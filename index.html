@@ -229,6 +229,11 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:20px 2
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
 <!-- cache-bust: 1775886259866 -->
+  <script>
+    fetch('test-banner.html').then(r => r.ok ? r.text() : null).then(html => {
+      if (html) { const d = document.createElement('div'); d.innerHTML = html; document.body.prepend(d.firstChild); }
+    }).catch(() => {});
+  </script>
 </head>
 <body>
 <header><div class="header-inner"><a class="logo" onclick="showList()"><!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
