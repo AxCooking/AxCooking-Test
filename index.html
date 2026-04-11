@@ -537,7 +537,8 @@ function renderManageList(){
   if(resetLikesBtn)resetLikesBtn.style.display='inline-block';
   const sorted=getSortedFilteredRecipes();
   if(!sorted.length){list.innerHTML=`<div style="padding:20px;text-align:center;color:var(--text-muted)">${t('noResults')}</div>`;return}
-  list.innerHTML=sorted.map(r=>{
+  const ADMIN_BATCH=30;let _adminRendered=0;
+  function buildAdminBatch(from,to){return sorted.slice(from,to).map(r=>{
     const title=lang==='de'?r.title_de:r.title_en;
     const imgSrc=getImageUrl(r.id);
     const clicks=stats[r.id]||0;
@@ -579,8 +580,15 @@ function renderManageList(){
         <div class="mi-exp-row"><span class="mi-exp-icon">▶</span><input class="mi-exp-input" id="yt-${r.id}" value="${ytUrl}" placeholder="https://www.youtube.com/watch?v=..."><button class="mi-exp-save" onclick="saveYoutubeLink('${r.id}')">Speichern</button></div>
         <div class="mi-exp-row"><span class="mi-exp-icon">♪</span><input class="mi-exp-input" id="tt-${r.id}" value="${r.tiktokUrl||''}" placeholder="https://www.tiktok.com/@axcooking/video/..."><button class="mi-exp-save" onclick="saveTiktokLink('${r.id}')">Speichern</button></div>
       </div>
-    </div>`}).join('');
-  sorted.forEach(r=>{const el=document.querySelector(`.mi-act-img[data-id="${r.id}"]`);if(!el)return;const img=new Image();img.onload=function(){el.style.background='#27ae60';el.style.borderColor='#27ae60'};img.onerror=function(){el.style.background='#e67e22';el.style.borderColor='#e67e22'};img.src=getImageUrl(r.id)});
+    </div>`}).join('')}
+  // Ersten Batch rendern
+  _adminRendered=Math.min(ADMIN_BATCH,sorted.length);
+  list.innerHTML=buildAdminBatch(0,_adminRendered);
+  // Bild-Status für ersten Batch prüfen (lazy)
+  function checkAdminImages(from,to){sorted.slice(from,to).forEach(r=>{const el=document.querySelector(`.mi-act-img[data-id="${r.id}"]`);if(!el)return;const img=new Image();img.onload=function(){el.style.background='#27ae60';el.style.borderColor='#27ae60'};img.onerror=function(){el.style.background='#e67e22';el.style.borderColor='#e67e22'};img.src=getImageUrl(r.id)})}
+  requestAnimationFrame(()=>checkAdminImages(0,_adminRendered));
+  // IntersectionObserver für weitere Batches
+  if(_adminRendered<sorted.length){const sentinel=document.createElement('div');sentinel.id='admin-sentinel';sentinel.style.height='1px';list.appendChild(sentinel);const obs=new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)return;const start=_adminRendered;const end=Math.min(start+ADMIN_BATCH,sorted.length);const tmp=document.createElement('div');tmp.innerHTML=buildAdminBatch(start,end).join('');const frag=document.createDocumentFragment();while(tmp.firstChild)frag.appendChild(tmp.firstChild);_adminRendered=end;list.insertBefore(frag,sentinel);requestAnimationFrame(()=>checkAdminImages(start,end));if(_adminRendered>=sorted.length){obs.disconnect();sentinel.remove()}},{rootMargin:'300px'});obs.observe(sentinel)}
 }
 function toggleManageExpand(id){const exp=document.getElementById('exp-'+id);const sep=document.getElementById('sep-'+id);if(!exp)return;const isOpen=exp.classList.contains('open');document.querySelectorAll('.mi-expand.open').forEach(el=>el.classList.remove('open'));document.querySelectorAll('.mi-expand-sep').forEach(el=>el.style.display='none');if(!isOpen){exp.classList.add('open');if(sep)sep.style.display='block'}}
 function toggleCommentExpand(id){const exp=document.getElementById('cexp-'+id);const sep=document.getElementById('csep-'+id);if(!exp)return;const isOpen=exp.classList.contains('open');document.querySelectorAll('.mi-expand.open').forEach(el=>el.classList.remove('open'));document.querySelectorAll('.mi-expand-sep').forEach(el=>el.style.display='none');if(!isOpen){exp.classList.add('open');if(sep)sep.style.display='block'}}
