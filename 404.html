@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>AxCooking</title>
+  <script>
+    // GitHub Pages SPA Routing: leitet alle 404s zurück zur index.html
+    // Der Pfad wird als Query-Parameter weitergegeben
+    var l = window.location;
+    var seg = l.pathname.split('/');
+    // Für GitHub Pages User-Sites (root domain): kein Prefix nötig
+    // Für Project-Sites (z.B. /AxCooking-Test/): ersten Segment als base
+    var isProject = seg.length > 1 && seg[1] !== 'de' && seg[1] !== 'en' && seg[1] !== '';
+    var base = isProject ? '/' + seg[1] : '';
+    var path = isProject ? '/' + seg.slice(2).join('/') : l.pathname;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      base + '/?p=' + encodeURIComponent(path) + (l.search ? '&' + l.search.slice(1) : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body></body>
+</html>
