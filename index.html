@@ -240,7 +240,7 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:20px 2
 <div class="login-overlay" id="loginOverlay" onclick="if(event.target===this)closeLogin()"><div class="login-box"><h3>Admin Login</h3><div class="login-hint">Gib deinen GitHub Personal Access Token ein. Dieser wird nur lokal im Browser gespeichert und nie an Dritte übermittelt.</div><label>GitHub Token</label><input type="password" id="loginToken" placeholder="Token eingeben..." onkeydown="if(event.key==='Enter')doLogin()"><div class="login-error" id="loginError">Token ungültig — bitte prüfen</div><div class="login-btns"><button class="btn-cancel" onclick="closeLogin()">Abbrechen</button><button class="btn-login" onclick="doLogin()">Anmelden</button></div></div></div>
 <div class="nav-tabs"><div class="nav-tabs-inner"><a class="nav-tab active" onclick="showList()" id="tabRecipes">Rezepte</a><a class="nav-tab hidden" onclick="showImport()" id="tabImport">Admin</a></div></div>
 <div class="main">
-  <div class="recipe-list" id="recipeList"><h1 id="listH1" style="font-family:var(--font-heading);font-size:1.6rem;font-weight:700;margin-bottom:16px;color:var(--text)">Rezepte</h1><div class="loading" id="loadingMsg">Rezepte werden geladen</div><div id="recipeGrid" role="list" aria-label="Rezeptliste"></div></div>
+  <div class="recipe-list" id="recipeList"><div class="loading" id="loadingMsg">Rezepte werden geladen</div><div id="recipeGrid" role="list" aria-label="Rezeptliste"></div></div>
   <div class="recipe-detail" id="recipeDetail"></div>
   <div class="import-panel" id="importPanel">
     <h2 id="importTitle" style="display:none">Rezept importieren</h2>
