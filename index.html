@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" sizes="180x180" href="logos/FavIcon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="logos/FavIcon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com https://img.youtube.com https://play-lh.googleusercontent.com https://www.axcooking.com; connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://www.axcooking.com; frame-src https://www.youtube.com; base-uri 'self'; form-action 'self';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com https://img.youtube.com https://play-lh.googleusercontent.com https://www.axcooking.com https://axcooking.github.io; connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://www.axcooking.com https://axcooking.github.io; frame-src https://www.youtube.com; base-uri 'self'; form-action 'self';">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
@@ -242,7 +242,8 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:20px 2
 </style>
 <!-- cache-bust: 1775886259866 -->
   <script>
-    fetch('test-banner.html').then(r => r.ok ? r.text() : null).then(html => {
+    var _base = (function(){ var s=location.pathname.split('/').filter(Boolean); return (s.length>0&&s[0]!=='de'&&s[0]!=='en')?'/'+s[0]:''; })();
+    fetch(_base+'/test-banner.html').then(r => r.ok ? r.text() : null).then(html => {
       if (html) { const d = document.createElement('div'); d.innerHTML = html; document.body.prepend(d.firstChild); }
     }).catch(() => {});
   </script>
