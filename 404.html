@@ -6,12 +6,14 @@
   <script>
     var l = window.location;
     var seg = l.pathname.split('/');
-    // Für Project-Sites (z.B. /AxCooking-Test/): ersten Segment als base
-    var isProject = seg.length > 1 && seg[1] !== 'de' && seg[1] !== 'en' && seg[1] !== '';
-    var base = isProject ? '/' + seg[1] : '';
-    var path = isProject ? '/' + seg.slice(2).join('/') : l.pathname;
+    // Auf axcooking.github.io: erstes Segment ist der Repo-Name (z.B. AxCooking-Test)
+    // Auf test.axcooking.com: kein Prefix, base ist leer
+    var isGithubIO = l.hostname === 'axcooking.github.io';
+    var base = isGithubIO && seg.length > 1 && seg[1] !== 'de' && seg[1] !== 'en' && seg[1] !== ''
+      ? '/' + seg[1] : '';
+    var path = isGithubIO && base ? '/' + seg.slice(2).join('/') : l.pathname;
 
-    // Wenn path leer oder nur "/" → direkt auf Root weiterleiten (kein ?p= nötig)
+    // Leerer Pfad -> direkt auf Root
     if (path === '' || path === '/') {
       l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + base + '/');
     } else {
