@@ -388,7 +388,7 @@ function clearSearch(){document.getElementById('searchInput').value='';document.
 function setLang(l,btn){lang=l;document.documentElement.lang=l;_searchIndex=null;document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('searchInput').placeholder=t('search');document.getElementById('tabRecipes').textContent=t('recipes');document.getElementById('tabImport').textContent=t('import');if(loggedIn)document.getElementById('authBtn').innerHTML='🔓 '+t('logout');updateImportLabels();if(currentRecipeId){renderDetail(currentRecipeId);history.replaceState({id:currentRecipeId,lang},null,makePath(currentRecipeId))}else{renderList();history.replaceState({lang},null,BASE_PATH+'/'+lang)}}
 function updateImportLabels(){document.getElementById('importTitle').textContent=t('importTitle');document.getElementById('importDesc').textContent=t('importDesc');document.querySelector('.drop-zone-text').innerHTML=t('dropText');document.getElementById('manageTitle').textContent=t('manageTitle');const ct=document.getElementById('manageCommentsTitle');if(ct)ct.textContent=t('manageComments')}
 const dropZone=document.getElementById('dropZone');dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');if(e.dataTransfer.files.length)handleFiles(e.dataTransfer.files)});
-async function handleFiles(fileList){if(!fileList||!fileList.length)return;const files=Array.from(fileList).filter(f=>f.name.match(/\.xlsx?m?$/i));if(!files.length){showStatus('error','Keine gültigen Excel-Dateien.');return}try{await loadXlsx()}catch(e){showStatus('error','XLSX konnte nicht geladen werden. Bitte Seite neu laden.');return}let imported=0,updated=0,errors=[];for(let i=0;i<files.length;i++){const file=files[i];showStatus('info',`Verarbeite Datei ${i+1} von ${files.length}: ${file.name}…`);try{const arrayBuffer=await readFileAsArrayBuffer(file);const wb=XLSX.read(new Uint8Array(arrayBuffer),{type:'array',cellNF:true});if(!wb.SheetNames.includes('Rezept DE')){errors.push(file.name+': Blatt "Rezept DE" fehlt')}else{const recipe=parseRecipe(wb);const idx=recipes.findIndex(r=>r.id===recipe.id);if(idx>=0){recipes[idx]=recipe;updated++;dbg(`Updated: ${recipe.id}`)}else{recipes.push(recipe);imported++;dbg(`New: ${recipe.id}`)}}}catch(err){errors.push(file.name+': '+err.message)}}if(imported>0||updated>0){showStatus('info',`${imported} Rezept(e) werden auf GitHub gespeichert… (${recipes.length} total, bitte warten)`);try{const ok=await saveRecipes();if(ok){showStatus('success',`✓ ${imported?imported+' neu':''}${imported&&updated?', ':''}${updated?updated+' aktualisiert':''} ${t('saved')} (${recipes.length} total)${errors.length?' — '+errors.length+' Fehler: '+errors.join(', '):''}`)}else{showStatus('error','Fehler beim Speichern: '+(lastGhError||'unbekannt'));return}}catch(e){showStatus('error','Fehler: '+e.message);return}}else{showStatus('error','Import fehlgeschlagen:\n'+errors.join('\n'))}renderManageList();document.getElementById('fileInput').value=''}
+async function handleFiles(fileList){if(!fileList||!fileList.length)return;const files=Array.from(fileList).filter(f=>f.name.match(/\.xlsx?m?$/i));if(!files.length){showStatus('error','Keine gültigen Excel-Dateien.');return}try{await loadXlsx()}catch(e){showStatus('error','XLSX konnte nicht geladen werden. Bitte Seite neu laden.');return}let imported=0,updated=0,errors=[];for(let i=0;i<files.length;i++){const file=files[i];showStatus('info',`Verarbeite Datei ${i+1} von ${files.length}: ${file.name}…`);try{const arrayBuffer=await readFileAsArrayBuffer(file);const wb=XLSX.read(new Uint8Array(arrayBuffer),{type:'array',cellNF:true});if(!wb.SheetNames.includes('Recipe')){errors.push(file.name+': Blatt "Recipe" fehlt')}else{const recipe=parseRecipe(wb);const idx=recipes.findIndex(r=>r.id===recipe.id);if(idx>=0){recipes[idx]=recipe;updated++;dbg(`Updated: ${recipe.id}`)}else{recipes.push(recipe);imported++;dbg(`New: ${recipe.id}`)}}}catch(err){errors.push(file.name+': '+err.message)}}if(imported>0||updated>0){showStatus('info',`${imported} Rezept(e) werden auf GitHub gespeichert… (${recipes.length} total, bitte warten)`);try{const ok=await saveRecipes();if(ok){showStatus('success',`✓ ${imported?imported+' neu':''}${imported&&updated?', ':''}${updated?updated+' aktualisiert':''} ${t('saved')} (${recipes.length} total)${errors.length?' — '+errors.length+' Fehler: '+errors.join(', '):''}`)}else{showStatus('error','Fehler beim Speichern: '+(lastGhError||'unbekannt'));return}}catch(e){showStatus('error','Fehler: '+e.message);return}}else{showStatus('error','Import fehlgeschlagen:\n'+errors.join('\n'))}renderManageList();document.getElementById('fileInput').value=''}
 function readFileAsArrayBuffer(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(new Error('Datei konnte nicht gelesen werden'));reader.readAsArrayBuffer(file)})}
 function resolveRef(wb,name,sheetOverride){
   const names=(wb.Workbook&&wb.Workbook.Names)||[];
@@ -429,87 +429,115 @@ function getRangeVals(wb,name,sheetOverride){
   }
   return vals
 }
-function extractServingsUnit(wb,name,sheetOverride){
-  const r=resolveRef(wb,name,sheetOverride);
-  if(!r)return null;
-  const cell=r.sheet[r.addr];
-  if(!cell||!cell.z)return null;
-  const matches=cell.z.match(/"([^"]+)"/g);
-  if(matches&&matches.length>=2)return matches[matches.length-1].replace(/"/g,'');
-  return null
+function buildTagMap(wb){
+  // _M_TAGS_Mtx: Spalte 1 = Kategorie (ignoriert), Spalte 2 = DE, Spalte 3 = EN
+  const map={};const r=resolveRef(wb,'_M_TAGS_Mtx','Master');
+  if(!r)return map;
+  const rng=r.addr.split(':');if(rng.length!==2)return map;
+  const d=XLSX.utils.decode_range(rng[0]+':'+rng[1]);
+  for(let row=d.s.r;row<=d.e.r;row++){
+    const de=r.sheet[XLSX.utils.encode_cell({r:row,c:d.s.c+1})];
+    const en=r.sheet[XLSX.utils.encode_cell({r:row,c:d.s.c+2})];
+    const deV=de&&de.v!=null?String(de.v).trim():'';
+    const enV=en&&en.v!=null?String(en.v).trim():'';
+    if(deV&&enV)map[deV]=enV
+  }
+  return map
 }
-function getStepsStart(wb,name,sheetOverride){
-  const r=resolveRef(wb,name,sheetOverride);
-  if(!r)return{row:19,col:0};
-  const decoded=XLSX.utils.decode_cell(r.addr);
-  return{row:decoded.r+1,col:decoded.c-1}
+function buildDifficultyMap(wb){
+  // _M_Difficulty_Mtx: Spalte 1 = DE, Spalte 2 = EN
+  const map={};const r=resolveRef(wb,'_M_Difficulty_Mtx','Master');
+  if(!r)return map;
+  const rng=r.addr.split(':');if(rng.length!==2)return map;
+  const d=XLSX.utils.decode_range(rng[0]+':'+rng[1]);
+  for(let row=d.s.r;row<=d.e.r;row++){
+    const de=r.sheet[XLSX.utils.encode_cell({r:row,c:d.s.c})];
+    const en=r.sheet[XLSX.utils.encode_cell({r:row,c:d.s.c+1})];
+    const deV=de&&de.v!=null?String(de.v).trim():'';
+    const enV=en&&en.v!=null?String(en.v).trim():'';
+    if(deV&&enV)map[deV]=enV
+  }
+  return map
+}
+function extractLastQuoted(fmt){
+  if(!fmt)return'';
+  const matches=fmt.match(/"([^"]*)"/g);
+  if(!matches||!matches.length)return'';
+  return matches[matches.length-1].replace(/"/g,'').trim()
 }
 function parseRecipe(wb){
-  const hasEN=wb.SheetNames.includes('Rezept EN');
-  const sheetDE='Rezept DE',sheetEN='Rezept EN';
-  const tagMap={};
-  if(wb.SheetNames.includes('MASTER')){
-    const wsMaster=XLSX.utils.sheet_to_json(wb.Sheets['MASTER'],{header:1,defval:''});
-    for(let i=2;i<wsMaster.length;i++){
-      const row=wsMaster[i];
-      const de=row[8]?String(row[8]).trim():'';
-      const en=row[9]?String(row[9]).trim():'';
-      if(de&&en)tagMap[de]=en
-    }
-    dbg(`Tag map: ${Object.keys(tagMap).length} entries`)
-  }
-  const title_de=String(getCellVal(wb,'_REZ_Titel')||'Unbekannt');
-  const desc_de=String(getCellVal(wb,'_REZ_Beschreibung')||'');
-  const title_en=hasEN?String(getCellVal(wb,'_REZ_Titel',sheetEN)||title_de):title_de;
-  const desc_en=hasEN?String(getCellVal(wb,'_REZ_Beschreibung',sheetEN)||desc_de):desc_de;
-  const difficulty_de=String(getCellVal(wb,'_REZ_Difficulty')||'');
-  const difficulty_en=difficulty_de==='einfach'?'simple':difficulty_de==='normal'?'normal':difficulty_de==='herausfordernd'?'challenging':difficulty_de;
-  const youtubeUrl=String(getCellVal(wb,'_REZ_Video')||'');
+  if(!wb.SheetNames.includes('Recipe'))throw new Error('Blatt "Recipe" fehlt');
+  if(!wb.SheetNames.includes('Master'))throw new Error('Blatt "Master" fehlt');
+  const sheetName='Recipe';
+  const tagMap=buildTagMap(wb);
+  const diffMap=buildDifficultyMap(wb);
+  dbg(`Tag map: ${Object.keys(tagMap).length} entries, Difficulty map: ${Object.keys(diffMap).length} entries`);
+  const title_de=String(getCellVal(wb,'_R_Title_DE',sheetName)||'Unbekannt');
+  const title_en=String(getCellVal(wb,'_R_Title_EN',sheetName)||title_de);
+  const desc_de=String(getCellVal(wb,'_R_Description_DE',sheetName)||'');
+  const desc_en=String(getCellVal(wb,'_R_Description_EN',sheetName)||desc_de);
+  const difficulty_de=String(getCellVal(wb,'_R_Difficulty',sheetName)||'');
+  const difficulty_en=diffMap[difficulty_de]||difficulty_de;
+  const youtubeUrl=String(getCellVal(wb,'_R_Youtube',sheetName)||'');
   const youtubeId=youtubeUrl.match(/[?&]v=([^&]+)/)?.[1]||'';
-  const tiktokUrlImport=String(getCellVal(wb,'_REZ_TikTokLink')||'').trim();
+  const tiktokUrlImport=String(getCellVal(wb,'_R_TikTok',sheetName)||'').trim();
   dbg('TikTok URL: '+(tiktokUrlImport||'(none)'));
-  const wt=fmtTime(getCellVal(wb,'_REZ_T_Working'));
-  const ct=fmtTime(getCellVal(wb,'_REZ_T_Cooking'));
-  const rt=fmtTime(getCellVal(wb,'_REZ_T_Rest'));
-  const tt=fmtTime(getCellVal(wb,'_REZ_T_Total'));
-  const tags_de=[...getRangeVals(wb,'_REZ_Tags'),...getRangeVals(wb,'_REZ_Categories')];
+  const wt=fmtTime(getCellVal(wb,'_R_TIME_Working',sheetName));
+  const ct=fmtTime(getCellVal(wb,'_R_TIME_Cooking',sheetName));
+  const rt=fmtTime(getCellVal(wb,'_R_TIME_Rest',sheetName));
+  const tt=fmtTime(getCellVal(wb,'_R_TIME_Total',sheetName));
+  const tags_de=getRangeVals(wb,'_R_TAGS_MTX',sheetName);
   const tags_en=tags_de.map(tag=>tagMap[tag]||tag);
-  const baseServings=getCellVal(wb,'_REZ_Menge')||10;
-  const servingsUnit_de=extractServingsUnit(wb,'_REZ_Menge')||'Personen';
-  const servingsUnit_en=hasEN?(extractServingsUnit(wb,'_REZ_Menge',sheetEN)||'people'):'people';
-  const stepsStartDE=getStepsStart(wb,'_REZ_Menge');
-  const stepsStartEN=hasEN?getStepsStart(wb,'_REZ_Menge',sheetEN):stepsStartDE;
-  dbg(`Steps start DE: row=${stepsStartDE.row} col=${stepsStartDE.col}`);
+  const baseServings=getCellVal(wb,'_R_Menge_DE',sheetName)||10;
+  const servingsUnit_de=extractLastQuoted(getCellFmt(wb,'_R_Menge_DE',sheetName))||'Personen';
+  const servingsUnit_en=extractLastQuoted(getCellFmt(wb,'_R_Menge_EN',sheetName))||'people';
+  // Steps start 2 rows below the Menge cell, DE at startCol, EN at startCol+6
+  const mengeDE=resolveRef(wb,'_R_Menge_DE',sheetName);
+  const mengeEN=resolveRef(wb,'_R_Menge_EN',sheetName);
+  const dDE=XLSX.utils.decode_cell(mengeDE.addr);
+  const dEN=XLSX.utils.decode_cell(mengeEN.addr);
+  const stepsStartDE={row:dDE.r+2,col:dDE.c};
+  const stepsStartEN={row:dEN.r+2,col:dEN.c};
+  dbg(`Steps start DE: row=${stepsStartDE.row} col=${stepsStartDE.col}, EN: row=${stepsStartEN.row} col=${stepsStartEN.col}`);
+  const sheet=wb.Sheets[sheetName];
   return{id:toSlug(title_de),title_de,title_en,desc_de,desc_en,difficulty_de,difficulty_en,
     workTime:wt,cookTime:ct,restTime:rt,totalTime:tt||addT(wt,ct,rt),
     youtubeId,youtubeUrl,tiktokUrl:tiktokUrlImport,
     tags_de,tags_en,baseServings:parseInt(baseServings)||10,servingsUnit_de,servingsUnit_en,
     emoji:'🍽',
-    steps_de:parseSteps(wb.Sheets[sheetDE],stepsStartDE),
-    steps_en:hasEN?parseSteps(wb.Sheets[sheetEN],stepsStartEN):parseSteps(wb.Sheets[sheetDE],stepsStartDE)}
+    steps_de:parseSteps(sheet,stepsStartDE,true),
+    steps_en:parseSteps(sheet,stepsStartEN,false)}
 }
-function parseSteps(sheet,start){
+function parseSteps(sheet,start,readBringFlag){
+  // Ingredient row: Col A = Amount (number), Col B = Name, unit = last quoted string in Col A numFmt
+  //                 Col D (only on DE side, startCol+3 from DE start) = Bring flag (TRUE/FALSE)
+  // Section title: Col A = Title (non-numeric text), Col B = empty
+  // Text row: Col A = empty, Col B = long text
   const steps=[];let cur=null;
   const startRow=start.row,startCol=start.col;
+  // Bring flag column is always Recipe!D (column index 3), regardless of which language we parse
+  const bringCol=3;
   for(let i=startRow;i<9999;i++){
     const cellA=sheet[XLSX.utils.encode_cell({r:i,c:startCol})];
     const cellB=sheet[XLSX.utils.encode_cell({r:i,c:startCol+1})];
     const a=cellA&&cellA.v!=null?String(cellA.v).trim():'';
     const b=cellB&&cellB.v!=null?String(cellB.v).trim():'';
-    if(!a&&!b)continue;
+    if(!a&&!b){if(steps.length>0&&cur&&(cur.ingredients.length||cur.text))cur=cur;continue}
     if(a&&!b&&isNaN(parseFloat(a))){cur={title:a,ingredients:[],text:''};steps.push(cur);continue}
     if(a&&b&&!isNaN(parseFloat(a))){
       if(!cur){cur={title:'Zubereitung',ingredients:[],text:''};steps.push(cur)}
-      let unit='gr';
-      if(cellA&&cellA.z){const m=cellA.z.match(/"([^"]+)"\s*$/);if(m)unit=m[1]}
-      const cellF=sheet[XLSX.utils.encode_cell({r:i,c:startCol+5})];
-      const fv=cellF?cellF.v:undefined;
-      const bringFlag=fv===true||fv==='TRUE'||fv==='WAHR'||fv===1;
+      let unit='';
+      if(cellA&&cellA.z){const m=cellA.z.match(/"([^"]*)"\s*$/);if(m)unit=m[1].trim()}
+      let bringFlag=true;
+      if(readBringFlag){
+        const cellD=sheet[XLSX.utils.encode_cell({r:i,c:bringCol})];
+        const dv=cellD?cellD.v:undefined;
+        bringFlag=dv===true||dv==='TRUE'||dv==='WAHR'||dv===1
+      }
       cur.ingredients.push({amount:parseFloat(a),unit:unit,name:b,bring:bringFlag});
       continue
     }
-    if(!a&&b&&b.length>30&&cur)cur.text=b;
-    if(!a&&!b&&steps.length>0)break
+    if(!a&&b&&b.length>30&&cur)cur.text=b
   }
   return steps
 }
@@ -601,7 +629,7 @@ async function deleteCommentFromManage(recipeId,idx){if(!confirm(t('deleteCommen
 async function resetAllLikes(){const msg=lang==='de'?'Alle Likes auf 0 zurücksetzen?':'Reset all likes to 0?';if(!confirm(msg))return;for(const key in likes)likes[key]=0;showStatus('info',t('saving'));const ok=await saveLikes();showStatus(ok?'success':'error',ok?(lang==='de'?'✓ Alle Likes wurden zurückgesetzt.':'✓ All likes have been reset.'):'Fehler beim Speichern');renderManageList()}
 async function saveYoutubeLink(recipeId){const r=recipes.find(x=>x.id===recipeId);if(!r)return;const input=document.getElementById('yt-'+recipeId);const url=input.value.trim();const ytMatch=url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([^&?#]+)/);r.youtubeUrl=url;r.youtubeId=ytMatch?ytMatch[1]:'';showStatus('info',t('saving'));const ok=await saveRecipes();showStatus(ok?'success':'error',ok?`✓ YouTube-Link ${t('saved')}`:'Fehler beim Speichern');renderManageList()}
 async function saveTiktokLink(recipeId){const r=recipes.find(x=>x.id===recipeId);if(!r)return;const input=document.getElementById('tt-'+recipeId);r.tiktokUrl=input.value.trim();showStatus('info',t('saving'));const ok=await saveRecipes();showStatus(ok?'success':'error',ok?`✓ TikTok-Link ${t('saved')}`:'Fehler beim Speichern');renderManageList()}
-async function updateSingleRecipe(recipeId,file){if(!file)return;const existing=recipes.find(r=>r.id===recipeId);const existingTitle=existing?(lang==='de'?existing.title_de:existing.title_en):recipeId;showStatus('info',`📄 "${existingTitle}" wird aktualisiert…`);try{await loadXlsx()}catch(e){showStatus('error','XLSX konnte nicht geladen werden. Bitte Seite neu laden.');return}try{const arrayBuffer=await readFileAsArrayBuffer(file);const wb=XLSX.read(new Uint8Array(arrayBuffer),{type:'array',cellNF:true});if(!wb.SheetNames.includes('Rezept DE')){showStatus('error','Fehler: Blatt "Rezept DE" nicht gefunden.');return}const newRecipe=parseRecipe(wb);if(existing)newRecipe.id=existing.id;const idx=recipes.findIndex(r=>r.id===recipeId);if(idx>=0)recipes[idx]=newRecipe;else recipes.push(newRecipe);showStatus('info',`📄 "${existingTitle}" wird auf GitHub gespeichert…`);const ok=await saveRecipes();showStatus(ok?'success':'error',ok?`✓ "${existingTitle}" wurde aktualisiert und ${t('saved')}`:'Fehler beim Speichern');renderManageList()}catch(e){showStatus('error','Fehler beim Aktualisieren: '+e.message)}}
+async function updateSingleRecipe(recipeId,file){if(!file)return;const existing=recipes.find(r=>r.id===recipeId);const existingTitle=existing?(lang==='de'?existing.title_de:existing.title_en):recipeId;showStatus('info',`📄 "${existingTitle}" wird aktualisiert…`);try{await loadXlsx()}catch(e){showStatus('error','XLSX konnte nicht geladen werden. Bitte Seite neu laden.');return}try{const arrayBuffer=await readFileAsArrayBuffer(file);const wb=XLSX.read(new Uint8Array(arrayBuffer),{type:'array',cellNF:true});if(!wb.SheetNames.includes('Recipe')){showStatus('error','Fehler: Blatt "Recipe" nicht gefunden.');return}const newRecipe=parseRecipe(wb);if(existing)newRecipe.id=existing.id;const idx=recipes.findIndex(r=>r.id===recipeId);if(idx>=0)recipes[idx]=newRecipe;else recipes.push(newRecipe);showStatus('info',`📄 "${existingTitle}" wird auf GitHub gespeichert…`);const ok=await saveRecipes();showStatus(ok?'success':'error',ok?`✓ "${existingTitle}" wurde aktualisiert und ${t('saved')}`:'Fehler beim Speichern');renderManageList()}catch(e){showStatus('error','Fehler beim Aktualisieren: '+e.message)}}
 async function uploadManageImage(recipeId,file){if(!file||!file.type.startsWith('image/'))return;const title=recipes.find(r=>r.id===recipeId);const name=title?(lang==='de'?title.title_de:title.title_en):recipeId;showStatus('info',`📷 Bild für "${name}" wird gelesen…`);const reader=new FileReader();reader.onload=function(e){showStatus('info',`📷 Bild für "${name}" wird optimiert…`);optimizeImage(e.target.result,async function(optimized){showStatus('info',`📷 Bild wird auf GitHub hochgeladen… (kann bis zu 30 Sek. dauern)`);const ok=await saveImage(recipeId,optimized);showStatus(ok?'success':'error',ok?`✓ Bild für "${name}" ${t('saved')}`:'Fehler beim Hochladen');renderManageList()})};reader.readAsDataURL(file)}
 async function deleteRecipe(id){const r=recipes.find(x=>x.id===id);if(!r)return;const title=lang==='de'?r.title_de:r.title_en;if(!confirm(t('deleteConfirm')+'\n\n'+title))return;recipes=recipes.filter(x=>x.id!==id);delete stats[id];showStatus('info',t('saving'));try{const ok1=await saveRecipes();if(!ok1){showStatus('error','Fehler beim Speichern');return}await new Promise(res=>setTimeout(res,3000));await saveStats().catch(()=>{});await new Promise(res=>setTimeout(res,2000));await ghDelete(`images/${id}.jpg`,'Delete image for '+id).catch(()=>{});showStatus('success',`✓ "${title}" ${t('deleted')}`)}catch(e){showStatus('error','Fehler: '+e.message)}renderManageList()}
 async function resetAllClicks(){const msg=lang==='de'?'Alle Klickzahlen auf 0 zurücksetzen?':'Reset all click counts to 0?';if(!confirm(msg))return;for(const key in stats)stats[key]=0;showStatus('info',t('saving'));const ok=await saveStats();showStatus(ok?'success':'error',ok?(lang==='de'?'✓ Alle Klickzahlen wurden zurückgesetzt.':'✓ All click counts have been reset.'):'Fehler beim Speichern');renderManageList()}
