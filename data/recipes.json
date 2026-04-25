@@ -4951,9 +4951,9 @@
     "cookTime": "30m",
     "restTime": "2h 0m",
     "totalTime": "3h 0m",
-    "youtubeId": "QteUBx8wl8I",
-    "youtubeUrl": "https://www.youtube.com/watch?v=QteUBx8wl8I",
-    "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7106237166476446981",
+    "youtubeId": "",
+    "youtubeUrl": "",
+    "tiktokUrl": "",
     "tags_de": [
       "Hauptspeise",
       "Marinade",
@@ -4998,193 +4998,279 @@
     "emoji": "🍽",
     "steps_de": [
       {
-        "title": "Zubereitung",
+        "title": "Ingwer-Chili Paste zubereiten",
         "ingredients": [
           {
             "amount": 40,
             "unit": "gr",
             "name": "Ingwer (frisch)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 8,
             "unit": "Stk.",
             "name": "Knoblauch",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 2,
             "unit": "Stk.",
             "name": "Chilischote (rot)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 20,
             "unit": "ml",
             "name": "Wasser",
-            "bring": false
-          },
+            "bring": false,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
+          }
+        ],
+        "text": "Alles geschält und grob geschnitten in Gewürzmühle geben und mit dem Wasser zu einer glatten Paste mixen. Alternativ kann auch ein Mörser verwendet werden. Die Ingwer-Chili Paste bei Seite stellen."
+      },
+      {
+        "title": "Hühnchen marinieren",
+        "ingredients": [
           {
             "amount": 800,
             "unit": "gr",
             "name": "Hühnchenschenkel (ohne Haut und Knochen)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 4,
             "unit": "EL",
             "name": "Griechischer Joghurt (neutral)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 4,
             "unit": "TL",
             "name": "Kichererbsenmehl",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 2,
             "unit": "TL",
             "name": "Paprikapulver (edelsüss)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 1,
             "unit": "TL",
             "name": "Kashmiri Chilipulver",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 1,
             "unit": "TL",
             "name": "Garam Masala Gewürzmischung",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 2,
             "unit": "TL",
             "name": "Korianderpulver",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 2,
             "unit": "Pr",
             "name": "Zimtpulver",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 2,
             "unit": "Pr",
             "name": "Safran",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 4,
             "unit": "Pr",
             "name": "Salz",
-            "bring": false
-          },
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
+          }
+        ],
+        "text": "Kichererbsenmehl mit dem Joghurt in einer Schüssel verrühren, bis sich alle Klumpen aufgelöst haben. Dann die Ingwer-Chili Paste und die Gewürze hinzugeben und alles gut vermengen. Hünchenschenkel in ca. 5 cm grosse Würfel schneiden und mit der Marinade vermengen. Dann abgedeckt mindestens 2 h kühl stellen, besser über Nacht."
+      },
+      {
+        "title": "Hühnchen grillieren",
+        "ingredients": [
           {
             "amount": 50,
             "unit": "gr",
             "name": "Butter (ungesalzen)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 6,
             "unit": "Stk.",
             "name": "Doppel-Grillspiesse",
-            "bring": false
-          },
+            "bring": false,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          }
+        ],
+        "text": "Butter in einem kleinen Topf zergehen lassen. Backofen mit Grillfunktion auf 250° C vorheizen. Mariniertes Hühnchen aus dem Kühlschrank nehmen und auf die Doppel-Grillspiesse stecken. Die überschüssige Marinade abtropfen lassen. Die Doppel-Grillspiesse vereinfachen das Wenden der Spiesse. Alternativ können auch pro Spiess zwei Holzspiesse verwendet werden.\r\n\r\nDie Hühnchenspiesse quer über eine Auflaufform legen und dann auf der höchst möglichen Backofenschiene für 20 Minuten grillieren. Alle 5 Minuten die Spiesse aus dem Backofen nehmen, die Spiesse um 180 Grad drehen und mit der zerlassenen Butter bepinseln. Die Pouletstücke sollten am Ende an einzelnen Stellen leicht verkohlte Ränder/Ecken haben. Die grillierten Hühnchenspiesse bei Seite stellen.\r\n\r\nWer seinen Backofen nicht auf 250° C erhitzen kann (wie ich), kann dasselbe auch auf dem Gasgrill erledigen."
+      },
+      {
+        "title": "Mise en place vorbereiten",
+        "ingredients": [
           {
             "amount": 10,
             "unit": "Stk.",
             "name": "Kardamomkapseln (leicht zerstossen)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 1,
             "unit": "Stk.",
             "name": "Zimtstange",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 8,
             "unit": "Stk.",
             "name": "Nelken",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 2,
             "unit": "Stk.",
             "name": "Zwiebeln",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 20,
             "unit": "gr",
             "name": "Ingwer (frisch)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 4,
             "unit": "Stk.",
             "name": "Chilischote (rot)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 140,
             "unit": "gr",
             "name": "Tomatenmark (Tomatenpurée)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 2,
             "unit": "TL",
             "name": "Kashmiri Chilipulver",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 1,
             "unit": "TL",
             "name": "Garam Masala Gewürzmischung",
-            "bring": true
-          },
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          }
+        ],
+        "text": "1) Kardamomkapseln andrücken und mit der Zimtstange und den Nelken zusammen bei Seite stellen.\r\n2) Zwiebeln schälen, Trieb entfernen, klein Hacken und separat bei Seite stellen.\r\n3) Ingwer schälen, fein reiben und zusammen mit der fein gehackten Chilischote in Schüssel bei Seite stellen.\r\n4) Tomatenmark, Kashmiri Chilipulver und Garam Masala zusammen in Schüssel separat bei Seite stellen."
+      },
+      {
+        "title": "Butter Chicken zubereiten",
+        "ingredients": [
           {
             "amount": 70,
             "unit": "gr",
             "name": "Butter (ungesalzen)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 300,
             "unit": "ml",
             "name": "Sahne (Vollrahm)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 2,
             "unit": "EL",
             "name": "Flüssighonig",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 2,
             "unit": "EL",
             "name": "Bockshornkleepulver",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 1,
             "unit": "Stk.",
             "name": "Koriander (frisch)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 1,
             "unit": "Pr",
             "name": "Salz",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           }
         ],
         "text": "Butter in Topf geben und zergehen lassen, dann Kardamom, Zimt und Nelken hinzugeben und 20 sek. andünsten lassen, dann Zwiebeln hinzugeben und bei mittlerer Hitze 5 - 7 min. anbraten, bis sie eine hellbraune Farbe annehmen. Ingwer und Chilischoten hinzugeben und eine weitere Minute anbraten. Dann Chilipulver, Garam Masala und Tomatenpurée hinzugeben, gut verrühren und einige Minuten kochen lassen. Sahne unter ständigem Rühren nach und nach hinzugeben, dann 2 - 3 min. auf tiefer Stufe köcheln lassen. Etwas Wasser hinzufügen, falls Curry zu dickflüssig wird. Honig und Bockshornkleepulver zum Curry hinzugeben und einrühren.\r\n\r\nDas gegrillte Poulet hinzugeben. Abgetropfte Marinade/Fleischsaft nicht in das Curry geben. Auf tiefer Hitzestufe 8 - 10 min. kochen lassen. Mit Salz abschmecken, mit Koriander garnieren und sofort servieren."
@@ -5192,193 +5278,279 @@
     ],
     "steps_en": [
       {
-        "title": "Zubereitung",
+        "title": "Prepare the ginger-chili paste",
         "ingredients": [
           {
             "amount": 40,
             "unit": "g",
             "name": "Ginger (fresh)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 8,
             "unit": "pc",
             "name": "Garlic",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 2,
             "unit": "pc",
             "name": "Chili pepper (red)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 20,
             "unit": "ml",
             "name": "Water",
-            "bring": true
-          },
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
+          }
+        ],
+        "text": "Peel and roughly chop all ingredients, place them in a spice grinder, and blend with the water until smooth. Alternatively, a mortar and pestle can be used. Set the ginger-chili paste aside."
+      },
+      {
+        "title": "Marinate the chicken",
+        "ingredients": [
           {
             "amount": 800,
             "unit": "g",
             "name": "Chicken thighs (skinless and boneless)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 4,
             "unit": "tb",
             "name": "Plain Greek yogurt",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 4,
             "unit": "ts",
             "name": "Chickpea flour",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 2,
             "unit": "ts",
             "name": "Paprika powder (sweet)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 1,
             "unit": "ts",
             "name": "Kashmiri chili powder",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 1,
             "unit": "ts",
             "name": "Garam masala spice blend",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 2,
             "unit": "ts",
             "name": "Coriander powder",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 2,
             "unit": "pn",
             "name": "Cinnamon powder",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 2,
             "unit": "pn",
             "name": "Saffron",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 4,
             "unit": "pn",
             "name": "Salt",
-            "bring": true
-          },
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
+          }
+        ],
+        "text": "In a bowl, mix the chickpea flour with the yogurt until all lumps have dissolved. Then add the ginger-chili paste and spices and mix everything well. Cut the chicken thighs into cubes about 5 cm | 2 in. in size and toss with the marinade. Cover and refrigerate for at least 2 hours, preferably overnight."
+      },
+      {
+        "title": "Grilling the chicken",
+        "ingredients": [
           {
             "amount": 50,
             "unit": "g",
             "name": "Butter (unsalted)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 6,
             "unit": "pc",
             "name": "Double barbecue skewers",
-            "bring": true
-          },
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          }
+        ],
+        "text": "Melt the butter in a small saucepan. Preheat the oven to 250°C | 480°F using the broil setting. Remove the marinated chicken from the refrigerator and thread it onto the double skewers. Let the excess marinade drip off. The double skewers make it easier to turn the skewers. Alternatively, you can use two wooden skewers per skewer.\r\n\r\nPlace the chicken skewers crosswise in a baking dish and then broil on the highest oven rack for 20 minutes. Every 5 minutes, remove the skewers from the oven, rotate them 180 degrees, and brush with the melted butter. The chicken pieces should have slightly charred edges or corners in places by the end. Set the grilled chicken skewers aside.\r\n\r\nIf you can’t heat your oven to 250°C | 480°F (like me), you can also do this on a gas grill."
+      },
+      {
+        "title": "Prepare the mise en place",
+        "ingredients": [
           {
             "amount": 10,
             "unit": "pc",
             "name": "Cardamom pods (lightly crushed)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 1,
             "unit": "pc",
             "name": "Cinnamon stick",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 8,
             "unit": "pc",
             "name": "Cloves",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 2,
             "unit": "pc",
             "name": "Onions",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 20,
             "unit": "g",
             "name": "Ginger (fresh)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 4,
             "unit": "pc",
             "name": "Chili pepper (red)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 140,
             "unit": "g",
             "name": "Tomato paste (Tomato purée)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 2,
             "unit": "ts",
             "name": "Kashmiri chili powder",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 1,
             "unit": "ts",
             "name": "Garam masala spice blend",
-            "bring": true
-          },
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          }
+        ],
+        "text": "1) Crush the cardamom pods and set them aside together with the cinnamon stick and cloves.\r\n2) Peel the onions, remove the sprouts, chop finely, and set aside separately.\r\n3) Peel the ginger, grate it finely, and set it aside in a bowl together with the finely chopped chili pepper.\r\n4) Combine the tomato paste, Kashmiri chili powder, and garam masala in a separate bowl and set aside."
+      },
+      {
+        "title": "Prepare the Butter Chicken",
+        "ingredients": [
           {
             "amount": 70,
             "unit": "g",
             "name": "Butter (unsalted)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 300,
             "unit": "ml",
             "name": "Cream",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 2,
             "unit": "tb",
             "name": "Liquid honey",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 2,
             "unit": "tb",
             "name": "Fenugreek powder",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 1,
             "unit": "pc",
             "name": "Cilantro (fresh)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 1,
             "unit": "pn",
             "name": "Salt",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           }
         ],
         "text": "Melt the butter in a pot, then add the cardamom, cinnamon, and cloves and sauté for 20 seconds. Add the onions and sauté over medium heat for 5–7 minutes, until they turn a light brown color. Add the ginger and chili peppers and sauté for another minute. Then add the chili powder, garam masala, and tomato paste, stir well, and let it cook for a few minutes. Gradually add the cream while stirring constantly, then let it simmer on low heat for 2–3 minutes. Add a little water if the curry becomes too thick. Add the honey and fenugreek powder to the curry and stir in.\r\n\r\nAdd the grilled chicken. Do not add the drained marinade or meat juices to the curry. Cook over low heat for 8–10 minutes. Season with salt to taste, garnish with cilantro, and serve immediately."
