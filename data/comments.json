@@ -5,6 +5,13 @@
       "text": "test 3",
       "date": "2026-04-06T09:32:34.364Z",
       "approved": true
+    },
+    {
+      "name": "Ax",
+      "text": "sosoo",
+      "date": "2026-04-25T13:37:32.636Z",
+      "approved": false,
+      "rating": 4
     }
   ]
 }
