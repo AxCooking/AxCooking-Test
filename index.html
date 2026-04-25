@@ -508,24 +508,27 @@ function parseRecipe(wb){
     youtubeId,youtubeUrl,tiktokUrl:tiktokUrlImport,
     tags_de,tags_en,baseServings:parseInt(baseServings)||10,servingsUnit_de,servingsUnit_en,
     emoji:'🍽',
-    steps_de:parseSteps(sheet,stepsStartDE,true,bringCol),
-    steps_en:parseSteps(sheet,stepsStartEN,false,bringCol)}
+    steps_de:parseSteps(sheet,stepsStartDE,true,bringCol,'Menge'),
+    steps_en:parseSteps(sheet,stepsStartEN,false,bringCol,'Quantity')}
 }
-function parseSteps(sheet,start,readBringFlag,bringCol){
-  // Ingredient row: Col A = Amount (number), Col B = Name, unit = last quoted string in Col A numFmt
-  //                 bringCol (default 3 = Col D, only on DE side) = Bring flag (TRUE/FALSE)
-  // Section title: Col A = Title (non-numeric text), Col B = empty
-  // Text row: Col A = empty, Col B = long text
+function parseSteps(sheet,start,readBringFlag,bringCol,sectionKeyword){
+  // Section header row: Col A = sectionKeyword ('Menge'/'Quantity'), Col B = section title
+  // Ingredient row:     Col A = Amount (number), Col B = Name, unit = last quoted string in Col A numFmt
+  //                     bringCol (default 3 = Col D, only on DE side) = Bring flag (TRUE/FALSE)
+  // Text row:           Col A = empty, Col B = text (preparation instructions)
   const steps=[];let cur=null;
   const startRow=start.row,startCol=start.col;
   if(typeof bringCol!=='number')bringCol=3;
+  const kw=(sectionKeyword||'').toLowerCase();
   for(let i=startRow;i<9999;i++){
     const cellA=sheet[XLSX.utils.encode_cell({r:i,c:startCol})];
     const cellB=sheet[XLSX.utils.encode_cell({r:i,c:startCol+1})];
     const a=cellA&&cellA.v!=null?String(cellA.v).trim():'';
     const b=cellB&&cellB.v!=null?String(cellB.v).trim():'';
-    if(!a&&!b){if(steps.length>0&&cur&&(cur.ingredients.length||cur.text))cur=cur;continue}
-    if(a&&!b&&isNaN(parseFloat(a))){cur={title:a,ingredients:[],text:''};steps.push(cur);continue}
+    if(!a&&!b)continue;
+    // Section header: A is the keyword and B has the title
+    if(a&&b&&kw&&a.toLowerCase()===kw){cur={title:b,ingredients:[],text:''};steps.push(cur);continue}
+    // Ingredient: numeric A and non-empty B
     if(a&&b&&!isNaN(parseFloat(a))){
       if(!cur){cur={title:'Zubereitung',ingredients:[],text:''};steps.push(cur)}
       let unit='';
@@ -539,7 +542,8 @@ function parseSteps(sheet,start,readBringFlag,bringCol){
       cur.ingredients.push({amount:parseFloat(a),unit:unit,name:b,bring:bringFlag});
       continue
     }
-    if(!a&&b&&b.length>30&&cur)cur.text=b
+    // Preparation text: empty A, text in B
+    if(!a&&b&&cur)cur.text=cur.text?cur.text+'\n\n'+b:b
   }
   return steps
 }
