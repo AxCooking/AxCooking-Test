@@ -4938,5 +4938,451 @@
         "text": "Peel shallots and garlic, remove shoots and then roughly chop. Remove the thick stems of the herbs. Put everything except the salt in a blender and mix until a homogeneous mass is formed (mix for about 5 to 10 min). Taste the marinade and only now add salt. When salting, pay attention to how strongly the bell pepper pulp is salted. The marinade must be salted proportionally. Blend again and then pour into a squeeze bottle and refrigerate overnight. Keeps for several weeks in the refrigerator in a squeeze bottle (no guarantee)."
       }
     ]
+  },
+  {
+    "id": "butter-chicken-murgh-makhani",
+    "title_de": "Butter Chicken Murgh Makhani",
+    "title_en": "Butter Chicken Murgh Makhani",
+    "desc_de": "Murgh Makhani ist mein absolutes Lieblingsgericht aus der indischen Küche - und ich koche es immer wieder mit Begeisterung. Zart mariniertes Hähnchen badet in einer samtigen Tomaten-Butter-Sauce, verfeinert mit Garam Masala, Ingwer, Knoblauch und einem Hauch Kasuri Methi. Was ich besonders liebe: Ich kann es ganz nach Lust und Laune zubereiten - mild und cremig mit viel Sahne für gemütliche Abende, oder schön scharf mit extra Chili, wenn ich richtig Lust auf Feuer habe. Dazu Basmatireis oder warmes Naan - einfach perfekt.",
+    "desc_en": "Murgh Makhani is my absolute favorite dish from Indian cuisine - and I cook it again and again with great enthusiasm. Tenderly marinated chicken is bathed in a velvety tomato-butter sauce, enhanced with garam masala, ginger, garlic, and a hint of kasuri methi. What I especially love: I can prepare it however I feel like - mild and creamy with plenty of cream for cozy evenings, or nice and spicy with extra chili when I’m really in the mood for some heat. Serve with basmati rice or warm naan - simply perfect.",
+    "difficulty_de": "normal",
+    "difficulty_en": "normal",
+    "workTime": "30m",
+    "cookTime": "30m",
+    "restTime": "2h 0m",
+    "totalTime": "3h 0m",
+    "youtubeId": "QteUBx8wl8I",
+    "youtubeUrl": "https://www.youtube.com/watch?v=QteUBx8wl8I",
+    "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7106237166476446981",
+    "tags_de": [
+      "Hauptspeise",
+      "Marinade",
+      "Dessert",
+      "Beilage",
+      "Fleisch",
+      "Scharf",
+      "Ketogen",
+      "Vegetarisch",
+      "Indische Küche",
+      "Asiatische Küche",
+      "Internationale Küche",
+      "Griechische Küche",
+      "Hühnchen",
+      "Frische Kräuter",
+      "Rahm",
+      "Reis",
+      "Kalb"
+    ],
+    "tags_en": [
+      "Main course",
+      "Marinade",
+      "Dessert",
+      "Side dish",
+      "Meat",
+      "Spicy",
+      "Ketogen",
+      "Vegetarian",
+      "Indian Cuisine",
+      "Asian cuisine",
+      "International Cuisine",
+      "Greek cuisine",
+      "Chicken",
+      "Fresh herbs",
+      "Cream",
+      "Rice",
+      "Veal"
+    ],
+    "baseServings": 4,
+    "servingsUnit_de": "Personen",
+    "servingsUnit_en": "people",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Zubereitung",
+        "ingredients": [
+          {
+            "amount": 40,
+            "unit": "gr",
+            "name": "Ingwer (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 8,
+            "unit": "Stk.",
+            "name": "Knoblauch",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Chilischote (rot)",
+            "bring": true
+          },
+          {
+            "amount": 20,
+            "unit": "ml",
+            "name": "Wasser",
+            "bring": false
+          },
+          {
+            "amount": 800,
+            "unit": "gr",
+            "name": "Hühnchenschenkel (ohne Haut und Knochen)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "EL",
+            "name": "Griechischer Joghurt (neutral)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "TL",
+            "name": "Kichererbsenmehl",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "TL",
+            "name": "Paprikapulver (edelsüss)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Kashmiri Chilipulver",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Garam Masala Gewürzmischung",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "TL",
+            "name": "Korianderpulver",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Zimtpulver",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Safran",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          },
+          {
+            "amount": 50,
+            "unit": "gr",
+            "name": "Butter (ungesalzen)",
+            "bring": true
+          },
+          {
+            "amount": 6,
+            "unit": "Stk.",
+            "name": "Doppel-Grillspiesse",
+            "bring": false
+          },
+          {
+            "amount": 10,
+            "unit": "Stk.",
+            "name": "Kardamomkapseln (leicht zerstossen)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Zimtstange",
+            "bring": true
+          },
+          {
+            "amount": 8,
+            "unit": "Stk.",
+            "name": "Nelken",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Zwiebeln",
+            "bring": true
+          },
+          {
+            "amount": 20,
+            "unit": "gr",
+            "name": "Ingwer (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "Stk.",
+            "name": "Chilischote (rot)",
+            "bring": true
+          },
+          {
+            "amount": 140,
+            "unit": "gr",
+            "name": "Tomatenmark (Tomatenpurée)",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "TL",
+            "name": "Kashmiri Chilipulver",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Garam Masala Gewürzmischung",
+            "bring": true
+          },
+          {
+            "amount": 70,
+            "unit": "gr",
+            "name": "Butter (ungesalzen)",
+            "bring": true
+          },
+          {
+            "amount": 300,
+            "unit": "ml",
+            "name": "Sahne (Vollrahm)",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "EL",
+            "name": "Flüssighonig",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "EL",
+            "name": "Bockshornkleepulver",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Koriander (frisch)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false
+          }
+        ],
+        "text": "Butter in Topf geben und zergehen lassen, dann Kardamom, Zimt und Nelken hinzugeben und 20 sek. andünsten lassen, dann Zwiebeln hinzugeben und bei mittlerer Hitze 5 - 7 min. anbraten, bis sie eine hellbraune Farbe annehmen. Ingwer und Chilischoten hinzugeben und eine weitere Minute anbraten. Dann Chilipulver, Garam Masala und Tomatenpurée hinzugeben, gut verrühren und einige Minuten kochen lassen. Sahne unter ständigem Rühren nach und nach hinzugeben, dann 2 - 3 min. auf tiefer Stufe köcheln lassen. Etwas Wasser hinzufügen, falls Curry zu dickflüssig wird. Honig und Bockshornkleepulver zum Curry hinzugeben und einrühren.\r\n\r\nDas gegrillte Poulet hinzugeben. Abgetropfte Marinade/Fleischsaft nicht in das Curry geben. Auf tiefer Hitzestufe 8 - 10 min. kochen lassen. Mit Salz abschmecken, mit Koriander garnieren und sofort servieren."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Zubereitung",
+        "ingredients": [
+          {
+            "amount": 40,
+            "unit": "g",
+            "name": "Ginger (fresh)",
+            "bring": true
+          },
+          {
+            "amount": 8,
+            "unit": "pc",
+            "name": "Garlic",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "pc",
+            "name": "Chili pepper (red)",
+            "bring": true
+          },
+          {
+            "amount": 20,
+            "unit": "ml",
+            "name": "Water",
+            "bring": true
+          },
+          {
+            "amount": 800,
+            "unit": "g",
+            "name": "Chicken thighs (skinless and boneless)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "tb",
+            "name": "Plain Greek yogurt",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "ts",
+            "name": "Chickpea flour",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "ts",
+            "name": "Paprika powder (sweet)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "ts",
+            "name": "Kashmiri chili powder",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "ts",
+            "name": "Garam masala spice blend",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "ts",
+            "name": "Coriander powder",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "pn",
+            "name": "Cinnamon powder",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "pn",
+            "name": "Saffron",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "pn",
+            "name": "Salt",
+            "bring": true
+          },
+          {
+            "amount": 50,
+            "unit": "g",
+            "name": "Butter (unsalted)",
+            "bring": true
+          },
+          {
+            "amount": 6,
+            "unit": "pc",
+            "name": "Double barbecue skewers",
+            "bring": true
+          },
+          {
+            "amount": 10,
+            "unit": "pc",
+            "name": "Cardamom pods (lightly crushed)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "pc",
+            "name": "Cinnamon stick",
+            "bring": true
+          },
+          {
+            "amount": 8,
+            "unit": "pc",
+            "name": "Cloves",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "pc",
+            "name": "Onions",
+            "bring": true
+          },
+          {
+            "amount": 20,
+            "unit": "g",
+            "name": "Ginger (fresh)",
+            "bring": true
+          },
+          {
+            "amount": 4,
+            "unit": "pc",
+            "name": "Chili pepper (red)",
+            "bring": true
+          },
+          {
+            "amount": 140,
+            "unit": "g",
+            "name": "Tomato paste (Tomato purée)",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "ts",
+            "name": "Kashmiri chili powder",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "ts",
+            "name": "Garam masala spice blend",
+            "bring": true
+          },
+          {
+            "amount": 70,
+            "unit": "g",
+            "name": "Butter (unsalted)",
+            "bring": true
+          },
+          {
+            "amount": 300,
+            "unit": "ml",
+            "name": "Cream",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "tb",
+            "name": "Liquid honey",
+            "bring": true
+          },
+          {
+            "amount": 2,
+            "unit": "tb",
+            "name": "Fenugreek powder",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "pc",
+            "name": "Cilantro (fresh)",
+            "bring": true
+          },
+          {
+            "amount": 1,
+            "unit": "pn",
+            "name": "Salt",
+            "bring": true
+          }
+        ],
+        "text": "Melt the butter in a pot, then add the cardamom, cinnamon, and cloves and sauté for 20 seconds. Add the onions and sauté over medium heat for 5–7 minutes, until they turn a light brown color. Add the ginger and chili peppers and sauté for another minute. Then add the chili powder, garam masala, and tomato paste, stir well, and let it cook for a few minutes. Gradually add the cream while stirring constantly, then let it simmer on low heat for 2–3 minutes. Add a little water if the curry becomes too thick. Add the honey and fenugreek powder to the curry and stir in.\r\n\r\nAdd the grilled chicken. Do not add the drained marinade or meat juices to the curry. Cook over low heat for 8–10 minutes. Season with salt to taste, garnish with cilantro, and serve immediately."
+      }
+    ]
   }
 ]
