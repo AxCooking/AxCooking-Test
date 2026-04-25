@@ -323,8 +323,8 @@ async function saveImage(recipeId,result){
   const ok=await ghPutBinary(`images/${recipeId}.jpg`,jpegB64,`Add image for ${recipeId}`);
   if(ok&&webp){const webpB64=webp.split(',')[1];await ghPutBinary(`images/${recipeId}.webp`,webpB64,`Add WebP image for ${recipeId}`).catch(()=>{})}
   return ok}
-function getImageUrl(recipeId){return`images/${recipeId}.jpg`}
-function getImageUrlWebP(recipeId){return`images/${recipeId}.webp`}
+function getImageUrl(recipeId){return BASE_PATH+'/images/'+recipeId+'.jpg'}
+function getImageUrlWebP(recipeId){return BASE_PATH+'/images/'+recipeId+'.webp'}
 function getImageUrlAbs(recipeId){return`https://www.axcooking.com/images/${recipeId}.jpg`}
 // Globaler Bild-Fallback: onerror-Handler für alle Rezeptbilder
 let _searchIndex=null;
