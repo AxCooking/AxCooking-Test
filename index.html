@@ -498,25 +498,27 @@ function parseRecipe(wb){
   const dEN=XLSX.utils.decode_cell(mengeEN.addr);
   const stepsStartDE={row:dDE.r+2,col:dDE.c};
   const stepsStartEN={row:dEN.r+2,col:dEN.c};
-  dbg(`Steps start DE: row=${stepsStartDE.row} col=${stepsStartDE.col}, EN: row=${stepsStartEN.row} col=${stepsStartEN.col}`);
+  // Bring-Flag column from named range _R_Check_App (only column matters, row comes from each ingredient)
+  const checkAppRef=resolveRef(wb,'_R_Check_App',sheetName);
+  const bringCol=checkAppRef?XLSX.utils.decode_cell(checkAppRef.addr.split(':')[0]).c:3;
+  dbg(`Steps start DE: row=${stepsStartDE.row} col=${stepsStartDE.col}, EN: row=${stepsStartEN.row} col=${stepsStartEN.col}, bringCol=${bringCol}`);
   const sheet=wb.Sheets[sheetName];
   return{id:toSlug(title_de),title_de,title_en,desc_de,desc_en,difficulty_de,difficulty_en,
     workTime:wt,cookTime:ct,restTime:rt,totalTime:tt||addT(wt,ct,rt),
     youtubeId,youtubeUrl,tiktokUrl:tiktokUrlImport,
     tags_de,tags_en,baseServings:parseInt(baseServings)||10,servingsUnit_de,servingsUnit_en,
     emoji:'🍽',
-    steps_de:parseSteps(sheet,stepsStartDE,true),
-    steps_en:parseSteps(sheet,stepsStartEN,false)}
+    steps_de:parseSteps(sheet,stepsStartDE,true,bringCol),
+    steps_en:parseSteps(sheet,stepsStartEN,false,bringCol)}
 }
-function parseSteps(sheet,start,readBringFlag){
+function parseSteps(sheet,start,readBringFlag,bringCol){
   // Ingredient row: Col A = Amount (number), Col B = Name, unit = last quoted string in Col A numFmt
-  //                 Col D (only on DE side, startCol+3 from DE start) = Bring flag (TRUE/FALSE)
+  //                 bringCol (default 3 = Col D, only on DE side) = Bring flag (TRUE/FALSE)
   // Section title: Col A = Title (non-numeric text), Col B = empty
   // Text row: Col A = empty, Col B = long text
   const steps=[];let cur=null;
   const startRow=start.row,startCol=start.col;
-  // Bring flag column is always Recipe!D (column index 3), regardless of which language we parse
-  const bringCol=3;
+  if(typeof bringCol!=='number')bringCol=3;
   for(let i=startRow;i<9999;i++){
     const cellA=sheet[XLSX.utils.encode_cell({r:i,c:startCol})];
     const cellB=sheet[XLSX.utils.encode_cell({r:i,c:startCol+1})];
