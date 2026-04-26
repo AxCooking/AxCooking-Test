@@ -115,8 +115,16 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .cook-mode-btn.active{background:#27ae60;box-shadow:0 4px 14px rgba(39,174,96,.4),0 0 0 4px rgba(39,174,96,.15)}
 .cook-mode-btn.active::before{content:'';width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 8px rgba(255,255,255,.8);animation:cook-mode-pulse 2s ease-in-out infinite}
 @keyframes cook-mode-pulse{0%,100%{opacity:1}50%{opacity:.4}}
+/* Bring-FAB: same style, right side */
+.bring-fab{position:fixed;bottom:24px;right:24px;display:none;align-items:center;gap:8px;background:#2B4D3F;color:#fff;border:none;border-radius:24px;padding:6px 18px 6px 6px;font-size:.88rem;font-weight:600;font-family:var(--font-body);cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25),0 2px 4px rgba(0,0,0,.15);z-index:90;transition:transform .15s,background .2s,box-shadow .25s;-webkit-tap-highlight-color:transparent}
+.bring-fab:hover{transform:translateY(-2px);background:#223F33;box-shadow:0 6px 18px rgba(0,0,0,.3),0 3px 6px rgba(0,0,0,.18)}
+.bring-fab:active{transform:translateY(0)}
+.bring-fab img{width:28px;height:28px;border-radius:50%;flex-shrink:0}
 /* Show only on mobile and tablet (≤1024px) AND only when on detail page */
-@media(max-width:1024px){body.on-detail .cook-mode-btn{display:inline-flex}}
+@media(max-width:1024px){body.on-detail .cook-mode-btn,body.on-detail .bring-fab{display:inline-flex}
+/* Inline Bring buttons (in header & comments) hidden on mobile/tablet to avoid duplication */
+body.on-detail .rd-cooking-header .bring-btn,body.on-detail .comments-section .bring-btn{display:none}
+}
 .recipe-list.hidden{display:none}
 .recipe-detail{padding:32px 0 60px;display:none}
 .recipe-detail.active{display:block}
@@ -340,7 +348,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1777172287439 -->
+<!-- cache-bust: 1777172601057 -->
   <script>
     fetch('test-banner.html').then(r => r.ok ? r.text() : null).then(html => {
       if (html) { const d = document.createElement('div'); d.innerHTML = html; document.body.prepend(d.firstChild); }
@@ -399,6 +407,10 @@ input,textarea,select{font-size:16px !important}
 <button class="cook-mode-btn" id="cookModeBtn" onclick="toggleCookMode()" aria-label="Kochmodus">
   <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zM9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1z"/></svg>
   <span id="cookModeLabel">Kochmodus</span>
+</button>
+<button class="bring-fab" id="bringFab" onclick="if(currentRecipeId)sendToBring(currentRecipeId)" aria-label="Einkaufsliste">
+  <img src="https://play-lh.googleusercontent.com/r5a8Ql7Nu5khKsKHrNo7uNy_e0Nf_ZpCLKqF4VGN9ohkuMzyz5PQ78dSUv3ZBZpR2mc=w240-h480" alt="Bring!">
+  <span id="bringFabLabel">Einkaufsliste</span>
 </button>
 <script src="config.js"></script>
 <script>
@@ -527,7 +539,7 @@ function updateJsonLd(r){removeJsonLd();const title=lang==='de'?r.title_de:r.tit
   const el=document.createElement('script');el.type='application/ld+json';el.id='recipe-jsonld';el.textContent=JSON.stringify(ld);document.head.appendChild(el)}
 function removeJsonLd(){const el=document.getElementById('recipe-jsonld');if(el)el.remove();const ws=document.getElementById('website-jsonld');if(ws)ws.remove()}
 function showList(){resetSeoMeta();currentRecipeId=null;cachedNavList=null;document.body.classList.remove('on-detail');releaseCookMode();document.getElementById('recipeList').classList.remove('hidden');document.getElementById('recipeDetail').classList.remove('active');document.getElementById('recipeDetail').style.display='none';document.getElementById('importPanel').classList.remove('active');document.getElementById('tabRecipes').classList.add('active');document.getElementById('tabImport').classList.remove('active');renderList();history.pushState({lang},null,BASE_PATH+'/'+lang);window.scrollTo({top:0,behavior:'smooth'})}
-async function showRecipe(id){if(!cachedNavList||!currentRecipeId)cachedNavList=getSortedFilteredRecipes();(async()=>{try{const fresh=await ghGet('data/stats.json');if(fresh&&fresh.content){const serverStats=JSON.parse(base64ToUtf8(fresh.content.replace(/\n/g,'')));Object.assign(stats,serverStats)}}catch(e){}stats[id]=(stats[id]||0)+1;saveStatsPublic().catch(()=>{})})();document.body.classList.add('on-detail');document.getElementById('recipeList').classList.add('hidden');document.getElementById('importPanel').classList.remove('active');const d=document.getElementById('recipeDetail');d.style.display='block';d.classList.add('active');renderDetail(id);history.pushState({id,lang},null,makePath(id));window.scrollTo({top:0,behavior:'smooth'});updateSeoMeta(id)}
+async function showRecipe(id){if(!cachedNavList||!currentRecipeId)cachedNavList=getSortedFilteredRecipes();(async()=>{try{const fresh=await ghGet('data/stats.json');if(fresh&&fresh.content){const serverStats=JSON.parse(base64ToUtf8(fresh.content.replace(/\n/g,'')));Object.assign(stats,serverStats)}}catch(e){}stats[id]=(stats[id]||0)+1;saveStatsPublic().catch(()=>{})})();document.body.classList.add('on-detail');const bfLbl=document.getElementById('bringFabLabel');if(bfLbl)bfLbl.textContent=lang==='de'?'Einkaufsliste':'Shopping list';const cmLbl=document.getElementById('cookModeLabel');if(cmLbl)cmLbl.textContent=t('cookMode');document.getElementById('recipeList').classList.add('hidden');document.getElementById('importPanel').classList.remove('active');const d=document.getElementById('recipeDetail');d.style.display='block';d.classList.add('active');renderDetail(id);history.pushState({id,lang},null,makePath(id));window.scrollTo({top:0,behavior:'smooth'});updateSeoMeta(id)}
 function showImport(){if(!loggedIn)return;document.getElementById('recipeList').classList.add('hidden');document.getElementById('recipeDetail').classList.remove('active');document.getElementById('recipeDetail').style.display='none';document.getElementById('importPanel').classList.add('active');document.getElementById('tabRecipes').classList.remove('active');document.getElementById('tabImport').classList.add('active');updateImportLabels();renderManageList();renderAdminComments();window.scrollTo({top:0,behavior:'smooth'})}
 let _searchTimer=null;
 function onSearchInput(){const val=document.getElementById('searchInput').value;document.getElementById('searchClear').style.display=val?'block':'none';clearTimeout(_searchTimer);_searchTimer=setTimeout(()=>{renderList();if(document.getElementById('importPanel').classList.contains('active'))renderManageList()},val?200:0)}
