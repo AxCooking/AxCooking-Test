@@ -3634,7 +3634,7 @@
     "title_de": "Bündner Gerstensuppe der Schweizer Armee (zum Einfrieren)",
     "title_en": "Swiss Army Barley Soup (for freezing)",
     "desc_de": "Die Bündner Gerstensuppe mit Wiener Würstchen gehört zu meinem Lieblingslunch bei einem Skitag in den Ostschweizer Alpen. Ursprung dieses Rezeptes war ein Rezept der Schweizer Armee. Ehrlich gesagt, habe ich die Zutaten \"leicht\" angepasst. In der Schweizer Armee gibt es natürlich kein Bündnerfleisch als Einlage und generell wird weniger Gemüse und Speck verwendet und auch ein Wiener Würstchen sucht man vergeblich. Dieses Rezept ist sehr reichhaltig und ist als vollwertige Mahlzeit, also als Hauptgericht und nicht als Vorspeise gedacht. Die Koch- und Zubereitungszeit ist auf 20 Portionen gerechnet.",
-    "desc_en": "Barley soup from Graubünden with Vienna sausages is one of my favorite lunches on a day of skiing in the Eastern Swiss Alps. This recipe is based on a Swiss Army recipe. To be honest, I’ve “slightly” adjusted the ingredients. Of course, the Swiss Army version doesn’t include Bündnerfleisch as a topping, and generally uses fewer vegetables and bacon—and you won’t find a Vienna sausage in it either. This recipe is very hearty and is intended as a complete meal—that is, as a main course rather than an appetizer. The cooking and preparation time is calculated for 20 servings.",
+    "desc_en": "Barley soup Grison style from eastern Switzerland with Vienna sausages is one of my favorite lunches on a ski day in the eastern Swiss Alps. The origin of this recipe was a Swiss Army recipe. To be honest, I adapted the ingredients \"slightly\". In the Swiss Army, of course, there is no air-dried meat (produced in the eastern Swiss Alps) as a chowder and generally less vegetables and bacon are used and you also look in vain for a Vienna sausage. This recipe is very rich and is meant to be a full meal, a main course, not an appetizer. The cooking and preparation time is calculated for 20 servings.",
     "difficulty_de": "einfach",
     "difficulty_en": "simple",
     "workTime": "1h 30m",
@@ -3646,10 +3646,10 @@
     "tiktokUrl": "",
     "tags_de": [
       "Vorspeise",
-      "Hauptspeise",
-      "Suppe",
       "Fleisch",
       "Schweizer Küche",
+      "Hauptspeise",
+      "Suppe",
       "Schwein",
       "Rind",
       "Einkochen",
@@ -3657,10 +3657,10 @@
     ],
     "tags_en": [
       "Starter",
-      "Main course",
-      "Soup",
       "Meat",
       "Swiss cuisine",
+      "Main course",
+      "Soup",
       "Pork",
       "Beef",
       "Canning",
@@ -3676,31 +3676,31 @@
         "ingredients": [
           {
             "amount": 15,
-            "unit": "EL",
+            "unit": "Vol L",
             "name": "Kochtopf (Vol L = minimum Kochtopf Volumen in Liter)",
             "bring": false
           },
           {
             "amount": 1200,
-            "unit": "Stk.",
+            "unit": "gr",
             "name": "Zwiebeln",
             "bring": true
           },
           {
             "amount": 900,
-            "unit": "Stk.",
+            "unit": "gr",
             "name": "Karotten",
             "bring": true
           },
           {
             "amount": 600,
-            "unit": "Stk.",
+            "unit": "gr",
             "name": "Lauch (Porree)",
             "bring": true
           },
           {
             "amount": 900,
-            "unit": "kg",
+            "unit": "gr",
             "name": "Knollensellerie",
             "bring": true
           }
@@ -3736,19 +3736,19 @@
           },
           {
             "amount": 5100,
-            "unit": "gr",
+            "unit": "ml",
             "name": "Hühnerfond (ungesalzen, selbstgemacht)",
             "bring": true
           },
           {
             "amount": 2400,
-            "unit": "gr",
+            "unit": "ml",
             "name": "Wasser",
             "bring": false
           },
           {
             "amount": 3,
-            "unit": "gr",
+            "unit": "Stk.",
             "name": "Lorbeerblatt (frisch oder getrocknet)",
             "bring": true
           },
@@ -3772,7 +3772,7 @@
         "ingredients": [
           {
             "amount": 30,
-            "unit": "gr",
+            "unit": "Stk.",
             "name": "Vorratsdose (400 ml Volumen)",
             "bring": false
           }
@@ -3783,14 +3783,14 @@
         "title": "Zubereitung der Suppe (1 Portion)",
         "ingredients": [
           {
-            "amount": 1,
-            "unit": "gr",
+            "amount": 1.5,
+            "unit": "Stk.",
             "name": "Vorratsdose mit eingefrorener Suppe (400 ml Volumen)",
             "bring": false
           },
           {
-            "amount": 2,
-            "unit": "gr",
+            "amount": 3,
+            "unit": "Stk.",
             "name": "Wiener Würstchen",
             "bring": true
           },
@@ -3801,32 +3801,32 @@
             "bring": true
           },
           {
-            "amount": 30,
-            "unit": "gr",
+            "amount": 75,
+            "unit": "ml",
             "name": "Wasser",
             "bring": false
           },
           {
-            "amount": 100,
-            "unit": "gr",
+            "amount": 105,
+            "unit": "ml",
             "name": "Sahne (Vollrahm)",
             "bring": true
           },
           {
             "amount": 3,
-            "unit": "gr",
+            "unit": "Stk.",
             "name": "Petersilienblatt (frisch)",
             "bring": true
           },
           {
-            "amount": 2,
-            "unit": "gr",
+            "amount": 4.5,
+            "unit": "Pr",
             "name": "Salz",
             "bring": false
           },
           {
-            "amount": 1,
-            "unit": "gr",
+            "amount": 1.5,
+            "unit": "Pr",
             "name": "Pfeffer (frisch gemahlen)",
             "bring": false
           }
@@ -3840,36 +3840,36 @@
         "ingredients": [
           {
             "amount": 15,
-            "unit": "tb",
-            "name": "Cooking pot (Vol L = minimum cooking pot volume in liters)",
-            "bring": true
+            "unit": "g",
+            "name": "Onions",
+            "bring": false
           },
           {
             "amount": 1200,
-            "unit": "pc",
-            "name": "Onions",
-            "bring": true
+            "unit": "g",
+            "name": "Carrots",
+            "bring": false
           },
           {
             "amount": 900,
-            "unit": "pc",
-            "name": "Carrots",
-            "bring": true
+            "unit": "g",
+            "name": "Leek",
+            "bring": false
           },
           {
             "amount": 600,
-            "unit": "pc",
-            "name": "Leek",
-            "bring": true
+            "unit": "g",
+            "name": "Celeriac",
+            "bring": false
           },
           {
             "amount": 900,
-            "unit": "kg",
-            "name": "Celeriac",
-            "bring": true
+            "unit": "ml",
+            "name": "Peel vegetables, finely chop onions, wash leeks well and chop. Cut carrots and celeriac into small cubes (about 5 mm | 0.2 in). Set onions aside separately.",
+            "bring": false
           }
         ],
-        "text": "Peel the vegetables, finely chop the onions, wash the leeks thoroughly, and cut them into small pieces. Cut the carrots and celeriac into small cubes (approx. 5 mm | ⅕ in). Set the onions aside separately."
+        "text": ""
       },
       {
         "title": "Prepare the meat",
@@ -3878,10 +3878,16 @@
             "amount": 1050,
             "unit": "g",
             "name": "Smoked farmhouse bacon",
-            "bring": true
+            "bring": false
+          },
+          {
+            "amount": 1050,
+            "unit": "gr",
+            "name": "Remove bacon rind and cartilage completely. Set the bacon rind aside separately. Cut the bacon into small cubes (about 10 mm | 0.4 in).",
+            "bring": false
           }
         ],
-        "text": "Completely remove the bacon rind and cartilage. Set the bacon rind aside separately. Cut the bacon into small cubes of approx. 10 mm | ⅖ in."
+        "text": ""
       },
       {
         "title": "Prepare the soup",
@@ -3890,112 +3896,130 @@
             "amount": 75,
             "unit": "g",
             "name": "Nutural oil",
-            "bring": true
+            "bring": false
+          },
+          {
+            "amount": 75,
+            "unit": "g",
+            "name": "Rolled barley",
+            "bring": false
           },
           {
             "amount": 600,
-            "unit": "g",
-            "name": "Rolled barley",
-            "bring": true
+            "unit": "ml",
+            "name": "Chicken stock (unsalted, homemade)",
+            "bring": false
           },
           {
             "amount": 5100,
-            "unit": "g",
-            "name": "Chicken stock (unsalted, homemade)",
-            "bring": true
+            "unit": "ml",
+            "name": "Water",
+            "bring": false
           },
           {
             "amount": 2400,
-            "unit": "g",
-            "name": "Water",
-            "bring": true
+            "unit": "pc",
+            "name": "Bay leaf (fresh or dried)",
+            "bring": false
           },
           {
             "amount": 3,
             "unit": "g",
-            "name": "Bay leaf (fresh or dried)",
-            "bring": true
+            "name": "Salt",
+            "bring": false
           },
           {
             "amount": 45,
             "unit": "g",
-            "name": "Salt",
-            "bring": true
+            "name": "Pepper (freshly grounded)",
+            "bring": false
           },
           {
             "amount": 9,
-            "unit": "g",
-            "name": "Pepper (freshly grounded)",
-            "bring": true
+            "unit": "kg",
+            "name": "Put the oil in a large cooking pot and lightly fry the bacon cubes on heat level 7/9, add the onions and sauté. Reduce the heat slightly and add the rolled barley and sauté as well. Now add the vegetables and sauté them as well. Make sure that the vegetables do not take on color. Fill up with chicken stock and water, add the bacon rinds and the bay leaf, bring to the boil briefly and then simmer for 2 h. Skim off the white foam and the fat that floats to the top with a soup ladle and remove the bacon rinds and the bay leaf. Then season with salt and pepper.",
+            "bring": false
           }
         ],
-        "text": "Pour the oil into a large pot and lightly sauté the bacon cubes over medium-high heat (7/9), then add the onions and sauté them as well. Reduce the heat slightly, add the pearl barley, and sauté it too. Now add the vegetables and sauté them as well. Make sure the vegetables don’t brown. Fill with chicken stock and water, add the bacon rinds and bay leaf, bring to a brief boil, then let simmer for 2 hours.\r\n\r\nSkim off the white foam and fat that rises to the top with a ladle, and remove the bacon rinds and bay leaf. Then season to taste with salt and pepper."
+        "text": ""
       },
       {
-        "title": "Storage and Shelf Life",
+        "title": "Storage and shelf life",
         "ingredients": [
           {
             "amount": 30,
-            "unit": "g",
-            "name": "Storage tin (400 ml | 13.5 oz volume)",
-            "bring": true
+            "unit": "pc",
+            "name": "Storage tin (400 ml volume)",
+            "bring": false
+          },
+          {
+            "amount": 30,
+            "unit": "kg",
+            "name": "Fill the storage can to 5 mm | 0.2 in below the rim of the can. Do not fill to the brim, as the mixture will expand when frozen. Put the lid on and let it cool at room temperature or better in the refrigerator. Once everything has cooled, freeze in the freezer. If available, turn on the quick freeze or blast freeze function so that the freezing process is as fast as possible, reducing the formation of ice crystals.\r\n\r\nThere are different theories about the shelf life of the frozen, I from my side have never disposed of a frozen soup and have never had a bad experience. In general, freezer burn is not harmful or toxic, but reduces the quality of the frozen. Generally speaking, the longer something is frozen, the more nutrients and flavor is lost. In any case, in this recipe you should add the full cream only during preparation and not before freezing.\r\n\r\nIn principle, you could also boil down this soup. Due to bad experiences with boiling down soups, I have switched to consistently freezing soups.",
+            "bring": false
           }
         ],
-        "text": "Fill the storage container to 5 mm | ⅕ in below the rim. Do not fill to the brim, as the mixture expands when frozen. Place the lid on and let it cool at room temperature or, preferably, in the refrigerator. Once everything has cooled, freeze it in the freezer. If available, turn on the quick-freeze or flash-freeze function so that the freezing process happens as quickly as possible, resulting in fewer ice crystals forming.\r\n\r\nThere are different theories regarding the shelf life of frozen food; for my part, I have never thrown away frozen soup and have never had a bad experience with it. Generally speaking, freezer burn is neither harmful nor toxic, but it does reduce the quality of the frozen food. As a general rule, the longer something is frozen, the more nutrients and flavor are lost. In any case, for this recipe, you should add the heavy cream only during preparation and not before freezing.\r\n\r\nIn principle, you could also can this soup. However, due to bad experiences with canning soups, I’ve switched to consistently freezing them."
+        "text": ""
       },
       {
         "title": "Preparation of the soup (1 serving)",
         "ingredients": [
           {
-            "amount": 1,
-            "unit": "g",
-            "name": "Storage tin with frozen soup (400 ml | 13.5 oz volume)",
-            "bring": true
+            "amount": 1.5,
+            "unit": "pc",
+            "name": "Storage tin with frozen soup (400 ml volume)",
+            "bring": false
           },
           {
-            "amount": 2,
-            "unit": "g",
+            "amount": 1.5,
+            "unit": "pc",
             "name": "Viennese sausages",
-            "bring": true
-          },
-          {
-            "amount": 15,
-            "unit": "g",
-            "name": "Dried meat (best to use dried meat from eastern Switzerland)",
-            "bring": true
-          },
-          {
-            "amount": 30,
-            "unit": "g",
-            "name": "Water",
-            "bring": true
-          },
-          {
-            "amount": 100,
-            "unit": "g",
-            "name": "Cream",
-            "bring": true
+            "bring": false
           },
           {
             "amount": 3,
             "unit": "g",
+            "name": "Dried meat (best to use dried meat from eastern Switzerland)",
+            "bring": false
+          },
+          {
+            "amount": 15,
+            "unit": "ml",
+            "name": "Water",
+            "bring": false
+          },
+          {
+            "amount": 75,
+            "unit": "ml",
+            "name": "Cream",
+            "bring": false
+          },
+          {
+            "amount": 105,
+            "unit": "pc",
             "name": "Parsley leaf (fresh)",
-            "bring": true
+            "bring": false
           },
           {
-            "amount": 2,
-            "unit": "g",
+            "amount": 3,
+            "unit": "pn",
             "name": "Salt",
-            "bring": true
+            "bring": false
           },
           {
-            "amount": 1,
-            "unit": "g",
+            "amount": 4.5,
+            "unit": "pn",
             "name": "Pepper (freshly grounded)",
-            "bring": true
+            "bring": false
+          },
+          {
+            "amount": 1.5,
+            "unit": "ml",
+            "name": "Place frozen soup in saucepan, add water to storage can, cover, shake well and add rinsed water to soup in saucepan. Cover and let thaw slowly over medium heat (heat level 5/9). Add the sausages and cook gently for 5 to 10 minutes. Cut the dried meat into slices of about 15 mm. Remove the sausages, cut into small wheels and add both back to the soup. Add full cream, stir and season with salt and pepper to taste. Bring to the boil briefly, then serve decorated with parsley or chives and enjoy immediately.",
+            "bring": false
           }
         ],
-        "text": "Place the frozen soup in a saucepan, pour water into the storage container, put the lid on, shake well, and pour the rinsed-out water into the saucepan with the soup. Cover and let thaw slowly over medium heat (heat setting 5/9). Add the sausages and simmer gently for 5 to 10 minutes. Cut the Bündnerfleisch into slices about 15 mm | ⅗ in thick. Remove the sausages, cut them into small rounds, and return both to the soup. Add heavy cream, stir, and season with salt and pepper to taste. Bring to a brief boil, then serve garnished with parsley or chives and enjoy immediately."
+        "text": "Eingefrorene Suppe in Kochtopf geben, Wasser in die Vorratsdose geben, Deckel drauf, gut schütteln und ausgespültes Wasser zur Suppe in den Topf geben. Abgedeckt bei mittlerer Hitze (Hitzestufe 5/9) langsam auftauen lassen. Die Würstchen hinzugeben und 5 bis 10 Minuten leicht kochen lassen. Das Bündnerfleisch in ca. 15 mm grosse Scheiben schneiden. Die Würstchen herausnehmen, in kleine Rädchen schneiden und beides wieder zur Suppe geben. Vollrahm hinzugeben, verrühren und mit Salz und Pfeffer nach eigenem Geschmack nachwürzen. Kurz aufkochen lassen, dann dekoriert mit Petersilie oder Schnittlauch servieren und sofort geniessen."
       }
     ]
   },
@@ -4956,41 +4980,23 @@
     "tiktokUrl": "",
     "tags_de": [
       "Hauptspeise",
-      "Marinade",
-      "Dessert",
-      "Beilage",
       "Fleisch",
       "Scharf",
-      "Ketogen",
-      "Vegetarisch",
       "Indische Küche",
-      "Asiatische Küche",
       "Internationale Küche",
-      "Griechische Küche",
       "Hühnchen",
       "Frische Kräuter",
-      "Rahm",
-      "Reis",
-      "Kalb"
+      "Rahm"
     ],
     "tags_en": [
       "Main course",
-      "Marinade",
-      "Dessert",
-      "Side dish",
       "Meat",
       "Spicy",
-      "Ketogen",
-      "Vegetarian",
       "Indian Cuisine",
-      "Asian cuisine",
       "International Cuisine",
-      "Greek cuisine",
       "Chicken",
       "Fresh herbs",
-      "Cream",
-      "Rice",
-      "Veal"
+      "Cream"
     ],
     "baseServings": 4,
     "servingsUnit_de": "Personen",
