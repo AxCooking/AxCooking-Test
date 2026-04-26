@@ -5,7 +5,7 @@
   <link rel="icon" type="image/x-icon" href="logos/FavIcon.ico">
   <link rel="icon" type="image/png" sizes="180x180" href="logos/FavIcon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="logos/FavIcon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com https://img.youtube.com https://play-lh.googleusercontent.com https://www.axcooking.com https://axcooking.github.io https://test.axcooking.com; connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://www.axcooking.com https://axcooking.github.io https://test.axcooking.com; frame-src https://www.youtube.com; base-uri 'self'; form-action 'self';">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -330,7 +330,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1777171457272 -->
+<!-- cache-bust: 1777171873181 -->
   <script>
     fetch('test-banner.html').then(r => r.ok ? r.text() : null).then(html => {
       if (html) { const d = document.createElement('div'); d.innerHTML = html; document.body.prepend(d.firstChild); }
