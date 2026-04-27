@@ -1,171 +1,177 @@
 {
-  "version": 1,
-  "generatedAt": "2026-04-27T17:03:22.756Z",
+  "version": 2,
+  "generatedAt": "2026-04-27T19:38:51.942Z",
   "images": {
-    "spaghetti-bolognese-aus-eingekochter-sauce.jpg": {
+    "spaghetti-bolognese-aus-eingekochter-sauce": {
       "slug": "spaghetti-bolognese-aus-eingekochter-sauce",
-      "sourceHash": "3fb6b8cd7e03638645fbb6b701b6e4c69bf11d9deaca90c2d6c2a1e50913dd70",
+      "sources": {
+        "16x9": {
+          "filename": "spaghetti-bolognese-aus-eingekochter-sauce.jpg",
+          "hash": "3fb6b8cd7e03638645fbb6b701b6e4c69bf11d9deaca90c2d6c2a1e50913dd70"
+        }
+      },
+      "compositeKey": "3fb6b8cd7e03638645fbb6b701b6e4c69bf11d9deaca90c2d6c2a1e50913dd70|-|-",
       "sourceWidth": 3390,
       "sourceHeight": 1907,
-      "encodedAt": "2026-04-27T17:03:22.754Z",
+      "encodedAt": "2026-04-27T19:38:51.942Z",
       "outputs": [
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.avif",
-          "bytes": 21387,
+          "bytes": 19959,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.webp",
-          "bytes": 26642,
+          "bytes": 21616,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.jpg",
-          "bytes": 24878,
+          "bytes": 33011,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.avif",
-          "bytes": 61094,
+          "bytes": 56392,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.webp",
-          "bytes": 85282,
+          "bytes": 64310,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.jpg",
-          "bytes": 121082,
+          "bytes": 100060,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.avif",
-          "bytes": 105862,
+          "bytes": 99986,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.webp",
-          "bytes": 154864,
+          "bytes": 112972,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.jpg",
-          "bytes": 225776,
+          "bytes": 186086,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.avif",
-          "bytes": 27862,
+          "bytes": 26440,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.webp",
-          "bytes": 35762,
+          "bytes": 29164,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.jpg",
-          "bytes": 32180,
+          "bytes": 43233,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.avif",
-          "bytes": 81884,
+          "bytes": 74294,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.webp",
-          "bytes": 116014,
+          "bytes": 84384,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.jpg",
-          "bytes": 161335,
+          "bytes": 131147,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.avif",
-          "bytes": 135489,
+          "bytes": 129124,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.webp",
-          "bytes": 201356,
+          "bytes": 146980,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.jpg",
-          "bytes": 295811,
+          "bytes": 243658,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-pin.jpg",
-          "bytes": 308698,
+          "bytes": 297812,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-pin.webp",
-          "bytes": 190026,
+          "bytes": 173702,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-square.jpg",
-          "bytes": 346469,
+          "bytes": 286950,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-og.jpg",
-          "bytes": 220190,
+          "bytes": 181068,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce.jpg",
-          "bytes": 121082,
+          "bytes": 100060,
           "format": "jpg",
           "width": 800,
           "height": 450
