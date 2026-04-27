@@ -1,324 +1,338 @@
-#!/usr/bin/env node
-/**
- * AxCooking Image Pipeline
- * - Inkrementell via SHA256-Manifest
- * - Idempotent: kann beliebig oft laufen
- * - Cleanup von Orphans (Source gelöscht → Outputs weg)
- * - Crash-Recovery: Manifest wird nach jedem Bild geschrieben
- */
-import { createHash } from 'node:crypto';
-import { mkdir, readFile, writeFile, unlink, readdir } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
-import { dirname, join, basename, extname, relative } from 'node:path';
-import { fileURLToPath } from 'node:url';
+// optimize-images.mjs (v2)
+// Image-Pipeline für AxCooking
+// 
+// Erwartete Source-Dateien in images/source/:
+//   recipe-id-16x9.jpg      → 16:9 Variante (Pflicht, wird für Detail-Hauptbild + Übersicht genutzt)
+//   recipe-id-43.jpg        → 4:3 Variante (optional; falls fehlend, wird aus 16:9 smart-cropped)
+//   recipe-id-pin.jpg       → 2:3 Pinterest-Pin Variante (optional; falls fehlend, wird aus 4:3 oder 16:9 smart-cropped)
+//
+// Endung kann .jpg oder .png sein. Mindestens eine 16:9-Source pro Recipe-ID muss existieren.
+//
+// Output-Dateinamen sind unverändert von v1 (Frontend braucht keine Änderung):
+//   recipe-id-{400|800|1200}-16x9.{avif|webp|jpg}
+//   recipe-id-{400|800|1200}-4x3.{avif|webp|jpg}
+//   recipe-id-pin.{jpg|webp}
+//   recipe-id-square.jpg
+//   recipe-id-og.jpg
+//   recipe-id.jpg (legacy 800x450)
+
 import sharp from 'sharp';
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
 import pLimit from 'p-limit';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..');
-const SOURCE_DIR = join(ROOT, 'images/source');
-const OUT_DIR = join(ROOT, 'images/optimized');
-const MANIFEST_PATH = join(ROOT, 'images/manifest.json');
+const SOURCE_DIR = 'images/source';
+const OUTPUT_DIR = 'images/optimized';
+const MANIFEST_PATH = 'images/manifest.json';
+
+const SIZES = [400, 800, 1200];
+const ASPECTS = {
+  '16x9': { ratio: 16 / 9 },
+  '4x3': { ratio: 4 / 3 }
+};
+
+// Encoding settings (food-photography optimized)
+const AVIF_OPTS = { quality: 65, effort: 4, chromaSubsampling: '4:2:0' };
+const WEBP_OPTS = { quality: 82, smartSubsample: true, effort: 5 };
+const JPEG_OPTS = { quality: 85, mozjpeg: true, chromaSubsampling: '4:4:4' };
+const PIN_JPEG_OPTS = { quality: 88, mozjpeg: true, chromaSubsampling: '4:4:4' };
 
 const FORCE = process.argv.includes('--force');
-const CLEANUP_ONLY = process.argv.includes('--cleanup-only');
+const limit = pLimit(2);
 
-// libvips: bei 4 vCPU + AVIF lieber niedrige Concurrency, sonst RAM-Spike
-sharp.concurrency(2);
-sharp.cache({ memory: 256, files: 50 });
-
-// ─── Variant Definitions ────────────────────────────────────────────────────
-const RESPONSIVE_WIDTHS = [400, 800, 1200];
-const ASPECT_RATIOS = {
-  '16x9': { ratio: 16 / 9, label: '16x9' },
-  '4x3':  { ratio: 4 / 3,  label: '4x3' },
-};
-const FIXED_VARIANTS = [
-  { label: 'pin',    w: 1000, h: 1500, formats: ['jpg', 'webp'] },          // Pinterest 2:3
-  { label: 'square', w: 1200, h: 1200, formats: ['jpg'] },                   // Schema.org 1:1
-  { label: 'og',     w: 1200, h: 630,  formats: ['jpg'] },                   // OpenGraph
-  { label: 'legacy', w: 800,  h: 450,  formats: ['jpg'] },                   // Legacy {slug}.jpg
+const SOURCE_EXTS = ['.jpg', '.jpeg', '.png'];
+// Recognized suffixes (sorted by specificity — longer first)
+const SUFFIX_PATTERNS = [
+  { suffix: '-16x9', kind: '16x9' },
+  { suffix: '-43', kind: '4x3' },
+  { suffix: '-pin', kind: 'pin' }
 ];
 
-const FORMAT_OPTS = {
-  avif: (size) => ({
-    quality: size >= 800 ? 65 : 60,
-    effort: 4,
-    chromaSubsampling: '4:2:0',
-  }),
-  webp: (size) => ({
-    quality: size >= 800 ? 82 : 78,
-    smartSubsample: true,
-    effort: 4,
-  }),
-  jpg: (size) => ({
-    quality: size >= 800 ? 85 : 78,
-    mozjpeg: true,
-    chromaSubsampling: size >= 800 ? '4:4:4' : '4:2:0',
-    progressive: true,
-  }),
-};
+function parseSourceFilename(filename) {
+  const ext = path.extname(filename).toLowerCase();
+  if (!SOURCE_EXTS.includes(ext)) return null;
+  const base = filename.slice(0, -ext.length);
+  for (const { suffix, kind } of SUFFIX_PATTERNS) {
+    if (base.endsWith(suffix)) {
+      return { slug: base.slice(0, -suffix.length), kind, ext, filename };
+    }
+  }
+  // No suffix → treat as 16x9 source (legacy / default)
+  return { slug: base, kind: '16x9', ext, filename };
+}
 
-// ─── Helpers ────────────────────────────────────────────────────────────────
-async function sha256(filepath) {
-  const buf = await readFile(filepath);
-  return createHash('sha256').update(buf).digest('hex');
+async function sha256OfFile(filePath) {
+  const buf = await fs.readFile(filePath);
+  return crypto.createHash('sha256').update(buf).digest('hex');
 }
 
 async function loadManifest() {
-  if (!existsSync(MANIFEST_PATH)) {
-    return { version: 1, generatedAt: null, images: {} };
-  }
   try {
-    return JSON.parse(await readFile(MANIFEST_PATH, 'utf8'));
-  } catch (err) {
-    console.warn('⚠ Manifest corrupt, starting fresh:', err.message);
-    return { version: 1, generatedAt: null, images: {} };
+    const raw = await fs.readFile(MANIFEST_PATH, 'utf-8');
+    return JSON.parse(raw);
+  } catch (e) {
+    return { version: 2, generatedAt: null, images: {} };
   }
 }
 
 async function saveManifest(manifest) {
+  manifest.version = 2;
   manifest.generatedAt = new Date().toISOString();
-  await mkdir(dirname(MANIFEST_PATH), { recursive: true });
-  await writeFile(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
+  await fs.mkdir(path.dirname(MANIFEST_PATH), { recursive: true });
+  await fs.writeFile(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n', 'utf-8');
 }
 
-async function* walk(dir) {
-  if (!existsSync(dir)) return;
-  for (const entry of await readdir(dir, { withFileTypes: true })) {
-    const full = join(dir, entry.name);
-    if (entry.isDirectory()) yield* walk(full);
-    else if (/\.(jpe?g|png|webp|tiff?)$/i.test(entry.name)) yield full;
+async function ensureDir(p) {
+  await fs.mkdir(p, { recursive: true });
+}
+
+async function fileSize(p) {
+  try {
+    const s = await fs.stat(p);
+    return s.size;
+  } catch (e) {
+    return null;
   }
 }
 
-function slugify(filename) {
-  return basename(filename, extname(filename))
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
-}
-
-// ─── Variant Generation ─────────────────────────────────────────────────────
-function buildVariantPlan(slug) {
-  const plan = [];
-
-  // Responsive: 3 Breiten × 2 Aspect Ratios × 3 Formate = 18
-  for (const [arKey, ar] of Object.entries(ASPECT_RATIOS)) {
-    for (const w of RESPONSIVE_WIDTHS) {
-      const h = Math.round(w / ar.ratio);
-      for (const fmt of ['avif', 'webp', 'jpg']) {
-        plan.push({
-          path: `${slug}-${w}-${ar.label}.${fmt}`,
-          width: w, height: h, format: fmt,
-          fit: 'cover', position: 'attention',
-        });
-      }
-    }
-  }
-
-  // Fixed: Pinterest, Square, OG, Legacy
-  for (const fv of FIXED_VARIANTS) {
-    for (const fmt of fv.formats) {
-      const filename = fv.label === 'legacy'
-        ? `${slug}.${fmt}`
-        : `${slug}-${fv.label}.${fmt}`;
-      plan.push({
-        path: filename,
-        width: fv.w, height: fv.h, format: fmt,
-        fit: 'cover', position: 'attention',
-      });
-    }
-  }
-
-  return plan;
-}
-
-async function processVariant(pipeline, variant, outDir) {
-  const outPath = join(outDir, variant.path);
-  await mkdir(dirname(outPath), { recursive: true });
-
-  let p = pipeline.clone()
+// Resize+crop a source to a target aspect ratio at a given width
+function buildPipeline(sourceBuffer, targetWidth, aspectKey) {
+  const ratio = ASPECTS[aspectKey].ratio;
+  const targetHeight = Math.round(targetWidth / ratio);
+  return sharp(sourceBuffer, { failOn: 'truncated' })
+    .rotate() // honor EXIF orientation
     .resize({
-      width: variant.width,
-      height: variant.height,
-      fit: variant.fit,
-      position: variant.position,
-      withoutEnlargement: true,
+      width: targetWidth,
+      height: targetHeight,
+      fit: 'cover',
+      position: sharp.strategy.attention
     });
-
-  // Sharpen nur für JPEG/WebP (AVIF reagiert mit Halos)
-  if (variant.format !== 'avif') {
-    p = p.sharpen({ sigma: 0.8, m1: 0.5, m2: 1.5 });
-  }
-
-  const opts = FORMAT_OPTS[variant.format](variant.width);
-  if (variant.format === 'avif') p = p.avif(opts);
-  else if (variant.format === 'webp') p = p.webp(opts);
-  else p = p.jpeg(opts);
-
-  const info = await p.toFile(outPath);
-  return { path: relative(ROOT, outPath), bytes: info.size };
 }
 
-async function processSource(sourcePath, manifest) {
-  const relPath = relative(SOURCE_DIR, sourcePath);
-  const slug = slugify(relPath);
-  const hash = await sha256(sourcePath);
-  const existing = manifest.images[relPath];
-
-  // Skip-Logik: gleicher Hash + alle Outputs vorhanden
-  if (!FORCE && existing?.sourceHash === hash) {
-    const allExist = existing.outputs.every(o => existsSync(join(ROOT, o.path)));
-    if (allExist) {
-      console.log(`⊙ skip ${relPath} (unchanged)`);
-      return { skipped: true };
-    }
-    console.log(`↻ re-encode ${relPath} (outputs missing)`);
+async function encodeVariant(sourceBuffer, slug, width, aspectKey, format) {
+  const ext = format === 'jpeg' ? 'jpg' : format;
+  const outPath = path.join(OUTPUT_DIR, `${slug}-${width}-${aspectKey}.${ext}`);
+  const pipeline = buildPipeline(sourceBuffer, width, aspectKey);
+  let out;
+  if (format === 'avif') {
+    out = pipeline.avif(AVIF_OPTS);
+  } else if (format === 'webp') {
+    out = pipeline.webp(WEBP_OPTS);
   } else {
-    console.log(`▶ encode ${relPath}`);
+    out = pipeline.jpeg(JPEG_OPTS);
   }
+  const info = await out.toFile(outPath);
+  return {
+    path: outPath.replace(/\\/g, '/'),
+    bytes: info.size,
+    format: ext,
+    width: info.width,
+    height: info.height
+  };
+}
 
-  const t0 = Date.now();
+async function encodePinterestPin(sourceBuffer, slug) {
+  const targetW = 1000;
+  const targetH = 1500;
+  const pipelineBase = sharp(sourceBuffer, { failOn: 'truncated' })
+    .rotate()
+    .resize({ width: targetW, height: targetH, fit: 'cover', position: sharp.strategy.attention });
 
-  // Base-Pipeline: einmal aus File lesen, dann clone() pro Variant
-  const basePipeline = sharp(sourcePath, { failOn: 'error' })
-    .autoOrient()                        // EXIF-Orientation
-    .pipelineColourspace('rgb16')        // hochpräzise interne Pipeline
-    .toColourspace('srgb')               // Web-Output sRGB
-    .withIccProfile('srgb')
-    .flatten({ background: { r: 255, g: 255, b: 255 } })  // PNG-Alpha → weiß
-    .withMetadata({ orientation: 1 });
+  const jpgPath = path.join(OUTPUT_DIR, `${slug}-pin.jpg`);
+  const webpPath = path.join(OUTPUT_DIR, `${slug}-pin.webp`);
+  const jpgInfo = await pipelineBase.clone().jpeg(PIN_JPEG_OPTS).toFile(jpgPath);
+  const webpInfo = await pipelineBase.clone().webp({ quality: 86, effort: 5 }).toFile(webpPath);
+  return [
+    { path: jpgPath.replace(/\\/g, '/'), bytes: jpgInfo.size, format: 'jpg', width: jpgInfo.width, height: jpgInfo.height },
+    { path: webpPath.replace(/\\/g, '/'), bytes: webpInfo.size, format: 'webp', width: webpInfo.width, height: webpInfo.height }
+  ];
+}
 
-  // Sanity Check: Original-Dimensionen
-  const meta = await sharp(sourcePath).metadata();
-  if (meta.width < 1200 || meta.height < 800) {
-    console.warn(`  ⚠ low-res source: ${meta.width}×${meta.height} (${relPath})`);
+async function encodeSquare(sourceBuffer, slug) {
+  const out = sharp(sourceBuffer, { failOn: 'truncated' })
+    .rotate()
+    .resize({ width: 1200, height: 1200, fit: 'cover', position: sharp.strategy.attention })
+    .jpeg(JPEG_OPTS);
+  const outPath = path.join(OUTPUT_DIR, `${slug}-square.jpg`);
+  const info = await out.toFile(outPath);
+  return { path: outPath.replace(/\\/g, '/'), bytes: info.size, format: 'jpg', width: info.width, height: info.height };
+}
+
+async function encodeOg(sourceBuffer, slug) {
+  // og:image standard 1200x630 (~1.91:1) — closer to 16:9, derive from 16:9 source
+  const out = sharp(sourceBuffer, { failOn: 'truncated' })
+    .rotate()
+    .resize({ width: 1200, height: 630, fit: 'cover', position: sharp.strategy.attention })
+    .jpeg(JPEG_OPTS);
+  const outPath = path.join(OUTPUT_DIR, `${slug}-og.jpg`);
+  const info = await out.toFile(outPath);
+  return { path: outPath.replace(/\\/g, '/'), bytes: info.size, format: 'jpg', width: info.width, height: info.height };
+}
+
+async function encodeLegacy(sourceBuffer, slug) {
+  // Legacy 800x450 jpg (path: images/optimized/recipe-id.jpg)
+  const out = sharp(sourceBuffer, { failOn: 'truncated' })
+    .rotate()
+    .resize({ width: 800, height: 450, fit: 'cover', position: sharp.strategy.attention })
+    .jpeg(JPEG_OPTS);
+  const outPath = path.join(OUTPUT_DIR, `${slug}.jpg`);
+  const info = await out.toFile(outPath);
+  return { path: outPath.replace(/\\/g, '/'), bytes: info.size, format: 'jpg', width: info.width, height: info.height };
+}
+
+async function processSlug(slug, sources, manifest) {
+  // sources: { '16x9': {filename,filePath,hash,buffer}, '4x3': {...}, 'pin': {...} }
+  const src169 = sources['16x9'];
+  if (!src169) {
+    console.warn(`[skip] ${slug}: no 16:9 source found`);
+    return null;
   }
+  const src43 = sources['4x3'] || src169; // fallback: smart-crop from 16:9
+  const srcPin = sources['pin'] || sources['4x3'] || sources['16x9']; // best-fit fallback
 
-  const plan = buildVariantPlan(slug);
-  const outputs = [];
-  for (const v of plan) {
-    try {
-      const result = await processVariant(basePipeline, v, OUT_DIR);
-      outputs.push({ ...result, format: v.format, width: v.width, height: v.height });
-    } catch (err) {
-      console.error(`  ✗ ${v.path}: ${err.message}`);
-      throw err;
+  // Composite hash: includes all source hashes so changes anywhere invalidate cache
+  const compositeKey = ['16x9', '4x3', 'pin']
+    .map(k => sources[k] ? sources[k].hash : '-')
+    .join('|');
+
+  const existing = manifest.images[slug];
+  if (!FORCE && existing && existing.compositeKey === compositeKey) {
+    // Verify all expected output files still exist
+    const allExist = await Promise.all((existing.outputs || []).map(o => fileSize(o.path).then(s => s !== null)));
+    if (allExist.every(Boolean)) {
+      console.log(`[cached] ${slug}`);
+      return null; // unchanged
     }
   }
 
-  manifest.images[relPath] = {
+  console.log(`[encoding] ${slug}`);
+  const startMs = Date.now();
+  const outputs = [];
+
+  // Read all source buffers up front
+  const buf169 = await fs.readFile(src169.filePath);
+  const buf43 = src43 === src169 ? buf169 : await fs.readFile(src43.filePath);
+  const bufPin = srcPin === src169 ? buf169 : (srcPin === src43 ? buf43 : await fs.readFile(srcPin.filePath));
+
+  // 16:9 outputs (3 sizes × 3 formats = 9)
+  for (const w of SIZES) {
+    for (const fmt of ['avif', 'webp', 'jpeg']) {
+      outputs.push(await encodeVariant(buf169, slug, w, '16x9', fmt));
+    }
+  }
+
+  // 4:3 outputs (3 sizes × 3 formats = 9)
+  for (const w of SIZES) {
+    for (const fmt of ['avif', 'webp', 'jpeg']) {
+      outputs.push(await encodeVariant(buf43, slug, w, '4x3', fmt));
+    }
+  }
+
+  // Pinterest pin (jpg + webp)
+  const pinOutputs = await encodePinterestPin(bufPin, slug);
+  outputs.push(...pinOutputs);
+
+  // Square (from 4:3 — better center composition than 16:9)
+  outputs.push(await encodeSquare(buf43, slug));
+
+  // OG image (1200x630, from 16:9)
+  outputs.push(await encodeOg(buf169, slug));
+
+  // Legacy 800x450 (from 16:9)
+  outputs.push(await encodeLegacy(buf169, slug));
+
+  // Source dimensions (from primary 16:9)
+  const meta = await sharp(buf169).metadata();
+
+  const totalBytes = outputs.reduce((sum, o) => sum + (o.bytes || 0), 0);
+  const elapsed = ((Date.now() - startMs) / 1000).toFixed(1);
+  console.log(`[done] ${slug}: ${outputs.length} variants, ${(totalBytes / 1024).toFixed(0)} KB total, ${elapsed}s`);
+
+  return {
     slug,
-    sourceHash: hash,
+    sources: Object.fromEntries(
+      Object.entries(sources).map(([k, v]) => [k, { filename: v.filename, hash: v.hash }])
+    ),
+    compositeKey,
     sourceWidth: meta.width,
     sourceHeight: meta.height,
     encodedAt: new Date().toISOString(),
-    outputs,
+    outputs
   };
-
-  const ms = Date.now() - t0;
-  const totalKB = Math.round(outputs.reduce((s, o) => s + o.bytes, 0) / 1024);
-  console.log(`  ✓ ${outputs.length} variants, ${totalKB} KB, ${ms}ms`);
-  return { processed: true, ms, bytes: outputs.reduce((s, o) => s + o.bytes, 0) };
 }
 
-// ─── Cleanup orphaned outputs ───────────────────────────────────────────────
-async function cleanup(manifest, currentSourcePaths) {
-  const orphanedKeys = Object.keys(manifest.images)
-    .filter(k => !currentSourcePaths.has(k));
-
-  let removed = 0;
-  for (const key of orphanedKeys) {
-    console.log(`✗ orphan: ${key}`);
-    for (const out of manifest.images[key].outputs) {
-      const full = join(ROOT, out.path);
-      try {
-        await unlink(full);
-        removed++;
-      } catch (err) {
-        if (err.code !== 'ENOENT') console.warn(`  ⚠ unlink ${out.path}: ${err.message}`);
-      }
-    }
-    delete manifest.images[key];
-  }
-  if (removed) console.log(`✓ removed ${removed} orphaned files`);
-}
-
-// ─── Main ───────────────────────────────────────────────────────────────────
 async function main() {
-  console.log(`AxCooking Image Pipeline`);
-  console.log(`sharp ${sharp.versions.sharp} | libvips ${sharp.versions.vips}`);
-  console.log(`force=${FORCE} cleanupOnly=${CLEANUP_ONLY}`);
+  await ensureDir(OUTPUT_DIR);
 
-  await mkdir(OUT_DIR, { recursive: true });
-  const manifest = await loadManifest();
-
-  // Source-Inventar
-  const sourcePaths = new Set();
-  for await (const f of walk(SOURCE_DIR)) {
-    sourcePaths.add(relative(SOURCE_DIR, f));
-  }
-  console.log(`Found ${sourcePaths.size} source images`);
-
-  if (sourcePaths.size === 0) {
-    console.log('⚠ No source images found in images/source/');
-    console.log('  Place images there to start processing.');
-    await saveManifest(manifest);
+  // Read source directory
+  let sourceFiles;
+  try {
+    sourceFiles = await fs.readdir(SOURCE_DIR);
+  } catch (e) {
+    console.log(`No ${SOURCE_DIR}/ directory yet — nothing to process.`);
+    await saveManifest({ version: 2, generatedAt: null, images: {} });
     return;
   }
 
-  // Cleanup zuerst (idempotent, sicher auch bei späterem Crash)
-  await cleanup(manifest, sourcePaths);
-
-  if (CLEANUP_ONLY) {
-    await saveManifest(manifest);
-    console.log('✓ cleanup-only done');
-    return;
-  }
-
-  // Parallel Encoding
-  const limit = pLimit(2);
-  const stats = { processed: 0, skipped: 0, totalMs: 0, totalBytes: 0, failed: 0 };
-
-  // Manifest nach jedem Bild persistieren → Crash-Recovery
-  let saveLock = Promise.resolve();
-  const persistManifest = () => {
-    saveLock = saveLock.then(() => saveManifest(manifest)).catch(() => {});
-    return saveLock;
-  };
-
-  const tasks = [...sourcePaths].map(rel => limit(async () => {
-    const full = join(SOURCE_DIR, rel);
-    try {
-      const r = await processSource(full, manifest);
-      if (r.skipped) stats.skipped++;
-      else { stats.processed++; stats.totalMs += r.ms; stats.totalBytes += r.bytes; }
-      await persistManifest();
-    } catch (err) {
-      stats.failed++;
-      console.error(`✗ FAIL ${rel}: ${err.stack}`);
+  // Group files by slug + kind
+  const slugMap = new Map(); // slug → { '16x9': {...}, '4x3': {...}, 'pin': {...} }
+  for (const filename of sourceFiles) {
+    const parsed = parseSourceFilename(filename);
+    if (!parsed) continue;
+    const filePath = path.join(SOURCE_DIR, filename);
+    const stat = await fs.stat(filePath);
+    if (!stat.isFile()) continue;
+    const hash = await sha256OfFile(filePath);
+    if (!slugMap.has(parsed.slug)) slugMap.set(parsed.slug, {});
+    const slugSources = slugMap.get(parsed.slug);
+    if (slugSources[parsed.kind]) {
+      console.warn(`[duplicate] ${parsed.slug} ${parsed.kind}: ${slugSources[parsed.kind].filename} vs ${filename} — keeping ${slugSources[parsed.kind].filename}`);
+      continue;
     }
-  }));
-
-  await Promise.all(tasks);
-  await saveLock;
-  await saveManifest(manifest);
-
-  console.log('\n─── Summary ───');
-  console.log(`Processed: ${stats.processed}`);
-  console.log(`Skipped:   ${stats.skipped}`);
-  console.log(`Failed:    ${stats.failed}`);
-  if (stats.processed) {
-    console.log(`Avg time:  ${Math.round(stats.totalMs / stats.processed)}ms/image`);
-    console.log(`Total out: ${(stats.totalBytes / 1024 / 1024).toFixed(1)} MB`);
+    slugSources[parsed.kind] = { filename, filePath, hash };
   }
 
-  if (stats.failed > 0) process.exit(1);
+  if (slugMap.size === 0) {
+    console.log(`Found 0 source images.`);
+    await saveManifest({ version: 2, generatedAt: null, images: {} });
+    return;
+  }
+
+  console.log(`Found ${slugMap.size} recipe(s) with source images.`);
+  for (const [slug, sources] of slugMap.entries()) {
+    const kinds = Object.keys(sources).join(', ');
+    console.log(`  - ${slug}: [${kinds}]`);
+  }
+
+  const manifest = await loadManifest();
+  if (!manifest.images) manifest.images = {};
+
+  // Process each slug (parallel-limited)
+  const results = await Promise.all(
+    [...slugMap.entries()].map(([slug, sources]) =>
+      limit(() => processSlug(slug, sources, manifest))
+    )
+  );
+
+  // Update manifest with new entries (results that are non-null)
+  for (const r of results) {
+    if (r) manifest.images[r.slug] = r;
+  }
+
+  // Remove manifest entries for slugs that no longer have any source
+  for (const slug of Object.keys(manifest.images)) {
+    if (!slugMap.has(slug)) {
+      console.log(`[orphan] ${slug}: no source files remain — removing from manifest`);
+      delete manifest.images[slug];
+    }
+  }
+
+  await saveManifest(manifest);
+  console.log(`Manifest saved with ${Object.keys(manifest.images).length} entries.`);
 }
 
 main().catch(err => {
-  console.error('FATAL:', err);
+  console.error('Pipeline failed:', err);
   process.exit(1);
 });
