@@ -1,0 +1,74 @@
+name: Image Pipeline
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'images/source/**'
+      - 'scripts/optimize-images.mjs'
+      - '.github/workflows/images.yml'
+      - 'package-lock.json'
+      - 'package.json'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force re-encode all images'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: image-pipeline
+  cancel-in-progress: false
+
+env:
+  UV_THREADPOOL_SIZE: '4'
+  MALLOC_ARENA_MAX: '2'
+  NODE_OPTIONS: '--max-old-space-size=4096'
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm install --include=optional
+
+      - name: Verify sharp install
+        run: node -e "import('sharp').then(s => console.log('sharp', s.default.versions))"
+
+      - name: Optimize images
+        run: |
+          if [ "${{ inputs.force }}" = "true" ]; then
+            npm run optimize:force
+          else
+            npm run optimize
+          fi
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/optimized images/manifest.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No image changes to commit"
+          else
+            COUNT=$(git diff --staged --name-only | wc -l)
+            git commit -m "chore(images): optimize ${COUNT} files [skip ci]"
+            git push
+          fi
