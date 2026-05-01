@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-01T09:36:10.363Z",
+  "generatedAt": "2026-05-01T10:19:54.253Z",
   "images": {
     "spaghetti-bolognese-aus-eingekochter-sauce": {
       "slug": "spaghetti-bolognese-aus-eingekochter-sauce",
@@ -532,6 +532,186 @@
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis.jpg",
           "bytes": 88154,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "rindsfilet-steak": {
+      "slug": "rindsfilet-steak",
+      "sources": {
+        "16x9": {
+          "filename": "rindsfilet-steak-16x9.jpg",
+          "hash": "81bf3f32fdd22c0665ce7cfc10775d25b525a7f3236f89fc7f6835d3c933ef37"
+        },
+        "4x3": {
+          "filename": "rindsfilet-steak-4x3.jpg",
+          "hash": "a32dc0d3c3d0eaadb5a1558bc066120b9d548fdd2996699dc32c466946dc4fc0"
+        }
+      },
+      "compositeKey": "81bf3f32fdd22c0665ce7cfc10775d25b525a7f3236f89fc7f6835d3c933ef37|a32dc0d3c3d0eaadb5a1558bc066120b9d548fdd2996699dc32c466946dc4fc0|-",
+      "sourceWidth": 2400,
+      "sourceHeight": 1350,
+      "encodedAt": "2026-05-01T10:19:54.253Z",
+      "outputs": [
+        {
+          "path": "images/optimized/rindsfilet-steak-400-16x9.avif",
+          "bytes": 1682,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-400-16x9.webp",
+          "bytes": 2660,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-400-16x9.jpg",
+          "bytes": 5779,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-800-16x9.avif",
+          "bytes": 3030,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-800-16x9.webp",
+          "bytes": 6528,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-800-16x9.jpg",
+          "bytes": 15194,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-1200-16x9.avif",
+          "bytes": 4196,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-1200-16x9.webp",
+          "bytes": 10692,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-1200-16x9.jpg",
+          "bytes": 23414,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-400-4x3.avif",
+          "bytes": 2013,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-400-4x3.webp",
+          "bytes": 3504,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-400-4x3.jpg",
+          "bytes": 7176,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-800-4x3.avif",
+          "bytes": 3428,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-800-4x3.webp",
+          "bytes": 7838,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-800-4x3.jpg",
+          "bytes": 18283,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-1200-4x3.avif",
+          "bytes": 4863,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-1200-4x3.webp",
+          "bytes": 12536,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-1200-4x3.jpg",
+          "bytes": 31526,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-pin.jpg",
+          "bytes": 39930,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-pin.webp",
+          "bytes": 14858,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-square.jpg",
+          "bytes": 36543,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak-og.jpg",
+          "bytes": 22516,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/rindsfilet-steak.jpg",
+          "bytes": 15194,
           "format": "jpg",
           "width": 800,
           "height": 450
