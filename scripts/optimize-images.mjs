@@ -45,6 +45,7 @@ const SOURCE_EXTS = ['.jpg', '.jpeg', '.png'];
 // Recognized suffixes (sorted by specificity — longer first)
 const SUFFIX_PATTERNS = [
   { suffix: '-16x9', kind: '16x9' },
+  { suffix: '-4x3', kind: '4x3' },
   { suffix: '-43', kind: '4x3' },
   { suffix: '-pin', kind: 'pin' }
 ];
