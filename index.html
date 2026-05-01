@@ -363,7 +363,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1777637572797 -->
+<!-- cache-bust: 1777638361471 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -430,6 +430,17 @@ input,textarea,select{font-size:16px !important}
       <button class="rm-confirm" id="c3BtnYes" onclick="resolveConfirm3('yes')" style="background:#1a1a1a;color:#fff">Ja</button>
       <button class="rm-cancel" id="c3BtnSkip" onclick="resolveConfirm3('skip')">Überspringen</button>
       <button class="rm-cancel" id="c3BtnCancel" onclick="resolveConfirm3('cancel')">Abbrechen</button>
+    </div>
+  </div>
+</div>
+<div id="pickerPromptOverlay" class="rating-modal-overlay" style="display:none">
+  <div class="rating-modal" style="max-width:520px">
+    <h2 id="ppTitle" style="margin-bottom:8px">Bilder wählen</h2>
+    <div id="ppSubtitle" style="font-size:13px;color:#666;margin-bottom:16px"></div>
+    <div id="ppMessage" style="font-size:14px;line-height:1.5;margin-bottom:20px;color:#333"></div>
+    <div class="rm-actions" style="display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap">
+      <button class="rm-confirm" id="ppBtnPick" style="background:#1a1a1a;color:#fff">📷 Bilder wählen</button>
+      <button class="rm-cancel" id="ppBtnSkip">Überspringen</button>
     </div>
   </div>
 </div>
@@ -844,8 +855,9 @@ let _confirm3Resolver=null;
 function resolveConfirm3(choice){if(_confirm3Resolver){const r=_confirm3Resolver;_confirm3Resolver=null;document.getElementById('confirm3Overlay').style.display='none';r(choice)}}
 function showConfirm3(message,opts){opts=opts||{};return new Promise(resolve=>{const ov=document.getElementById('confirm3Overlay');document.getElementById('c3Title').textContent=opts.title||'Frage';document.getElementById('c3Message').textContent=message;document.getElementById('c3BtnYes').textContent=opts.yesLabel||'Ja';document.getElementById('c3BtnSkip').textContent=opts.skipLabel||'Überspringen';document.getElementById('c3BtnCancel').textContent=opts.cancelLabel||'Abbrechen';_confirm3Resolver=resolve;ov.style.display='flex'})}
 let _pendingBulkImageRecipeId=null,_pendingBulkImageResolver=null;
-function pickImagesViaInput(){return new Promise(resolve=>{const inp=$('fileInputBulkImages');_pendingBulkImageResolver=resolve;inp.click()})}
-async function pickImagesForRecipe(recipeId,recipeName,sourceLabel){_pendingBulkImageRecipeId=recipeId;if(window.showOpenFilePicker){try{const desc=sourceLabel?('Bilder für '+sourceLabel):('Bilder für '+recipeName);const handles=await window.showOpenFilePicker({multiple:true,types:[{description:desc,accept:{'image/*':['.jpg','.jpeg','.png','.webp']}}],startIn:lastImageDir||'pictures'});if(handles.length){lastImageDir=handles[0];saveDirHandle('image',handles[0]);const files=[];for(const h of handles)files.push(await h.getFile());return files}return[]}catch(e){if(e.name==='AbortError')return[];if(e.name==='SecurityError'){return await pickImagesViaInput()}console.error('pickImagesForRecipe error:',e);return await pickImagesViaInput()}}return await pickImagesViaInput()}
+async function _openPickerNow(recipeName,sourceLabel){if(window.showOpenFilePicker){try{const desc=sourceLabel?('Bilder für '+sourceLabel):('Bilder für '+recipeName);const handles=await window.showOpenFilePicker({multiple:true,types:[{description:desc,accept:{'image/*':['.jpg','.jpeg','.png','.webp']}}],startIn:lastImageDir||'pictures'});if(handles.length){lastImageDir=handles[0];saveDirHandle('image',handles[0]);const files=[];for(const h of handles)files.push(await h.getFile());return files}return[]}catch(e){if(e.name==='AbortError')return[];console.error('showOpenFilePicker error:',e);return null}}return null}
+function _openInputNow(){return new Promise(resolve=>{const inp=$('fileInputBulkImages');_pendingBulkImageResolver=resolve;inp.click()})}
+function pickImagesForRecipe(recipeId,recipeName,sourceLabel){_pendingBulkImageRecipeId=recipeId;return new Promise(resolve=>{const ov=document.getElementById('pickerPromptOverlay');document.getElementById('ppTitle').textContent=sourceLabel||recipeName;document.getElementById('ppSubtitle').textContent=sourceLabel?('Rezept: '+recipeName):'';document.getElementById('ppMessage').textContent='Wähle 1 oder 2 Bilder (16:9 + 4:3) für dieses Rezept aus.';const btnPick=document.getElementById('ppBtnPick');const btnSkip=document.getElementById('ppBtnSkip');const cleanup=()=>{ov.style.display='none';btnPick.onclick=null;btnSkip.onclick=null};btnPick.onclick=async()=>{const files=await _openPickerNow(recipeName,sourceLabel);if(files===null){const f2=await _openInputNow();cleanup();resolve(f2||[])}else{cleanup();resolve(files)}};btnSkip.onclick=()=>{cleanup();resolve([])};ov.style.display='flex'})}
 async function processImagesForTouchedRecipes(touchedIds,fileNameMap){const total=touchedIds.length;let completed=0;let totalUploaded=0;for(const recipeId of touchedIds){const r=recipes.find(rc=>rc.id===recipeId);const name=r?(r.title_de||r.title_en||recipeId):recipeId;const xlsxName=fileNameMap?fileNameMap[recipeId]:null;const label=xlsxName||name;completed++;showStatus('info',`📷 Bilder für "${label}" auswählen (${completed}/${total})…`);const files=await pickImagesForRecipe(recipeId,name,xlsxName);if(!files.length){showStatus('info',`📷 "${label}" — kein Bild ausgewählt, übersprungen`);continue}await uploadManageImagesMulti(recipeId,files);totalUploaded++}if(totalUploaded>0){showStatus('success',`✓ Bilder für ${totalUploaded} von ${total} Rezept(en) verarbeitet`)}else{showStatus('info','Keine Bilder hochgeladen')}}
 function renderManageList(){
   const list=$('manageList');
