@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-01T12:44:25.720Z",
+  "generatedAt": "2026-05-01T12:46:06.127Z",
   "images": {
     "spaghetti-bolognese-aus-eingekochter-sauce": {
       "slug": "spaghetti-bolognese-aus-eingekochter-sauce",
@@ -896,6 +896,186 @@
         {
           "path": "images/optimized/sauce-bolognese-zum-einkochen.jpg",
           "bytes": 139781,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets": {
+      "slug": "zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets",
+      "sources": {
+        "16x9": {
+          "filename": "zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-16x9.jpg",
+          "hash": "d75c30d7d84e43a9f74be9225d365f4db92f0a45e84f10ffb3df8d0f85b611d8"
+        },
+        "4x3": {
+          "filename": "zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-4x3.jpg",
+          "hash": "6bcbe79af71dc9096161bfd54e96e5c4c4f769d3df6988ecaafaa3a6297344d3"
+        }
+      },
+      "compositeKey": "d75c30d7d84e43a9f74be9225d365f4db92f0a45e84f10ffb3df8d0f85b611d8|6bcbe79af71dc9096161bfd54e96e5c4c4f769d3df6988ecaafaa3a6297344d3|-",
+      "sourceWidth": 2961,
+      "sourceHeight": 1665,
+      "encodedAt": "2026-05-01T12:46:06.127Z",
+      "outputs": [
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-400-16x9.avif",
+          "bytes": 16362,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-400-16x9.webp",
+          "bytes": 18956,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-400-16x9.jpg",
+          "bytes": 30190,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-800-16x9.avif",
+          "bytes": 40447,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-800-16x9.webp",
+          "bytes": 50132,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-800-16x9.jpg",
+          "bytes": 87052,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-1200-16x9.avif",
+          "bytes": 66945,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-1200-16x9.webp",
+          "bytes": 86480,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-1200-16x9.jpg",
+          "bytes": 159288,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-400-4x3.avif",
+          "bytes": 20383,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-400-4x3.webp",
+          "bytes": 24120,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-400-4x3.jpg",
+          "bytes": 38029,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-800-4x3.avif",
+          "bytes": 51114,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-800-4x3.webp",
+          "bytes": 64458,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-800-4x3.jpg",
+          "bytes": 110529,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-1200-4x3.avif",
+          "bytes": 82467,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-1200-4x3.webp",
+          "bytes": 108932,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-1200-4x3.jpg",
+          "bytes": 203462,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-pin.jpg",
+          "bytes": 239102,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-pin.webp",
+          "bytes": 128888,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-square.jpg",
+          "bytes": 225058,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-og.jpg",
+          "bytes": 149212,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets.jpg",
+          "bytes": 87052,
           "format": "jpg",
           "width": 800,
           "height": 450
