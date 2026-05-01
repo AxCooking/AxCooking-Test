@@ -1,177 +1,181 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-01T12:41:50.510Z",
+  "generatedAt": "2026-05-01T12:44:25.720Z",
   "images": {
     "spaghetti-bolognese-aus-eingekochter-sauce": {
       "slug": "spaghetti-bolognese-aus-eingekochter-sauce",
       "sources": {
         "16x9": {
           "filename": "spaghetti-bolognese-aus-eingekochter-sauce-16x9.jpg",
-          "hash": "3fb6b8cd7e03638645fbb6b701b6e4c69bf11d9deaca90c2d6c2a1e50913dd70"
+          "hash": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8"
+        },
+        "4x3": {
+          "filename": "spaghetti-bolognese-aus-eingekochter-sauce-4x3.jpg",
+          "hash": "a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946"
         }
       },
-      "compositeKey": "3fb6b8cd7e03638645fbb6b701b6e4c69bf11d9deaca90c2d6c2a1e50913dd70|-|-",
-      "sourceWidth": 3390,
-      "sourceHeight": 1907,
-      "encodedAt": "2026-05-01T08:35:59.143Z",
+      "compositeKey": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8|a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946|-",
+      "sourceWidth": 2687,
+      "sourceHeight": 1511,
+      "encodedAt": "2026-05-01T12:44:25.720Z",
       "outputs": [
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.avif",
-          "bytes": 19959,
+          "bytes": 25131,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.webp",
-          "bytes": 21616,
+          "bytes": 28874,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.jpg",
-          "bytes": 33011,
+          "bytes": 45357,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.avif",
-          "bytes": 56392,
+          "bytes": 70666,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.webp",
-          "bytes": 64310,
+          "bytes": 83056,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.jpg",
-          "bytes": 100060,
+          "bytes": 139781,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.avif",
-          "bytes": 99986,
+          "bytes": 121477,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.webp",
-          "bytes": 112972,
+          "bytes": 146656,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.jpg",
-          "bytes": 186086,
+          "bytes": 253089,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.avif",
-          "bytes": 26440,
+          "bytes": 30848,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.webp",
-          "bytes": 29164,
+          "bytes": 33108,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.jpg",
-          "bytes": 43233,
+          "bytes": 50307,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.avif",
-          "bytes": 74294,
+          "bytes": 92625,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.webp",
-          "bytes": 84384,
+          "bytes": 102090,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.jpg",
-          "bytes": 131147,
+          "bytes": 157221,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.avif",
-          "bytes": 129124,
+          "bytes": 150742,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.webp",
-          "bytes": 146980,
+          "bytes": 178282,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.jpg",
-          "bytes": 243658,
+          "bytes": 286781,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-pin.jpg",
-          "bytes": 297812,
+          "bytes": 402617,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-pin.webp",
-          "bytes": 173702,
+          "bytes": 244862,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-square.jpg",
-          "bytes": 286950,
+          "bytes": 346816,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-og.jpg",
-          "bytes": 181068,
+          "bytes": 241766,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce.jpg",
-          "bytes": 100060,
+          "bytes": 139781,
           "format": "jpg",
           "width": 800,
           "height": 450
@@ -183,175 +187,175 @@
       "sources": {
         "16x9": {
           "filename": "sauce-b-arnaise-16x9.jpg",
-          "hash": "4484a6a6b0e6142d4536c7e264531b0494e60505cd2bb3c792fa650794ff45a1"
+          "hash": "7af31416ca976b105305e9002432d9b27a7985aec2676089ee1234a878cab890"
         },
         "4x3": {
           "filename": "sauce-b-arnaise-4x3.jpg",
-          "hash": "ab99b9ae724c7ccb341ba0f15b08e5c68bc9c8b68be78fbc48464badd2c16061"
+          "hash": "bb6cbab196b3d9470c2b80fa4e60b1044c1ed7cff24563eb4e937662f671b369"
         }
       },
-      "compositeKey": "4484a6a6b0e6142d4536c7e264531b0494e60505cd2bb3c792fa650794ff45a1|ab99b9ae724c7ccb341ba0f15b08e5c68bc9c8b68be78fbc48464badd2c16061|-",
-      "sourceWidth": 2400,
-      "sourceHeight": 1350,
-      "encodedAt": "2026-05-01T08:35:49.037Z",
+      "compositeKey": "7af31416ca976b105305e9002432d9b27a7985aec2676089ee1234a878cab890|bb6cbab196b3d9470c2b80fa4e60b1044c1ed7cff24563eb4e937662f671b369|-",
+      "sourceWidth": 1425,
+      "sourceHeight": 802,
+      "encodedAt": "2026-05-01T12:44:20.033Z",
       "outputs": [
         {
           "path": "images/optimized/sauce-b-arnaise-400-16x9.avif",
-          "bytes": 1911,
+          "bytes": 7616,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/sauce-b-arnaise-400-16x9.webp",
-          "bytes": 2978,
+          "bytes": 9390,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/sauce-b-arnaise-400-16x9.jpg",
-          "bytes": 6805,
+          "bytes": 18456,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/sauce-b-arnaise-800-16x9.avif",
-          "bytes": 3335,
+          "bytes": 14786,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/sauce-b-arnaise-800-16x9.webp",
-          "bytes": 7242,
+          "bytes": 21234,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/sauce-b-arnaise-800-16x9.jpg",
-          "bytes": 16923,
+          "bytes": 47657,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/sauce-b-arnaise-1200-16x9.avif",
-          "bytes": 4696,
+          "bytes": 21878,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/sauce-b-arnaise-1200-16x9.webp",
-          "bytes": 12268,
+          "bytes": 33294,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/sauce-b-arnaise-1200-16x9.jpg",
-          "bytes": 26783,
+          "bytes": 80737,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/sauce-b-arnaise-400-4x3.avif",
-          "bytes": 2173,
+          "bytes": 10928,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/sauce-b-arnaise-400-4x3.webp",
-          "bytes": 3600,
+          "bytes": 13770,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/sauce-b-arnaise-400-4x3.jpg",
-          "bytes": 7484,
+          "bytes": 26858,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/sauce-b-arnaise-800-4x3.avif",
-          "bytes": 3861,
+          "bytes": 20501,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/sauce-b-arnaise-800-4x3.webp",
-          "bytes": 8240,
+          "bytes": 29922,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/sauce-b-arnaise-800-4x3.jpg",
-          "bytes": 18005,
+          "bytes": 67086,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/sauce-b-arnaise-1200-4x3.avif",
-          "bytes": 5545,
+          "bytes": 29623,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/sauce-b-arnaise-1200-4x3.webp",
-          "bytes": 13166,
+          "bytes": 46238,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/sauce-b-arnaise-1200-4x3.jpg",
-          "bytes": 31522,
+          "bytes": 113503,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/sauce-b-arnaise-pin.jpg",
-          "bytes": 55346,
+          "bytes": 127336,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/sauce-b-arnaise-pin.webp",
-          "bytes": 20898,
+          "bytes": 50082,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/sauce-b-arnaise-square.jpg",
-          "bytes": 39510,
+          "bytes": 122019,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
           "path": "images/optimized/sauce-b-arnaise-og.jpg",
-          "bytes": 26050,
+          "bytes": 74581,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
           "path": "images/optimized/sauce-b-arnaise.jpg",
-          "bytes": 16923,
+          "bytes": 47657,
           "format": "jpg",
           "width": 800,
           "height": 450
