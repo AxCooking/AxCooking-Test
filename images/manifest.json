@@ -1,361 +1,721 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-01T13:34:09.733Z",
+  "generatedAt": "2026-05-01T19:58:42.331Z",
   "images": {
-    "spaghetti-bolognese-aus-eingekochter-sauce": {
-      "slug": "spaghetti-bolognese-aus-eingekochter-sauce",
+    "bruschetta": {
+      "slug": "bruschetta",
       "sources": {
         "16x9": {
-          "filename": "spaghetti-bolognese-aus-eingekochter-sauce-16x9.jpg",
-          "hash": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8"
+          "filename": "bruschetta-16x9.jpg",
+          "hash": "25737f77613d810d0eac27746275adff4c02e934f0df33fd0d87cabe97d5728f"
         },
         "4x3": {
-          "filename": "spaghetti-bolognese-aus-eingekochter-sauce-4x3.jpg",
-          "hash": "a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946"
+          "filename": "bruschetta-4x3.jpg",
+          "hash": "32618c3e6e138fad0f154bf7e75c72fee50414b13388932e01a4415bed70a895"
         }
       },
-      "compositeKey": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8|a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946|-",
-      "sourceWidth": 2687,
-      "sourceHeight": 1511,
-      "encodedAt": "2026-05-01T12:44:25.720Z",
+      "compositeKey": "25737f77613d810d0eac27746275adff4c02e934f0df33fd0d87cabe97d5728f|32618c3e6e138fad0f154bf7e75c72fee50414b13388932e01a4415bed70a895|-",
+      "sourceWidth": 2982,
+      "sourceHeight": 1678,
+      "encodedAt": "2026-05-01T19:56:15.115Z",
       "outputs": [
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.avif",
-          "bytes": 25131,
+          "path": "images/optimized/bruschetta-400-16x9.avif",
+          "bytes": 16685,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.webp",
-          "bytes": 28874,
+          "path": "images/optimized/bruschetta-400-16x9.webp",
+          "bytes": 18928,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.jpg",
-          "bytes": 45357,
+          "path": "images/optimized/bruschetta-400-16x9.jpg",
+          "bytes": 31846,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.avif",
-          "bytes": 70666,
+          "path": "images/optimized/bruschetta-800-16x9.avif",
+          "bytes": 39883,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.webp",
-          "bytes": 83056,
+          "path": "images/optimized/bruschetta-800-16x9.webp",
+          "bytes": 49458,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.jpg",
-          "bytes": 139781,
+          "path": "images/optimized/bruschetta-800-16x9.jpg",
+          "bytes": 88926,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.avif",
-          "bytes": 121477,
+          "path": "images/optimized/bruschetta-1200-16x9.avif",
+          "bytes": 64573,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.webp",
-          "bytes": 146656,
+          "path": "images/optimized/bruschetta-1200-16x9.webp",
+          "bytes": 83140,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.jpg",
-          "bytes": 253089,
+          "path": "images/optimized/bruschetta-1200-16x9.jpg",
+          "bytes": 159518,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.avif",
-          "bytes": 30848,
+          "path": "images/optimized/bruschetta-400-4x3.avif",
+          "bytes": 21023,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.webp",
-          "bytes": 33108,
+          "path": "images/optimized/bruschetta-400-4x3.webp",
+          "bytes": 24246,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.jpg",
-          "bytes": 50307,
+          "path": "images/optimized/bruschetta-400-4x3.jpg",
+          "bytes": 40931,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.avif",
-          "bytes": 92625,
+          "path": "images/optimized/bruschetta-800-4x3.avif",
+          "bytes": 50084,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.webp",
-          "bytes": 102090,
+          "path": "images/optimized/bruschetta-800-4x3.webp",
+          "bytes": 62082,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.jpg",
-          "bytes": 157221,
+          "path": "images/optimized/bruschetta-800-4x3.jpg",
+          "bytes": 112852,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.avif",
-          "bytes": 150742,
+          "path": "images/optimized/bruschetta-1200-4x3.avif",
+          "bytes": 76750,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.webp",
-          "bytes": 178282,
+          "path": "images/optimized/bruschetta-1200-4x3.webp",
+          "bytes": 101592,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.jpg",
-          "bytes": 286781,
+          "path": "images/optimized/bruschetta-1200-4x3.jpg",
+          "bytes": 200409,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-pin.jpg",
-          "bytes": 402617,
+          "path": "images/optimized/bruschetta-pin.jpg",
+          "bytes": 221521,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-pin.webp",
-          "bytes": 244862,
+          "path": "images/optimized/bruschetta-pin.webp",
+          "bytes": 103608,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-square.jpg",
-          "bytes": 346816,
+          "path": "images/optimized/bruschetta-square.jpg",
+          "bytes": 220736,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-og.jpg",
-          "bytes": 241766,
+          "path": "images/optimized/bruschetta-og.jpg",
+          "bytes": 152588,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
-          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce.jpg",
-          "bytes": 139781,
+          "path": "images/optimized/bruschetta.jpg",
+          "bytes": 88926,
           "format": "jpg",
           "width": 800,
           "height": 450
         }
       ]
     },
-    "sauce-b-arnaise": {
-      "slug": "sauce-b-arnaise",
+    "buendner-gerstensuppe-der-schweizer-armee": {
+      "slug": "buendner-gerstensuppe-der-schweizer-armee",
       "sources": {
         "16x9": {
-          "filename": "sauce-b-arnaise-16x9.jpg",
-          "hash": "7af31416ca976b105305e9002432d9b27a7985aec2676089ee1234a878cab890"
+          "filename": "buendner-gerstensuppe-der-schweizer-armee-16x9.jpg",
+          "hash": "ac3d8a352f38dc409554b24484cb700eaabe30bd3c6f4d8dfcd54bbd5435baca"
         },
         "4x3": {
-          "filename": "sauce-b-arnaise-4x3.jpg",
-          "hash": "bb6cbab196b3d9470c2b80fa4e60b1044c1ed7cff24563eb4e937662f671b369"
+          "filename": "buendner-gerstensuppe-der-schweizer-armee-4x3.jpg",
+          "hash": "c60ef7baf81dbf66dffdef06b60ca7039e3b41d475da2c4f6eb77bca211a1b3a"
         }
       },
-      "compositeKey": "7af31416ca976b105305e9002432d9b27a7985aec2676089ee1234a878cab890|bb6cbab196b3d9470c2b80fa4e60b1044c1ed7cff24563eb4e937662f671b369|-",
-      "sourceWidth": 1425,
-      "sourceHeight": 802,
-      "encodedAt": "2026-05-01T12:44:20.033Z",
+      "compositeKey": "ac3d8a352f38dc409554b24484cb700eaabe30bd3c6f4d8dfcd54bbd5435baca|c60ef7baf81dbf66dffdef06b60ca7039e3b41d475da2c4f6eb77bca211a1b3a|-",
+      "sourceWidth": 3032,
+      "sourceHeight": 1705,
+      "encodedAt": "2026-05-01T19:56:14.657Z",
       "outputs": [
         {
-          "path": "images/optimized/sauce-b-arnaise-400-16x9.avif",
-          "bytes": 7616,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-16x9.avif",
+          "bytes": 13505,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-400-16x9.webp",
-          "bytes": 9390,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-16x9.webp",
+          "bytes": 16484,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-400-16x9.jpg",
-          "bytes": 18456,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-16x9.jpg",
+          "bytes": 29353,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-800-16x9.avif",
-          "bytes": 14786,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-16x9.avif",
+          "bytes": 30577,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-800-16x9.webp",
-          "bytes": 21234,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-16x9.webp",
+          "bytes": 40836,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-800-16x9.jpg",
-          "bytes": 47657,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-16x9.jpg",
+          "bytes": 81217,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-1200-16x9.avif",
-          "bytes": 21878,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-16x9.avif",
+          "bytes": 49689,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-1200-16x9.webp",
-          "bytes": 33294,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-16x9.webp",
+          "bytes": 69498,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-1200-16x9.jpg",
-          "bytes": 80737,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-16x9.jpg",
+          "bytes": 146473,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-400-4x3.avif",
-          "bytes": 10928,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-4x3.avif",
+          "bytes": 16940,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-400-4x3.webp",
-          "bytes": 13770,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-4x3.webp",
+          "bytes": 20166,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-400-4x3.jpg",
-          "bytes": 26858,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-4x3.jpg",
+          "bytes": 36040,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-800-4x3.avif",
-          "bytes": 20501,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-4x3.avif",
+          "bytes": 39518,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-800-4x3.webp",
-          "bytes": 29922,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-4x3.webp",
+          "bytes": 50932,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-800-4x3.jpg",
-          "bytes": 67086,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-4x3.jpg",
+          "bytes": 99762,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-1200-4x3.avif",
-          "bytes": 29623,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-4x3.avif",
+          "bytes": 62248,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-1200-4x3.webp",
-          "bytes": 46238,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-4x3.webp",
+          "bytes": 85832,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-1200-4x3.jpg",
-          "bytes": 113503,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-4x3.jpg",
+          "bytes": 181371,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-pin.jpg",
-          "bytes": 127336,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-pin.jpg",
+          "bytes": 256439,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-pin.webp",
-          "bytes": 50082,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-pin.webp",
+          "bytes": 131498,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-square.jpg",
-          "bytes": 122019,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-square.jpg",
+          "bytes": 224206,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
-          "path": "images/optimized/sauce-b-arnaise-og.jpg",
-          "bytes": 74581,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-og.jpg",
+          "bytes": 139095,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
-          "path": "images/optimized/sauce-b-arnaise.jpg",
-          "bytes": 47657,
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee.jpg",
+          "bytes": 81217,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren": {
+      "slug": "buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren",
+      "sources": {
+        "16x9": {
+          "filename": "buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-16x9.jpg",
+          "hash": "ac3d8a352f38dc409554b24484cb700eaabe30bd3c6f4d8dfcd54bbd5435baca"
+        },
+        "4x3": {
+          "filename": "buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-4x3.jpg",
+          "hash": "c60ef7baf81dbf66dffdef06b60ca7039e3b41d475da2c4f6eb77bca211a1b3a"
+        }
+      },
+      "compositeKey": "ac3d8a352f38dc409554b24484cb700eaabe30bd3c6f4d8dfcd54bbd5435baca|c60ef7baf81dbf66dffdef06b60ca7039e3b41d475da2c4f6eb77bca211a1b3a|-",
+      "sourceWidth": 3032,
+      "sourceHeight": 1705,
+      "encodedAt": "2026-05-01T19:56:27.463Z",
+      "outputs": [
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-16x9.avif",
+          "bytes": 13505,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-16x9.webp",
+          "bytes": 16484,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-16x9.jpg",
+          "bytes": 29353,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-16x9.avif",
+          "bytes": 30577,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-16x9.webp",
+          "bytes": 40836,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-16x9.jpg",
+          "bytes": 81217,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-16x9.avif",
+          "bytes": 49689,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-16x9.webp",
+          "bytes": 69498,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-16x9.jpg",
+          "bytes": 146473,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-4x3.avif",
+          "bytes": 16940,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-4x3.webp",
+          "bytes": 20166,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-4x3.jpg",
+          "bytes": 36040,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-4x3.avif",
+          "bytes": 39518,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-4x3.webp",
+          "bytes": 50932,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-4x3.jpg",
+          "bytes": 99762,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-4x3.avif",
+          "bytes": 62248,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-4x3.webp",
+          "bytes": 85832,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-4x3.jpg",
+          "bytes": 181371,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-pin.jpg",
+          "bytes": 256439,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-pin.webp",
+          "bytes": 131498,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-square.jpg",
+          "bytes": 224206,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-og.jpg",
+          "bytes": 139095,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren.jpg",
+          "bytes": 81217,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "butter-chicken-murgh-makhani": {
+      "slug": "butter-chicken-murgh-makhani",
+      "sources": {
+        "16x9": {
+          "filename": "butter-chicken-murgh-makhani-16x9.jpg",
+          "hash": "7980147cf2a849482b453e9b59b8a8fbbb5a12c2136236e1d46f1004156e5fc0"
+        },
+        "4x3": {
+          "filename": "butter-chicken-murgh-makhani-4x3.jpg",
+          "hash": "836dcc54f831958b47eb99ade66ef19ef74e25b24630d9cc5d9c5ec1fff5c7ac"
+        }
+      },
+      "compositeKey": "7980147cf2a849482b453e9b59b8a8fbbb5a12c2136236e1d46f1004156e5fc0|836dcc54f831958b47eb99ade66ef19ef74e25b24630d9cc5d9c5ec1fff5c7ac|-",
+      "sourceWidth": 1642,
+      "sourceHeight": 924,
+      "encodedAt": "2026-05-01T19:56:30.738Z",
+      "outputs": [
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-400-16x9.avif",
+          "bytes": 25499,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-400-16x9.webp",
+          "bytes": 29918,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-400-16x9.jpg",
+          "bytes": 47136,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-800-16x9.avif",
+          "bytes": 59665,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-800-16x9.webp",
+          "bytes": 74280,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-800-16x9.jpg",
+          "bytes": 129117,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-1200-16x9.avif",
+          "bytes": 90295,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-1200-16x9.webp",
+          "bytes": 122362,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-1200-16x9.jpg",
+          "bytes": 226218,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-400-4x3.avif",
+          "bytes": 29874,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-400-4x3.webp",
+          "bytes": 35772,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-400-4x3.jpg",
+          "bytes": 57302,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-800-4x3.avif",
+          "bytes": 68266,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-800-4x3.webp",
+          "bytes": 90294,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-800-4x3.jpg",
+          "bytes": 156117,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-1200-4x3.avif",
+          "bytes": 101895,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-1200-4x3.webp",
+          "bytes": 145564,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-1200-4x3.jpg",
+          "bytes": 275234,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-pin.jpg",
+          "bytes": 299565,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-pin.webp",
+          "bytes": 141528,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-square.jpg",
+          "bytes": 300559,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani-og.jpg",
+          "bytes": 215630,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/butter-chicken-murgh-makhani.jpg",
+          "bytes": 129117,
           "format": "jpg",
           "width": 800,
           "height": 450
@@ -377,7 +737,7 @@
       "compositeKey": "3ccd2d0ece0438143a3b76bb39689f721d501dec361e923ca65351ad1739b29d|481793a7f19bd30904766682cb2ad152a3dba9ca18f7a26d344fbb204d1eb812|-",
       "sourceWidth": 2511,
       "sourceHeight": 1413,
-      "encodedAt": "2026-05-01T09:36:10.362Z",
+      "encodedAt": "2026-05-01T19:56:39.943Z",
       "outputs": [
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-400-16x9.avif",
@@ -542,180 +902,2340 @@
         }
       ]
     },
+    "gyros-marinade": {
+      "slug": "gyros-marinade",
+      "sources": {
+        "16x9": {
+          "filename": "gyros-marinade-16x9.jpg",
+          "hash": "b10d6d424f59151ce23985107ca536e28049b2893c26ec17246ce39bcc0c49e5"
+        },
+        "4x3": {
+          "filename": "gyros-marinade-4x3.jpg",
+          "hash": "206d34c48cf4bae7f6be41cb3b11799721d5484d93d975d1c98625ddee3db87b"
+        }
+      },
+      "compositeKey": "b10d6d424f59151ce23985107ca536e28049b2893c26ec17246ce39bcc0c49e5|206d34c48cf4bae7f6be41cb3b11799721d5484d93d975d1c98625ddee3db87b|-",
+      "sourceWidth": 1763,
+      "sourceHeight": 991,
+      "encodedAt": "2026-05-01T19:56:47.916Z",
+      "outputs": [
+        {
+          "path": "images/optimized/gyros-marinade-400-16x9.avif",
+          "bytes": 26563,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/gyros-marinade-400-16x9.webp",
+          "bytes": 30268,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/gyros-marinade-400-16x9.jpg",
+          "bytes": 45182,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/gyros-marinade-800-16x9.avif",
+          "bytes": 77586,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/gyros-marinade-800-16x9.webp",
+          "bytes": 93278,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/gyros-marinade-800-16x9.jpg",
+          "bytes": 141328,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/gyros-marinade-1200-16x9.avif",
+          "bytes": 132123,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/gyros-marinade-1200-16x9.webp",
+          "bytes": 163062,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/gyros-marinade-1200-16x9.jpg",
+          "bytes": 258631,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/gyros-marinade-400-4x3.avif",
+          "bytes": 33338,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/gyros-marinade-400-4x3.webp",
+          "bytes": 38032,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/gyros-marinade-400-4x3.jpg",
+          "bytes": 57651,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/gyros-marinade-800-4x3.avif",
+          "bytes": 93823,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/gyros-marinade-800-4x3.webp",
+          "bytes": 111108,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/gyros-marinade-800-4x3.jpg",
+          "bytes": 175671,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/gyros-marinade-1200-4x3.avif",
+          "bytes": 151292,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/gyros-marinade-1200-4x3.webp",
+          "bytes": 194910,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/gyros-marinade-1200-4x3.jpg",
+          "bytes": 316692,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/gyros-marinade-pin.jpg",
+          "bytes": 378778,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/gyros-marinade-pin.webp",
+          "bytes": 216424,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/gyros-marinade-square.jpg",
+          "bytes": 365405,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/gyros-marinade-og.jpg",
+          "bytes": 244200,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/gyros-marinade.jpg",
+          "bytes": 141328,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "gyros-schweinshalsspiesse": {
+      "slug": "gyros-schweinshalsspiesse",
+      "sources": {
+        "16x9": {
+          "filename": "gyros-schweinshalsspiesse-16x9.jpg",
+          "hash": "d09cb05e849be1718088b4798958eb05730239a3160097bd3561791cdb377fdc"
+        },
+        "4x3": {
+          "filename": "gyros-schweinshalsspiesse-4x3.jpg",
+          "hash": "c96834d92e9b39dc97b3c659d994a56f0995f0424a7e4ba6fc82be47ff7bcbd8"
+        }
+      },
+      "compositeKey": "d09cb05e849be1718088b4798958eb05730239a3160097bd3561791cdb377fdc|c96834d92e9b39dc97b3c659d994a56f0995f0424a7e4ba6fc82be47ff7bcbd8|-",
+      "sourceWidth": 2518,
+      "sourceHeight": 1416,
+      "encodedAt": "2026-05-01T19:56:56.020Z",
+      "outputs": [
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-400-16x9.avif",
+          "bytes": 29960,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-400-16x9.webp",
+          "bytes": 31690,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-400-16x9.jpg",
+          "bytes": 44547,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-800-16x9.avif",
+          "bytes": 91877,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-800-16x9.webp",
+          "bytes": 98666,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-800-16x9.jpg",
+          "bytes": 141330,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-1200-16x9.avif",
+          "bytes": 161622,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-1200-16x9.webp",
+          "bytes": 180424,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-1200-16x9.jpg",
+          "bytes": 260435,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-400-4x3.avif",
+          "bytes": 39606,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-400-4x3.webp",
+          "bytes": 41526,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-400-4x3.jpg",
+          "bytes": 57087,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-800-4x3.avif",
+          "bytes": 107760,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-800-4x3.webp",
+          "bytes": 118700,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-800-4x3.jpg",
+          "bytes": 167787,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-1200-4x3.avif",
+          "bytes": 169710,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-1200-4x3.webp",
+          "bytes": 199626,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-1200-4x3.jpg",
+          "bytes": 298793,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-pin.jpg",
+          "bytes": 347208,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-pin.webp",
+          "bytes": 214160,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-square.jpg",
+          "bytes": 338686,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse-og.jpg",
+          "bytes": 256640,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/gyros-schweinshalsspiesse.jpg",
+          "bytes": 141330,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "kalbs-cordon-bleu-nach-wiener-art": {
+      "slug": "kalbs-cordon-bleu-nach-wiener-art",
+      "sources": {
+        "16x9": {
+          "filename": "kalbs-cordon-bleu-nach-wiener-art-16x9.jpg",
+          "hash": "61939c5a9873d1c6a8ecf9e36e22fd3d9d7b23ab2b19437534caa533b088c42e"
+        },
+        "4x3": {
+          "filename": "kalbs-cordon-bleu-nach-wiener-art-4x3.jpg",
+          "hash": "88c7d0bafef2bde0e6db3349ccc29d833563cceb6c9bc302bf5b2d8e8870b930"
+        }
+      },
+      "compositeKey": "61939c5a9873d1c6a8ecf9e36e22fd3d9d7b23ab2b19437534caa533b088c42e|88c7d0bafef2bde0e6db3349ccc29d833563cceb6c9bc302bf5b2d8e8870b930|-",
+      "sourceWidth": 3455,
+      "sourceHeight": 1943,
+      "encodedAt": "2026-05-01T19:57:02.177Z",
+      "outputs": [
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-400-16x9.avif",
+          "bytes": 18889,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-400-16x9.webp",
+          "bytes": 21480,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-400-16x9.jpg",
+          "bytes": 32177,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-800-16x9.avif",
+          "bytes": 52833,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-800-16x9.webp",
+          "bytes": 64854,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-800-16x9.jpg",
+          "bytes": 100538,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-1200-16x9.avif",
+          "bytes": 96750,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-1200-16x9.webp",
+          "bytes": 118928,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-1200-16x9.jpg",
+          "bytes": 190166,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-400-4x3.avif",
+          "bytes": 20461,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-400-4x3.webp",
+          "bytes": 23264,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-400-4x3.jpg",
+          "bytes": 36603,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-800-4x3.avif",
+          "bytes": 58847,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-800-4x3.webp",
+          "bytes": 67724,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-800-4x3.jpg",
+          "bytes": 112088,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-1200-4x3.avif",
+          "bytes": 96791,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-1200-4x3.webp",
+          "bytes": 118478,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-1200-4x3.jpg",
+          "bytes": 206957,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-pin.jpg",
+          "bytes": 285823,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-pin.webp",
+          "bytes": 160074,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-square.jpg",
+          "bytes": 250190,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-og.jpg",
+          "bytes": 185330,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art.jpg",
+          "bytes": 100538,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "kalbskopfbacken-geschmort-zum-einkochen": {
+      "slug": "kalbskopfbacken-geschmort-zum-einkochen",
+      "sources": {
+        "16x9": {
+          "filename": "kalbskopfbacken-geschmort-zum-einkochen-16x9.jpg",
+          "hash": "dfd10f043e65088f10f6407727eb2329dcc5c6294dd3b63b5b0034556e5c7c8d"
+        },
+        "4x3": {
+          "filename": "kalbskopfbacken-geschmort-zum-einkochen-4x3.jpg",
+          "hash": "5688a134077bc038f517f8c958c59cac955c03e8afdbf2ea4e2a08cc979bf5e5"
+        }
+      },
+      "compositeKey": "dfd10f043e65088f10f6407727eb2329dcc5c6294dd3b63b5b0034556e5c7c8d|5688a134077bc038f517f8c958c59cac955c03e8afdbf2ea4e2a08cc979bf5e5|-",
+      "sourceWidth": 2410,
+      "sourceHeight": 1355,
+      "encodedAt": "2026-05-01T19:57:11.113Z",
+      "outputs": [
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-400-16x9.avif",
+          "bytes": 18880,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-400-16x9.webp",
+          "bytes": 21464,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-400-16x9.jpg",
+          "bytes": 32661,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-800-16x9.avif",
+          "bytes": 58163,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-800-16x9.webp",
+          "bytes": 69040,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-800-16x9.jpg",
+          "bytes": 103657,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-1200-16x9.avif",
+          "bytes": 109441,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-1200-16x9.webp",
+          "bytes": 128018,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-1200-16x9.jpg",
+          "bytes": 198871,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-400-4x3.avif",
+          "bytes": 24518,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-400-4x3.webp",
+          "bytes": 28192,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-400-4x3.jpg",
+          "bytes": 42121,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-800-4x3.avif",
+          "bytes": 77008,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-800-4x3.webp",
+          "bytes": 90470,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-800-4x3.jpg",
+          "bytes": 134166,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-1200-4x3.avif",
+          "bytes": 128914,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-1200-4x3.webp",
+          "bytes": 153614,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-1200-4x3.jpg",
+          "bytes": 250640,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-pin.jpg",
+          "bytes": 325912,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-pin.webp",
+          "bytes": 196040,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-square.jpg",
+          "bytes": 310341,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-og.jpg",
+          "bytes": 188664,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen.jpg",
+          "bytes": 103657,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "kartoffelpuffer-haerdoepfeltaetsch": {
+      "slug": "kartoffelpuffer-haerdoepfeltaetsch",
+      "sources": {
+        "16x9": {
+          "filename": "kartoffelpuffer-haerdoepfeltaetsch-16x9.jpg",
+          "hash": "8bf003f13974615c65cac1239322c398f246bbf16ec85bbb32ab757580867ce1"
+        },
+        "4x3": {
+          "filename": "kartoffelpuffer-haerdoepfeltaetsch-4x3.jpg",
+          "hash": "e4e0255cf5dfda32d6384538e4f3c7894041c78e22fdd5d8490074f8697c07c5"
+        }
+      },
+      "compositeKey": "8bf003f13974615c65cac1239322c398f246bbf16ec85bbb32ab757580867ce1|e4e0255cf5dfda32d6384538e4f3c7894041c78e22fdd5d8490074f8697c07c5|-",
+      "sourceWidth": 3093,
+      "sourceHeight": 1740,
+      "encodedAt": "2026-05-01T19:57:17.233Z",
+      "outputs": [
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-400-16x9.avif",
+          "bytes": 14403,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-400-16x9.webp",
+          "bytes": 17948,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-400-16x9.jpg",
+          "bytes": 30119,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-800-16x9.avif",
+          "bytes": 40085,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-800-16x9.webp",
+          "bytes": 50528,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-800-16x9.jpg",
+          "bytes": 88404,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-1200-16x9.avif",
+          "bytes": 74092,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-1200-16x9.webp",
+          "bytes": 94656,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-1200-16x9.jpg",
+          "bytes": 165973,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-400-4x3.avif",
+          "bytes": 21866,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-400-4x3.webp",
+          "bytes": 25136,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-400-4x3.jpg",
+          "bytes": 39854,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-800-4x3.avif",
+          "bytes": 79625,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-800-4x3.webp",
+          "bytes": 88764,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-800-4x3.jpg",
+          "bytes": 131561,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-1200-4x3.avif",
+          "bytes": 151588,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-1200-4x3.webp",
+          "bytes": 170604,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-1200-4x3.jpg",
+          "bytes": 261596,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-pin.jpg",
+          "bytes": 355266,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-pin.webp",
+          "bytes": 227644,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-square.jpg",
+          "bytes": 333304,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-og.jpg",
+          "bytes": 160693,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch.jpg",
+          "bytes": 88404,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "kartoffelsalat-schwaebische-art": {
+      "slug": "kartoffelsalat-schwaebische-art",
+      "sources": {
+        "16x9": {
+          "filename": "kartoffelsalat-schwaebische-art-16x9.jpg",
+          "hash": "bfe3188c3735639bef623331815624a1ce41816fb530ea1d6809ccb312c8535f"
+        },
+        "4x3": {
+          "filename": "kartoffelsalat-schwaebische-art-4x3.jpg",
+          "hash": "12e8d12277c2c780eae6831c233bd2e4b3ae36f78a113143872dca48259c8546"
+        }
+      },
+      "compositeKey": "bfe3188c3735639bef623331815624a1ce41816fb530ea1d6809ccb312c8535f|12e8d12277c2c780eae6831c233bd2e4b3ae36f78a113143872dca48259c8546|-",
+      "sourceWidth": 2961,
+      "sourceHeight": 1666,
+      "encodedAt": "2026-05-01T19:57:26.248Z",
+      "outputs": [
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-400-16x9.avif",
+          "bytes": 18499,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-400-16x9.webp",
+          "bytes": 20662,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-400-16x9.jpg",
+          "bytes": 33849,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-800-16x9.avif",
+          "bytes": 51672,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-800-16x9.webp",
+          "bytes": 61044,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-800-16x9.jpg",
+          "bytes": 101740,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-1200-16x9.avif",
+          "bytes": 93786,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-1200-16x9.webp",
+          "bytes": 115066,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-1200-16x9.jpg",
+          "bytes": 191496,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-400-4x3.avif",
+          "bytes": 23893,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-400-4x3.webp",
+          "bytes": 25942,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-400-4x3.jpg",
+          "bytes": 42081,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-800-4x3.avif",
+          "bytes": 64958,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-800-4x3.webp",
+          "bytes": 76912,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-800-4x3.jpg",
+          "bytes": 124122,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-1200-4x3.avif",
+          "bytes": 106913,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-1200-4x3.webp",
+          "bytes": 130128,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-1200-4x3.jpg",
+          "bytes": 228698,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-pin.jpg",
+          "bytes": 284318,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-pin.webp",
+          "bytes": 154814,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-square.jpg",
+          "bytes": 263078,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art-og.jpg",
+          "bytes": 181267,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/kartoffelsalat-schwaebische-art.jpg",
+          "bytes": 101740,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "original-wiener-schnitzel": {
+      "slug": "original-wiener-schnitzel",
+      "sources": {
+        "16x9": {
+          "filename": "original-wiener-schnitzel-16x9.jpg",
+          "hash": "f908f4c7cdd3e60dd7b280f8f05e753156f1f77793a6d987c7325bba62867c49"
+        },
+        "4x3": {
+          "filename": "original-wiener-schnitzel-4x3.jpg",
+          "hash": "2840aff8a3466f744c0a3a6130c11cf16a653d493e070813a8528f9122cab7ab"
+        }
+      },
+      "compositeKey": "f908f4c7cdd3e60dd7b280f8f05e753156f1f77793a6d987c7325bba62867c49|2840aff8a3466f744c0a3a6130c11cf16a653d493e070813a8528f9122cab7ab|-",
+      "sourceWidth": 3638,
+      "sourceHeight": 2046,
+      "encodedAt": "2026-05-01T19:57:31.336Z",
+      "outputs": [
+        {
+          "path": "images/optimized/original-wiener-schnitzel-400-16x9.avif",
+          "bytes": 19382,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-400-16x9.webp",
+          "bytes": 21974,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-400-16x9.jpg",
+          "bytes": 33985,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-800-16x9.avif",
+          "bytes": 61378,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-800-16x9.webp",
+          "bytes": 71824,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-800-16x9.jpg",
+          "bytes": 112525,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-1200-16x9.avif",
+          "bytes": 114899,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-1200-16x9.webp",
+          "bytes": 135946,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-1200-16x9.jpg",
+          "bytes": 217652,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-400-4x3.avif",
+          "bytes": 17236,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-400-4x3.webp",
+          "bytes": 21624,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-400-4x3.jpg",
+          "bytes": 34866,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-800-4x3.avif",
+          "bytes": 49052,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-800-4x3.webp",
+          "bytes": 62490,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-800-4x3.jpg",
+          "bytes": 105712,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-1200-4x3.avif",
+          "bytes": 82149,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-1200-4x3.webp",
+          "bytes": 108190,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-1200-4x3.jpg",
+          "bytes": 197427,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-pin.jpg",
+          "bytes": 245371,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-pin.webp",
+          "bytes": 131114,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-square.jpg",
+          "bytes": 241047,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel-og.jpg",
+          "bytes": 214268,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/original-wiener-schnitzel.jpg",
+          "bytes": 112525,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "pasta-alfredo": {
+      "slug": "pasta-alfredo",
+      "sources": {
+        "16x9": {
+          "filename": "pasta-alfredo-16x9.jpg",
+          "hash": "5b1708d7675fdc1a7e0c30b9a4ddb7f384adec517b43599896107b41bb10d4cd"
+        },
+        "4x3": {
+          "filename": "pasta-alfredo-4x3.jpg",
+          "hash": "4f443f60adbd81fda853586343b57f27efc884cc4be5da0fe78395cca56bbba2"
+        }
+      },
+      "compositeKey": "5b1708d7675fdc1a7e0c30b9a4ddb7f384adec517b43599896107b41bb10d4cd|4f443f60adbd81fda853586343b57f27efc884cc4be5da0fe78395cca56bbba2|-",
+      "sourceWidth": 1588,
+      "sourceHeight": 893,
+      "encodedAt": "2026-05-01T19:57:38.434Z",
+      "outputs": [
+        {
+          "path": "images/optimized/pasta-alfredo-400-16x9.avif",
+          "bytes": 16498,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-400-16x9.webp",
+          "bytes": 18346,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-400-16x9.jpg",
+          "bytes": 30184,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-800-16x9.avif",
+          "bytes": 36398,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-800-16x9.webp",
+          "bytes": 44976,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-800-16x9.jpg",
+          "bytes": 83811,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-1200-16x9.avif",
+          "bytes": 52624,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-1200-16x9.webp",
+          "bytes": 70678,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-1200-16x9.jpg",
+          "bytes": 144497,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-400-4x3.avif",
+          "bytes": 21323,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-400-4x3.webp",
+          "bytes": 24046,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-400-4x3.jpg",
+          "bytes": 40079,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-800-4x3.avif",
+          "bytes": 43241,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-800-4x3.webp",
+          "bytes": 55566,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-800-4x3.jpg",
+          "bytes": 106059,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-1200-4x3.avif",
+          "bytes": 61289,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-1200-4x3.webp",
+          "bytes": 86610,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-1200-4x3.jpg",
+          "bytes": 180315,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-pin.jpg",
+          "bytes": 211145,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-pin.webp",
+          "bytes": 96128,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-square.jpg",
+          "bytes": 202609,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/pasta-alfredo-og.jpg",
+          "bytes": 139092,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/pasta-alfredo.jpg",
+          "bytes": 83811,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "pasta-carbonara-mit-pochiertem-ei": {
+      "slug": "pasta-carbonara-mit-pochiertem-ei",
+      "sources": {
+        "16x9": {
+          "filename": "pasta-carbonara-mit-pochiertem-ei-16x9.jpg",
+          "hash": "1c38b534fbab8add74dfcf3e6fd6adba1b574441f13bdec12db11a1b4b9c5ea2"
+        },
+        "4x3": {
+          "filename": "pasta-carbonara-mit-pochiertem-ei-4x3.jpg",
+          "hash": "07efd0766ecae83ba2905376098dd3dcc3bb7ff834e4c822fd220d010a54ad2d"
+        }
+      },
+      "compositeKey": "1c38b534fbab8add74dfcf3e6fd6adba1b574441f13bdec12db11a1b4b9c5ea2|07efd0766ecae83ba2905376098dd3dcc3bb7ff834e4c822fd220d010a54ad2d|-",
+      "sourceWidth": 3638,
+      "sourceHeight": 2046,
+      "encodedAt": "2026-05-01T19:57:45.263Z",
+      "outputs": [
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-400-16x9.avif",
+          "bytes": 16906,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-400-16x9.webp",
+          "bytes": 19134,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-400-16x9.jpg",
+          "bytes": 31709,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-800-16x9.avif",
+          "bytes": 46238,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-800-16x9.webp",
+          "bytes": 55880,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-800-16x9.jpg",
+          "bytes": 95741,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-1200-16x9.avif",
+          "bytes": 78349,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-1200-16x9.webp",
+          "bytes": 96270,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-1200-16x9.jpg",
+          "bytes": 177119,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-400-4x3.avif",
+          "bytes": 21871,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-400-4x3.webp",
+          "bytes": 24796,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-400-4x3.jpg",
+          "bytes": 41997,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-800-4x3.avif",
+          "bytes": 55851,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-800-4x3.webp",
+          "bytes": 68902,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-800-4x3.jpg",
+          "bytes": 122136,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-1200-4x3.avif",
+          "bytes": 95204,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-1200-4x3.webp",
+          "bytes": 118854,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-1200-4x3.jpg",
+          "bytes": 222283,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-pin.jpg",
+          "bytes": 281139,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-pin.webp",
+          "bytes": 146702,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-square.jpg",
+          "bytes": 279797,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-og.jpg",
+          "bytes": 168452,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei.jpg",
+          "bytes": 95741,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "pasta-pesto-genovese": {
+      "slug": "pasta-pesto-genovese",
+      "sources": {
+        "16x9": {
+          "filename": "pasta-pesto-genovese-16x9.jpg",
+          "hash": "165284dab1c8470a5b7587c69f547e1468284be8206810f8ff76f9fadbca1fab"
+        },
+        "4x3": {
+          "filename": "pasta-pesto-genovese-4x3.jpg",
+          "hash": "8bde62001d89f8d8fc433ce3c75e925fee10fd604fb7cd327a7efaf3234c2888"
+        }
+      },
+      "compositeKey": "165284dab1c8470a5b7587c69f547e1468284be8206810f8ff76f9fadbca1fab|8bde62001d89f8d8fc433ce3c75e925fee10fd604fb7cd327a7efaf3234c2888|-",
+      "sourceWidth": 3830,
+      "sourceHeight": 2154,
+      "encodedAt": "2026-05-01T19:57:54.918Z",
+      "outputs": [
+        {
+          "path": "images/optimized/pasta-pesto-genovese-400-16x9.avif",
+          "bytes": 20695,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-400-16x9.webp",
+          "bytes": 22018,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-400-16x9.jpg",
+          "bytes": 32241,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-800-16x9.avif",
+          "bytes": 71767,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-800-16x9.webp",
+          "bytes": 78572,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-800-16x9.jpg",
+          "bytes": 111912,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-1200-16x9.avif",
+          "bytes": 138104,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-1200-16x9.webp",
+          "bytes": 151714,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-1200-16x9.jpg",
+          "bytes": 222579,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-400-4x3.avif",
+          "bytes": 31039,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-400-4x3.webp",
+          "bytes": 32714,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-400-4x3.jpg",
+          "bytes": 46481,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-800-4x3.avif",
+          "bytes": 101351,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-800-4x3.webp",
+          "bytes": 110008,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-800-4x3.jpg",
+          "bytes": 155716,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-1200-4x3.avif",
+          "bytes": 186785,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-1200-4x3.webp",
+          "bytes": 209340,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-1200-4x3.jpg",
+          "bytes": 304564,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-pin.jpg",
+          "bytes": 387097,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-pin.webp",
+          "bytes": 256522,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-square.jpg",
+          "bytes": 393660,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese-og.jpg",
+          "bytes": 214587,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/pasta-pesto-genovese.jpg",
+          "bytes": 111912,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "pesto-genovese-basilikum-pesto": {
+      "slug": "pesto-genovese-basilikum-pesto",
+      "sources": {
+        "16x9": {
+          "filename": "pesto-genovese-basilikum-pesto-16x9.jpg",
+          "hash": "f2a1f0d6ca4e383bbb812889b3859d05ca3dee0cbc1f34c11d76d060e8e12287"
+        },
+        "4x3": {
+          "filename": "pesto-genovese-basilikum-pesto-4x3.jpg",
+          "hash": "105b8912d9143dbd3482fffbff25c81a2f964e1a8a979fb4d66f09f7c0ae806b"
+        }
+      },
+      "compositeKey": "f2a1f0d6ca4e383bbb812889b3859d05ca3dee0cbc1f34c11d76d060e8e12287|105b8912d9143dbd3482fffbff25c81a2f964e1a8a979fb4d66f09f7c0ae806b|-",
+      "sourceWidth": 2245,
+      "sourceHeight": 1263,
+      "encodedAt": "2026-05-01T19:58:02.574Z",
+      "outputs": [
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-400-16x9.avif",
+          "bytes": 30989,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-400-16x9.webp",
+          "bytes": 33858,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-400-16x9.jpg",
+          "bytes": 45746,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-800-16x9.avif",
+          "bytes": 95735,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-800-16x9.webp",
+          "bytes": 108544,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-800-16x9.jpg",
+          "bytes": 148938,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-1200-16x9.avif",
+          "bytes": 155715,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-1200-16x9.webp",
+          "bytes": 187782,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-1200-16x9.jpg",
+          "bytes": 273824,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-400-4x3.avif",
+          "bytes": 39588,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-400-4x3.webp",
+          "bytes": 43682,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-400-4x3.jpg",
+          "bytes": 57467,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-800-4x3.avif",
+          "bytes": 106710,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-800-4x3.webp",
+          "bytes": 126252,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-800-4x3.jpg",
+          "bytes": 174778,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-1200-4x3.avif",
+          "bytes": 158804,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-1200-4x3.webp",
+          "bytes": 204538,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-1200-4x3.jpg",
+          "bytes": 310375,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-pin.jpg",
+          "bytes": 318573,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-pin.webp",
+          "bytes": 183948,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-square.jpg",
+          "bytes": 311612,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto-og.jpg",
+          "bytes": 259363,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/pesto-genovese-basilikum-pesto.jpg",
+          "bytes": 148938,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
     "rindsfilet-steak": {
       "slug": "rindsfilet-steak",
       "sources": {
         "16x9": {
           "filename": "rindsfilet-steak-16x9.jpg",
-          "hash": "81bf3f32fdd22c0665ce7cfc10775d25b525a7f3236f89fc7f6835d3c933ef37"
+          "hash": "4f2f783c35d17fa20c2f7b6c0b71bb75e1daa4afe358370ea9bed4d48017f029"
         },
         "4x3": {
           "filename": "rindsfilet-steak-4x3.jpg",
-          "hash": "a32dc0d3c3d0eaadb5a1558bc066120b9d548fdd2996699dc32c466946dc4fc0"
+          "hash": "5808090de727bfa5f559e736ebf777f1a2a9c78d965069ab761457d07bd1b3ec"
         }
       },
-      "compositeKey": "81bf3f32fdd22c0665ce7cfc10775d25b525a7f3236f89fc7f6835d3c933ef37|a32dc0d3c3d0eaadb5a1558bc066120b9d548fdd2996699dc32c466946dc4fc0|-",
-      "sourceWidth": 2400,
-      "sourceHeight": 1350,
-      "encodedAt": "2026-05-01T10:19:54.253Z",
+      "compositeKey": "4f2f783c35d17fa20c2f7b6c0b71bb75e1daa4afe358370ea9bed4d48017f029|5808090de727bfa5f559e736ebf777f1a2a9c78d965069ab761457d07bd1b3ec|-",
+      "sourceWidth": 1408,
+      "sourceHeight": 792,
+      "encodedAt": "2026-05-01T19:58:07.019Z",
       "outputs": [
         {
           "path": "images/optimized/rindsfilet-steak-400-16x9.avif",
-          "bytes": 1682,
+          "bytes": 21964,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/rindsfilet-steak-400-16x9.webp",
-          "bytes": 2660,
+          "bytes": 24600,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/rindsfilet-steak-400-16x9.jpg",
-          "bytes": 5779,
+          "bytes": 38431,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/rindsfilet-steak-800-16x9.avif",
-          "bytes": 3030,
+          "bytes": 49622,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/rindsfilet-steak-800-16x9.webp",
-          "bytes": 6528,
+          "bytes": 64454,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/rindsfilet-steak-800-16x9.jpg",
-          "bytes": 15194,
+          "bytes": 108861,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/rindsfilet-steak-1200-16x9.avif",
-          "bytes": 4196,
+          "bytes": 70938,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/rindsfilet-steak-1200-16x9.webp",
-          "bytes": 10692,
+          "bytes": 100436,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/rindsfilet-steak-1200-16x9.jpg",
-          "bytes": 23414,
+          "bytes": 186870,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/rindsfilet-steak-400-4x3.avif",
-          "bytes": 2013,
+          "bytes": 25383,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/rindsfilet-steak-400-4x3.webp",
-          "bytes": 3504,
+          "bytes": 30050,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/rindsfilet-steak-400-4x3.jpg",
-          "bytes": 7176,
+          "bytes": 46538,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/rindsfilet-steak-800-4x3.avif",
-          "bytes": 3428,
+          "bytes": 48004,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/rindsfilet-steak-800-4x3.webp",
-          "bytes": 7838,
+          "bytes": 67318,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/rindsfilet-steak-800-4x3.jpg",
-          "bytes": 18283,
+          "bytes": 120162,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/rindsfilet-steak-1200-4x3.avif",
-          "bytes": 4863,
+          "bytes": 66342,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/rindsfilet-steak-1200-4x3.webp",
-          "bytes": 12536,
+          "bytes": 101502,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/rindsfilet-steak-1200-4x3.jpg",
-          "bytes": 31526,
+          "bytes": 202344,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/rindsfilet-steak-pin.jpg",
-          "bytes": 39930,
+          "bytes": 233864,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/rindsfilet-steak-pin.webp",
-          "bytes": 14858,
+          "bytes": 117286,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/rindsfilet-steak-square.jpg",
-          "bytes": 36543,
+          "bytes": 226369,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
           "path": "images/optimized/rindsfilet-steak-og.jpg",
-          "bytes": 22516,
+          "bytes": 171856,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
           "path": "images/optimized/rindsfilet-steak.jpg",
-          "bytes": 15194,
+          "bytes": 108861,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "sauce-b-arnaise": {
+      "slug": "sauce-b-arnaise",
+      "sources": {
+        "16x9": {
+          "filename": "sauce-b-arnaise-16x9.jpg",
+          "hash": "7af31416ca976b105305e9002432d9b27a7985aec2676089ee1234a878cab890"
+        },
+        "4x3": {
+          "filename": "sauce-b-arnaise-4x3.jpg",
+          "hash": "bb6cbab196b3d9470c2b80fa4e60b1044c1ed7cff24563eb4e937662f671b369"
+        }
+      },
+      "compositeKey": "7af31416ca976b105305e9002432d9b27a7985aec2676089ee1234a878cab890|bb6cbab196b3d9470c2b80fa4e60b1044c1ed7cff24563eb4e937662f671b369|-",
+      "sourceWidth": 1425,
+      "sourceHeight": 802,
+      "encodedAt": "2026-05-01T19:58:12.433Z",
+      "outputs": [
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-16x9.avif",
+          "bytes": 7616,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-16x9.webp",
+          "bytes": 9390,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-16x9.jpg",
+          "bytes": 18456,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-16x9.avif",
+          "bytes": 14786,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-16x9.webp",
+          "bytes": 21234,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-16x9.jpg",
+          "bytes": 47657,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-16x9.avif",
+          "bytes": 21878,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-16x9.webp",
+          "bytes": 33294,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-16x9.jpg",
+          "bytes": 80737,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-4x3.avif",
+          "bytes": 10928,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-4x3.webp",
+          "bytes": 13770,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-4x3.jpg",
+          "bytes": 26858,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-4x3.avif",
+          "bytes": 20501,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-4x3.webp",
+          "bytes": 29922,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-4x3.jpg",
+          "bytes": 67086,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-4x3.avif",
+          "bytes": 29623,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-4x3.webp",
+          "bytes": 46238,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-4x3.jpg",
+          "bytes": 113503,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-pin.jpg",
+          "bytes": 127336,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-pin.webp",
+          "bytes": 50082,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-square.jpg",
+          "bytes": 122019,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-og.jpg",
+          "bytes": 74581,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise.jpg",
+          "bytes": 47657,
           "format": "jpg",
           "width": 800,
           "height": 450
@@ -737,7 +3257,7 @@
       "compositeKey": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8|a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946|-",
       "sourceWidth": 2687,
       "sourceHeight": 1511,
-      "encodedAt": "2026-05-01T12:41:50.510Z",
+      "encodedAt": "2026-05-01T19:58:23.463Z",
       "outputs": [
         {
           "path": "images/optimized/sauce-bolognese-zum-einkochen-400-16x9.avif",
@@ -902,6 +3422,366 @@
         }
       ]
     },
+    "spaghetti-bolognese-aus-eingekochter-sauce": {
+      "slug": "spaghetti-bolognese-aus-eingekochter-sauce",
+      "sources": {
+        "16x9": {
+          "filename": "spaghetti-bolognese-aus-eingekochter-sauce-16x9.jpg",
+          "hash": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8"
+        },
+        "4x3": {
+          "filename": "spaghetti-bolognese-aus-eingekochter-sauce-4x3.jpg",
+          "hash": "a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946"
+        }
+      },
+      "compositeKey": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8|a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946|-",
+      "sourceWidth": 2687,
+      "sourceHeight": 1511,
+      "encodedAt": "2026-05-01T19:58:28.884Z",
+      "outputs": [
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.avif",
+          "bytes": 25131,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.webp",
+          "bytes": 28874,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.jpg",
+          "bytes": 45357,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.avif",
+          "bytes": 70666,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.webp",
+          "bytes": 83056,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-16x9.jpg",
+          "bytes": 139781,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.avif",
+          "bytes": 121477,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.webp",
+          "bytes": 146656,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-16x9.jpg",
+          "bytes": 253089,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.avif",
+          "bytes": 30848,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.webp",
+          "bytes": 33108,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-4x3.jpg",
+          "bytes": 50307,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.avif",
+          "bytes": 92625,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.webp",
+          "bytes": 102090,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-800-4x3.jpg",
+          "bytes": 157221,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.avif",
+          "bytes": 150742,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.webp",
+          "bytes": 178282,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-1200-4x3.jpg",
+          "bytes": 286781,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-pin.jpg",
+          "bytes": 402617,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-pin.webp",
+          "bytes": 244862,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-square.jpg",
+          "bytes": 346816,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-og.jpg",
+          "bytes": 241766,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce.jpg",
+          "bytes": 139781,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "stubenkueken-mit-ofengemuese-mistkratzerli": {
+      "slug": "stubenkueken-mit-ofengemuese-mistkratzerli",
+      "sources": {
+        "16x9": {
+          "filename": "stubenkueken-mit-ofengemuese-mistkratzerli-16x9.jpg",
+          "hash": "4418d2fe82632ba226720d3b33c061bcebe1d2ac1e87a1da870a2fd2cb91ad47"
+        },
+        "4x3": {
+          "filename": "stubenkueken-mit-ofengemuese-mistkratzerli-4x3.jpg",
+          "hash": "3c397721f960f381a169ffc17ce35c24ce83ef62d5e8ec010feb00738a8ef12b"
+        }
+      },
+      "compositeKey": "4418d2fe82632ba226720d3b33c061bcebe1d2ac1e87a1da870a2fd2cb91ad47|3c397721f960f381a169ffc17ce35c24ce83ef62d5e8ec010feb00738a8ef12b|-",
+      "sourceWidth": 1037,
+      "sourceHeight": 584,
+      "encodedAt": "2026-05-01T19:58:33.950Z",
+      "outputs": [
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-400-16x9.avif",
+          "bytes": 15184,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-400-16x9.webp",
+          "bytes": 17422,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-400-16x9.jpg",
+          "bytes": 28083,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-800-16x9.avif",
+          "bytes": 33579,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-800-16x9.webp",
+          "bytes": 42972,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-800-16x9.jpg",
+          "bytes": 76566,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-1200-16x9.avif",
+          "bytes": 47889,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-1200-16x9.webp",
+          "bytes": 66874,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-1200-16x9.jpg",
+          "bytes": 130792,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-400-4x3.avif",
+          "bytes": 17180,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-400-4x3.webp",
+          "bytes": 20368,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-400-4x3.jpg",
+          "bytes": 32646,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-800-4x3.avif",
+          "bytes": 37473,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-800-4x3.webp",
+          "bytes": 48810,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-800-4x3.jpg",
+          "bytes": 88369,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-1200-4x3.avif",
+          "bytes": 52399,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-1200-4x3.webp",
+          "bytes": 74692,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-1200-4x3.jpg",
+          "bytes": 151324,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-pin.jpg",
+          "bytes": 183523,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-pin.webp",
+          "bytes": 89144,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-square.jpg",
+          "bytes": 170002,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-og.jpg",
+          "bytes": 129800,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli.jpg",
+          "bytes": 76566,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
     "zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets": {
       "slug": "zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets",
       "sources": {
@@ -917,7 +3797,7 @@
       "compositeKey": "d75c30d7d84e43a9f74be9225d365f4db92f0a45e84f10ffb3df8d0f85b611d8|6bcbe79af71dc9096161bfd54e96e5c4c4f769d3df6988ecaafaa3a6297344d3|-",
       "sourceWidth": 2961,
       "sourceHeight": 1665,
-      "encodedAt": "2026-05-01T12:46:06.127Z",
+      "encodedAt": "2026-05-01T19:58:42.330Z",
       "outputs": [
         {
           "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-400-16x9.avif",
