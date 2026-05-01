@@ -2692,37 +2692,49 @@
             "amount": 20,
             "unit": "ml",
             "name": "Kräuterweissweinessig",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 60,
             "unit": "ml",
             "name": "Wasser",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 1,
             "unit": "Stk.",
             "name": "Schalotten",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 10,
             "unit": "Stk.",
             "name": "Pfefferkörner",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 1,
             "unit": "Stk.",
             "name": "Lorbeerblatt (frisch oder getrocknet)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 3,
             "unit": "Stk.",
             "name": "Estragonzweig (frisch)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           }
         ],
         "text": "Alles in einen kleinen Topf geben und bis auf weniger als einen Drittel einkochen lassen. Wenn die Sauce nach dieser Kochanleitung zu flüssig oder zu dickflüssig wird, dann hängt dies ziemlich sicher damit zusammen, dass die Reduktion zu kurz oder zu lange eingekocht wurde."
@@ -2734,7 +2746,9 @@
             "amount": 250,
             "unit": "gr",
             "name": "Butter (ungesalzen)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           }
         ],
         "text": "In einen Topf geben und schmelzen lassen. Die Butter muss nicht geklärt werden. Die Molke hat keinen Einfluss auf Geschmack oder Konsistenz."
@@ -2746,37 +2760,49 @@
             "amount": 3,
             "unit": "Stk.",
             "name": "Eigelb (gross, mit Zimmertemperatur)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 1,
             "unit": "TL",
             "name": "Zitronensaft (frisch gepresst)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 3,
             "unit": "Pr",
             "name": "Salz",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 2,
             "unit": "Pr",
             "name": "Zucker",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 1,
             "unit": "Spr",
             "name": "Weisswein",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Spritzer",
+            "unitLong_en": "dash"
           },
           {
             "amount": 2.5,
             "unit": "TL",
             "name": "Estragon (frisch)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           }
         ],
         "text": "Alles ausser Estragon in den Mixer geben, Eigelbe schaumig mixen. Die Reduktion in den Mixer passieren und nochmals kurz mixen. Die heisse Butter in eine Squeeze Flasche abfüllen und in einem dünnen Strahl während des Mixens hinzugeben. Zwischendurch nur mixen und keine Butter hinzugeben. Man merkt am Ton des Mixers an, wann die Sauce abbindet. Am Schluss Estragon grob gehackt hinzugeben und nochmals kurz mixen. Sofort servieren und geniessen."
@@ -2790,37 +2816,49 @@
             "amount": 20,
             "unit": "ml",
             "name": "White wine vinegar",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 60,
             "unit": "ml",
             "name": "Water",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 1,
             "unit": "pc",
             "name": "Shallots",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 10,
             "unit": "pc",
             "name": "Peppercorns",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 1,
             "unit": "pc",
             "name": "Bay leaf (fresh or dried)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 3,
             "unit": "pc",
             "name": "Tarragon sprig (fresh)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           }
         ],
         "text": "Place everything in a small pot and reduce to less than a third. If the sauce becomes too liquid or too thick after these cooking instructions, it is almost certainly related to the fact that the reduction was boiled down for too short or too long."
@@ -2832,7 +2870,9 @@
             "amount": 250,
             "unit": "g",
             "name": "Butter (unsalted)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           }
         ],
         "text": "Put the butter in a small pot and let it melt. The butter does not need to be clarified. The whey does not affect the taste or consistency."
@@ -2844,37 +2884,49 @@
             "amount": 3,
             "unit": "pc",
             "name": "Egg yolk (large, with room temperature)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 1,
             "unit": "ts",
             "name": "Lemon juice freshly squeezed",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           },
           {
             "amount": 3,
             "unit": "pn",
             "name": "Salt",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 2,
             "unit": "pn",
             "name": "Sugar",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 1,
             "unit": "ds",
             "name": "White wine",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Spritzer",
+            "unitLong_en": "dash"
           },
           {
             "amount": 2.5,
             "unit": "ts",
             "name": "Tarragon (fresh)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
           }
         ],
         "text": "Put everything except tarragon into the blender, blend the egg yolks until frothy. Strain the reduction into the blender and blend again briefly. Pour the hot butter into a squeeze bottle and add in a thin stream while blending. In between, just blend and do not add butter. The sound of the blender tells you when the sauce is setting. At the end, add tarragon roughly chopped and blend again briefly. Serve immediately and enjoy."
@@ -2898,17 +2950,17 @@
     "tiktokUrl": "",
     "tags_de": [
       "Hauptspeise",
+      "Sauce",
       "Fleisch",
       "Italienische Küche",
-      "Sauce",
       "Einkochen",
       "Kalb"
     ],
     "tags_en": [
       "Main course",
+      "Sauce",
       "Meat",
       "Italian Cuisine",
-      "Sauce",
       "Canning",
       "Veal"
     ],
@@ -2924,43 +2976,57 @@
             "amount": 12,
             "unit": "Vol L",
             "name": "Kochtopf (Vol L = minimum Kochtopf Volumen in Liter)",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Volumen Liter",
+            "unitLong_en": "Volume liters"
           },
           {
             "amount": 720,
             "unit": "gr",
             "name": "Karotten",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 720,
             "unit": "gr",
             "name": "Staudensellerie",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 720,
             "unit": "gr",
             "name": "Zwiebeln",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 70,
             "unit": "gr",
             "name": "Knoblauch",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 150,
             "unit": "gr",
             "name": "Butter (ungesalzen)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 3,
             "unit": "EL",
             "name": "Olivenöl",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           }
         ],
         "text": "Das Gemüse schälen, Karotten und Staudensellerie in ca. 5 mm grosse Würfel schneiden, Zwiebeln fein hacken und Knoblauch in dünne Scheiben schneiden. Anstelle von Staudensellerie verwende ich die gleiche Menge Knollensellerie. Die Butter mit dem Öl in einen grossen Kochtopf geben und zergehen lassen. Das Gemüse hinzugeben mit der Butter gut vermengen und langsam auf niedriger Hitzestufe 2/9 garen lassen. Je nach Menge dauert dieser Vorgang 1 bis 2 Stunden. Das Gemüse darf nicht braten und darf keine Farbe annehmen, es soll solange gegart werden, bis die Karotten weich werden. Von Zeit zu Zeit das Gemüse umrühren."
@@ -2972,7 +3038,9 @@
             "amount": 4300,
             "unit": "gr",
             "name": "Dosen Tomaten (am Stück, geschält)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           }
         ],
         "text": "Dosen öffnen, noch vorhandene Tomatenhaut entfernen, Strunk entfernen, dann Tomaten grob geschnitten mit Tomatensaft in Schüssel bei Seite stellen. Ich kaufe grundsätzlich keine Dosen Tomaten, welche bereits gehackt sind, damit man den Strunk und Reste der Tomatenhaut vollständig entfernen kann."
@@ -2984,25 +3052,33 @@
             "amount": 3600.0000000000005,
             "unit": "gr",
             "name": "Kalbshack (vom Kalbsvoressen/Kalbsragout)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 260,
             "unit": "ml",
             "name": "Weisswein",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 1200,
             "unit": "ml",
             "name": "Vollmilch",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 38,
             "unit": "gr",
             "name": "Salz",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           }
         ],
         "text": "Das Kalbfleisch vom Metzger mit der grössten Lochscheibe (ca. 5 mm) grob faschieren (durch den Fleischwolf drehen) lassen. Als günstigere und einfachere Variante kann auch Rinderhack verwendet werden. Das Hackfleisch ohne Zusatz von Öl oder Bratbutter in eine heisse beschichtete Bratpfanne geben, salzen und so lange scharf anbraten (Hitzestufe 9/9) bis kein Fleischsaft mehr austritt und dieser vollständig verdampft ist. Mit Weisswein ablöschen, dann die Milch hinzugeben und kurz aufkochen lassen und bei Seite stellen. Je nach Menge sollte das Hackfleisch in verschiedenen Durchgängen angebraten werden, damit nur der Bratpfannenboden mit Fleisch bedeckt ist."
@@ -3014,37 +3090,49 @@
             "amount": 1300,
             "unit": "ml",
             "name": "Kalbsfond (ungesalzen, selbstgemacht)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 80,
             "unit": "gr",
             "name": "Tomatenmark (Tomatenpurée)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 2,
             "unit": "Stk.",
             "name": "Chilischote (rot)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 8,
             "unit": "gr",
             "name": "Salz",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 8,
             "unit": "gr",
             "name": "Pfeffer (frisch gemahlen)",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 8,
             "unit": "gr",
             "name": "Zucker",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           }
         ],
         "text": "Wenn das Soffritto fertig gegart ist, in einer Ecke des Kochtopfs das Tomatenpüree direkt auf den Topfboden geben und kurz anbraten, dann die vorbereiteten Dosentomaten, das angebratene Hackfleisch zusammen mit dem Hühnerfond hinzugeben und gut vermengen. Die Chilischoten fein gehackt hinzugeben. Um die Schärfe der Chilischote zu reduzieren, kann man die Kerne der Chilischote entfernen. Alles aufkochen lassen und dann für 2 h auf niedriger Hitzestufe 2/9 kochen lassen. Von Zeit zu Zeit die Sauce umrühren und sicherstellen, dass nichts am Topfboden anbrennt. Am Ende der Kochzeit mit Salz, Pfeffer und Zucker abschmecken."
@@ -3056,19 +3144,25 @@
             "amount": 14,
             "unit": "Stk.",
             "name": "Weck Sturzglas (850 ml Volumen)",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 14,
             "unit": "Stk.",
             "name": "Einkochgummiringe (94 x 108 mm)",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 42,
             "unit": "Stk.",
             "name": "Weck Klammern",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           }
         ],
         "text": "Die Einmachgläser, die Deckel, die Gummiringe und den Abfülltrichter im Steamer bei 100° C oder in kochendem Wasser für 10 min sterilisieren und umgekehrt aufgestellt auf einem sauberen Küchentuch trocknen lassen. Nach dem Sterilisieren die Innenseite des Einmachglases und des Deckels sowie den Gummiring nicht mehr mit den Fingern anfassen. Eine PVC beschichtete Bratpinzette hilft dabei (die muss natürlich auch steril sein).\r\n\r\nDie Sauce mit einem sterilen Trichter mit grosser Öffnung (zum Beispiel Marmeladentrichter) in die sterilen, getrockneten Einmachgläser abfüllen. Die Gläser maximal bis 1.5 cm unterhalb des Glasrandes befüllen. Darauf achten, dass der Rand des Einmachglases sauber und trocken bleibt. Den Deckel mit dem Gummiring bestücken und das Einmachglas mit dem Deckel und 3 Klammern verschliessen.\r\n\r\nIm Steamer oder im Einkochgerät bei 100° C während 60 min einkochen. Die Einmachgläser nach dem Einkochen im Steamer abkühlen lassen. Dann zur Sicherheit innert 12 h bis 24 h den Einkochvorgang bei 100° C während 60 min wiederholen. Die Klammern erst nach dem Abkühlen entfernen. Bei jedem Einmachglas prüfen, ob ein Vakuum aufgebaut wurde und der Deckel und der Gummiring festen Halt haben. Die Einkochzeit bezieht sich auf Einmachgläser mit einem Volumen bis 850 ml. Falls grössere Einmachgläser verwendet werden, erhöht sich die Einkochzeit pro 500 ml um 15 min. Die Einmachgläser mit Rezeptname und Abfülldatum beschriften.\r\n\r\nMindestens 6 Monate haltbar, falls korrekt eingekocht wurde und die Einmachgläser an einem kühlen und dunklen Ort (zum Beispiel Keller) gelagert werden."
@@ -3079,46 +3173,60 @@
         "title": "Prepare the soffritto",
         "ingredients": [
           {
-            "amount": 10.8333333333333,
+            "amount": 12,
             "unit": "vol l",
             "name": "Cooking pot (Vol L = minimum cooking pot volume in liters)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Volumen Liter",
+            "unitLong_en": "Volume liters"
           },
           {
-            "amount": 722.222222222222,
+            "amount": 720,
             "unit": "g",
             "name": "Carrots",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
-            "amount": 722.222222222222,
+            "amount": 720,
             "unit": "g",
             "name": "Celery",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
-            "amount": 722.222222222222,
+            "amount": 720,
             "unit": "g",
             "name": "Onions",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
-            "amount": 72.2222222222222,
+            "amount": 70,
             "unit": "g",
             "name": "Garlic",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
-            "amount": 144.444444444444,
+            "amount": 150,
             "unit": "g",
             "name": "Butter (unsalted)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
-            "amount": 2.88888888888889,
+            "amount": 3,
             "unit": "tb",
             "name": "Olive oil",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           }
         ],
         "text": "Peel the vegetables, cut carrots and celery into about 5 mm | ¼ in large cubes, finely chop onions and cut garlic into thin slices. Instead of celery, I use the same amount of celeriac. Put the butter in a large cooking pot with the oil and let it melt. Add the vegetables, mix well with the butter and cook slowly on low heat 2/9. Depending on the quantity, this process will take 1 to 2 hours. The vegetables should not fry or take on color, they should be cooked until the carrots become soft. Stir the vegetables from time to time."
@@ -3127,94 +3235,134 @@
         "title": "Prepare cans of tomatoes",
         "ingredients": [
           {
-            "amount": 4333.33333333333,
+            "amount": 4300,
             "unit": "g",
             "name": "Canned tomatoes (peeled and in one piece)",
-            "bring": false
-          },
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          }
+        ],
+        "text": "Open cans, remove any remaining tomato skin, remove stalk, then set tomatoes roughly chopped with tomato juice aside in bowl. Rinse each can with a little water and empty the rinsed water to the tomatoes. I generally do not buy cans of tomatoes that are already chopped, so that you can completely remove the stalk and any leftover tomato skin."
+      },
+      {
+        "title": "Prepare the ground veal",
+        "ingredients": [
           {
-            "amount": 450.00000000000006,
-            "unit": "ml",
-            "name": "Water",
-            "bring": false
+            "amount": 3600.0000000000005,
+            "unit": "g",
+            "name": "Veal mince (from veal starter/veal stew)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 260,
-            "unit": "g",
-            "name": "Veal mince (from veal starter/veal stew)",
-            "bring": false
-          },
-          {
-            "amount": 1155.55555555556,
             "unit": "ml",
             "name": "White wine",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
-            "amount": 37.5555555555556,
+            "amount": 1200,
             "unit": "ml",
             "name": "Milk",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
-            "amount": 26,
+            "amount": 38,
             "unit": "g",
             "name": "Salt",
-            "bring": false
-          },
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          }
+        ],
+        "text": "Have the butcher coarsely mince (put through a meat grinder) the veal with the largest perforated disc (about 5 mm | ¼ in). Ground beef can also be used as a cheaper and easier option. Put the minced meat into a hot coated frying pan without adding oil or frying butter, salt it and fry it hot (heat level 9/9) until no more meat juice comes out and it has evaporated completely. Deglaze with white wine, then add the milk and bring to the boil briefly and set aside. Depending on the quantity, fry the minced meat in different batches so that only the bottom of the frying pan is covered with meat."
+      },
+      {
+        "title": "Prepare Bolognese sauce",
+        "ingredients": [
           {
-            "amount": 72.2222222222222,
+            "amount": 1300,
             "unit": "ml",
             "name": "Chicken stock (unsalted, homemade)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
-            "amount": 1.44444444444444,
+            "amount": 80,
             "unit": "g",
             "name": "Tomato purée",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
-            "amount": 7.22222222222222,
+            "amount": 2,
             "unit": "pc",
             "name": "Chili pepper (red)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
-            "amount": 7.22222222222222,
+            "amount": 8,
             "unit": "g",
             "name": "Salt",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
-            "amount": 7.22222222222222,
+            "amount": 8,
             "unit": "g",
             "name": "Pepper (freshly grounded)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
-            "amount": 5,
+            "amount": 8,
             "unit": "g",
             "name": "Sugar",
-            "bring": false
-          },
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          }
+        ],
+        "text": "When the soffritto is cooked, in a corner of the cooking pot, put the tomato puree directly on the bottom of the pot and sauté briefly, then add the prepared canned tomatoes, the sautéed minced meat together with the chicken stock and mix well. Add the chili peppers finely chopped. To reduce the hotness of the chili pepper, you can remove the seeds of the chili pepper. Bring everything to a boil and then simmer for 2 h on low heat setting 2/9. Stir the sauce from time to time and make sure nothing burns on the bottom of the pot. At the end of the cooking time, season with salt, pepper and sugar."
+      },
+      {
+        "title": "Preserving, Storage, and Shelf Life",
+        "ingredients": [
           {
-            "amount": 13,
+            "amount": 14,
             "unit": "pc",
             "name": "Weck tumble jar (850 ml volume)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
-            "amount": 39,
+            "amount": 14,
             "unit": "pc",
             "name": "Preserving rubber rings (94 x 108)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
-            "amount": 27,
+            "amount": 42,
             "unit": "pc",
             "name": "Weck clamps",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           }
         ],
         "text": "Sterilize the canning jars, lids, rubber rings and filling funnel in a steamer at 100° C | 210° F or in boiling water for 10 min and allow to dry inverted on a clean kitchen towel. After sterilization, do not touch the inside of the canning jar and lid or the rubber ring with your fingers. A pair of PVC-coated frying tweezers will help (they must be sterile, too, of course).\r\n\r\nUsing a sterile funnel with a large opening (such as a jam funnel), pour the sauce into the sterile, dried canning jars. Fill the jars to a maximum of 1.5 cm | 0.6 in below the rim of the jar. Make sure that the rim of the canning jar remains clean and dry. Fit the lid with the rubber ring and close the canning jar with the lid and 3 clamps.\r\n\r\nBoil down in a steamer or canning jar at 100° C | 210° F for 60 min. Let the preserving jars cool down in the steamer after boiling down. Then, to be on the safe side, repeat the canning process within 12 h to 24 h at 100° C | 210° F for 60 min. Do not remove the clamps until the jars have cooled down. For each canning jar, check that a vacuum has been established and that the lid and rubber ring have a firm grip. The canning time refers to canning jars with a volume of up to 850 ml. If larger canning jars are used, the canning time increases by 15 min per 500 ml. Label the canning jars with recipe name and filling date.\r\n\r\nIt can be kept for at least 6 months, provided that the preserving is done correctly and the jars are stored in a cool and dark place (e.g. cellar)."
@@ -3238,18 +3386,18 @@
     "tiktokUrl": "",
     "tags_de": [
       "Hauptspeise",
+      "Sauce",
       "Fleisch",
       "Italienische Küche",
-      "Sauce",
       "Einkochen",
       "Kalb",
       "Pasta"
     ],
     "tags_en": [
       "Main course",
+      "Sauce",
       "Meat",
       "Italian Cuisine",
-      "Sauce",
       "Canning",
       "Veal",
       "Pasta"
@@ -3266,43 +3414,57 @@
             "amount": 0.9999999999999989,
             "unit": "Stk.",
             "name": "Einmachglas mit Sauce Bolognese (850 ml)",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 50,
             "unit": "ml",
             "name": "Wasser",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 500,
             "unit": "gr",
             "name": "Spaghetti",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 9.99999999999999,
             "unit": "Stk.",
             "name": "Basilikumblätter (frisch)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 50,
             "unit": "gr",
             "name": "Parmigiano Reggiano (frisch gerieben)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 2,
             "unit": "Pr",
             "name": "Salz",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 0.9999999999999989,
             "unit": "Pr",
             "name": "Pfeffer (frisch gemahlen)",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           }
         ],
         "text": "Beim Öffnen des Einmachglases prüfen, ob ein Vakuum besteht. Dann eine Geruchs- und Sichtprobe durchführen (bei fehlendem Vakuum, seltsamem Geruch oder komischen Verfärbungen die Sauce entsorgen und keinesfalls verwenden).\r\n\r\nDie eingekochte Sauce Bolognese in einen Topf geben, das Einmachglas mit dem Wasser ausspülen und zur Sauce geben. Die Sauce abgedeckt 10 min leicht köcheln lassen (zur Sicherheit gegen das Botulinumtoxin). Erst nach 10 min Kochzeit, die Sauce probieren und mit Salz und Pfeffer abschmecken.\r\n\r\nDerweil in einem grossen Kochtopf gesalzenes Wasser (16 gr pro Liter Wasser) zum kochen bringen und die Spaghetti darin al dente kochen. Das Pastawasser abschütten, die Spaghetti zurück in den Kochtopf geben und mit der Hälfte der Sauce Bolognese vermengen und abgedeckt 5 min ziehen lassen. Beim Servieren die restliche Sauce über die Spaghetti geben, dann mit Parmesan und den Basilikumblättern dekorieren."
@@ -3316,43 +3478,57 @@
             "amount": 0.9999999999999989,
             "unit": "pc",
             "name": "Canning jar with sauce Bolognese (850 ml | 28.7 oz)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 50,
             "unit": "ml",
             "name": "Water",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 500,
             "unit": "g",
             "name": "Spaghetti",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 9.99999999999999,
             "unit": "pc",
             "name": "Basil leaves (fresh)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 50,
             "unit": "g",
             "name": "Parmigiano Reggiano (freshly grated)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 2,
             "unit": "pn",
             "name": "Salt",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 0.9999999999999989,
             "unit": "pn",
             "name": "Pepper (freshly grounded)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           }
         ],
         "text": "When opening the canning jar, check if there is a vacuum. Then perform an odor and visual test (if there is no vacuum, strange odor or strange discoloration, discard the sauce and do not use it under any circumstances).\r\n\r\nPut the boiled down Bolognese sauce in a pot, rinse the canning jar with the water and add to the sauce. Cover and let the sauce simmer gently for 10 min (to be safe from the botulinum toxin). Only after 10 min of cooking, taste the sauce and season with salt and pepper.\r\n\r\nMeanwhile, in a large cooking pot, bring salted water (16 gr per liter of water) to a boil and cook the spaghetti in it until al dente. Drain the pasta water, return the spaghetti to the cooking pot and mix with half of the Bolognese sauce, cover and let it stand for 5 minutes. When serving, pour the remaining sauce over the spaghetti, then decorate with Parmesan cheese and the basil leaves."
