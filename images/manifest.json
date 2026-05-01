@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-01T10:19:54.253Z",
+  "generatedAt": "2026-05-01T12:41:50.510Z",
   "images": {
     "spaghetti-bolognese-aus-eingekochter-sauce": {
       "slug": "spaghetti-bolognese-aus-eingekochter-sauce",
@@ -712,6 +712,186 @@
         {
           "path": "images/optimized/rindsfilet-steak.jpg",
           "bytes": 15194,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "sauce-bolognese-zum-einkochen": {
+      "slug": "sauce-bolognese-zum-einkochen",
+      "sources": {
+        "16x9": {
+          "filename": "sauce-bolognese-zum-einkochen-16x9.jpg",
+          "hash": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8"
+        },
+        "4x3": {
+          "filename": "sauce-bolognese-zum-einkochen-4x3.jpg",
+          "hash": "a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946"
+        }
+      },
+      "compositeKey": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8|a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946|-",
+      "sourceWidth": 2687,
+      "sourceHeight": 1511,
+      "encodedAt": "2026-05-01T12:41:50.510Z",
+      "outputs": [
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-400-16x9.avif",
+          "bytes": 25131,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-400-16x9.webp",
+          "bytes": 28874,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-400-16x9.jpg",
+          "bytes": 45357,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-800-16x9.avif",
+          "bytes": 70666,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-800-16x9.webp",
+          "bytes": 83056,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-800-16x9.jpg",
+          "bytes": 139781,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-1200-16x9.avif",
+          "bytes": 121477,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-1200-16x9.webp",
+          "bytes": 146656,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-1200-16x9.jpg",
+          "bytes": 253089,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-400-4x3.avif",
+          "bytes": 30848,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-400-4x3.webp",
+          "bytes": 33108,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-400-4x3.jpg",
+          "bytes": 50307,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-800-4x3.avif",
+          "bytes": 92625,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-800-4x3.webp",
+          "bytes": 102090,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-800-4x3.jpg",
+          "bytes": 157221,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-1200-4x3.avif",
+          "bytes": 150742,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-1200-4x3.webp",
+          "bytes": 178282,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-1200-4x3.jpg",
+          "bytes": 286781,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-pin.jpg",
+          "bytes": 402617,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-pin.webp",
+          "bytes": 244862,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-square.jpg",
+          "bytes": 346816,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen-og.jpg",
+          "bytes": 241766,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/sauce-bolognese-zum-einkochen.jpg",
+          "bytes": 139781,
           "format": "jpg",
           "width": 800,
           "height": 450
