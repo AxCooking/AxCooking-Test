@@ -363,7 +363,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1777667758860 -->
+<!-- cache-bust: 1777668101609 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -594,7 +594,7 @@ function updateJsonLd(r){removeJsonLd();const title=tr(r,'title');const desc=tr(
   // Image: Google wants array with 1:1, 4:3, 16:9 variants
   const baseImg=getImageUrlAbs(r.id);
   const ytImg=r.youtubeId?'https://img.youtube.com/vi/'+r.youtubeId+'/hqdefault.jpg':null;
-  const imgArr=(()=>{const arr=[];const base=window.location.origin;if(_optimizedSlugs&&_optimizedSlugs.has(r.id)){arr.push(base+'/images/optimized/'+r.id+'-1200-16x9.jpg');arr.push(base+'/images/optimized/'+r.id+'-1200-4x3.jpg');arr.push(base+'/images/optimized/'+r.id+'-square.jpg')}else{arr.push(getImageUrlAbs(r.id))}if(r.youtubeId)arr.push('https://img.youtube.com/vi/'+r.youtubeId+'/hqdefault.jpg');return arr})();if(ytImg&&ytImg!==baseImg)imgArr.push(ytImg);
+  const imgArr=(()=>{const arr=[];const base=window.location.origin;if(_optimizedSlugs&&_optimizedSlugs.has(r.id)){arr.push(base+'/images/optimized/'+r.id+'-1200-16x9.jpg');arr.push(base+'/images/optimized/'+r.id+'-1200-4x3.jpg');arr.push(base+'/images/optimized/'+r.id+'-square.jpg')}else{arr.push(getImageUrlAbs(r.id))}return arr})();if(ytImg&&ytImg!==baseImg)imgArr.push(ytImg);
   const ld={"@context":"https://schema.org","@type":"Recipe","mainEntityOfPage":{"@type":"WebPage","@id":(window.location.origin+window.location.pathname).replace(/[#?].*$/,'')},"name":title,"description":desc,"author":{"@type":"Organization","name":"AxCooking","url":"https://www.axcooking.com"},"image":imgArr,"datePublished":r.datePublished||new Date().toISOString().split('T')[0],"recipeYield":[String(r.baseServings),(lang==='de'?r.servingsUnit_de:r.servingsUnit_en)||'Personen'],"recipeIngredient":ings,"recipeInstructions":instr};
   const tags=tr(r,'tags');
   if(tags&&tags.length)ld.keywords=tags.join(', ');
@@ -623,7 +623,7 @@ function updateJsonLd(r){removeJsonLd();const title=tr(r,'title');const desc=tr(
       })
     }
   }
-  const el=document.createElement('script');el.type='application/ld+json';el.id='recipe-jsonld';el.textContent=JSON.stringify(ld);document.head.appendChild(el);try{const bcEl=document.createElement('script');bcEl.type='application/ld+json';bcEl.id='breadcrumb-jsonld';const bcOrigin=window.location.origin;const bcLang=lang||'de';const bcHomeLabel=bcLang==='en'?'Home':'Startseite';const bcListLabel=bcLang==='en'?'Recipes':'Rezepte';const bcList={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":bcHomeLabel,"item":bcOrigin+'/'},{"@type":"ListItem","position":2,"name":bcListLabel,"item":bcOrigin+'/'},{"@type":"ListItem","position":3,"name":title,"item":(window.location.origin+window.location.pathname).replace(/[#?].*$/,'')}]};bcEl.textContent=JSON.stringify(bcList);document.head.appendChild(bcEl)}catch(e){}}
+  const el=document.createElement('script');el.type='application/ld+json';el.id='recipe-jsonld';el.textContent=JSON.stringify(ld);document.head.appendChild(el);try{const bcEl=document.createElement('script');bcEl.type='application/ld+json';bcEl.id='breadcrumb-jsonld';const bcOrigin=window.location.origin;const bcLang=lang||'de';const bcHomeLabel=bcLang==='en'?'Home':'Startseite';const bcList={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":bcHomeLabel,"item":bcOrigin+'/'},{"@type":"ListItem","position":2,"name":title,"item":(window.location.origin+window.location.pathname).replace(/[#?].*$/,'')}]};bcEl.textContent=JSON.stringify(bcList);document.head.appendChild(bcEl)}catch(e){}}
 function removeJsonLd(){const el=$('recipe-jsonld');if(el)el.remove();const ws=$('website-jsonld');if(ws)ws.remove();const bc=$('breadcrumb-jsonld');if(bc)bc.remove()}
 function _resetView(){document.body.classList.remove('on-detail');releaseCookMode();teardownCookStepTracking();const d=$('recipeDetail');d.classList.remove('active');d.style.display='none'}
 function showList(){resetSeoMeta();currentRecipeId=null;cachedNavList=null;_resetView();$('recipeList').classList.remove('hidden');$('importPanel').classList.remove('active');$('tabRecipes').classList.add('active');$('tabImport').classList.remove('active');renderList();history.pushState({lang},null,BASE_PATH+'/'+lang);window.scrollTo({top:0,behavior:'smooth'})}
