@@ -363,7 +363,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1777638361471 -->
+<!-- cache-bust: 1777667758860 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -590,19 +590,19 @@ function insertWebSiteJsonLd(){if($('website-jsonld'))return;const el=document.c
 function setHreflang(deUrl,enUrl){['de','en'].forEach(hl=>{let el=document.querySelector(`link[hreflang="${hl}"]`);if(!el){el=document.createElement('link');el.rel='alternate';el.hreflang=hl;document.head.appendChild(el)}el.href=hl==='de'?deUrl:enUrl});let xDef=document.querySelector('link[hreflang="x-default"]');if(!xDef){xDef=document.createElement('link');xDef.rel='alternate';xDef.hreflang='x-default';document.head.appendChild(xDef)}xDef.href=deUrl}
 function setCanonical(url){let el=document.querySelector('link[rel=canonical]');if(!el){el=document.createElement('link');el.rel='canonical';document.head.appendChild(el)}el.href=url}
 function setMeta(name,val,attr){attr=attr||'name';let el=document.querySelector('meta['+attr+'="'+name+'"]');if(!el){el=document.createElement('meta');el.setAttribute(attr,name);document.head.appendChild(el)}el.setAttribute('content',val)}
-function updateJsonLd(r){removeJsonLd();const title=tr(r,'title');const desc=tr(r,'desc');const steps=tr(r,'steps');const ings=[];(steps||[]).forEach(s=>(s.ingredients||[]).forEach(ing=>{const a=ing.amount?(ing.amount%1===0?ing.amount:parseFloat(ing.amount.toFixed(1)))+' ':'';ings.push((a+(ing.unit?ing.unit+' ':'')+ing.name).trim())}));const instr=(steps||[]).map((s,i)=>({"@type":"HowToStep","position":i+1,"name":s.title,"text":s.text||s.title,"url":window.location.origin+makePath(r.id)}));
+function updateJsonLd(r){removeJsonLd();const title=tr(r,'title');const desc=tr(r,'desc');const steps=tr(r,'steps');const ings=[];(steps||[]).forEach(s=>(s.ingredients||[]).forEach(ing=>{const a=ing.amount?(ing.amount%1===0?ing.amount:parseFloat(ing.amount.toFixed(1)))+' ':'';ings.push((a+(ing.unit?ing.unit+' ':'')+ing.name).trim())}));const instr=(steps||[]).map((s,i)=>({"@type":"HowToStep","position":i+1,"name":s.title,"text":s.text||s.title,"url":(window.location.origin+window.location.pathname).replace(/[#?].*$/,'')+'#step-'+(i+1),"url":window.location.origin+makePath(r.id)}));
   // Image: Google wants array with 1:1, 4:3, 16:9 variants
   const baseImg=getImageUrlAbs(r.id);
   const ytImg=r.youtubeId?'https://img.youtube.com/vi/'+r.youtubeId+'/hqdefault.jpg':null;
-  const imgArr=[baseImg];if(ytImg&&ytImg!==baseImg)imgArr.push(ytImg);
-  const ld={"@context":"https://schema.org","@type":"Recipe","name":title,"description":desc,"author":{"@type":"Organization","name":"AxCooking","url":"https://www.axcooking.com"},"image":imgArr,"datePublished":r.datePublished||new Date().toISOString().split('T')[0],"recipeYield":[String(r.baseServings),(lang==='de'?r.servingsUnit_de:r.servingsUnit_en)||'Personen'],"recipeIngredient":ings,"recipeInstructions":instr};
+  const imgArr=(()=>{const arr=[];const base=window.location.origin;if(_optimizedSlugs&&_optimizedSlugs.has(r.id)){arr.push(base+'/images/optimized/'+r.id+'-1200-16x9.jpg');arr.push(base+'/images/optimized/'+r.id+'-1200-4x3.jpg');arr.push(base+'/images/optimized/'+r.id+'-square.jpg')}else{arr.push(getImageUrlAbs(r.id))}if(r.youtubeId)arr.push('https://img.youtube.com/vi/'+r.youtubeId+'/hqdefault.jpg');return arr})();if(ytImg&&ytImg!==baseImg)imgArr.push(ytImg);
+  const ld={"@context":"https://schema.org","@type":"Recipe","mainEntityOfPage":{"@type":"WebPage","@id":(window.location.origin+window.location.pathname).replace(/[#?].*$/,'')},"name":title,"description":desc,"author":{"@type":"Organization","name":"AxCooking","url":"https://www.axcooking.com"},"image":imgArr,"datePublished":r.datePublished||new Date().toISOString().split('T')[0],"recipeYield":[String(r.baseServings),(lang==='de'?r.servingsUnit_de:r.servingsUnit_en)||'Personen'],"recipeIngredient":ings,"recipeInstructions":instr};
   const tags=tr(r,'tags');
   if(tags&&tags.length)ld.keywords=tags.join(', ');
   if(tags&&tags.length>=1)ld.recipeCategory=tags[0];
   // Cuisine: match both German and English cuisine-related tags
   const cuisinePat=/küche|cuisine|swiss|french|italian|greek|asian|österreich|schweiz|griechisch|italienisch|französisch|asiatisch/i;
   const cuisineTags=(tags||[]).filter(t=>cuisinePat.test(t));
-  if(cuisineTags.length)ld.recipeCuisine=cuisineTags.join(', ');
+  /* suitableForDiet */const dietMap={vegetarisch:'https://schema.org/VegetarianDiet',vegetarian:'https://schema.org/VegetarianDiet',vegan:'https://schema.org/VeganDiet',glutenfrei:'https://schema.org/GlutenFreeDiet','gluten-free':'https://schema.org/GlutenFreeDiet','low carb':'https://schema.org/LowCalorieDiet','low-carb':'https://schema.org/LowCalorieDiet','low-fat':'https://schema.org/LowFatDiet',laktosefrei:'https://schema.org/LowLactoseDiet','lactose-free':'https://schema.org/LowLactoseDiet'};const diets=Array.from(new Set((tags||[]).map(tg=>dietMap[(tg||'').toLowerCase()]).filter(Boolean)));if(diets.length)ld.suitableForDiet=diets.length===1?diets[0]:diets;if(cuisineTags.length)ld.recipeCuisine=cuisineTags.join(', ');
   // Times: convert e.g. "1h30m" → "PT1H30M"
   function toISO(t){if(!t||t==='0m')return undefined;return'PT'+t.toUpperCase().replace(/\s+/g,'').replace(/(\d+)H(\d+)M/,'$1H$2M')}
   if(toISO(r.totalTime))ld.totalTime=toISO(r.totalTime);
@@ -623,8 +623,8 @@ function updateJsonLd(r){removeJsonLd();const title=tr(r,'title');const desc=tr(
       })
     }
   }
-  const el=document.createElement('script');el.type='application/ld+json';el.id='recipe-jsonld';el.textContent=JSON.stringify(ld);document.head.appendChild(el)}
-function removeJsonLd(){const el=$('recipe-jsonld');if(el)el.remove();const ws=$('website-jsonld');if(ws)ws.remove()}
+  const el=document.createElement('script');el.type='application/ld+json';el.id='recipe-jsonld';el.textContent=JSON.stringify(ld);document.head.appendChild(el);try{const bcEl=document.createElement('script');bcEl.type='application/ld+json';bcEl.id='breadcrumb-jsonld';const bcOrigin=window.location.origin;const bcLang=lang||'de';const bcHomeLabel=bcLang==='en'?'Home':'Startseite';const bcListLabel=bcLang==='en'?'Recipes':'Rezepte';const bcList={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":bcHomeLabel,"item":bcOrigin+'/'},{"@type":"ListItem","position":2,"name":bcListLabel,"item":bcOrigin+'/'},{"@type":"ListItem","position":3,"name":title,"item":(window.location.origin+window.location.pathname).replace(/[#?].*$/,'')}]};bcEl.textContent=JSON.stringify(bcList);document.head.appendChild(bcEl)}catch(e){}}
+function removeJsonLd(){const el=$('recipe-jsonld');if(el)el.remove();const ws=$('website-jsonld');if(ws)ws.remove();const bc=$('breadcrumb-jsonld');if(bc)bc.remove()}
 function _resetView(){document.body.classList.remove('on-detail');releaseCookMode();teardownCookStepTracking();const d=$('recipeDetail');d.classList.remove('active');d.style.display='none'}
 function showList(){resetSeoMeta();currentRecipeId=null;cachedNavList=null;_resetView();$('recipeList').classList.remove('hidden');$('importPanel').classList.remove('active');$('tabRecipes').classList.add('active');$('tabImport').classList.remove('active');renderList();history.pushState({lang},null,BASE_PATH+'/'+lang);window.scrollTo({top:0,behavior:'smooth'})}
 async function showRecipe(id){if(!cachedNavList||!currentRecipeId)cachedNavList=getSortedFilteredRecipes();(async()=>{try{const fresh=await ghGet('data/stats.json');if(fresh&&fresh.content){const serverStats=JSON.parse(base64ToUtf8(fresh.content.replace(/\n/g,'')));Object.assign(stats,serverStats)}}catch(e){}stats[id]=(stats[id]||0)+1;saveStatsPublic().catch(()=>{})})();document.body.classList.add('on-detail');const bfLbl=$('bringFabLabel');if(bfLbl)bfLbl.textContent='Bring! App';const cmLbl=$('cookModeLabel');if(cmLbl)cmLbl.textContent=t('cookMode');$('recipeList').classList.add('hidden');$('importPanel').classList.remove('active');const d=$('recipeDetail');d.style.display='block';d.classList.add('active');renderDetail(id);history.pushState({id,lang},null,makePath(id));window.scrollTo({top:0,behavior:'smooth'});updateSeoMeta(id)}
