@@ -363,7 +363,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1777668101609 -->
+<!-- cache-bust: 1777668316803 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -590,7 +590,7 @@ function insertWebSiteJsonLd(){if($('website-jsonld'))return;const el=document.c
 function setHreflang(deUrl,enUrl){['de','en'].forEach(hl=>{let el=document.querySelector(`link[hreflang="${hl}"]`);if(!el){el=document.createElement('link');el.rel='alternate';el.hreflang=hl;document.head.appendChild(el)}el.href=hl==='de'?deUrl:enUrl});let xDef=document.querySelector('link[hreflang="x-default"]');if(!xDef){xDef=document.createElement('link');xDef.rel='alternate';xDef.hreflang='x-default';document.head.appendChild(xDef)}xDef.href=deUrl}
 function setCanonical(url){let el=document.querySelector('link[rel=canonical]');if(!el){el=document.createElement('link');el.rel='canonical';document.head.appendChild(el)}el.href=url}
 function setMeta(name,val,attr){attr=attr||'name';let el=document.querySelector('meta['+attr+'="'+name+'"]');if(!el){el=document.createElement('meta');el.setAttribute(attr,name);document.head.appendChild(el)}el.setAttribute('content',val)}
-function updateJsonLd(r){removeJsonLd();const title=tr(r,'title');const desc=tr(r,'desc');const steps=tr(r,'steps');const ings=[];(steps||[]).forEach(s=>(s.ingredients||[]).forEach(ing=>{const a=ing.amount?(ing.amount%1===0?ing.amount:parseFloat(ing.amount.toFixed(1)))+' ':'';ings.push((a+(ing.unit?ing.unit+' ':'')+ing.name).trim())}));const instr=(steps||[]).map((s,i)=>({"@type":"HowToStep","position":i+1,"name":s.title,"text":s.text||s.title,"url":(window.location.origin+window.location.pathname).replace(/[#?].*$/,'')+'#step-'+(i+1),"url":window.location.origin+makePath(r.id)}));
+function updateJsonLd(r){removeJsonLd();const title=tr(r,'title');const desc=tr(r,'desc');const steps=tr(r,'steps');const ings=[];(steps||[]).forEach(s=>(s.ingredients||[]).forEach(ing=>{const a=ing.amount?(ing.amount%1===0?ing.amount:parseFloat(ing.amount.toFixed(1)))+' ':'';ings.push((a+(ing.unit?ing.unit+' ':'')+ing.name).trim())}));const instr=(steps||[]).map((s,i)=>({"@type":"HowToStep","position":i+1,"name":s.title,"text":s.text||s.title,"url":window.location.origin+makePath(r.id)+'#step-'+(i+1)}));
   // Image: Google wants array with 1:1, 4:3, 16:9 variants
   const baseImg=getImageUrlAbs(r.id);
   const ytImg=r.youtubeId?'https://img.youtube.com/vi/'+r.youtubeId+'/hqdefault.jpg':null;
