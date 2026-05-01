@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-01T19:58:42.331Z",
+  "generatedAt": "2026-05-01T21:36:14.049Z",
   "images": {
     "bruschetta": {
       "slug": "bruschetta",
@@ -547,175 +547,175 @@
       "sources": {
         "16x9": {
           "filename": "butter-chicken-murgh-makhani-16x9.jpg",
-          "hash": "7980147cf2a849482b453e9b59b8a8fbbb5a12c2136236e1d46f1004156e5fc0"
+          "hash": "ef4e759c216be656824a1803ea94844f29d2ee9ba13949d09761408f312106c9"
         },
         "4x3": {
           "filename": "butter-chicken-murgh-makhani-4x3.jpg",
-          "hash": "836dcc54f831958b47eb99ade66ef19ef74e25b24630d9cc5d9c5ec1fff5c7ac"
+          "hash": "3fc553332dd3511233d81aaf9b4e9e2f4c4662651afda7c749c0ee32088c204d"
         }
       },
-      "compositeKey": "7980147cf2a849482b453e9b59b8a8fbbb5a12c2136236e1d46f1004156e5fc0|836dcc54f831958b47eb99ade66ef19ef74e25b24630d9cc5d9c5ec1fff5c7ac|-",
-      "sourceWidth": 1642,
-      "sourceHeight": 924,
-      "encodedAt": "2026-05-01T19:56:30.738Z",
+      "compositeKey": "ef4e759c216be656824a1803ea94844f29d2ee9ba13949d09761408f312106c9|3fc553332dd3511233d81aaf9b4e9e2f4c4662651afda7c749c0ee32088c204d|-",
+      "sourceWidth": 1704,
+      "sourceHeight": 958,
+      "encodedAt": "2026-05-01T21:36:14.048Z",
       "outputs": [
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-400-16x9.avif",
-          "bytes": 25499,
+          "bytes": 23886,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-400-16x9.webp",
-          "bytes": 29918,
+          "bytes": 28230,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-400-16x9.jpg",
-          "bytes": 47136,
+          "bytes": 44899,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-800-16x9.avif",
-          "bytes": 59665,
+          "bytes": 55420,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-800-16x9.webp",
-          "bytes": 74280,
+          "bytes": 70214,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-800-16x9.jpg",
-          "bytes": 129117,
+          "bytes": 122700,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-1200-16x9.avif",
-          "bytes": 90295,
+          "bytes": 82907,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-1200-16x9.webp",
-          "bytes": 122362,
+          "bytes": 115660,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-1200-16x9.jpg",
-          "bytes": 226218,
+          "bytes": 213829,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-400-4x3.avif",
-          "bytes": 29874,
+          "bytes": 28926,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-400-4x3.webp",
-          "bytes": 35772,
+          "bytes": 34544,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-400-4x3.jpg",
-          "bytes": 57302,
+          "bytes": 55520,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-800-4x3.avif",
-          "bytes": 68266,
+          "bytes": 64278,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-800-4x3.webp",
-          "bytes": 90294,
+          "bytes": 84358,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-800-4x3.jpg",
-          "bytes": 156117,
+          "bytes": 148214,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-1200-4x3.avif",
-          "bytes": 101895,
+          "bytes": 95009,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-1200-4x3.webp",
-          "bytes": 145564,
+          "bytes": 135842,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-1200-4x3.jpg",
-          "bytes": 275234,
+          "bytes": 258237,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-pin.jpg",
-          "bytes": 299565,
+          "bytes": 300633,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-pin.webp",
-          "bytes": 141528,
+          "bytes": 145048,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-square.jpg",
-          "bytes": 300559,
+          "bytes": 298893,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-og.jpg",
-          "bytes": 215630,
+          "bytes": 202000,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
           "path": "images/optimized/butter-chicken-murgh-makhani.jpg",
-          "bytes": 129117,
+          "bytes": 122700,
           "format": "jpg",
           "width": 800,
           "height": 450
