@@ -2392,43 +2392,57 @@
             "amount": 200,
             "unit": "gr",
             "name": "Champignon (frisch)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 4,
             "unit": "Stk.",
             "name": "Schalotten",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 2,
             "unit": "Stk.",
             "name": "Knoblauchzehen",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 2,
             "unit": "Stk.",
             "name": "Petersilienzweig (frisch)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 120,
             "unit": "ml",
             "name": "Weisswein",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 40,
             "unit": "ml",
             "name": "Wermutwein (italienischer Wein-Aperitif)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 360,
             "unit": "ml",
             "name": "Sahne (Vollrahm)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           }
         ],
         "text": "Schalotten und Knoblauch schälen, Triebe entfernen und klein schneiden und zusammen in Schüssel bei Seite stellen. Pilze in 4 mm dicke Scheiben schneiden (nicht zu dünn, da die Pilze beim Anbraten schrumpfen werden) und in separater Schüssel bei Seite stellen. Dicke Stile der Petersilie entfernen und den Rest klein geschnitten bei Seite stellen. Weisswein und Wermutwein abmessen und in einem Behälter zur Seite stellen. Die Sahne in einem separaten Behälter bei Seite stellen."
@@ -2440,25 +2454,33 @@
             "amount": 550,
             "unit": "gr",
             "name": "Hero Rösti (klassisch)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 4,
             "unit": "EL",
             "name": "Bratbutter",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 2,
             "unit": "Pr",
             "name": "Salz",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 1,
             "unit": "Pr",
             "name": "Muskatnuss (frisch gerieben)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           }
         ],
         "text": "Bratbutter in Pfanne erhitzen auf Hitzestufe 6/9, Rösti hinzugeben, ein paar mal durchschwenken und würzen. Auf beiden Seiten bei mittlerer Hitze gold braun braten."
@@ -2470,25 +2492,33 @@
             "amount": 320,
             "unit": "gr",
             "name": "Kalbsoberschale (ohne Deckel)",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 4,
             "unit": "EL",
             "name": "Bratbutter",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 4,
             "unit": "Pr",
             "name": "Salz",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 2,
             "unit": "Pr",
             "name": "Pfeffer (frisch gemahlen)",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           }
         ],
         "text": "Kalbfleisch entgegen der Fleischmaserung in 3 mm dicke Scheiben schneiden. Bratbutter in Bratpfanne geben und stark erhitzen (Stufe 8/9) bis Rauch aufsteigt. Kalbfleisch kurz und heiss anbraten jeweils ca. 30 Sekunden pro Seite, dabei salzen und pfeffern und dann abgedeckt in separater Schüssel zur Seite stellen. Das Kalbfleisch nur medium bis medium rare anbraten."
@@ -2500,19 +2530,25 @@
             "amount": 6,
             "unit": "EL",
             "name": "Bratbutter",
-            "bring": true
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 2,
             "unit": "Pr",
             "name": "Salz",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 1,
             "unit": "Pr",
             "name": "Pfeffer (frisch gemahlen)",
-            "bring": false
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           }
         ],
         "text": "In der selben Bratpfanne in der das Kalbfleisch angebraten wurde, die Bratbutter hinzugeben bei Hitzestufe 7/9, Schalotten und Knoblauch kurz andünsten, Pilze hinzufügen und sofort salzen und pfeffern. Die Pilze unter ständigem Rühren anbraten, bis sie zu schrumpfen beginnen. Dann mit dem Weisswein/Wehrmut mix ablöschen und vollständig einkochen lassen. Vollrahm und den Fleischsaft des angebratenen Kalbfleisches hinzufügen und bis zur gewünschten Konsistenz auf mittlerer Hitzestufe einkochen lassen. Herd abstellen (Sauce darf nicht mehr kochen), dann das Kalbfleisch und die Petersilie hinzufügen, kurz durchschwenken und servieren. Wenn die Sauce bei der Hinzugabe des Kalbfleisches noch kocht, wird das Kalbfleisch zäh."
@@ -2526,43 +2562,57 @@
             "amount": 200,
             "unit": "g",
             "name": "Champignon mushrooms (fresh)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 4,
             "unit": "pc",
             "name": "Shallots",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 2,
             "unit": "pc",
             "name": "Garlic cloves",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 2,
             "unit": "pc",
             "name": "Parsley sprig (fresh)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
           },
           {
             "amount": 120,
             "unit": "ml",
             "name": "White wine",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 40,
             "unit": "ml",
             "name": "Vermouth (italian wine aperitif)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           },
           {
             "amount": 360,
             "unit": "ml",
             "name": "Cream",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Milliliter",
+            "unitLong_en": "milliliter"
           }
         ],
         "text": "Peel shallots and garlic, remove the sprouts and cut them into small pieces and put them together in bowl at the side. Cut mushrooms into 4 mm | ⅙ in thick slices (not too thin, as mushrooms will shrink when sautéed) and set aside in separate bowl. Remove thick stalks of parsley and set the rest aside, chopped. Measure white wine and vermouth and set aside in a container. Set cream aside in a separate container."
@@ -2574,25 +2624,33 @@
             "amount": 550,
             "unit": "g",
             "name": "Hero ready to cook Rösti (classic variation)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 4,
             "unit": "tb",
             "name": "Frying butter",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 2,
             "unit": "pn",
             "name": "Salt",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 1,
             "unit": "pn",
             "name": "Nutmeg (freshly grated)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           }
         ],
         "text": "Heat the frying butter in a pan on heat level 6/9, add the Rösti, toss a few times and season. Fry on both sides over medium heat until golden brown."
@@ -2604,25 +2662,33 @@
             "amount": 320,
             "unit": "g",
             "name": "Veal topside (without cap)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
           },
           {
             "amount": 4,
             "unit": "tb",
             "name": "Frying butter",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 4,
             "unit": "pn",
             "name": "Salt",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 2,
             "unit": "pn",
             "name": "Pepper (freshly grounded)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           }
         ],
         "text": "Cut veal into 3 mm | ⅛ in thick slices against the grain of the meat. Add frying butter to frying pan and heat strongly ( heat level 8/9) until smoke rises. Sear veal briefly until hot, about 30 seconds per side, seasoning with salt and pepper, then set aside, covered, in separate bowl. Sear veal only medium to medium rare."
@@ -2634,19 +2700,25 @@
             "amount": 6,
             "unit": "tb",
             "name": "Frying butter",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
           },
           {
             "amount": 2,
             "unit": "pn",
             "name": "Salt",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           },
           {
             "amount": 1,
             "unit": "pn",
             "name": "Pepper (freshly grounded)",
-            "bring": false
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
           }
         ],
         "text": "In the same frying pan in which the veal was seared, add the frying butter on heat level 7/9, briefly sauté the shallots and garlic, add the mushrooms and immediately season with salt and pepper. Sauté the mushrooms, stirring constantly, until they start to shrink. Then deglaze with the white wine/mustard mix and reduce completely. Add full cream and the meat juices from the sautéed veal and reduce to desired consistency on medium heat. Turn off heat (sauce should no longer boil), then add the veal and parsley, toss briefly and serve. If the sauce is still boiling when the veal is added, the veal will be tough."
