@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-04-27T19:44:10.616Z",
+  "generatedAt": "2026-05-01T08:26:19.292Z",
   "images": {
     "spaghetti-bolognese-aus-eingekochter-sauce": {
       "slug": "spaghetti-bolognese-aus-eingekochter-sauce",
@@ -172,6 +172,358 @@
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce.jpg",
           "bytes": 100060,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "sauce-b-arnaise": {
+      "slug": "sauce-b-arnaise",
+      "sources": {
+        "16x9": {
+          "filename": "sauce-b-arnaise-16x9.jpg",
+          "hash": "4484a6a6b0e6142d4536c7e264531b0494e60505cd2bb3c792fa650794ff45a1"
+        }
+      },
+      "compositeKey": "4484a6a6b0e6142d4536c7e264531b0494e60505cd2bb3c792fa650794ff45a1|-|-",
+      "sourceWidth": 2400,
+      "sourceHeight": 1350,
+      "encodedAt": "2026-05-01T08:26:19.267Z",
+      "outputs": [
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-16x9.avif",
+          "bytes": 1911,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-16x9.webp",
+          "bytes": 2978,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-16x9.jpg",
+          "bytes": 6805,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-16x9.avif",
+          "bytes": 3335,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-16x9.webp",
+          "bytes": 7242,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-16x9.jpg",
+          "bytes": 16923,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-16x9.avif",
+          "bytes": 4696,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-16x9.webp",
+          "bytes": 12268,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-16x9.jpg",
+          "bytes": 26783,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-4x3.avif",
+          "bytes": 2381,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-4x3.webp",
+          "bytes": 4040,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-400-4x3.jpg",
+          "bytes": 8306,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-4x3.avif",
+          "bytes": 4174,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-4x3.webp",
+          "bytes": 8950,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-800-4x3.jpg",
+          "bytes": 20438,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-4x3.avif",
+          "bytes": 5794,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-4x3.webp",
+          "bytes": 14432,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-1200-4x3.jpg",
+          "bytes": 36392,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-pin.jpg",
+          "bytes": 59429,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-pin.webp",
+          "bytes": 21374,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-square.jpg",
+          "bytes": 43517,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-og.jpg",
+          "bytes": 26050,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise.jpg",
+          "bytes": 16923,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "sauce-b-arnaise-4x3": {
+      "slug": "sauce-b-arnaise-4x3",
+      "sources": {
+        "16x9": {
+          "filename": "sauce-b-arnaise-4x3.jpg",
+          "hash": "ab99b9ae724c7ccb341ba0f15b08e5c68bc9c8b68be78fbc48464badd2c16061"
+        }
+      },
+      "compositeKey": "ab99b9ae724c7ccb341ba0f15b08e5c68bc9c8b68be78fbc48464badd2c16061|-|-",
+      "sourceWidth": 2000,
+      "sourceHeight": 1500,
+      "encodedAt": "2026-05-01T08:26:19.292Z",
+      "outputs": [
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-400-16x9.avif",
+          "bytes": 2095,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-400-16x9.webp",
+          "bytes": 3298,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-400-16x9.jpg",
+          "bytes": 6799,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-800-16x9.avif",
+          "bytes": 3782,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-800-16x9.webp",
+          "bytes": 7250,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-800-16x9.jpg",
+          "bytes": 15944,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-1200-16x9.avif",
+          "bytes": 5343,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-1200-16x9.webp",
+          "bytes": 11532,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-1200-16x9.jpg",
+          "bytes": 26565,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-400-4x3.avif",
+          "bytes": 2173,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-400-4x3.webp",
+          "bytes": 3600,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-400-4x3.jpg",
+          "bytes": 7484,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-800-4x3.avif",
+          "bytes": 3861,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-800-4x3.webp",
+          "bytes": 8240,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-800-4x3.jpg",
+          "bytes": 18005,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-1200-4x3.avif",
+          "bytes": 5545,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-1200-4x3.webp",
+          "bytes": 13166,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-1200-4x3.jpg",
+          "bytes": 31522,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-pin.jpg",
+          "bytes": 55346,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-pin.webp",
+          "bytes": 20898,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-square.jpg",
+          "bytes": 39510,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3-og.jpg",
+          "bytes": 26183,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/sauce-b-arnaise-4x3.jpg",
+          "bytes": 15944,
           "format": "jpg",
           "width": 800,
           "height": 450
