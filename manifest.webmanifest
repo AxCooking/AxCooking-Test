@@ -1,0 +1,38 @@
+{
+  "name": "AxCooking — Schweizer Rezepte",
+  "short_name": "AxCooking",
+  "description": "Schweizer Kochrezepte mit Bring!-Integration und bilingualen Inhalten",
+  "lang": "de",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/logos/FavIcon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logos/FavIcon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logos/FavIcon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "food",
+    "lifestyle"
+  ],
+  "prefer_related_applications": false
+}

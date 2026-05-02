@@ -5,6 +5,15 @@
   <link rel="icon" type="image/x-icon" href="/logos/FavIcon.ico">
   <link rel="icon" type="image/png" sizes="180x180" href="/logos/FavIcon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/logos/FavIcon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AxCooking">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="AxCooking">
+  <meta name="msapplication-TileColor" content="#1a1a1a">
+  <meta name="msapplication-TileImage" content="/logos/FavIcon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.bunny.net; font-src https://fonts.bunny.net; img-src 'self' data: https://raw.githubusercontent.com https://img.youtube.com https://play-lh.googleusercontent.com https://www.axcooking.com https://axcooking.github.io https://test.axcooking.com; connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://www.axcooking.com https://axcooking.github.io https://test.axcooking.com; frame-src https://www.youtube.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -363,7 +372,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1777750007210 -->
+<!-- cache-bust: 1777754236597 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -1122,6 +1131,29 @@ document.addEventListener('visibilitychange',async()=>{if(document.visibilitySta
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=$('ratingModalOverlay');if(o&&o.classList.contains('open'))closeRatingModal()}});
 window.addEventListener('popstate',checkPath);
 window.addEventListener('scroll',()=>{const b=$('bttBtn');if(b)b.classList.toggle('visible',window.scrollY>300)},{passive:true});
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').then((reg) => {
+      reg.addEventListener('updatefound', () => {
+        const installing = reg.installing;
+        if (!installing) return;
+        installing.addEventListener('statechange', () => {
+          if (installing.state === 'installed' && navigator.serviceWorker.controller) {
+            installing.postMessage({ type: 'SKIP_WAITING' });
+          }
+        });
+      });
+    }).catch((err) => { console.warn('SW register failed:', err); });
+    let refreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (refreshing) return;
+      refreshing = true;
+      window.location.reload();
+    });
+  });
+}
 </script>
 </body>
 </html>
