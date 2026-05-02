@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-02T17:15:02.516Z",
+  "generatedAt": "2026-05-02T17:39:58.677Z",
   "images": {
     "bruschetta": {
       "slug": "bruschetta",
@@ -727,175 +727,175 @@
       "sources": {
         "16x9": {
           "filename": "caprese-salat-tomaten-mozzarella-mit-crostinis-16x9.jpg",
-          "hash": "f908f4c7cdd3e60dd7b280f8f05e753156f1f77793a6d987c7325bba62867c49"
+          "hash": "3ccd2d0ece0438143a3b76bb39689f721d501dec361e923ca65351ad1739b29d"
         },
         "4x3": {
           "filename": "caprese-salat-tomaten-mozzarella-mit-crostinis-4x3.jpg",
-          "hash": "2840aff8a3466f744c0a3a6130c11cf16a653d493e070813a8528f9122cab7ab"
+          "hash": "481793a7f19bd30904766682cb2ad152a3dba9ca18f7a26d344fbb204d1eb812"
         }
       },
-      "compositeKey": "f908f4c7cdd3e60dd7b280f8f05e753156f1f77793a6d987c7325bba62867c49|2840aff8a3466f744c0a3a6130c11cf16a653d493e070813a8528f9122cab7ab|-",
-      "sourceWidth": 3638,
-      "sourceHeight": 2046,
-      "encodedAt": "2026-05-02T17:13:04.060Z",
+      "compositeKey": "3ccd2d0ece0438143a3b76bb39689f721d501dec361e923ca65351ad1739b29d|481793a7f19bd30904766682cb2ad152a3dba9ca18f7a26d344fbb204d1eb812|-",
+      "sourceWidth": 2511,
+      "sourceHeight": 1413,
+      "encodedAt": "2026-05-02T17:39:58.676Z",
       "outputs": [
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-400-16x9.avif",
-          "bytes": 19382,
+          "bytes": 15799,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-400-16x9.webp",
-          "bytes": 21974,
+          "bytes": 18202,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-400-16x9.jpg",
-          "bytes": 33985,
+          "bytes": 30115,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-800-16x9.avif",
-          "bytes": 61378,
+          "bytes": 41490,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-800-16x9.webp",
-          "bytes": 71824,
+          "bytes": 52030,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-800-16x9.jpg",
-          "bytes": 112525,
+          "bytes": 88154,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-1200-16x9.avif",
-          "bytes": 114899,
+          "bytes": 71897,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-1200-16x9.webp",
-          "bytes": 135946,
+          "bytes": 91128,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-1200-16x9.jpg",
-          "bytes": 217652,
+          "bytes": 163174,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-400-4x3.avif",
-          "bytes": 17236,
+          "bytes": 16797,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-400-4x3.webp",
-          "bytes": 21624,
+          "bytes": 19884,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-400-4x3.jpg",
-          "bytes": 34866,
+          "bytes": 33870,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-800-4x3.avif",
-          "bytes": 49052,
+          "bytes": 40046,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-800-4x3.webp",
-          "bytes": 62490,
+          "bytes": 51520,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-800-4x3.jpg",
-          "bytes": 105712,
+          "bytes": 94615,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-1200-4x3.avif",
-          "bytes": 82149,
+          "bytes": 60861,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-1200-4x3.webp",
-          "bytes": 108190,
+          "bytes": 85408,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-1200-4x3.jpg",
-          "bytes": 197427,
+          "bytes": 169721,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-pin.jpg",
-          "bytes": 245371,
+          "bytes": 200931,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-pin.webp",
-          "bytes": 131114,
+          "bytes": 97064,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-square.jpg",
-          "bytes": 241047,
+          "bytes": 196246,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-og.jpg",
-          "bytes": 214268,
+          "bytes": 153807,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis.jpg",
-          "bytes": 112525,
+          "bytes": 88154,
           "format": "jpg",
           "width": 800,
           "height": 450
