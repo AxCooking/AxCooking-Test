@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-02T17:39:58.677Z",
+  "generatedAt": "2026-05-02T18:13:33.004Z",
   "images": {
     "bruschetta": {
       "slug": "bruschetta",
@@ -17,7 +17,7 @@
       "compositeKey": "25737f77613d810d0eac27746275adff4c02e934f0df33fd0d87cabe97d5728f|32618c3e6e138fad0f154bf7e75c72fee50414b13388932e01a4415bed70a895|-",
       "sourceWidth": 2982,
       "sourceHeight": 1678,
-      "encodedAt": "2026-05-02T17:12:36.928Z",
+      "encodedAt": "2026-05-02T18:13:33.004Z",
       "outputs": [
         {
           "path": "images/optimized/bruschetta-400-16x9.avif",
@@ -197,7 +197,7 @@
       "compositeKey": "ac3d8a352f38dc409554b24484cb700eaabe30bd3c6f4d8dfcd54bbd5435baca|c60ef7baf81dbf66dffdef06b60ca7039e3b41d475da2c4f6eb77bca211a1b3a|-",
       "sourceWidth": 3032,
       "sourceHeight": 1705,
-      "encodedAt": "2026-05-02T17:12:36.982Z",
+      "encodedAt": "2026-05-01T19:56:14.657Z",
       "outputs": [
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-16x9.avif",
@@ -367,175 +367,175 @@
       "sources": {
         "16x9": {
           "filename": "buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-16x9.jpg",
-          "hash": "ac3d8a352f38dc409554b24484cb700eaabe30bd3c6f4d8dfcd54bbd5435baca"
+          "hash": "cb17d05f695782646d684b66ecb0ca466ea0eca1ba5506fbb035866bc01a6e8f"
         },
         "4x3": {
           "filename": "buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-4x3.jpg",
-          "hash": "c60ef7baf81dbf66dffdef06b60ca7039e3b41d475da2c4f6eb77bca211a1b3a"
+          "hash": "7daa6e1b4fd59c2fa74440d01a354ec981cb6a866f703bf256194e1f95bf7908"
         }
       },
-      "compositeKey": "ac3d8a352f38dc409554b24484cb700eaabe30bd3c6f4d8dfcd54bbd5435baca|c60ef7baf81dbf66dffdef06b60ca7039e3b41d475da2c4f6eb77bca211a1b3a|-",
+      "compositeKey": "cb17d05f695782646d684b66ecb0ca466ea0eca1ba5506fbb035866bc01a6e8f|7daa6e1b4fd59c2fa74440d01a354ec981cb6a866f703bf256194e1f95bf7908|-",
       "sourceWidth": 3032,
       "sourceHeight": 1705,
-      "encodedAt": "2026-05-02T17:12:49.771Z",
+      "encodedAt": "2026-05-02T09:42:08.535Z",
       "outputs": [
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-16x9.avif",
-          "bytes": 13505,
+          "bytes": 13187,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-16x9.webp",
-          "bytes": 16484,
+          "bytes": 15878,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-16x9.jpg",
-          "bytes": 29353,
+          "bytes": 28470,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-16x9.avif",
-          "bytes": 30577,
+          "bytes": 29717,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-16x9.webp",
-          "bytes": 40836,
+          "bytes": 39636,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-16x9.jpg",
-          "bytes": 81217,
+          "bytes": 79017,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-16x9.avif",
-          "bytes": 49689,
+          "bytes": 48517,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-16x9.webp",
-          "bytes": 69498,
+          "bytes": 67022,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-16x9.jpg",
-          "bytes": 146473,
+          "bytes": 142389,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-4x3.avif",
-          "bytes": 16940,
+          "bytes": 16888,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-4x3.webp",
-          "bytes": 20166,
+          "bytes": 20160,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-400-4x3.jpg",
-          "bytes": 36040,
+          "bytes": 35877,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-4x3.avif",
-          "bytes": 39518,
+          "bytes": 39316,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-4x3.webp",
-          "bytes": 50932,
+          "bytes": 50598,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-800-4x3.jpg",
-          "bytes": 99762,
+          "bytes": 99363,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-4x3.avif",
-          "bytes": 62248,
+          "bytes": 62114,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-4x3.webp",
-          "bytes": 85832,
+          "bytes": 85358,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-1200-4x3.jpg",
-          "bytes": 181371,
+          "bytes": 179946,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-pin.jpg",
-          "bytes": 256439,
+          "bytes": 256339,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-pin.webp",
-          "bytes": 131498,
+          "bytes": 131240,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-square.jpg",
-          "bytes": 224206,
+          "bytes": 223932,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren-og.jpg",
-          "bytes": 139095,
+          "bytes": 135454,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren.jpg",
-          "bytes": 81217,
+          "bytes": 79017,
           "format": "jpg",
           "width": 800,
           "height": 450
@@ -557,7 +557,7 @@
       "compositeKey": "ef4e759c216be656824a1803ea94844f29d2ee9ba13949d09761408f312106c9|3fc553332dd3511233d81aaf9b4e9e2f4c4662651afda7c749c0ee32088c204d|-",
       "sourceWidth": 1704,
       "sourceHeight": 958,
-      "encodedAt": "2026-05-02T17:12:52.085Z",
+      "encodedAt": "2026-05-02T09:42:09.639Z",
       "outputs": [
         {
           "path": "images/optimized/butter-chicken-murgh-makhani-400-16x9.avif",
@@ -737,7 +737,7 @@
       "compositeKey": "3ccd2d0ece0438143a3b76bb39689f721d501dec361e923ca65351ad1739b29d|481793a7f19bd30904766682cb2ad152a3dba9ca18f7a26d344fbb204d1eb812|-",
       "sourceWidth": 2511,
       "sourceHeight": 1413,
-      "encodedAt": "2026-05-02T17:39:58.676Z",
+      "encodedAt": "2026-05-01T19:56:39.943Z",
       "outputs": [
         {
           "path": "images/optimized/caprese-salat-tomaten-mozzarella-mit-crostinis-400-16x9.avif",
@@ -917,7 +917,7 @@
       "compositeKey": "b10d6d424f59151ce23985107ca536e28049b2893c26ec17246ce39bcc0c49e5|206d34c48cf4bae7f6be41cb3b11799721d5484d93d975d1c98625ddee3db87b|-",
       "sourceWidth": 1763,
       "sourceHeight": 991,
-      "encodedAt": "2026-05-02T17:13:09.335Z",
+      "encodedAt": "2026-05-01T19:56:47.916Z",
       "outputs": [
         {
           "path": "images/optimized/gyros-marinade-400-16x9.avif",
@@ -1097,7 +1097,7 @@
       "compositeKey": "d09cb05e849be1718088b4798958eb05730239a3160097bd3561791cdb377fdc|c96834d92e9b39dc97b3c659d994a56f0995f0424a7e4ba6fc82be47ff7bcbd8|-",
       "sourceWidth": 2518,
       "sourceHeight": 1416,
-      "encodedAt": "2026-05-02T17:13:20.206Z",
+      "encodedAt": "2026-05-01T19:56:56.020Z",
       "outputs": [
         {
           "path": "images/optimized/gyros-schweinshalsspiesse-400-16x9.avif",
@@ -1277,7 +1277,7 @@
       "compositeKey": "61939c5a9873d1c6a8ecf9e36e22fd3d9d7b23ab2b19437534caa533b088c42e|88c7d0bafef2bde0e6db3349ccc29d833563cceb6c9bc302bf5b2d8e8870b930|-",
       "sourceWidth": 3455,
       "sourceHeight": 1943,
-      "encodedAt": "2026-05-02T17:13:23.686Z",
+      "encodedAt": "2026-05-01T19:57:02.177Z",
       "outputs": [
         {
           "path": "images/optimized/kalbs-cordon-bleu-nach-wiener-art-400-16x9.avif",
@@ -1457,7 +1457,7 @@
       "compositeKey": "dfd10f043e65088f10f6407727eb2329dcc5c6294dd3b63b5b0034556e5c7c8d|5688a134077bc038f517f8c958c59cac955c03e8afdbf2ea4e2a08cc979bf5e5|-",
       "sourceWidth": 2410,
       "sourceHeight": 1355,
-      "encodedAt": "2026-05-02T17:13:35.308Z",
+      "encodedAt": "2026-05-01T19:57:11.113Z",
       "outputs": [
         {
           "path": "images/optimized/kalbskopfbacken-geschmort-zum-einkochen-400-16x9.avif",
@@ -1637,7 +1637,7 @@
       "compositeKey": "8bf003f13974615c65cac1239322c398f246bbf16ec85bbb32ab757580867ce1|e4e0255cf5dfda32d6384538e4f3c7894041c78e22fdd5d8490074f8697c07c5|-",
       "sourceWidth": 3093,
       "sourceHeight": 1740,
-      "encodedAt": "2026-05-02T17:13:38.779Z",
+      "encodedAt": "2026-05-01T19:57:17.233Z",
       "outputs": [
         {
           "path": "images/optimized/kartoffelpuffer-haerdoepfeltaetsch-400-16x9.avif",
@@ -1817,7 +1817,7 @@
       "compositeKey": "bfe3188c3735639bef623331815624a1ce41816fb530ea1d6809ccb312c8535f|12e8d12277c2c780eae6831c233bd2e4b3ae36f78a113143872dca48259c8546|-",
       "sourceWidth": 2961,
       "sourceHeight": 1666,
-      "encodedAt": "2026-05-02T17:13:50.549Z",
+      "encodedAt": "2026-05-01T19:57:26.248Z",
       "outputs": [
         {
           "path": "images/optimized/kartoffelsalat-schwaebische-art-400-16x9.avif",
@@ -1997,7 +1997,7 @@
       "compositeKey": "f908f4c7cdd3e60dd7b280f8f05e753156f1f77793a6d987c7325bba62867c49|2840aff8a3466f744c0a3a6130c11cf16a653d493e070813a8528f9122cab7ab|-",
       "sourceWidth": 3638,
       "sourceHeight": 2046,
-      "encodedAt": "2026-05-02T17:13:52.992Z",
+      "encodedAt": "2026-05-01T19:57:31.336Z",
       "outputs": [
         {
           "path": "images/optimized/original-wiener-schnitzel-400-16x9.avif",
@@ -2177,7 +2177,7 @@
       "compositeKey": "5b1708d7675fdc1a7e0c30b9a4ddb7f384adec517b43599896107b41bb10d4cd|4f443f60adbd81fda853586343b57f27efc884cc4be5da0fe78395cca56bbba2|-",
       "sourceWidth": 1588,
       "sourceHeight": 893,
-      "encodedAt": "2026-05-02T17:14:02.741Z",
+      "encodedAt": "2026-05-01T19:57:38.434Z",
       "outputs": [
         {
           "path": "images/optimized/pasta-alfredo-400-16x9.avif",
@@ -2357,7 +2357,7 @@
       "compositeKey": "1c38b534fbab8add74dfcf3e6fd6adba1b574441f13bdec12db11a1b4b9c5ea2|07efd0766ecae83ba2905376098dd3dcc3bb7ff834e4c822fd220d010a54ad2d|-",
       "sourceWidth": 3638,
       "sourceHeight": 2046,
-      "encodedAt": "2026-05-02T17:14:06.985Z",
+      "encodedAt": "2026-05-01T19:57:45.263Z",
       "outputs": [
         {
           "path": "images/optimized/pasta-carbonara-mit-pochiertem-ei-400-16x9.avif",
@@ -2537,7 +2537,7 @@
       "compositeKey": "165284dab1c8470a5b7587c69f547e1468284be8206810f8ff76f9fadbca1fab|8bde62001d89f8d8fc433ce3c75e925fee10fd604fb7cd327a7efaf3234c2888|-",
       "sourceWidth": 3830,
       "sourceHeight": 2154,
-      "encodedAt": "2026-05-02T17:14:19.317Z",
+      "encodedAt": "2026-05-01T19:57:54.918Z",
       "outputs": [
         {
           "path": "images/optimized/pasta-pesto-genovese-400-16x9.avif",
@@ -2717,7 +2717,7 @@
       "compositeKey": "f2a1f0d6ca4e383bbb812889b3859d05ca3dee0cbc1f34c11d76d060e8e12287|105b8912d9143dbd3482fffbff25c81a2f964e1a8a979fb4d66f09f7c0ae806b|-",
       "sourceWidth": 2245,
       "sourceHeight": 1263,
-      "encodedAt": "2026-05-02T17:14:24.290Z",
+      "encodedAt": "2026-05-01T19:58:02.574Z",
       "outputs": [
         {
           "path": "images/optimized/pesto-genovese-basilikum-pesto-400-16x9.avif",
@@ -2897,7 +2897,7 @@
       "compositeKey": "4f2f783c35d17fa20c2f7b6c0b71bb75e1daa4afe358370ea9bed4d48017f029|5808090de727bfa5f559e736ebf777f1a2a9c78d965069ab761457d07bd1b3ec|-",
       "sourceWidth": 1408,
       "sourceHeight": 792,
-      "encodedAt": "2026-05-02T17:14:31.455Z",
+      "encodedAt": "2026-05-01T19:58:07.019Z",
       "outputs": [
         {
           "path": "images/optimized/rindsfilet-steak-400-16x9.avif",
@@ -3077,7 +3077,7 @@
       "compositeKey": "3f66a0168362d4d86f5fae257a077588d1ec42645e6a9d79ff609bc23d322d70|d42f53d5de88f065c93fe7a7f32f1b77b7c95bc2206786d10b16862f6814a3de|-",
       "sourceWidth": 1425,
       "sourceHeight": 802,
-      "encodedAt": "2026-05-02T17:14:32.392Z",
+      "encodedAt": "2026-05-02T09:42:14.872Z",
       "outputs": [
         {
           "path": "images/optimized/sauce-b-arnaise-400-16x9.avif",
@@ -3257,7 +3257,7 @@
       "compositeKey": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8|a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946|-",
       "sourceWidth": 2687,
       "sourceHeight": 1511,
-      "encodedAt": "2026-05-02T17:14:47.955Z",
+      "encodedAt": "2026-05-01T19:58:23.463Z",
       "outputs": [
         {
           "path": "images/optimized/sauce-bolognese-zum-einkochen-400-16x9.avif",
@@ -3437,7 +3437,7 @@
       "compositeKey": "c738d5c9d1fabab5fb5fc27a2e9f930b0c29a271851ecaf5cdd88b73306710c8|a82a192c07072eb1dc56626135f56d4394158a9c2f51141dd0cdb643b9887946|-",
       "sourceWidth": 2687,
       "sourceHeight": 1511,
-      "encodedAt": "2026-05-02T17:14:48.956Z",
+      "encodedAt": "2026-05-01T19:58:28.884Z",
       "outputs": [
         {
           "path": "images/optimized/spaghetti-bolognese-aus-eingekochter-sauce-400-16x9.avif",
@@ -3617,7 +3617,7 @@
       "compositeKey": "4418d2fe82632ba226720d3b33c061bcebe1d2ac1e87a1da870a2fd2cb91ad47|3c397721f960f381a169ffc17ce35c24ce83ef62d5e8ec010feb00738a8ef12b|-",
       "sourceWidth": 1037,
       "sourceHeight": 584,
-      "encodedAt": "2026-05-02T17:14:58.477Z",
+      "encodedAt": "2026-05-01T19:58:33.950Z",
       "outputs": [
         {
           "path": "images/optimized/stubenkueken-mit-ofengemuese-mistkratzerli-400-16x9.avif",
@@ -3797,7 +3797,7 @@
       "compositeKey": "d75c30d7d84e43a9f74be9225d365f4db92f0a45e84f10ffb3df8d0f85b611d8|6bcbe79af71dc9096161bfd54e96e5c4c4f769d3df6988ecaafaa3a6297344d3|-",
       "sourceWidth": 2961,
       "sourceHeight": 1665,
-      "encodedAt": "2026-05-02T17:15:02.516Z",
+      "encodedAt": "2026-05-01T19:58:42.330Z",
       "outputs": [
         {
           "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets-400-16x9.avif",
