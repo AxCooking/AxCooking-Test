@@ -6982,5 +6982,443 @@
         "text": "Cut thin rings from the green of the spring onion at a steep angle for decoration. Place the toasted bread slices, crusty side up, on a cooling rack (make sure the underside of the bread doesn't soak up any tomato juice). Generously top the bread slices with the tomato mixture. Decorate with basil leaves and green onion rings and serve and enjoy immediately."
       }
     ]
+  },
+  {
+    "id": "szechuan-rind",
+    "title_de": "Szechuan Rind",
+    "title_en": "Szechuan Beef",
+    "desc_de": "Szechuan Rind gehört für mich klar zu meinen liebsten chinesischen Gerichten - und das nicht ohne Grund. Es vereint mehrere entscheidende Kriterien, die ein herausragendes Menü ausmachen: intensive Schärfe, aromatische Tiefe, knackige Frische und eine schnelle Zubereitung. Die Kombination aus zartem Rindfleisch, frischem Gemüse wie Paprika und Frühlingszwiebeln sowie der typischen Szechuan-Sauce sorgt für ein ausgewogenes Spiel zwischen Schärfe, Umami und leichter Säure.",
+    "desc_en": "Szechuan beef is clearly one of my favorite Chinese dishes - and for good reason. It combines several key criteria that define an outstanding meal: intense heat, aromatic depth, crisp freshness, and quick preparation. The combination of tender beef, fresh vegetables such as bell peppers and spring onions, along with the characteristic Szechuan sauce, creates a well-balanced interplay of spiciness, umami, and subtle acidity.\r\n",
+    "difficulty_de": "einfach",
+    "difficulty_en": "simple",
+    "workTime": "20m",
+    "cookTime": "10m",
+    "restTime": "0m",
+    "totalTime": "30m",
+    "youtubeId": "",
+    "youtubeUrl": "",
+    "tiktokUrl": "",
+    "tags_de": [
+      "Hauptspeise",
+      "Fleisch",
+      "Scharf",
+      "Chinesische Küche",
+      "Rind"
+    ],
+    "tags_en": [
+      "Main course",
+      "Meat",
+      "Spicy",
+      "Chinese Cuisine",
+      "Beef"
+    ],
+    "baseServings": 2,
+    "servingsUnit_de": "Personen",
+    "servingsUnit_en": "people",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Fleisch marinieren",
+        "ingredients": [
+          {
+            "amount": 160,
+            "unit": "gr",
+            "name": "Rindshuft",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Eiweiss",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 1,
+            "unit": "EL",
+            "name": "Sojasauce",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "EL",
+            "name": "Reisswein (chinesischer Kochwein)",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "EL",
+            "name": "Geröstetes Sesamöl",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Chiliflocken",
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Chiliöl",
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          },
+          {
+            "amount": 2,
+            "unit": "EL",
+            "name": "Maizena",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 3,
+            "unit": "Pr",
+            "name": "Salz",
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Pfeffer (frisch gemahlen)",
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
+          }
+        ],
+        "text": "Rindshuft in feine, dünne Scheiben schneiden und in eine Schüssel geben. Alle anderen Zutaten hinzugeben und gut vermengen. Danach für mindestens 1 h Stunde abgedeckt im Kühlschrank marinieren lassen."
+      },
+      {
+        "title": "Sauce zubereiten",
+        "ingredients": [
+          {
+            "amount": 1,
+            "unit": "EL",
+            "name": "Sojasauce",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "EL",
+            "name": "Sojasauce dunkel (Sweet Sojasauce)",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "EL",
+            "name": "Austernsauce",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "EL",
+            "name": "Zucker",
+            "bring": false,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          }
+        ],
+        "text": "Alles in eine kleine Schüssel geben und gut vermengen bis der Zucker sich aufgelöst hat und bei Seite stellen."
+      },
+      {
+        "title": "Gemüse vorbereiten",
+        "ingredients": [
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Karotten",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Paprika grün",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Frühlingszwiebeln",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 3,
+            "unit": "Stk.",
+            "name": "Knoblauch (frisch)",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 30,
+            "unit": "gr",
+            "name": "Ingwer (frisch)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          }
+        ],
+        "text": "Karotten schälen und in 2 x 2 mm dünne Streifen schneiden und separat zur Seite stellen. Paprika waschen und in 5 mm breite Streifen schneiden und separat zur Seite stellen. Das Grün der Frühlingszwiebel grob schneiden und separat zur Seite stellen. Aus dem weissen der Frühlingsziebel einige dünne Ringe für die Deko abschneiden. Den Knoblauch schälen, Triebe entfernen und in dünne Scheiben schneiden. Den Ingwer schälen und in 1 x 1 mm dünne Streifen schneiden und zusammen mit dem Knoblauch zur Seite stellen."
+      },
+      {
+        "title": "Szechuan Rind zubereiten",
+        "ingredients": [
+          {
+            "amount": 5,
+            "unit": "EL",
+            "name": "Rapsöl",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 8,
+            "unit": "Stk.",
+            "name": "Frühlingszwiebelringe",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 2,
+            "unit": "Spr",
+            "name": "Wasser",
+            "bring": false,
+            "unitLong_de": "Spritzer",
+            "unitLong_en": "dash"
+          }
+        ],
+        "text": "Die Hälfte des Öls in eine Bratpfanne geben und stark erhitzen (Hitzestufe 8/9). Wenn das Öl den Rauchpunkt erreicht, die marinierte Rindshuft in die Pfanne geben und während 1 bis 2 min scharf anbraten. Danach die Rindshuft in einen Behälter geben und zugedeckt zur Seite stellen.\r\n\r\nIn der selben Bratpfanne das restliche Öl hinzugeben und die Hitze auf Stufe 6/9 reduzieren. Knoblauch und Ingwer kurz scharf anbraten und dann die Karotten hinzugeben. Wasser hinzugeben, damit das Gemüse gedämpft wird. Anschliessend die Peperoni hinzufügen und je nachdem wieder etwas Wasser hinzufügen (nicht zu viel).\r\n\r\nWenn das Gemüse halb gar ist, die Sauce und das Grün der Frühlingszwiebeln hinzufügen und alles ein paar mal durchschwenken. Anschliessend das angebratene Rindfleisch hinzugeben und kurz aufwärmen und servieren und mit dünnen Ringen der Frühlingszwiebel garnieren."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Marinate the meat",
+        "ingredients": [
+          {
+            "amount": 160,
+            "unit": "g",
+            "name": "Beef round",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 1,
+            "unit": "pc",
+            "name": "Egg whites",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 1,
+            "unit": "tb",
+            "name": "Soy sauce",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "tb",
+            "name": "Chinese cooking wine",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "tb",
+            "name": "Toasted sesame oil",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "ts",
+            "name": "Chili flakes",
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          },
+          {
+            "amount": 1,
+            "unit": "ts",
+            "name": "Chili oil",
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          },
+          {
+            "amount": 2,
+            "unit": "tb",
+            "name": "Cornstarch",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 3,
+            "unit": "pn",
+            "name": "Salt",
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
+          },
+          {
+            "amount": 2,
+            "unit": "pn",
+            "name": "Pepper (freshly grounded)",
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
+          }
+        ],
+        "text": "Slice the beef round into thin, fine strips and place them in a bowl. Add all the other ingredients and mix well. Cover and let marinate in the refrigerator for at least 1 hour."
+      },
+      {
+        "title": "Prepare the sauce",
+        "ingredients": [
+          {
+            "amount": 1,
+            "unit": "tb",
+            "name": "Soy sauce",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "tb",
+            "name": "Dark soy sauce (sweet soy sauce)",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "tb",
+            "name": "Oyster sauce",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 1,
+            "unit": "tb",
+            "name": "Sugar",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          }
+        ],
+        "text": "Place all ingredients in a small bowl and mix well until the sugar has dissolved, then set aside."
+      },
+      {
+        "title": "Prepare the vegetables",
+        "ingredients": [
+          {
+            "amount": 1,
+            "unit": "pc",
+            "name": "Carrots",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 1,
+            "unit": "pc",
+            "name": "Green bell pepper",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 1,
+            "unit": "pc",
+            "name": "Spring onions",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 3,
+            "unit": "pc",
+            "name": "Garlic (fresh)",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 30,
+            "unit": "g",
+            "name": "Ginger (fresh)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          }
+        ],
+        "text": "Peel the carrots and cut them into thin strips (2 x 2 mm | 0.08 in), then set aside separately. Wash the bell peppers and cut them into strips 5 mm | ⅕ in wide, then set aside separately. Coarsely chop the green part of the scallion and set aside separately. Cut a few thin rings from the white part of the scallion for garnish. Peel the garlic, remove the sprouts, and slice thinly. Peel the ginger and cut into 1 x 1 mm | 0.04 in thin strips, then set aside with the garlic."
+      },
+      {
+        "title": "Prepare the Szechuan Beef",
+        "ingredients": [
+          {
+            "amount": 5,
+            "unit": "tb",
+            "name": "Nutural oil",
+            "bring": true,
+            "unitLong_de": "Esslöffel",
+            "unitLong_en": "tablespoon"
+          },
+          {
+            "amount": 8,
+            "unit": "pc",
+            "name": "Spring onion rings",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 2,
+            "unit": "ds",
+            "name": "Water",
+            "bring": true,
+            "unitLong_de": "Spritzer",
+            "unitLong_en": "dash"
+          }
+        ],
+        "text": "Pour half of the oil into a frying pan and heat it to a high temperature (heat setting 8/9). When the oil reaches its smoke point, add the marinated beef round to the pan and sear for 1 to 2 minutes. Then transfer the beef round to a bowl, cover it, and set it aside.\r\n\r\nAdd the remaining oil to the same frying pan and reduce the heat to level 6/9. Sear the garlic and ginger briefly, then add the carrots. Add water to steam the vegetables. Next, add the bell peppers and, if necessary, add a little more water (not too much).\r\n\r\nWhen the vegetables are half-cooked, add the sauce and the green parts of the scallions and toss everything a few times. Then add the seared beef, heat through briefly, serve, and garnish with thin rings of scallion."
+      }
+    ]
   }
 ]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-02T18:24:31.888Z",
+  "generatedAt": "2026-05-02T18:56:54.180Z",
   "images": {
     "bruschetta": {
       "slug": "bruschetta",
@@ -3956,6 +3956,186 @@
         {
           "path": "images/optimized/zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets.jpg",
           "bytes": 87052,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "szechuan-rind": {
+      "slug": "szechuan-rind",
+      "sources": {
+        "16x9": {
+          "filename": "szechuan-rind-16x9.jpg",
+          "hash": "61ed7405207e196afefa9ad294297b4a22d3ad2ad897396e1738f5b269d13062"
+        },
+        "4x3": {
+          "filename": "szechuan-rind-4x3.jpg",
+          "hash": "0a1270763d70e6246d67eb29c6c895a34a2d0d0f4a4555f2b9099cf3ea7b8dbf"
+        }
+      },
+      "compositeKey": "61ed7405207e196afefa9ad294297b4a22d3ad2ad897396e1738f5b269d13062|0a1270763d70e6246d67eb29c6c895a34a2d0d0f4a4555f2b9099cf3ea7b8dbf|-",
+      "sourceWidth": 3530,
+      "sourceHeight": 1985,
+      "encodedAt": "2026-05-02T18:56:54.180Z",
+      "outputs": [
+        {
+          "path": "images/optimized/szechuan-rind-400-16x9.avif",
+          "bytes": 20252,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/szechuan-rind-400-16x9.webp",
+          "bytes": 21656,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/szechuan-rind-400-16x9.jpg",
+          "bytes": 32910,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/szechuan-rind-800-16x9.avif",
+          "bytes": 60088,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/szechuan-rind-800-16x9.webp",
+          "bytes": 67862,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/szechuan-rind-800-16x9.jpg",
+          "bytes": 104013,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/szechuan-rind-1200-16x9.avif",
+          "bytes": 109498,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/szechuan-rind-1200-16x9.webp",
+          "bytes": 125326,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/szechuan-rind-1200-16x9.jpg",
+          "bytes": 198595,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/szechuan-rind-400-4x3.avif",
+          "bytes": 25828,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/szechuan-rind-400-4x3.webp",
+          "bytes": 27584,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/szechuan-rind-400-4x3.jpg",
+          "bytes": 43061,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/szechuan-rind-800-4x3.avif",
+          "bytes": 80600,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/szechuan-rind-800-4x3.webp",
+          "bytes": 91996,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/szechuan-rind-800-4x3.jpg",
+          "bytes": 140442,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/szechuan-rind-1200-4x3.avif",
+          "bytes": 138432,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/szechuan-rind-1200-4x3.webp",
+          "bytes": 165928,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/szechuan-rind-1200-4x3.jpg",
+          "bytes": 269035,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/szechuan-rind-pin.jpg",
+          "bytes": 346329,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/szechuan-rind-pin.webp",
+          "bytes": 209058,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/szechuan-rind-square.jpg",
+          "bytes": 333115,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/szechuan-rind-og.jpg",
+          "bytes": 191939,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/szechuan-rind.jpg",
+          "bytes": 104013,
           "format": "jpg",
           "width": 800,
           "height": 450
