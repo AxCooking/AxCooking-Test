@@ -69,5 +69,15 @@ jobs:
           else
             COUNT=$(git diff --staged --name-only | wc -l)
             git commit -m "chore(images): optimize ${COUNT} files [skip ci]"
-            git push
+            for i in 1 2 3; do
+              if git push; then
+                echo "Push erfolgreich beim Versuch $i"
+                exit 0
+              fi
+              echo "Push abgewiesen — versuche pull --rebase und retry ($i/3)"
+              git pull --rebase origin main || true
+              sleep $((i * 2))
+            done
+            echo "Push nach 3 Versuchen fehlgeschlagen" >&2
+            exit 1
           fi
