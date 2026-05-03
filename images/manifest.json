@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-02T18:56:54.180Z",
+  "generatedAt": "2026-05-03T04:50:37.363Z",
   "images": {
     "bruschetta": {
       "slug": "bruschetta",
@@ -187,175 +187,175 @@
       "sources": {
         "16x9": {
           "filename": "buendner-gerstensuppe-der-schweizer-armee-16x9.jpg",
-          "hash": "ac3d8a352f38dc409554b24484cb700eaabe30bd3c6f4d8dfcd54bbd5435baca"
+          "hash": "cb17d05f695782646d684b66ecb0ca466ea0eca1ba5506fbb035866bc01a6e8f"
         },
         "4x3": {
           "filename": "buendner-gerstensuppe-der-schweizer-armee-4x3.jpg",
-          "hash": "c60ef7baf81dbf66dffdef06b60ca7039e3b41d475da2c4f6eb77bca211a1b3a"
+          "hash": "7daa6e1b4fd59c2fa74440d01a354ec981cb6a866f703bf256194e1f95bf7908"
         }
       },
-      "compositeKey": "ac3d8a352f38dc409554b24484cb700eaabe30bd3c6f4d8dfcd54bbd5435baca|c60ef7baf81dbf66dffdef06b60ca7039e3b41d475da2c4f6eb77bca211a1b3a|-",
+      "compositeKey": "cb17d05f695782646d684b66ecb0ca466ea0eca1ba5506fbb035866bc01a6e8f|7daa6e1b4fd59c2fa74440d01a354ec981cb6a866f703bf256194e1f95bf7908|-",
       "sourceWidth": 3032,
       "sourceHeight": 1705,
-      "encodedAt": "2026-05-01T19:56:14.657Z",
+      "encodedAt": "2026-05-03T04:50:37.363Z",
       "outputs": [
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-16x9.avif",
-          "bytes": 13505,
+          "bytes": 13187,
           "format": "avif",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-16x9.webp",
-          "bytes": 16484,
+          "bytes": 15878,
           "format": "webp",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-16x9.jpg",
-          "bytes": 29353,
+          "bytes": 28470,
           "format": "jpg",
           "width": 400,
           "height": 225
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-16x9.avif",
-          "bytes": 30577,
+          "bytes": 29717,
           "format": "avif",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-16x9.webp",
-          "bytes": 40836,
+          "bytes": 39636,
           "format": "webp",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-16x9.jpg",
-          "bytes": 81217,
+          "bytes": 79017,
           "format": "jpg",
           "width": 800,
           "height": 450
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-16x9.avif",
-          "bytes": 49689,
+          "bytes": 48517,
           "format": "avif",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-16x9.webp",
-          "bytes": 69498,
+          "bytes": 67022,
           "format": "webp",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-16x9.jpg",
-          "bytes": 146473,
+          "bytes": 142389,
           "format": "jpg",
           "width": 1200,
           "height": 675
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-4x3.avif",
-          "bytes": 16940,
+          "bytes": 16888,
           "format": "avif",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-4x3.webp",
-          "bytes": 20166,
+          "bytes": 20160,
           "format": "webp",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-400-4x3.jpg",
-          "bytes": 36040,
+          "bytes": 35877,
           "format": "jpg",
           "width": 400,
           "height": 300
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-4x3.avif",
-          "bytes": 39518,
+          "bytes": 39316,
           "format": "avif",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-4x3.webp",
-          "bytes": 50932,
+          "bytes": 50598,
           "format": "webp",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-800-4x3.jpg",
-          "bytes": 99762,
+          "bytes": 99363,
           "format": "jpg",
           "width": 800,
           "height": 600
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-4x3.avif",
-          "bytes": 62248,
+          "bytes": 62114,
           "format": "avif",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-4x3.webp",
-          "bytes": 85832,
+          "bytes": 85358,
           "format": "webp",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-1200-4x3.jpg",
-          "bytes": 181371,
+          "bytes": 179946,
           "format": "jpg",
           "width": 1200,
           "height": 900
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-pin.jpg",
-          "bytes": 256439,
+          "bytes": 256339,
           "format": "jpg",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-pin.webp",
-          "bytes": 131498,
+          "bytes": 131240,
           "format": "webp",
           "width": 1000,
           "height": 1500
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-square.jpg",
-          "bytes": 224206,
+          "bytes": 223932,
           "format": "jpg",
           "width": 1200,
           "height": 1200
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee-og.jpg",
-          "bytes": 139095,
+          "bytes": 135454,
           "format": "jpg",
           "width": 1200,
           "height": 630
         },
         {
           "path": "images/optimized/buendner-gerstensuppe-der-schweizer-armee.jpg",
-          "bytes": 81217,
+          "bytes": 79017,
           "format": "jpg",
           "width": 800,
           "height": 450
