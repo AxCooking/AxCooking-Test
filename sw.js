@@ -29,9 +29,10 @@ function isFresh(response) {
   return (Date.now() - new Date(dateHeader).getTime()) < MAX_AGE_MS;
 }
 
-function putInCache(cacheName, request, response) {
-  if (!response.ok) return;
-  caches.open(cacheName).then((cache) => { cache.put(request, response.clone()); });
+// IMPORTANT: caller must clone() BEFORE passing the response to this function.
+function putInCache(cacheName, request, responseClone) {
+  if (!responseClone.ok) return;
+  caches.open(cacheName).then((cache) => { cache.put(request, responseClone); });
 }
 
 self.addEventListener('fetch', (event) => {
@@ -40,14 +41,14 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
   if (event.request.headers.get('range')) return;
 
-  // Cache-First for static assets
   if (url.pathname.startsWith('/logos/') || url.pathname.startsWith('/images/optimized/') ||
       url.pathname.includes('favicon') || url.pathname.includes('apple-touch-icon')) {
     event.respondWith(
       caches.match(event.request).then((cached) => {
         if (cached && isFresh(cached)) return cached;
         return fetch(event.request).then((response) => {
-          putInCache(RUNTIME_CACHE, event.request, response);
+          const responseClone = response.clone();
+          putInCache(RUNTIME_CACHE, event.request, responseClone);
           return response;
         }).catch(() => cached);
       })
@@ -55,14 +56,14 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Network-First for HTML/JSON/data with 3s timeout
   if (url.pathname.startsWith('/data/') || url.pathname.startsWith('/recipes/') ||
       url.pathname.startsWith('/recipes-en/') || url.pathname.endsWith('.html') ||
       url.pathname === '/' || url.pathname === '/de' || url.pathname === '/en') {
     event.respondWith(
       Promise.race([
         fetch(event.request).then((response) => {
-          if (response.ok) putInCache(RUNTIME_CACHE, event.request, response);
+          const responseClone = response.clone();
+          putInCache(RUNTIME_CACHE, event.request, responseClone);
           return response;
         }),
         new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 3000))
@@ -73,7 +74,8 @@ self.addEventListener('fetch', (event) => {
 
   event.respondWith(
     fetch(event.request).then((response) => {
-      if (response.ok) putInCache(RUNTIME_CACHE, event.request, response);
+      const responseClone = response.clone();
+      putInCache(RUNTIME_CACHE, event.request, responseClone);
       return response;
     }).catch(() => caches.match(event.request))
   );
