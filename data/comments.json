@@ -1,1 +1,10 @@
-{}
+{
+  "bruschetta": [
+    {
+      "name": "TestKommentar1",
+      "date": "2026-05-03T11:46:35.551Z",
+      "approved": false,
+      "text": "Test-Kommentar via /comment endpoint"
+    }
+  ]
+}
