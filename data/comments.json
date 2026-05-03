@@ -1,16 +1,1 @@
-{
-  "bruschetta": [
-    {
-      "name": "TestKommentar1",
-      "date": "2026-05-03T11:46:35.551Z",
-      "approved": false,
-      "text": "Test-Kommentar via /comment endpoint"
-    },
-    {
-      "name": "TestRating1",
-      "date": "2026-05-03T11:47:18.995Z",
-      "approved": false,
-      "rating": 4
-    }
-  ]
-}
+{}
