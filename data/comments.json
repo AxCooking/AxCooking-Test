@@ -4,7 +4,7 @@
       "name": "TestUser",
       "text": "Sehr lecker, super Rezept!",
       "date": "2026-05-03T10:14:48.034Z",
-      "approved": false,
+      "approved": true,
       "rating": 5
     }
   ]
