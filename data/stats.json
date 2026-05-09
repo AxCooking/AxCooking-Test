@@ -14,7 +14,10 @@
     "views": 1
   },
   "caprese-salat-tomaten-mozzarella-mit-crostinis": 0,
-  "gyros-marinade": 0,
+  "gyros-marinade": {
+    "likes": 0,
+    "views": 1
+  },
   "kalbs-cordon-bleu-nach-wiener-art": 0,
   "kalbskopfbacken-geschmort-zum-einkochen": 0,
   "kartoffelpuffer-haerdoepfeltaetsch": 0,
@@ -31,7 +34,7 @@
   },
   "sauce-b-arnaise": {
     "likes": 0,
-    "views": 4
+    "views": 6
   },
   "pasta-pesto-genovese": 0,
   "pesto-genovese-basilikum-pesto": 0,
