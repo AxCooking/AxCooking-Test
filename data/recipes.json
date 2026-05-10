@@ -11,6 +11,7 @@
     "cookTime": "8m",
     "restTime": "0m",
     "totalTime": "23m",
+    "kcalPerServing": 600,
     "youtubeId": "CCBaT6jK_cA",
     "youtubeUrl": "https://www.youtube.com/watch?v=CCBaT6jK_cA",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7098732135527337222",
@@ -34,9 +35,9 @@
       "Greek cuisine",
       "Fresh herbs"
     ],
-    "baseServings": 350,
-    "servingsUnit_de": "ml",
-    "servingsUnit_en": "ml",
+    "baseServings": 2,
+    "servingsUnit_de": "Personen",
+    "servingsUnit_en": "people",
     "emoji": "🍽",
     "steps_de": [
       {
@@ -209,7 +210,7 @@
         "title": "Prepare the marinade",
         "ingredients": [
           {
-            "amount": 70,
+            "amount": 0.4,
             "unit": "g",
             "name": "Shallots",
             "bring": true,
@@ -217,7 +218,7 @@
             "unitLong_en": "gram"
           },
           {
-            "amount": 25,
+            "amount": 0.14285714285714285,
             "unit": "g",
             "name": "Garlic cloves",
             "bring": true,
@@ -225,7 +226,7 @@
             "unitLong_en": "gram"
           },
           {
-            "amount": 100,
+            "amount": 0.5714285714285714,
             "unit": "g",
             "name": "Bell pepper pulp",
             "bring": true,
@@ -233,7 +234,7 @@
             "unitLong_en": "gram"
           },
           {
-            "amount": 130,
+            "amount": 0.7428571428571429,
             "unit": "g",
             "name": "Nutural oil (not cold pressed, with high smoke point)",
             "bring": true,
@@ -241,7 +242,7 @@
             "unitLong_en": "gram"
           },
           {
-            "amount": 3,
+            "amount": 0.017142857142857144,
             "unit": "g",
             "name": "Marjoram (fresh)",
             "bring": true,
@@ -249,7 +250,7 @@
             "unitLong_en": "gram"
           },
           {
-            "amount": 3,
+            "amount": 0.017142857142857144,
             "unit": "g",
             "name": "Oregano (fresh)",
             "bring": true,
@@ -257,7 +258,7 @@
             "unitLong_en": "gram"
           },
           {
-            "amount": 6,
+            "amount": 0.03428571428571429,
             "unit": "g",
             "name": "Rosemary (fresh)",
             "bring": true,
@@ -265,7 +266,7 @@
             "unitLong_en": "gram"
           },
           {
-            "amount": 6,
+            "amount": 0.03428571428571429,
             "unit": "g",
             "name": "Sage (fresh)",
             "bring": true,
@@ -273,7 +274,7 @@
             "unitLong_en": "gram"
           },
           {
-            "amount": 6,
+            "amount": 0.03428571428571429,
             "unit": "g",
             "name": "Thyme (fresh)",
             "bring": true,
@@ -281,7 +282,7 @@
             "unitLong_en": "gram"
           },
           {
-            "amount": 2,
+            "amount": 0.011428571428571429,
             "unit": "ts",
             "name": "Savory (dried)",
             "bring": true,
@@ -289,7 +290,7 @@
             "unitLong_en": "teaspoon"
           },
           {
-            "amount": 3,
+            "amount": 0.017142857142857144,
             "unit": "ts",
             "name": "Paprika powder (sweet)",
             "bring": true,
@@ -297,7 +298,7 @@
             "unitLong_en": "teaspoon"
           },
           {
-            "amount": 2.5,
+            "amount": 0.014285714285714285,
             "unit": "ts",
             "name": "Chili flakes",
             "bring": true,
@@ -305,7 +306,7 @@
             "unitLong_en": "teaspoon"
           },
           {
-            "amount": 3,
+            "amount": 0.017142857142857144,
             "unit": "ts",
             "name": "Lemon juice freshly squeezed",
             "bring": true,
@@ -313,7 +314,7 @@
             "unitLong_en": "teaspoon"
           },
           {
-            "amount": 3,
+            "amount": 0.017142857142857144,
             "unit": "ts",
             "name": "Liquid honey",
             "bring": true,
@@ -321,7 +322,7 @@
             "unitLong_en": "teaspoon"
           },
           {
-            "amount": 3,
+            "amount": 0.017142857142857144,
             "unit": "pn",
             "name": "Cinnamon powder",
             "bring": true,
@@ -329,7 +330,7 @@
             "unitLong_en": "pinch"
           },
           {
-            "amount": 3,
+            "amount": 0.017142857142857144,
             "unit": "pn",
             "name": "Cumin powder",
             "bring": true,
@@ -337,7 +338,7 @@
             "unitLong_en": "pinch"
           },
           {
-            "amount": 12,
+            "amount": 0.06857142857142857,
             "unit": "g",
             "name": "Salt",
             "bring": true,
@@ -351,7 +352,7 @@
         "title": "Prepare meat skewers",
         "ingredients": [
           {
-            "amount": 1,
+            "amount": 0.005714285714285714,
             "unit": "pc",
             "name": "Pork neck steak (5 cm | 2 in thick)",
             "bring": true,
@@ -359,7 +360,7 @@
             "unitLong_en": "piece"
           },
           {
-            "amount": 2,
+            "amount": 0.011428571428571429,
             "unit": "pc",
             "name": "Double barbecue skewers",
             "bring": true,
@@ -383,6 +384,7 @@
     "cookTime": "4h 0m",
     "restTime": "0m",
     "totalTime": "5h 30m",
+    "kcalPerServing": 900,
     "youtubeId": "",
     "youtubeUrl": "",
     "tiktokUrl": "",
@@ -977,6 +979,7 @@
     "cookTime": "15m",
     "restTime": "5m",
     "totalTime": "20h 20m",
+    "kcalPerServing": 610,
     "youtubeId": "",
     "youtubeUrl": "",
     "tiktokUrl": "",
@@ -1227,6 +1230,7 @@
     "cookTime": "15m",
     "restTime": "1h 0m",
     "totalTime": "1h 35m",
+    "kcalPerServing": 350,
     "youtubeId": "3zYhW5r2YBk",
     "youtubeUrl": "https://www.youtube.com/watch?v=3zYhW5r2YBk",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7106876991676157190",
@@ -1465,6 +1469,7 @@
     "cookTime": "57m",
     "restTime": "0m",
     "totalTime": "1h 7m",
+    "kcalPerServing": 1300,
     "youtubeId": "crRVsBlQpFo",
     "youtubeUrl": "https://www.youtube.com/watch?v=crRVsBlQpFo",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7134634592094407941",
@@ -1853,6 +1858,7 @@
     "cookTime": "10m",
     "restTime": "0m",
     "totalTime": "15m",
+    "kcalPerServing": 812,
     "youtubeId": "Rmugfh7o8y8",
     "youtubeUrl": "https://www.youtube.com/watch?v=Rmugfh7o8y8",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7111699919731248390",
@@ -2043,6 +2049,7 @@
     "cookTime": "10m",
     "restTime": "0m",
     "totalTime": "15m",
+    "kcalPerServing": 560,
     "youtubeId": "xhbKhEi2NNc",
     "youtubeUrl": "https://www.youtube.com/watch?v=xhbKhEi2NNc&t",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7106461017927847174",
@@ -2257,6 +2264,7 @@
     "cookTime": "10m",
     "restTime": "0m",
     "totalTime": "30m",
+    "kcalPerServing": 280,
     "youtubeId": "2h24n7zOLFE",
     "youtubeUrl": "https://www.youtube.com/watch?v=2h24n7zOLFE",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7104327021144149254",
@@ -2521,6 +2529,7 @@
     "cookTime": "40m",
     "restTime": "0m",
     "totalTime": "43m",
+    "kcalPerServing": 600,
     "youtubeId": "pY4HVNssWKc",
     "youtubeUrl": "https://www.youtube.com/watch?v=pY4HVNssWKc",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7099496508898266373",
@@ -2679,6 +2688,7 @@
     "cookTime": "5m",
     "restTime": "0m",
     "totalTime": "20m",
+    "kcalPerServing": 910,
     "youtubeId": "RP7xpIVmyV8",
     "youtubeUrl": "https://www.youtube.com/watch?v=RP7xpIVmyV8",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7110897052707556613",
@@ -2875,6 +2885,7 @@
     "cookTime": "25m",
     "restTime": "0m",
     "totalTime": "35m",
+    "kcalPerServing": 650,
     "youtubeId": "9Yq5lrZyGvo",
     "youtubeUrl": "https://www.youtube.com/watch?v=9Yq5lrZyGvo",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7109501341260598533",
@@ -3253,6 +3264,7 @@
     "cookTime": "10m",
     "restTime": "0m",
     "totalTime": "20m",
+    "kcalPerServing": 910,
     "youtubeId": "QZLKh1XEh2w",
     "youtubeUrl": "https://www.youtube.com/watch?v=QZLKh1XEh2w",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7099660777866431749",
@@ -3533,6 +3545,7 @@
     "cookTime": "5h 0m",
     "restTime": "0m",
     "totalTime": "5h 45m",
+    "kcalPerServing": 850,
     "youtubeId": "",
     "youtubeUrl": "",
     "tiktokUrl": "",
@@ -3969,6 +3982,7 @@
     "cookTime": "10m",
     "restTime": "5m",
     "totalTime": "17m",
+    "kcalPerServing": 850,
     "youtubeId": "",
     "youtubeUrl": "",
     "tiktokUrl": "",
@@ -4135,6 +4149,7 @@
     "cookTime": "2h 15m",
     "restTime": "0m",
     "totalTime": "2h 35m",
+    "kcalPerServing": 290,
     "youtubeId": "",
     "youtubeUrl": "",
     "tiktokUrl": "",
@@ -4469,6 +4484,7 @@
     "cookTime": "2h 30m",
     "restTime": "0m",
     "totalTime": "4h 0m",
+    "kcalPerServing": 290,
     "youtubeId": "",
     "youtubeUrl": "",
     "tiktokUrl": "",
@@ -4927,6 +4943,7 @@
     "cookTime": "12m",
     "restTime": "0m",
     "totalTime": "32m",
+    "kcalPerServing": 220,
     "youtubeId": "QteUBx8wl8I",
     "youtubeUrl": "https://www.youtube.com/watch?v=QteUBx8wl8I",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7106237166476446981",
@@ -4955,7 +4972,7 @@
           {
             "amount": 2,
             "unit": "Stk.",
-            "name": "Ciabatta Brotscheiben (klein, 1 cm dick)",
+            "name": "Ciabatta Brotscheiben (klein, 1cm dick)",
             "bring": true,
             "unitLong_de": "Stück",
             "unitLong_en": "piece"
@@ -5197,6 +5214,7 @@
     "cookTime": "12m",
     "restTime": "0m",
     "totalTime": "22m",
+    "kcalPerServing": 600,
     "youtubeId": "uS2DGzNplWg",
     "youtubeUrl": "https://www.youtube.com/watch?v=uS2DGzNplWg&t",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7098558069776387334",
@@ -5465,6 +5483,7 @@
     "cookTime": "5m",
     "restTime": "0m",
     "totalTime": "25m",
+    "kcalPerServing": 2200,
     "youtubeId": "S3-eHjDOdK4",
     "youtubeUrl": "https://www.youtube.com/watch?v=S3-eHjDOdK4&t",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7114660743546440965",
@@ -5755,6 +5774,7 @@
     "cookTime": "0m",
     "restTime": "2h 0m",
     "totalTime": "2h 15m",
+    "kcalPerServing": 60,
     "youtubeId": "CCBaT6jK_cA",
     "youtubeUrl": "https://www.youtube.com/watch?v=CCBaT6jK_cA",
     "tiktokUrl": "https://www.tiktok.com/@axcooking/video/7098732135527337222",
@@ -6083,6 +6103,7 @@
     "cookTime": "30m",
     "restTime": "2h 0m",
     "totalTime": "3h 0m",
+    "kcalPerServing": 400,
     "youtubeId": "",
     "youtubeUrl": "",
     "tiktokUrl": "",
@@ -6683,6 +6704,7 @@
     "cookTime": "4m",
     "restTime": "1h 20m",
     "totalTime": "1h 39m",
+    "kcalPerServing": 120,
     "youtubeId": "",
     "youtubeUrl": "",
     "tiktokUrl": "",
@@ -6995,6 +7017,7 @@
     "cookTime": "10m",
     "restTime": "0m",
     "totalTime": "30m",
+    "kcalPerServing": 280,
     "youtubeId": "",
     "youtubeUrl": "",
     "tiktokUrl": "",
