@@ -52,16 +52,13 @@
   },
   "sauce-b-arnaise": {
     "likes": 0,
-    "views": 0
+    "views": 1
   },
   "pasta-pesto-genovese": {
     "likes": 0,
     "views": 1
   },
-  "pesto-genovese-basilikum-pesto": {
-    "likes": 0,
-    "views": 1
-  },
+  "pesto-genovese-basilikum-pesto": 0,
   "rindsfilet-steak": {
     "likes": 0,
     "views": 1
@@ -78,5 +75,8 @@
     "likes": 0,
     "views": 1
   },
-  "szechuan-rind": 0
+  "szechuan-rind": {
+    "likes": 0,
+    "views": 1
+  }
 }
