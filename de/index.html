@@ -119,6 +119,8 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .user-menu-header{padding:12px 14px;border-bottom:1px solid var(--border-light);font-size:.78rem;color:var(--text-muted)}
 .user-menu-header strong{display:block;color:var(--text);font-size:.88rem;margin-top:2px;word-break:break-all}
 .user-menu button{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;font-family:var(--font-body);font-size:.88rem;color:var(--text);cursor:pointer;text-align:left;transition:background .12s;-webkit-tap-highlight-color:transparent}
+.user-menu-delete{color:#c0392b !important}
+.user-menu-delete:hover{background:rgba(192,57,43,.08) !important}
 .user-menu button:hover{background:var(--bg)}
 .user-menu-wrap{position:relative;display:inline-block}
 .privacy-modal-content{max-width:560px;max-height:75vh;overflow-y:auto;padding:8px 4px 4px}
@@ -261,6 +263,31 @@ body.lightbox-open .rd-image-col .fav-btn{display:none}
 .step-note{margin-top:10px;padding:10px 14px;background:#fef7f5;border:1px solid #f4d4cf;border-radius:8px;font-size:.88rem;color:var(--text-light);line-height:1.7;min-height:1.5em}
 .step-note.has-content{background:#fef7f5;border-color:var(--accent);color:var(--text);font-style:normal}
 /* S5-Punkt1/2: Diff-Highlights für hinzugefügte Items + Add-Buttons */
+
+/* ===== P11: Profil-View + Avatar ===== */
+#userIconBtn.user-active{background:var(--accent);color:#fff;border:none;display:flex;align-items:center;justify-content:center;padding:0;overflow:hidden}
+.user-icon-avatar-img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}
+.profile-view{max-width:600px;margin:32px auto;padding:0 16px}
+.profile-view h2{margin:0 0 24px 0;font-size:1.4rem;font-weight:600;color:var(--text)}
+.profile-section{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:20px}
+.profile-section h3{margin:0 0 16px 0;font-size:1rem;font-weight:600;color:var(--text)}
+.profile-field{margin-bottom:16px}
+.profile-field label{display:block;font-size:.85rem;color:var(--text-light);margin-bottom:6px;font-weight:500}
+.profile-field input[type="text"],.profile-field input[type="email"]{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:.95rem;font-family:inherit;box-sizing:border-box}
+.profile-field input:focus{outline:none;border-color:var(--accent)}
+.profile-field-hint{font-size:.78rem;color:var(--text-muted);margin-top:4px}
+.profile-avatar-preview{width:120px;height:120px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:600;overflow:hidden;margin:0 auto 16px auto}
+.profile-avatar-preview img{width:100%;height:100%;object-fit:cover;display:block}
+.profile-avatar-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.profile-btn-primary{background:var(--accent);color:#fff;border:none;padding:10px 20px;border-radius:8px;font-size:.9rem;font-weight:500;cursor:pointer;font-family:inherit}
+.profile-btn-primary:hover{opacity:.9}
+.profile-btn-secondary{background:transparent;color:var(--accent);border:1px solid var(--accent);padding:10px 20px;border-radius:8px;font-size:.9rem;font-weight:500;cursor:pointer;font-family:inherit}
+.profile-btn-secondary:hover{background:rgba(192,57,43,.05)}
+.profile-back{background:none;border:none;color:var(--text-light);font-size:.9rem;cursor:pointer;padding:8px 0;margin-bottom:8px;font-family:inherit}
+.profile-back:hover{color:var(--text)}
+.profile-save-status{display:inline-block;margin-left:12px;color:var(--text-muted);font-size:.85rem}
+.profile-save-status.success{color:#27ae60}
+.profile-save-status.error{color:#c0392b}
 /* Punkt 5: ce-fields in added Zutaten — rot umrandet, hellrot, breite Mindestmasse */
 .ingredient-row.ing-added{background:none;border:none;border-radius:0;align-items:stretch;padding:8px 0;margin:0;border-bottom:1px solid #ccc;gap:0;box-sizing:content-box}
 .ingredient-row.ing-added .ing-amount,
@@ -571,7 +598,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781880000000 -->
+<!-- cache-bust: 1781890000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -616,7 +643,7 @@ input,textarea,select{font-size:16px !important}
 </head>
 <body>
 <header><div class="header-inner"><a class="logo" onclick="showList()"><!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
-<img src="/logos/Logo_Invertiert.png" alt="AXCOOKING" style="height:28px;width:auto"></a><div class="header-search"><input type="search" id="searchInput" name="recipe-search" placeholder="Suche nach Rezept oder Kategorie" oninput="onSearchInput()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" role="searchbox" data-form-type="other" data-1p-ignore="true" data-lpignore="true" readonly onfocus="this.removeAttribute('readonly')"><button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button></div><div class="header-right"><div class="header-icons"><a href="https://www.youtube.com/@axcooking" target="_blank" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C17 2.6 12 2.6 12 2.6s-5 0-8.3.3c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8.1.2 10v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s5 0 8.3-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.5 15.6V8.1l6.3 3.7-6.3 3.8z"/></svg></a><a href="https://www.tiktok.com/@axcooking" target="_blank" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.8.1v-3.5a6.37 6.37 0 0 0-.8-.05A6.34 6.34 0 0 0 3.15 15.3 6.34 6.34 0 0 0 9.49 21.6a6.34 6.34 0 0 0 6.34-6.34V8.79a8.22 8.22 0 0 0 3.76 1.27V6.69z"/></svg></a></div><div class="lang-picker" id="langPicker"><button type="button" class="lang-picker-trigger" id="langPickerTrigger" onclick="toggleLangPicker(event)" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprache"><span class="flag" id="langPickerFlag"></span><span class="caret"></span></button><div class="lang-picker-menu" id="langPickerMenu" role="listbox"><button type="button" data-lang="de" onclick="selectLang('de')" role="option"><span class="flag flag-de"></span><span class="lang-name" data-de="Deutsch" data-en="German">Deutsch</span></button><button type="button" data-lang="en" onclick="selectLang('en')" role="option"><span class="flag flag-en"></span><span class="lang-name" data-de="Englisch" data-en="English">Englisch</span></button></div></div><div class="user-menu-wrap" id="userMenuWrap"><button class="lock-icon" onclick="handleAuthClick()" id="authBtn" title="Login" aria-label="Login"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button><div class="user-menu" id="userMenu" role="menu"><div class="user-menu-header" id="userMenuHeader"></div><button onclick="closeUserMenu();handleUserLogout()" id="userMenuLogoutBtn">Abmelden</button></div></div></div></div></header>
+<img src="/logos/Logo_Invertiert.png" alt="AXCOOKING" style="height:28px;width:auto"></a><div class="header-search"><input type="search" id="searchInput" name="recipe-search" placeholder="Suche nach Rezept oder Kategorie" oninput="onSearchInput()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" role="searchbox" data-form-type="other" data-1p-ignore="true" data-lpignore="true" readonly onfocus="this.removeAttribute('readonly')"><button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button></div><div class="header-right"><div class="header-icons"><a href="https://www.youtube.com/@axcooking" target="_blank" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C17 2.6 12 2.6 12 2.6s-5 0-8.3.3c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8.1.2 10v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s5 0 8.3-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.5 15.6V8.1l6.3 3.7-6.3 3.8z"/></svg></a><a href="https://www.tiktok.com/@axcooking" target="_blank" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.8.1v-3.5a6.37 6.37 0 0 0-.8-.05A6.34 6.34 0 0 0 3.15 15.3 6.34 6.34 0 0 0 9.49 21.6a6.34 6.34 0 0 0 6.34-6.34V8.79a8.22 8.22 0 0 0 3.76 1.27V6.69z"/></svg></a></div><div class="lang-picker" id="langPicker"><button type="button" class="lang-picker-trigger" id="langPickerTrigger" onclick="toggleLangPicker(event)" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprache"><span class="flag" id="langPickerFlag"></span><span class="caret"></span></button><div class="lang-picker-menu" id="langPickerMenu" role="listbox"><button type="button" data-lang="de" onclick="selectLang('de')" role="option"><span class="flag flag-de"></span><span class="lang-name" data-de="Deutsch" data-en="German">Deutsch</span></button><button type="button" data-lang="en" onclick="selectLang('en')" role="option"><span class="flag flag-en"></span><span class="lang-name" data-de="Englisch" data-en="English">Englisch</span></button></div></div><div class="user-menu-wrap" id="userMenuWrap"><button class="lock-icon" onclick="handleAuthClick()" id="authBtn" title="Login" aria-label="Login"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button><div class="user-menu" id="userMenu" role="menu"><div class="user-menu-header" id="userMenuHeader"></div><button onclick="closeUserMenu();openProfileView()" id="userMenuProfileBtn">Profil</button><button onclick="closeUserMenu();handleUserLogout()" id="userMenuLogoutBtn">Abmelden</button><button onclick="closeUserMenu();handleDeleteAccount()" id="userMenuDeleteBtn" class="user-menu-delete">Login löschen</button></div></div></div></div></header>
 <div class="login-overlay" id="loginOverlay" onclick="if(event.target===this)closeAuth()"><div class="login-box auth-box"><div class="auth-tabs"><button class="auth-tab active" id="authTabUserBtn" onclick="setAuthTab('user')">User</button><button class="auth-tab" id="authTabAdminBtn" onclick="setAuthTab('admin')">Admin</button></div>
 
 <!-- User Tab -->
@@ -1067,7 +1094,43 @@ if(similar.length){bodyHtml+='<h2>'+L.similarLabel+'</h2><div class="similar-gri
 bodyHtml+='</main>';
 bodyHtml+='<footer class="site"><div>&copy; '+(new Date().getFullYear())+' AxCooking</div><div style="margin-top:6px"><a href="https://www.axcooking.com/">'+L.homeLabel+'</a> &middot; <a href="'+pageUrlAlt+'">'+(langCode==='en'?'Deutsch':'English')+'</a></div></footer>';
 var jsHtml='<script>(function(){var sv=document.getElementById("servings");var sb='+(r.baseServings||1)+';function recalc(){var v=parseFloat(sv.value)||sb;if(v<.1)v=.1;var amounts=document.querySelectorAll(".ing-list .amount[data-base]");amounts.forEach(function(a){var b=parseFloat(a.getAttribute("data-base"))||0;var nv=b*v/sb;var disp=nv%1===0?nv:Math.round(nv*100)/100;a.textContent=disp})}window.adjustServings=function(d){var v=parseFloat(sv.value)||sb;if(d>0)v=Math.floor(v)+1;else v=Math.max(.1,Math.ceil(v)-1);sv.value=v;recalc()};sv.addEventListener("input",function(){this.value=this.value.replace(",",".");recalc()})})();<\/script>';
-return headHtml+cssHtml+'</head><body>'+bodyHtml+jsHtml+'</body></html>'
+return headHtml+cssHtml+'</head><body>'+bodyHtml+jsHtml+'<div id="profileView" class="profile-view" style="display:none">
+<button type="button" class="profile-back" onclick="closeProfileView()">← <span data-i18n-de="Zurück" data-i18n-en="Back">Zurück</span></button>
+<h2 data-i18n-de="Mein Profil" data-i18n-en="My Profile">Mein Profil</h2>
+<div class="profile-section">
+<h3 data-i18n-de="Profilbild" data-i18n-en="Profile picture">Profilbild</h3>
+<div class="profile-avatar-preview" id="profileAvatarPreview"></div>
+<div class="profile-avatar-actions">
+<input type="file" id="profileAvatarInput" accept="image/jpeg,image/png,image/webp" style="display:none" onchange="handleAvatarFileSelect(event)">
+<button type="button" class="profile-btn-primary" onclick="document.getElementById('profileAvatarInput').click()" data-i18n-de="Bild hochladen" data-i18n-en="Upload picture">Bild hochladen</button>
+<button type="button" class="profile-btn-secondary" id="profileAvatarRemoveBtn" onclick="removeAvatar()" style="display:none" data-i18n-de="Entfernen" data-i18n-en="Remove">Entfernen</button>
+</div>
+<div class="profile-field-hint" style="text-align:center;margin-top:12px" data-i18n-de="JPEG, PNG oder WebP. Maximal 5 MB Originalbild — wird automatisch verkleinert." data-i18n-en="JPEG, PNG or WebP. Max 5 MB original — auto-resized.">JPEG, PNG oder WebP. Maximal 5 MB Originalbild — wird automatisch verkleinert.</div>
+</div>
+<div class="profile-section">
+<h3 data-i18n-de="Persönliche Daten" data-i18n-en="Personal data">Persönliche Daten</h3>
+<div class="profile-field">
+<label for="profileEmail">E-Mail</label>
+<input type="email" id="profileEmail" autocomplete="off" name="ax_profile_email_anti" data-1p-ignore="true">
+<div class="profile-field-hint" data-i18n-de="Bei Änderung musst du die neue Adresse erneut bestätigen." data-i18n-en="On change you must verify the new address again.">Bei Änderung musst du die neue Adresse erneut bestätigen.</div>
+</div>
+<div class="profile-field">
+<label for="profileNickname" data-i18n-de="Nickname (optional)" data-i18n-en="Nickname (optional)">Nickname (optional)</label>
+<input type="text" id="profileNickname" maxlength="50" autocomplete="off" name="ax_profile_nick_anti">
+<div class="profile-field-hint" data-i18n-de="Wird automatisch bei Kommentaren verwendet statt deines Vornamens." data-i18n-en="Used automatically as your name in comments.">Wird automatisch bei Kommentaren verwendet statt deines Vornamens.</div>
+</div>
+<div>
+<button type="button" class="profile-btn-primary" onclick="saveProfile()" data-i18n-de="Speichern" data-i18n-en="Save">Speichern</button>
+<span id="profileSaveStatus" class="profile-save-status"></span>
+</div>
+</div>
+<div class="profile-section">
+<h3 style="color:#c0392b" data-i18n-de="Login löschen" data-i18n-en="Delete account">Login löschen</h3>
+<p style="margin:0 0 16px 0;color:var(--text-light);font-size:.9rem" data-i18n-de="Entfernt unwiderruflich dein Login, alle Favoriten, Notizen und dein Profilbild. Kommentare und Bewertungen bleiben erhalten." data-i18n-en="Permanently removes your login, all favorites, notes and your avatar. Comments and ratings will be kept.">Entfernt unwiderruflich dein Login, alle Favoriten, Notizen und dein Profilbild. Kommentare und Bewertungen bleiben erhalten.</p>
+<button type="button" class="profile-btn-secondary" style="border-color:#c0392b;color:#c0392b" onclick="handleDeleteAccount()" data-i18n-de="Login löschen" data-i18n-en="Delete account">Login löschen</button>
+</div>
+</div>
+</body></html>'
 }
 function buildBringPageHtml(r){return _bringPageHtml(r,'de')}
 function buildBringPageHtmlEn(r){return _bringPageHtml(r,'en')}
@@ -1290,6 +1353,171 @@ async function handleUserLogout(){
   updateAuthUI();
   showToast(t('authBtnLogout')+' ✓','success');
 }
+function handleDeleteAccount(){
+  if(!userSession)return;
+  const msg1=lang==='de'?'Login wirklich löschen?\n\nAlle deine Favoriten, Notizen und Profildaten werden unwiderruflich entfernt.\nKommentare und Bewertungen bleiben erhalten.':'Really delete your login?\n\nAll favorites, notes and profile data will be permanently removed.\nComments and ratings will be kept.';
+  if(!confirm(msg1))return;
+  const msg2=lang==='de'?'Sicher? Tippe LÖSCHEN zum Bestätigen:':'Sure? Type DELETE to confirm:';
+  const confirmWord=lang==='de'?'LÖSCHEN':'DELETE';
+  const input=prompt(msg2);
+  if(input!==confirmWord){
+    if(input!==null)alert(lang==='de'?'Abgebrochen: Eingabe nicht "LÖSCHEN".':'Cancelled: input was not "DELETE".');
+    return;
+  }
+  (async()=>{
+    try{
+      const r=await _authFetch('/auth/delete-account',{method:'POST'});
+      if(!r||!r.ok){
+        alert(lang==='de'?'Löschen fehlgeschlagen.':'Delete failed.');
+        return;
+      }
+      userSession=null;
+      userFavorites=[];
+      _currentFav=null;
+      if(typeof updateAuthUI==='function')updateAuthUI();
+      if(typeof showToast==='function')showToast(lang==='de'?'Login gelöscht':'Account deleted');
+      if(typeof showList==='function')showList();
+    }catch(e){
+      console.warn('Delete account error:',e);
+      alert(lang==='de'?'Fehler beim Löschen.':'Error deleting account.');
+    }
+  })();
+}
+let _profileSaving=false;
+function openProfileView(){
+  if(!userSession){if(typeof openAuth==='function')openAuth();return;}
+  ['recipeList','recipeDetail','cookbookView'].forEach(id=>{const el=$(id);if(el)el.style.display='none';});
+  const pv=$('profileView');if(!pv)return;
+  pv.style.display='block';
+  pv.querySelectorAll('[data-i18n-de]').forEach(el=>{el.textContent=lang==='en'?el.getAttribute('data-i18n-en'):el.getAttribute('data-i18n-de');});
+  $('profileEmail').value=userSession.email||'';
+  $('profileNickname').value=userSession.nickname||'';
+  _renderProfileAvatarPreview();
+  $('profileSaveStatus').textContent='';
+  $('profileSaveStatus').className='profile-save-status';
+  window.scrollTo(0,0);
+}
+function closeProfileView(){
+  const pv=$('profileView');if(pv)pv.style.display='none';
+  if(typeof showList==='function')showList();
+}
+function _renderProfileAvatarPreview(){
+  const preview=$('profileAvatarPreview');
+  const removeBtn=$('profileAvatarRemoveBtn');
+  if(!preview)return;
+  if(userSession&&userSession.avatar_key){
+    preview.innerHTML='<img src="'+_avatarUrl(userSession.id)+'?'+Date.now()+'" alt="">';
+    if(removeBtn)removeBtn.style.display='inline-block';
+  }else{
+    const initial=(userSession.nickname||userSession.email||'?').charAt(0).toUpperCase();
+    preview.textContent=initial;
+    if(removeBtn)removeBtn.style.display='none';
+  }
+}
+function _avatarUrl(uid){return 'https://axcooking-api.axcooking.workers.dev/auth/avatar/'+uid;}
+async function saveProfile(){
+  if(_profileSaving)return;
+  _profileSaving=true;
+  const status=$('profileSaveStatus');
+  status.textContent=lang==='de'?'Speichere…':'Saving…';
+  status.className='profile-save-status';
+  const emailNew=($('profileEmail').value||'').trim().toLowerCase();
+  const nickNew=($('profileNickname').value||'').trim();
+  const updates={};
+  if(emailNew&&emailNew!==(userSession.email||'').toLowerCase()){updates.email=emailNew;}
+  if(nickNew!==(userSession.nickname||'')){updates.nickname=nickNew;}
+  if(Object.keys(updates).length===0){
+    status.textContent=lang==='de'?'Nichts geändert.':'Nothing changed.';
+    _profileSaving=false;return;
+  }
+  try{
+    const r=await _authFetch('/auth/update-profile',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(updates)});
+    const j=await r.json().catch(()=>({}));
+    if(!r.ok){
+      status.textContent=(j&&j.error)||(lang==='de'?'Fehler beim Speichern.':'Save error.');
+      status.className='profile-save-status error';
+      _profileSaving=false;return;
+    }
+    if(updates.nickname!==undefined)userSession.nickname=updates.nickname||null;
+    if(updates.email){
+      userSession.email=updates.email;
+      userSession.email_verified=false;
+      alert(lang==='de'?'E-Mail geändert. Du erhältst einen neuen Bestätigungslink an die neue Adresse.':'Email changed. You will receive a new verification link at the new address.');
+    }
+    status.textContent=lang==='de'?'Gespeichert.':'Saved.';
+    status.className='profile-save-status success';
+    if(typeof updateAuthUI==='function')updateAuthUI();
+    _renderProfileAvatarPreview();
+  }catch(e){
+    console.warn('saveProfile error:',e);
+    status.textContent=lang==='de'?'Fehler.':'Error.';
+    status.className='profile-save-status error';
+  }finally{_profileSaving=false;}
+}
+async function handleAvatarFileSelect(event){
+  const file=event.target.files&&event.target.files[0];
+  if(!file)return;
+  if(file.size>5*1024*1024){
+    alert(lang==='de'?'Datei zu groß (max 5 MB).':'File too large (max 5 MB).');
+    event.target.value='';return;
+  }
+  const status=$('profileSaveStatus');
+  status.textContent=lang==='de'?'Bild wird verarbeitet…':'Processing…';
+  status.className='profile-save-status';
+  try{
+    const blob=await _resizeImageToBlob(file, 256, 256, 0.85);
+    const r=await _authFetch('/auth/avatar',{method:'POST',headers:{'Content-Type':'image/jpeg'},body:blob});
+    const j=await r.json().catch(()=>({}));
+    if(!r.ok){
+      status.textContent=(j&&j.error)||(lang==='de'?'Upload fehlgeschlagen.':'Upload failed.');
+      status.className='profile-save-status error';return;
+    }
+    userSession.avatar_key=j.avatar_key;
+    _renderProfileAvatarPreview();
+    if(typeof updateAuthUI==='function')updateAuthUI();
+    status.textContent=lang==='de'?'Bild gespeichert.':'Picture saved.';
+    status.className='profile-save-status success';
+  }catch(e){
+    console.warn('avatar upload error:',e);
+    status.textContent=lang==='de'?'Fehler beim Hochladen.':'Upload error.';
+    status.className='profile-save-status error';
+  }finally{event.target.value='';}
+}
+async function removeAvatar(){
+  if(!userSession||!userSession.avatar_key)return;
+  if(!confirm(lang==='de'?'Profilbild entfernen?':'Remove profile picture?'))return;
+  userSession.avatar_key=null;
+  _renderProfileAvatarPreview();
+  if(typeof updateAuthUI==='function')updateAuthUI();
+  const status=$('profileSaveStatus');
+  status.textContent=lang==='de'?'Bild lokal entfernt — beim nächsten Upload überschrieben.':'Locally removed — overwritten on next upload.';
+  status.className='profile-save-status';
+}
+function _resizeImageToBlob(file, maxW, maxH, quality){
+  return new Promise((resolve,reject)=>{
+    const reader=new FileReader();
+    reader.onload=()=>{
+      const img=new Image();
+      img.onload=()=>{
+        const ratio=Math.min(maxW/img.width, maxH/img.height, 1);
+        const w=Math.round(img.width*ratio);
+        const h=Math.round(img.height*ratio);
+        const canvas=document.createElement('canvas');
+        canvas.width=w;canvas.height=h;
+        const ctx=canvas.getContext('2d');
+        ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);
+        ctx.drawImage(img,0,0,w,h);
+        canvas.toBlob(b=>b?resolve(b):reject(new Error('Canvas toBlob failed')),'image/jpeg',quality);
+      };
+      img.onerror=()=>reject(new Error('Image load failed'));
+      img.src=reader.result;
+    };
+    reader.onerror=()=>reject(new Error('FileReader failed'));
+    reader.readAsDataURL(file);
+  });
+}
+
+
 async function _restoreUserSession(){
   // Beim Page-Load: prüfen ob Cookie noch gültig ist
   const r=await _authFetch('/auth/me',null);
@@ -1317,7 +1545,7 @@ function updateAuthUI(){
   if(userSession){
     // User-Avatar mit Initial
     const initial=(userSession.email||'?').charAt(0).toUpperCase();
-    btn.innerHTML='<span class="user-avatar" style="display:flex" aria-hidden="true">'+esc(initial)+'</span>';
+    if(userSession.avatar_key){btn.innerHTML='<img class="user-icon-avatar-img" alt="" src="'+_avatarUrl(userSession.id)+'?'+(userSession.avatar_key||'').substring(0,12)+'">';}else{btn.innerHTML='<span class="user-avatar" style="display:flex" aria-hidden="true">'+esc(initial)+'</span>';}
     btn.title=t('authMyAccount');
     btn.classList.add('user-active');
     btn.classList.remove('lock-icon');
@@ -2594,7 +2822,7 @@ function setRatingPickerValue(v){
   const clearBtn=$('clearRatingBtn');
   if(clearBtn)clearBtn.style.display=v>0?'':'none'
 }
-async function submitComment(id){const nameEl=$('commentName');const textEl=$('commentText');const msgEl=$('commentMsg');const name=nameEl.value.trim();const text=textEl.value.trim();const picker=document.querySelector('.comment-form .rating-picker');const ratingVal=picker?parseInt(picker.dataset.value||'0',10):0;if(!name){msgEl.style.display='block';msgEl.style.color='var(--accent)';msgEl.textContent=t('nameNeeded');return}if(!text&&!(ratingVal>=1&&ratingVal<=5)){msgEl.style.display='block';msgEl.style.color='var(--accent)';msgEl.textContent=t('commentEmpty');return}localStorage.setItem('axc_name',name);msgEl.style.display='block';msgEl.style.color='var(--green)';msgEl.textContent=t('commentSending');let ok;if(loggedIn){if(!comments[id])comments[id]=[];const entry={name,text,date:new Date().toISOString(),approved:false};if(ratingVal>=1&&ratingVal<=5)entry.rating=ratingVal;comments[id].push(entry);ok=await saveComments()}else{const payload={recipeId:id,name};if(text)payload.text=text;if(ratingVal>=1&&ratingVal<=5)payload.rating=ratingVal;ok=await workerComment(payload);if(ok){if(!comments[id])comments[id]=[];const entry={name,text:text||'',date:new Date().toISOString(),approved:false};if(ratingVal>=1&&ratingVal<=5)entry.rating=ratingVal;comments[id].push(entry)}}msgEl.textContent=ok?t('commentSaved'):t('commentSaveError');msgEl.style.color=ok?'var(--green)':'var(--accent)';if(ok){_gaEvent('comment_submit',{recipe_id:id,with_rating:(ratingVal>=1&&ratingVal<=5),lang:lang});textEl.value='';renderComments(id);renderList();if(currentRecipeId===id)renderDetail(id)}}
+async function submitComment(id){const nameEl=$('commentName');if(userSession&&userSession.nickname&&nameEl){nameEl.value=userSession.nickname;}const textEl=$('commentText');const msgEl=$('commentMsg');const name=nameEl.value.trim();const text=textEl.value.trim();const picker=document.querySelector('.comment-form .rating-picker');const ratingVal=picker?parseInt(picker.dataset.value||'0',10):0;if(!name){msgEl.style.display='block';msgEl.style.color='var(--accent)';msgEl.textContent=t('nameNeeded');return}if(!text&&!(ratingVal>=1&&ratingVal<=5)){msgEl.style.display='block';msgEl.style.color='var(--accent)';msgEl.textContent=t('commentEmpty');return}localStorage.setItem('axc_name',name);msgEl.style.display='block';msgEl.style.color='var(--green)';msgEl.textContent=t('commentSending');let ok;if(loggedIn){if(!comments[id])comments[id]=[];const entry={name,text,date:new Date().toISOString(),approved:false};if(ratingVal>=1&&ratingVal<=5)entry.rating=ratingVal;comments[id].push(entry);ok=await saveComments()}else{const payload={recipeId:id,name};if(text)payload.text=text;if(ratingVal>=1&&ratingVal<=5)payload.rating=ratingVal;ok=await workerComment(payload);if(ok){if(!comments[id])comments[id]=[];const entry={name,text:text||'',date:new Date().toISOString(),approved:false};if(ratingVal>=1&&ratingVal<=5)entry.rating=ratingVal;comments[id].push(entry)}}msgEl.textContent=ok?t('commentSaved'):t('commentSaveError');msgEl.style.color=ok?'var(--green)':'var(--accent)';if(ok){_gaEvent('comment_submit',{recipe_id:id,with_rating:(ratingVal>=1&&ratingVal<=5),lang:lang});textEl.value='';renderComments(id);renderList();if(currentRecipeId===id)renderDetail(id)}}
 async function deleteComment(recipeId,idx){if(!confirm(t('deleteCommentConfirm')))return;const list=comments[recipeId]||[];const wasApproved=!!(list[idx]&&list[idx].approved);list.splice(idx,1);if(!list.length)delete comments[recipeId];else comments[recipeId]=list;await saveComments();renderComments(recipeId);renderList();if(loggedIn&&wasApproved)_regenBringPagesForRecipe(recipeId)}
 function renderAdminComments(){const el=$('adminComments');if(!el)return;const allComments=[];Object.keys(comments).forEach(rid=>{const rTitle=recipes.find(r=>r.id===rid);const name=rTitle?(tr(rTitle,'title')):rid;(comments[rid]||[]).filter(c=>c.approved===false||c.approved===undefined).forEach((c,i)=>{const origIdx=(comments[rid]||[]).indexOf(c);allComments.push({rid,idx:origIdx,name:name,c})})});allComments.sort((a,b)=>new Date(b.c.date)-new Date(a.c.date));el.innerHTML=allComments.length?allComments.map(a=>`<div class="admin-comment-item"><div class="admin-comment-meta"><div class="admin-comment-recipe">${esc(a.name)}</div><div class="admin-comment-text">${(typeof a.c.rating==='number'&&a.c.rating>=1&&a.c.rating<=5)?renderStarsHtml(a.c.rating,true)+' ':''}${esc(a.c.text)}</div><div class="admin-comment-info">${esc(a.c.name)} · ${new Date(a.c.date).toLocaleDateString(t('locale'),{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})}</div></div><div class="mi-act" style="flex-shrink:0;background:${a.c.approved?'#27ae60':'#e67e22'};border-color:${a.c.approved?'#27ae60':'#e67e22'};color:white" title="${t('approveComment')}" onclick="toggleApproveComment('${a.rid}',${a.idx});renderAdminComments()">${checkIcon(18)}</div><div class="mi-act del" style="flex-shrink:0" title="${t('deleteComment')}" onclick="deleteComment('${a.rid}',${a.idx});renderAdminComments()">${trashIcon(18)}</div></div>`).join(''):`<div style="padding:12px;color:var(--text-muted);font-size:.85rem">${t('noComments')}</div>`}
 async function sendToBring(id){
