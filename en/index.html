@@ -63,7 +63,7 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .header-icons{display:flex;gap:12px}
 .header-icons a{color:var(--white);text-decoration:none;font-size:.8rem;opacity:.7;transition:opacity .2s;display:flex;align-items:center;gap:4px}
 .header-icons a:hover{opacity:1}
-.header-icons svg{width:16px;height:16px;fill:currentColor}
+.header-icons svg{width:21px;height:21px;fill:currentColor}
 .lang-picker{position:relative;display:inline-flex;align-items:center}
 .lang-picker-trigger{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:4px;padding:3px 6px;cursor:pointer;font-family:var(--font-body);transition:background .15s,border-color .15s;-webkit-tap-highlight-color:transparent}
 .lang-picker-trigger:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.4)}
@@ -94,6 +94,7 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .btn-login{background:var(--black);color:var(--white);border:none;padding:9px 20px;border-radius:4px;font-size:.85rem;font-weight:600;cursor:pointer;font-family:var(--font-body)}
 .btn-cancel{background:transparent;border:1px solid var(--border);color:var(--text-light);padding:9px 20px;border-radius:4px;font-size:.85rem;cursor:pointer;font-family:var(--font-body)}
 .login-box.auth-box{max-width:440px}
+#authAdminTitle{color:#999;font-weight:400}
 .auth-tabs{display:flex;border-bottom:1px solid var(--border);margin:-8px -32px 20px -32px;padding:0 32px}
 .auth-tab{padding:10px 16px;font-size:.85rem;font-weight:500;color:var(--text-light);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;background:none;border-left:none;border-right:none;border-top:none;font-family:var(--font-body);margin-bottom:-1px}
 .auth-tab.active{color:var(--text);border-bottom-color:var(--black)}
@@ -125,7 +126,7 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .privacy-modal-content p{font-size:.88rem;line-height:1.55;margin-bottom:10px;color:var(--text)}
 .privacy-modal-content strong{color:var(--text)}
 .privacy-modal-content em{font-style:italic}
-.toast-banner{position:fixed;top:80px;left:50%;transform:translateX(-50%);background:var(--black);color:#fff;padding:12px 24px;border-radius:24px;font-size:.88rem;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:600;opacity:0;transition:opacity .3s;pointer-events:none;max-width:90%;text-align:center}
+.toast-banner{position:fixed;top:calc(62px + 56px);left:50%;transform:translateX(-50%);background:var(--black);color:#fff;padding:12px 24px;border-radius:24px;font-size:.88rem;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:600;opacity:0;transition:opacity .3s;pointer-events:none;max-width:90%;text-align:center}
 .toast-banner.show{opacity:1}
 .toast-banner.success{background:#1e6f3c}
 .toast-banner.error{background:#a93226}
@@ -257,7 +258,7 @@ body.lightbox-open .rd-image-col .fav-btn{display:none}
 .ing-restore-btn{color:var(--green);border-color:#cdebd8;background:#eef8f1}
 .ing-restore-btn:hover{background:#dff0e6;border-color:var(--green)}
 .ing-delete-btn svg,.ing-restore-btn svg{width:14px;height:14px}
-.step-note{margin-top:10px;padding:10px 14px;background:#fef7f5;border:1px solid #f4d4cf;border-radius:8px;font-size:.92rem;color:var(--accent);font-style:italic;min-height:1.5em}
+.step-note{margin-top:10px;padding:10px 14px;background:#fef7f5;border:1px solid #f4d4cf;border-radius:8px;font-size:.88rem;color:var(--text-light);line-height:1.7;min-height:1.5em}
 .step-note.has-content{background:#fef7f5;border-color:var(--accent);color:var(--text);font-style:normal}
 /* S5-Punkt1/2: Diff-Highlights für hinzugefügte Items + Add-Buttons */
 /* Punkt 5: ce-fields in added Zutaten — rot umrandet, hellrot, breite Mindestmasse */
@@ -304,7 +305,7 @@ body.cook-mode-active .ce-field:hover,
 body.cook-mode-active .ce-field:focus{background:none !important;box-shadow:none !important;border:none !important}
 body.cook-mode-active .ingredient-row.ing-added .ing-amount,
 body.cook-mode-active .ingredient-row.ing-added .ing-unit,
-body.cook-mode-active .ingredient-row.ing-added .ing-name{color:var(--text) !important;font-weight:400 !important}
+body.cook-mode-active .ingredient-row.ing-added .ing-name{color:var(--text) !important;font-weight:400 !important;background:none !important;border:none !important;border-radius:0 !important}
 body.cook-mode-active .ingredient-row.ing-added .ce-field{color:var(--text) !important;background:none !important;border:none !important;padding:0 !important;margin:0 !important}
 body.cook-mode-active .ce-empty:empty{display:none}
 body.cook-mode-active .step-note .ce-field:empty{display:none}
@@ -316,6 +317,8 @@ body.cook-mode-active .ing-restore-btn,
 body.cook-mode-active .add-ing-btn,
 body.cook-mode-active .add-step-btn{display:none !important}
 /* Notizen bleiben sichtbar im Cook-Mode (das ist gewollt) */
+body.cook-mode-active .step-added .step-note,
+body.cook-mode-active .step-added .step-note.has-content{background:none !important;border:none !important;padding:0 !important;color:var(--text) !important;font-style:normal !important;font-size:.88rem !important}
 body.cook-mode-active .step-note{display:block}
 .recipe-item{position:relative}
 .cookbook-remove-btn{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.92);border:1px solid var(--border);color:var(--accent);width:30px;height:30px;border-radius:50%;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.12);z-index:2;-webkit-tap-highlight-color:transparent;transition:background .15s,transform .12s}
@@ -549,7 +552,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781850000000 -->
+<!-- cache-bust: 1781860000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -602,9 +605,9 @@ input,textarea,select{font-size:16px !important}
   <div id="authPanelLogin">
     <h3 id="authLoginTitle">Anmelden</h3>
     <label for="authLoginEmail" id="authLoginEmailLabel">E-Mail</label>
-    <input type="email" id="authLoginEmail" autocomplete="username" inputmode="email" onkeydown="if(event.key==='Enter')doUserLogin()">
+    <input type="email" id="authLoginEmail" name="ax_email_anti" autocomplete="off" data-form-type="other" data-1p-ignore="true" data-lpignore="true" inputmode="email" onkeydown="if(event.key==='Enter')doUserLogin()">
     <label for="authLoginPassword" id="authLoginPasswordLabel">Passwort</label>
-    <input type="password" id="authLoginPassword" autocomplete="current-password" onkeydown="if(event.key==='Enter')doUserLogin()">
+    <input type="password" id="authLoginPassword" name="ax_pw_anti" autocomplete="new-password" data-form-type="other" data-1p-ignore="true" data-lpignore="true" onkeydown="if(event.key==='Enter')doUserLogin()">
     <div class="auth-checkbox"><label><input type="checkbox" id="authLoginRemember" checked> <span id="authLoginRememberLabel">Angemeldet bleiben (30 Tage)</span></label></div>
     <div class="auth-msg" id="authLoginMsg"></div>
     <div class="login-btns" style="margin-top:12px"><button class="btn-cancel" onclick="closeAuth()" id="authLoginCancelBtn">Abbrechen</button><button class="btn-login" onclick="doUserLogin()" id="authLoginSubmitBtn">Anmelden</button></div>
