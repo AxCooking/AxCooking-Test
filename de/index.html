@@ -288,6 +288,25 @@ body.lightbox-open .rd-image-col .fav-btn{display:none}
 .add-step-wrap{display:flex;justify-content:flex-end;margin-top:14px}
 .add-step-btn{font-size:.95rem;padding:9px 16px}
 /* S5-Punkt3/4: Cook-Mode im Kochbuch — Distraktoren weg, gestrichene Zutaten weg, Edit-Modus aus */
+.step .remove-orig-step-btn{background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px;margin-left:auto;display:flex;align-items:center;justify-content:center;border-radius:4px;transition:all .15s}
+.step .remove-orig-step-btn:hover{color:var(--accent);background:rgba(0,0,0,.05)}
+.step .remove-orig-step-btn svg{width:18px;height:18px}
+.step .restore-orig-step-btn{background:none;border:none;cursor:pointer;color:var(--accent);padding:4px;margin-left:auto;display:none;align-items:center;gap:4px;font-size:.85rem;border-radius:4px;transition:all .15s}
+.step .restore-orig-step-btn:hover{background:rgba(0,0,0,.05)}
+.step .restore-orig-step-btn svg{width:16px;height:16px}
+.step.step-deleted .step-header .step-num,
+.step.step-deleted .step-header > .step-title-text,
+.step.step-deleted .step-text,
+.step.step-deleted .step-note .ce-field{text-decoration:line-through;opacity:.55}
+.step.step-deleted .ingredient-row{display:none}
+.step.step-deleted .add-ing-wrap,
+.step.step-deleted .add-step-wrap{display:none}
+.step.step-deleted .restore-orig-step-btn{display:inline-flex}
+.step.step-deleted .remove-orig-step-btn{display:none}
+.step-header{display:flex;align-items:center;gap:8px}
+body.cook-mode-active .step.step-deleted{display:none}
+body.cook-mode-active .remove-orig-step-btn,
+body.cook-mode-active .restore-orig-step-btn{display:none !important}
 body.cook-mode-active .ingredient-row.ing-deleted{display:none}
 body.cook-mode-active .cookbook-toolbar,
 body.cook-mode-active .cookbook-badge,
@@ -552,7 +571,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781870000000 -->
+<!-- cache-bust: 1781880000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -1918,6 +1937,26 @@ function removeAddedIng(stepIdx,addedIdx){
   saveOverlayDebounced();
   if(currentRecipeId)renderDetail(currentRecipeId);
 }
+function removeOriginalStep(stepIdx){
+  if(!_currentFav)return;
+  if(!confirm(lang==='de'?'Diesen Originalschritt entfernen?':'Remove this original step?'))return;
+  if(!_currentFav.overlay)_currentFav.overlay={};
+  if(!Array.isArray(_currentFav.overlay.deletedSteps))_currentFav.overlay.deletedSteps=[];
+  if(_currentFav.overlay.deletedSteps.indexOf(stepIdx)===-1){
+    _currentFav.overlay.deletedSteps.push(stepIdx);
+  }
+  saveOverlayDebounced();
+  if(currentRecipeId)renderDetail(currentRecipeId);
+}
+function restoreOriginalStep(stepIdx){
+  if(!_currentFav||!_currentFav.overlay||!Array.isArray(_currentFav.overlay.deletedSteps))return;
+  const i=_currentFav.overlay.deletedSteps.indexOf(stepIdx);
+  if(i>=0){
+    _currentFav.overlay.deletedSteps.splice(i,1);
+    saveOverlayDebounced();
+    if(currentRecipeId)renderDetail(currentRecipeId);
+  }
+}
 function removeAddedStep(addedIdx){
   if(!_currentFav)return;
   if(!confirm(lang==='de'?'Diesen Schritt entfernen?':'Remove this step?'))return;
@@ -2085,7 +2124,7 @@ function renderSteps(recipe,steps,servings){
       ? `<div class="step-note${noteEff?' has-content':''}"><span class="ce-field ce-empty" contenteditable="true" data-placeholder="${esc(t('editNote'))}" oninput="_onNoteInput(this,${i})">${esc(noteEff)}</span></div>`
       : '';
     // Reihenfolge im Step-Body: orig+added Zutaten, "+ Zutat" rechts, Text, Notiz, "+ Schritt" rechts
-    return `<div class="step"><div class="step-header"><span class="step-num">${stepNum}</span>${titleHtml}</div>${origIngsHtml}${addedIngsHtml}${addIngBtnHtml(String(i))}${textHtml}${noteHtml}${addStepBtnHtml('orig:'+i)}</div>`;
+    return `<div class="step${(_currentFav&&_currentFav.overlay&&Array.isArray(_currentFav.overlay.deletedSteps)&&_currentFav.overlay.deletedSteps.indexOf(i+1)>=0)?' step-deleted':''}"><div class="step-header"><span class="step-num">${stepNum}</span>${titleHtml}<button class="remove-orig-step-btn" type="button" onclick="removeOriginalStep(${i+1})" title="${lang==='de'?'Schritt löschen':'Delete step'}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><button class="restore-orig-step-btn" type="button" onclick="restoreOriginalStep(${i+1})" title="${lang==='de'?'Schritt wieder hinzufügen':'Restore step'}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><polyline points="3 3 3 8 8 8"/></svg><span>${lang==='de'?'Wieder hinzufügen':'Restore'}</span></button></div>${origIngsHtml}${addedIngsHtml}${addIngBtnHtml(String(i))}${textHtml}${noteHtml}${addStepBtnHtml('orig:'+i)}</div>`;
   }
 
   // Helper: rendert einen added Step
