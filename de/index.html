@@ -221,8 +221,8 @@ body.lightbox-open .rd-image-col .fav-btn{display:none}
 .cookbook-toolbar{display:flex;align-items:stretch;flex-wrap:nowrap;gap:12px;margin:0 0 14px 0;font-size:1.33rem;line-height:1.3}
 .cookbook-toolbar>.cookbook-badge,
 .cookbook-toolbar>.reset-overlay-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--white);border:none;border-radius:6px;padding:8px 14px;font-weight:500;font-size:inherit;line-height:1.3;min-height:40px;text-align:center;flex:1 1 0;min-width:0;cursor:pointer;font-family:var(--font-body)}
-.cookbook-toolbar .cookbook-badge svg{width:1.42em;height:1.42em;flex-shrink:0;fill:var(--white);position:relative;top:0;vertical-align:middle}
-.cookbook-toolbar .reset-overlay-btn svg{width:1.05rem;height:1.05rem;flex-shrink:0;stroke:var(--white)}
+.cookbook-toolbar .cookbook-badge svg{width:1.28em;height:1.28em;flex-shrink:0;fill:var(--white);position:relative;top:0;vertical-align:middle}
+.cookbook-toolbar .reset-overlay-btn svg{width:1.155rem;height:1.155rem;flex-shrink:0;stroke:var(--white)}
 .cookbook-badge{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-weight:500;font-size:inherit;background:none;border:none;padding:0;border-radius:0;margin:0}
 .cookbook-badge svg{width:15px;height:15px;flex-shrink:0;fill:var(--accent)}
 .cookbook-empty{text-align:center;padding:60px 20px;color:var(--text-muted);font-size:.95rem;line-height:1.6}
@@ -270,9 +270,9 @@ body.lightbox-open .rd-image-col .fav-btn{display:none}
 .ingredient-row.ing-added .ing-amount,
 .ingredient-row.ing-added .ing-unit,
 .ingredient-row.ing-added .ing-name{background:none;border:none;display:flex;align-items:center;line-height:23px;min-height:23px;color:var(--accent);font-weight:400}
-.ingredient-row.ing-added .ing-amount{justify-content:flex-end;padding:0}
-.ingredient-row.ing-added .ing-unit{border-left:1px solid #e89289;border-right:1px solid #e89289;justify-content:flex-start;padding:0 8px}
-.ingredient-row.ing-added .ing-name{flex:1 1 auto;padding:0}
+.ingredient-row.ing-added .ing-amount{flex:0 0 40px;width:40px;min-width:40px;justify-content:center;padding:0}
+.ingredient-row.ing-added .ing-unit{flex:0 0 40px;width:40px;min-width:40px;border-left:1px solid #e89289;border-right:1px solid #e89289;justify-content:center;padding:0}
+.ingredient-row.ing-added .ing-name{flex:1 1 auto;justify-content:flex-start;padding:0 8px}
 .ingredient-row.ing-added .ce-field{background:none !important;border:none !important;border-radius:0 !important;padding:0 !important;margin:0 !important;color:var(--accent);font-weight:400;display:inline-block;min-width:2ch;box-sizing:content-box;line-height:inherit !important}
 .ingredient-row.ing-added .ing-amount .ce-field{text-align:right}
 .ingredient-row.ing-added .ing-name .ce-field{flex:1}
@@ -555,7 +555,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781780000000 -->
+<!-- cache-bust: 1781790000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
