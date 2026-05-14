@@ -111,7 +111,6 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .auth-msg.success{background:#e8f5ec;color:#1e6f3c;border:1px solid #bfe3c8;display:block}
 .auth-msg.info{background:#eef4f9;color:#1e4a72;border:1px solid #c5d8e8;display:block}
 .auth-hint{font-size:.75rem;color:var(--text-muted);margin:-4px 0 8px}
-.auth-divider{font-size:.78rem;color:var(--text-muted);text-align:center;margin:14px 0 10px}
 .user-avatar{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-size:.85rem;font-weight:600;display:inline-flex;align-items:center;justify-content:center;border:none;cursor:pointer;font-family:var(--font-body);transition:opacity .15s;-webkit-tap-highlight-color:transparent;padding:0;flex-shrink:0}
 .user-avatar:hover{opacity:.85}
 .user-menu{display:none;position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--border);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.15),0 2px 6px rgba(0,0,0,.08);min-width:220px;overflow:hidden;z-index:200}
@@ -200,7 +199,6 @@ body.on-detail .rd-cooking-header .bring-btn,body.on-detail .comments-section .b
 .recipe-list.hidden{display:none}
 .recipe-detail{padding:32px 0 60px;display:none}
 .recipe-detail.active{display:block}
-.rd-back-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin-bottom:12px}
 .rd-back{font-size:.85rem;color:var(--text-light);cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
 .rd-back::before{content:'';display:inline-block;width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:5px solid currentColor;flex-shrink:0}
 .rd-back:hover{color:var(--text)}
@@ -264,7 +262,6 @@ body.lightbox-open .rd-image-col .fav-btn{display:none}
 /* S5-Punkt1/2: Diff-Highlights für hinzugefügte Items + Add-Buttons */
 .ingredient-row.ing-added .ing-amount,
 .ingredient-row.ing-added .ing-unit,
-.ingredient-row.ing-added .ing-name{font-weight:400;color:var(--accent)}
 /* Punkt 5: ce-fields in added Zutaten — rot umrandet, hellrot, breite Mindestmasse */
 .ingredient-row.ing-added{background:none;border:none;border-radius:0;align-items:stretch;padding:8px 0;margin:0;border-bottom:1px solid #ccc;gap:0;box-sizing:content-box}
 .ingredient-row.ing-added .ing-amount,
@@ -275,10 +272,8 @@ body.lightbox-open .rd-image-col .fav-btn{display:none}
 .ingredient-row.ing-added .ing-name{flex:1 1 auto;justify-content:flex-start;padding:0 8px 0 12px;text-align:left;border-right:1px solid var(--accent);border-radius:0 6px 6px 0;margin-right:8px}
 .ingredient-row.ing-added .ing-amount .ce-field{text-align:right}
 .ingredient-row.ing-added .ce-field{background:none !important;border:none !important;border-radius:0 !important;padding:0 !important;margin:0 !important;color:var(--accent);font-weight:400;display:inline-block;min-width:3ch;box-sizing:content-box;line-height:inherit !important}
-.ingredient-row.ing-added .ing-amount .ce-field{text-align:right}
 .ingredient-row.ing-added .ing-name .ce-field{flex:1}
 .ingredient-row.ing-added .ing-name .ce-field{min-width:30ch}
-.ingredient-row.ing-added .ing-amount .ce-field{text-align:right}
 .ingredient-row.ing-added .ing-unit .ce-field{text-align:left}
 .ingredient-row.ing-added .ing-name .ce-field{text-align:left}
 .ingredient-row.ing-added .ce-field:hover,
@@ -556,7 +551,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781820000000 -->
+<!-- cache-bust: 1781830000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
