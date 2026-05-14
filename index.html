@@ -270,9 +270,10 @@ body.lightbox-open .rd-image-col .fav-btn{display:none}
 .ingredient-row.ing-added .ing-amount,
 .ingredient-row.ing-added .ing-unit,
 .ingredient-row.ing-added .ing-name{background:#fef7f5;border-top:1px solid var(--accent);border-bottom:1px solid var(--accent);display:flex;align-items:center;line-height:23px;min-height:23px;color:var(--accent);font-weight:400}
-.ingredient-row.ing-added .ing-amount{flex:0 0 47px;width:47px;min-width:47px;justify-content:center;padding:0;border-left:1px solid var(--accent);border-radius:6px 0 0 6px}
-.ingredient-row.ing-added .ing-unit{flex:0 0 43px;width:43px;min-width:43px;border-left:1px solid #e89289;border-right:1px solid #e89289;justify-content:center;padding:0}
-.ingredient-row.ing-added .ing-name{flex:1 1 auto;justify-content:flex-start;padding:0 8px;border-right:1px solid var(--accent);border-radius:0 6px 6px 0;margin-right:8px}
+.ingredient-row.ing-added .ing-amount{flex:0 0 55px;width:55px;min-width:55px;justify-content:flex-end;padding:0;border-left:1px solid var(--accent);border-radius:6px 0 0 6px;text-align:right}
+.ingredient-row.ing-added .ing-unit{flex:0 0 47px;width:47px;min-width:47px;border-left:1px solid #e89289;border-right:1px solid #e89289;justify-content:flex-start;padding:0 0 0 12px;text-align:left}
+.ingredient-row.ing-added .ing-name{flex:1 1 auto;justify-content:flex-start;padding:0 8px 0 12px;text-align:left;border-right:1px solid var(--accent);border-radius:0 6px 6px 0;margin-right:8px}
+.ingredient-row.ing-added .ing-amount .ce-field{text-align:right}
 .ingredient-row.ing-added .ce-field{background:none !important;border:none !important;border-radius:0 !important;padding:0 !important;margin:0 !important;color:var(--accent);font-weight:400;display:inline-block;min-width:2ch;box-sizing:content-box;line-height:inherit !important}
 .ingredient-row.ing-added .ing-amount .ce-field{text-align:right}
 .ingredient-row.ing-added .ing-name .ce-field{flex:1}
@@ -555,7 +556,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781800000000 -->
+<!-- cache-bust: 1781810000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
