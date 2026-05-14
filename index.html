@@ -551,7 +551,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781830000000 -->
+<!-- cache-bust: 1781840000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -1842,18 +1842,6 @@ function _onIngFieldInput(el,stepIdx,ingIdx,fieldName){
   }
   saveOverlayDebounced();
 }
-function _onStepFieldInput(el,stepIdx,fieldName){
-  const newVal=(el.textContent||'').trim();
-  const original=_getOriginalStep(stepIdx);
-  if(!original)return;
-  const slot=_ensureOverlayPath(stepIdx,null);
-  if(newVal===String(original[fieldName]||'').trim()){
-    delete slot[fieldName];
-  }else{
-    slot[fieldName]=newVal;
-  }
-  saveOverlayDebounced();
-}
 function _onNoteInput(el,stepIdx){
   const newVal=(el.textContent||'').trim();
   const slot=_ensureOverlayPath(stepIdx,null);
@@ -1908,7 +1896,6 @@ function addStepAfter(refStr){
   if(currentRecipeId)renderDetail(currentRecipeId);
 }
 // Legacy-Alias (falls aus alter Cache aufgerufen)
-function addNewStep(){return addStepAfter('end')}
 function removeAddedIng(stepIdx,addedIdx){
   if(!_currentFav)return;
   if(typeof stepIdx==='string'&&stepIdx.startsWith('a:')){
