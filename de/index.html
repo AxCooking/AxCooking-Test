@@ -1,4 +1,4 @@
-<!-- v1781940000000 -->
+<!-- v1781960000000 -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -60,17 +60,16 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .header-search input:focus{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.15)}
 .header-search .search-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.5);font-size:.85rem;cursor:pointer;display:none;padding:2px 4px;line-height:1}
 .header-search .search-clear:hover{color:rgba(255,255,255,.8)}
-.header-right{display:flex;align-items:center;gap:16px}
-.header-icons{display:flex;gap:12px}
-.header-icons a{color:var(--white);text-decoration:none;font-size:.8rem;opacity:.7;transition:opacity .2s;display:flex;align-items:center;gap:4px}
-.header-icons a:hover{opacity:1}
-.header-icons svg{width:21px;height:21px;fill:currentColor}
+.header-right{display:flex;align-items:center;gap:8px}
+.header-icons{display:flex;gap:8px}
+/* Alle Header-Icons: einheitliche 34x34 Box, gleicher Style wie Suchfeld (oben/unten bündig) */
+.header-icons a{color:var(--white);text-decoration:none;font-size:.8rem;opacity:.85;transition:opacity .2s,background .15s,border-color .15s;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;box-sizing:border-box;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:4px;padding:0;flex-shrink:0}
+.header-icons a:hover{opacity:1;background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4)}
+.header-icons svg{width:18px;height:18px;fill:currentColor}
 .lang-picker{position:relative;display:inline-flex;align-items:center}
-.lang-picker-trigger{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:4px;padding:3px 6px;cursor:pointer;font-family:var(--font-body);transition:background .15s,border-color .15s;-webkit-tap-highlight-color:transparent}
-.lang-picker-trigger:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.4)}
+.lang-picker-trigger{display:inline-flex;align-items:center;justify-content:center;gap:0;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:4px;padding:0;width:34px;height:34px;box-sizing:border-box;cursor:pointer;font-family:var(--font-body);transition:background .15s,border-color .15s;-webkit-tap-highlight-color:transparent;flex-shrink:0}
+.lang-picker-trigger:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4)}
 .lang-picker-trigger .flag{width:22px;height:14px;border-radius:2px;display:block;flex-shrink:0;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
-.lang-picker-trigger .caret{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid rgba(255,255,255,.7);transition:transform .15s}
-.lang-picker.open .lang-picker-trigger .caret{transform:rotate(180deg)}
 .lang-picker-menu{display:none;position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--border);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.15),0 2px 6px rgba(0,0,0,.08);min-width:160px;overflow:hidden;z-index:200}
 .lang-picker.open .lang-picker-menu{display:block}
 .lang-picker-menu button{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;font-family:var(--font-body);font-size:.9rem;color:var(--text);cursor:pointer;text-align:left;transition:background .12s;-webkit-tap-highlight-color:transparent}
@@ -79,8 +78,11 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .lang-picker-menu .flag{width:24px;height:16px;border-radius:2px;flex-shrink:0;box-shadow:0 0 0 1px rgba(0,0,0,.1)}
 .flag-de{background:linear-gradient(to bottom,#000 0,#000 33.33%,#DD0000 33.33%,#DD0000 66.66%,#FFCE00 66.66%,#FFCE00 100%)}
 .flag-en{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'><clipPath id='t'><path d='M0,0 v30 h60 v-30 z'/></clipPath><clipPath id='s'><path d='M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z'/></clipPath><g clip-path='url(%23t)'><path d='M0,0 v30 h60 v-30 z' fill='%23012169'/><path d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/><path d='M0,0 L60,30 M60,0 L0,30' clip-path='url(%23s)' stroke='%23C8102E' stroke-width='4'/><path d='M30,0 v30 M0,15 h60' stroke='%23fff' stroke-width='10'/><path d='M30,0 v30 M0,15 h60' stroke='%23C8102E' stroke-width='6'/></g></svg>");background-size:cover;background-position:center}
-.lock-icon{color:rgba(255,255,255,.5);font-size:1.05rem;cursor:pointer;display:flex;align-items:center;justify-content:center;background:none;border:none;font-family:var(--font-body);transition:color .2s;padding:4px 6px;line-height:1}
-.lock-icon:hover{color:rgba(255,255,255,.85)}
+.lock-icon{color:rgba(255,255,255,.85);font-size:1.05rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:4px;font-family:var(--font-body);transition:color .2s,background .15s,border-color .15s;width:34px;height:34px;box-sizing:border-box;padding:0;line-height:1;flex-shrink:0}
+.lock-icon:hover{color:#fff;background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4)}
+/* Wenn Avatar aktiv: kein Border/BG am Button selbst (Avatar fühlt sich rund) */
+.lock-icon.user-active{background:none;border:none;width:34px;height:34px}
+.lock-icon.user-active .user-avatar{width:34px;height:34px}
 .login-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center}
 .login-overlay.open{display:flex}
 .login-box{background:var(--white);border-radius:8px;padding:32px;max-width:380px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.2)}
@@ -95,7 +97,7 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .btn-login{background:var(--black);color:var(--white);border:none;padding:9px 20px;border-radius:4px;font-size:.85rem;font-weight:600;cursor:pointer;font-family:var(--font-body)}
 .btn-cancel{background:transparent;border:1px solid var(--border);color:var(--text-light);padding:9px 20px;border-radius:4px;font-size:.85rem;cursor:pointer;font-family:var(--font-body)}
 .login-box.auth-box{max-width:440px}
-#authAdminTitle{color:#bbb;font-weight:400}
+#authAdminTitle{color:rgb(209,209,209);font-weight:400}
 .auth-tabs{display:flex;border-bottom:1px solid var(--border);margin:-8px -32px 20px -32px;padding:0 32px}
 .auth-tab{padding:10px 16px;font-size:.85rem;font-weight:500;color:var(--text-light);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;background:none;border-left:none;border-right:none;border-top:none;font-family:var(--font-body);margin-bottom:-1px}
 .auth-tab.active{color:var(--text);border-bottom-color:var(--black)}
@@ -615,7 +617,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781940000000 -->
+<!-- cache-bust: 1781960000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -660,7 +662,7 @@ input,textarea,select{font-size:16px !important}
 </head>
 <body>
 <header><div class="header-inner"><a class="logo" onclick="showList()"><!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
-<img src="/logos/Logo_Invertiert.png" alt="AXCOOKING" style="height:28px;width:auto"></a><div class="header-search"><input type="search" id="searchInput" name="recipe-search" placeholder="Suche nach Rezept oder Kategorie" oninput="onSearchInput()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" role="searchbox" data-form-type="other" data-1p-ignore="true" data-lpignore="true" readonly onfocus="this.removeAttribute('readonly')"><button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button></div><div class="header-right"><div class="header-icons"><a href="https://www.youtube.com/@axcooking" target="_blank" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C17 2.6 12 2.6 12 2.6s-5 0-8.3.3c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8.1.2 10v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s5 0 8.3-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.5 15.6V8.1l6.3 3.7-6.3 3.8z"/></svg></a><a href="https://www.tiktok.com/@axcooking" target="_blank" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.8.1v-3.5a6.37 6.37 0 0 0-.8-.05A6.34 6.34 0 0 0 3.15 15.3 6.34 6.34 0 0 0 9.49 21.6a6.34 6.34 0 0 0 6.34-6.34V8.79a8.22 8.22 0 0 0 3.76 1.27V6.69z"/></svg></a></div><div class="lang-picker" id="langPicker"><button type="button" class="lang-picker-trigger" id="langPickerTrigger" onclick="toggleLangPicker(event)" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprache"><span class="flag" id="langPickerFlag"></span><span class="caret"></span></button><div class="lang-picker-menu" id="langPickerMenu" role="listbox"><button type="button" data-lang="de" onclick="selectLang('de')" role="option"><span class="flag flag-de"></span><span class="lang-name" data-de="Deutsch" data-en="German">Deutsch</span></button><button type="button" data-lang="en" onclick="selectLang('en')" role="option"><span class="flag flag-en"></span><span class="lang-name" data-de="Englisch" data-en="English">Englisch</span></button></div></div><div class="user-menu-wrap" id="userMenuWrap"><button class="lock-icon" onclick="handleAuthClick()" id="authBtn" title="Login" aria-label="Login"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button><div class="user-menu" id="userMenu" role="menu"><div class="user-menu-header" id="userMenuHeader"></div><div class="um-section" id="umProfileSection"><div class="um-row"><input type="text" id="umNicknameInput" maxlength="40" placeholder="Nickname" autocomplete="off" data-1p-ignore="true"><button class="um-btn" id="umNicknameSaveBtn" onclick="doUpdateProfile()">Speichern</button></div><div class="um-msg" id="umProfileMsg"></div></div><div class="um-section" id="umAvatarSection"><label id="umAvatarLabel">Profilbild</label><div class="um-avatar-preview"><div class="um-ap-actions"><button class="um-btn um-btn-sec" id="umAvatarUploadBtn" onclick="document.getElementById('umAvatarFile').click()">Hochladen</button><button class="um-btn um-btn-sec" id="umAvatarRemoveBtn" onclick="doDeleteAvatar()" style="display:none">Entfernen</button></div></div><input type="file" id="umAvatarFile" accept="image/*" style="display:none" onchange="doUploadAvatar(this.files[0])"><div class="um-msg" id="umAvatarMsg"></div></div><div class="um-section um-danger" id="umDangerSection"><label id="umDangerLabel">Konto löschen</label><div class="um-danger-text" id="umDangerText">Diese Aktion ist endgültig. Alle deine Daten werden gelöscht.</div><button class="um-btn um-btn-danger" id="umDeleteToggleBtn" onclick="toggleDeleteAccountConfirm()">Konto löschen</button><div class="um-danger-confirm" id="umDeleteConfirm"><div style="margin-top:8px"><label for="umDeletePassword" style="margin-bottom:4px" id="umDeletePasswordLabel">Passwort zur Bestätigung</label><input type="password" id="umDeletePassword" autocomplete="current-password" placeholder=""></div><div class="um-row" style="margin-top:8px"><button class="um-btn um-btn-sec" onclick="toggleDeleteAccountConfirm()" id="umDeleteCancelBtn" style="flex:1">Abbrechen</button><button class="um-btn um-btn-danger" onclick="doDeleteAccount()" id="umDeleteConfirmBtn" style="flex:1">Löschen</button></div><div class="um-msg" id="umDeleteMsg"></div></div></div><button onclick="closeUserMenu();handleUserLogout()" id="userMenuLogoutBtn">Abmelden</button></div></div></div></div></header>
+<img src="/logos/Logo_Invertiert.png" alt="AXCOOKING" style="height:28px;width:auto"></a><div class="header-search"><input type="search" id="searchInput" name="recipe-search" placeholder="Suche nach Rezept oder Kategorie" oninput="onSearchInput()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" role="searchbox" data-form-type="other" data-1p-ignore="true" data-lpignore="true" readonly onfocus="this.removeAttribute('readonly')"><button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button></div><div class="header-right"><div class="header-icons"><a href="https://www.youtube.com/@axcooking" target="_blank" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C17 2.6 12 2.6 12 2.6s-5 0-8.3.3c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8.1.2 10v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s5 0 8.3-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.5 15.6V8.1l6.3 3.7-6.3 3.8z"/></svg></a><a href="https://www.tiktok.com/@axcooking" target="_blank" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.8.1v-3.5a6.37 6.37 0 0 0-.8-.05A6.34 6.34 0 0 0 3.15 15.3 6.34 6.34 0 0 0 9.49 21.6a6.34 6.34 0 0 0 6.34-6.34V8.79a8.22 8.22 0 0 0 3.76 1.27V6.69z"/></svg></a></div><div class="lang-picker" id="langPicker"><button type="button" class="lang-picker-trigger" id="langPickerTrigger" onclick="toggleLangPicker(event)" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprachauswahl" title="Sprachauswahl"><span class="flag" id="langPickerFlag"></span></button><div class="lang-picker-menu" id="langPickerMenu" role="listbox"><button type="button" data-lang="de" onclick="selectLang('de')" role="option"><span class="flag flag-de"></span><span class="lang-name" data-de="Deutsch" data-en="German">Deutsch</span></button><button type="button" data-lang="en" onclick="selectLang('en')" role="option"><span class="flag flag-en"></span><span class="lang-name" data-de="Englisch" data-en="English">Englisch</span></button></div></div><div class="user-menu-wrap" id="userMenuWrap"><button class="lock-icon" onclick="handleAuthClick()" id="authBtn" title="Login" aria-label="Login"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button><div class="user-menu" id="userMenu" role="menu"><div class="user-menu-header" id="userMenuHeader"></div><div class="um-section" id="umProfileSection"><div class="um-row"><input type="text" id="umNicknameInput" maxlength="40" placeholder="Nickname" autocomplete="off" data-1p-ignore="true"><button class="um-btn" id="umNicknameSaveBtn" onclick="doUpdateProfile()">Speichern</button></div><div class="um-msg" id="umProfileMsg"></div></div><div class="um-section" id="umAvatarSection"><label id="umAvatarLabel">Profilbild</label><div class="um-avatar-preview"><div class="um-ap-actions"><button class="um-btn um-btn-sec" id="umAvatarUploadBtn" onclick="document.getElementById('umAvatarFile').click()">Hochladen</button><button class="um-btn um-btn-sec" id="umAvatarRemoveBtn" onclick="doDeleteAvatar()" style="display:none">Entfernen</button></div></div><input type="file" id="umAvatarFile" accept="image/*" style="display:none" onchange="doUploadAvatar(this.files[0])"><div class="um-msg" id="umAvatarMsg"></div></div><div class="um-section um-danger" id="umDangerSection"><label id="umDangerLabel">Konto löschen</label><div class="um-danger-text" id="umDangerText">Diese Aktion ist endgültig. Alle deine Daten werden gelöscht.</div><button class="um-btn um-btn-danger" id="umDeleteToggleBtn" onclick="toggleDeleteAccountConfirm()">Konto löschen</button><div class="um-danger-confirm" id="umDeleteConfirm"><div style="margin-top:8px"><label for="umDeletePassword" style="margin-bottom:4px" id="umDeletePasswordLabel">Passwort zur Bestätigung</label><input type="password" id="umDeletePassword" autocomplete="current-password" placeholder=""></div><div class="um-row" style="margin-top:8px"><button class="um-btn um-btn-sec" onclick="toggleDeleteAccountConfirm()" id="umDeleteCancelBtn" style="flex:1">Abbrechen</button><button class="um-btn um-btn-danger" onclick="doDeleteAccount()" id="umDeleteConfirmBtn" style="flex:1">Löschen</button></div><div class="um-msg" id="umDeleteMsg"></div></div></div><button onclick="closeUserMenu();handleUserLogout()" id="userMenuLogoutBtn">Abmelden</button></div></div></div></div></header>
 <div class="login-overlay" id="loginOverlay" onclick="if(event.target===this)closeAuth()"><div class="login-box auth-box"><div class="auth-tabs"><button class="auth-tab active" id="authTabUserBtn" onclick="setAuthTab('user')">User</button><button class="auth-tab" id="authTabAdminBtn" onclick="setAuthTab('admin')">Admin</button></div>
 
 <!-- User Tab -->
@@ -904,7 +906,8 @@ Object.assign(L.de, {
   umDeleteDeleting:'Wird gelöscht…',
   umDeleteSuccess:'Konto gelöscht. Auf Wiedersehen!',
   umDeleteWrongPw:'Passwort falsch.',
-  umDeleteError:'Konto konnte nicht gelöscht werden.'
+  umDeleteError:'Konto konnte nicht gelöscht werden.',
+  langPickerTooltip:'Sprachauswahl'
 });
 Object.assign(L.en, {
   authBtnLogin:'Sign in',
@@ -981,7 +984,8 @@ Object.assign(L.en, {
   umDeleteDeleting:'Deleting…',
   umDeleteSuccess:'Account deleted. Goodbye!',
   umDeleteWrongPw:'Wrong password.',
-  umDeleteError:'Account could not be deleted.'
+  umDeleteError:'Account could not be deleted.',
+  langPickerTooltip:'Language selection'
 });
 function t(k){return L[lang][k]||k}
 // S3: Favorit/Kochbuch i18n
@@ -1297,7 +1301,8 @@ async function doUserLogin(){
   if(!email||!/.+@.+\..+/.test(email)){_setAuthMsg('authLoginMsg','error',t('authEmailNeeded'));return}
   if(!password){_setAuthMsg('authLoginMsg','error',t('authPasswordNeeded'));return}
   $('authLoginSubmitBtn').disabled=true;
-  _setAuthMsg('authLoginMsg','info','…');
+  // Vorherige Fehler-/Info-Meldung löschen, damit kein leeres Info-Feld stehen bleibt
+  _setAuthMsg('authLoginMsg','');
   const r=await _authFetch('/auth/login',{email,password,env:_workerEnv(),remember});
   $('authLoginSubmitBtn').disabled=false;
   if(r.status===0){_setAuthMsg('authLoginMsg','error',t('authNetworkError'));return}
@@ -1792,6 +1797,8 @@ function applyAuthLabels(){
   // Placeholders separat setzen
   const ni=$('umNicknameInput');if(ni)ni.placeholder=t('umNicknamePlaceholder');
   const um=$('userMenuLogoutBtn');if(um)um.textContent=t('authBtnLogout');
+  // Tooltips/Titles für Header-Icons
+  const lpt=$('langPickerTrigger');if(lpt){lpt.title=t('langPickerTooltip');lpt.setAttribute('aria-label',t('langPickerTooltip'))}
 }
 function handleAuthUrlParams(){
   // Wird beim Page-Load aufgerufen um ?verify=...&reset=... zu verarbeiten
