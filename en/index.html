@@ -112,15 +112,49 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .auth-msg.success{background:#e8f5ec;color:#1e6f3c;border:1px solid #bfe3c8;display:block}
 .auth-msg.info{background:#eef4f9;color:#1e4a72;border:1px solid #c5d8e8;display:block}
 .auth-hint{font-size:.75rem;color:var(--text-muted);margin:-4px 0 8px}
-.user-avatar{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-size:.85rem;font-weight:600;display:inline-flex;align-items:center;justify-content:center;border:none;cursor:pointer;font-family:var(--font-body);transition:opacity .15s;-webkit-tap-highlight-color:transparent;padding:0;flex-shrink:0}
+.user-avatar{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-size:.85rem;font-weight:600;display:inline-flex;align-items:center;justify-content:center;border:none;cursor:pointer;font-family:var(--font-body);transition:opacity .15s;-webkit-tap-highlight-color:transparent;padding:0;flex-shrink:0;overflow:hidden}
 .user-avatar:hover{opacity:.85}
-.user-menu{display:none;position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--border);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.15),0 2px 6px rgba(0,0,0,.08);min-width:220px;overflow:hidden;z-index:200}
+.user-avatar img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+.user-menu{display:none;position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--border);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.15),0 2px 6px rgba(0,0,0,.08);min-width:280px;max-width:320px;overflow:hidden;z-index:200}
 .user-menu.open{display:block}
-.user-menu-header{padding:12px 14px;border-bottom:1px solid var(--border-light);font-size:.78rem;color:var(--text-muted)}
-.user-menu-header strong{display:block;color:var(--text);font-size:.88rem;margin-top:2px;word-break:break-all}
+.user-menu-header{padding:12px 14px;border-bottom:1px solid var(--border-light);font-size:.78rem;color:var(--text-muted);display:flex;align-items:center;gap:12px}
+.user-menu-header .um-h-avatar{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;font-size:1.15rem;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.user-menu-header .um-h-avatar img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+.user-menu-header .um-h-text{flex:1;min-width:0}
+.user-menu-header .um-h-text strong{display:block;color:var(--text);font-size:.92rem;word-break:break-word;margin-top:0}
+.user-menu-header .um-h-text .um-h-mail{display:block;color:var(--text-muted);font-size:.74rem;margin-top:2px;word-break:break-all}
 .user-menu button{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;font-family:var(--font-body);font-size:.88rem;color:var(--text);cursor:pointer;text-align:left;transition:background .12s;-webkit-tap-highlight-color:transparent}
 .user-menu button:hover{background:var(--bg)}
 .user-menu-wrap{position:relative;display:inline-block}
+.um-section{padding:10px 14px;border-bottom:1px solid var(--border-light);font-size:.82rem}
+.um-section:last-of-type{border-bottom:none}
+.um-section .um-row{display:flex;gap:8px;align-items:center;margin-top:6px}
+.um-section label{display:block;font-size:.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;font-weight:600}
+.um-section input[type=text],.um-section input[type=password]{flex:1;padding:6px 10px;border:1px solid var(--border);border-radius:4px;font-size:.85rem;font-family:var(--font-body);outline:none;color:var(--text);min-width:0}
+.um-section input:focus{border-color:var(--text-light)}
+.um-section .um-btn{padding:6px 12px;background:var(--accent);color:#fff;border:none;border-radius:4px;font-size:.78rem;font-weight:600;cursor:pointer;font-family:var(--font-body);flex-shrink:0;width:auto;display:inline-flex}
+.um-section .um-btn:hover{opacity:.9;background:var(--accent)}
+.um-section .um-btn.um-btn-sec{background:transparent;color:var(--text);border:1px solid var(--border)}
+.um-section .um-btn.um-btn-sec:hover{background:var(--bg)}
+.um-section .um-btn.um-btn-danger{background:#c53030;color:#fff}
+.um-section .um-btn.um-btn-danger:hover{background:#9b2424;opacity:1}
+.um-section .um-btn:disabled{opacity:.5;cursor:not-allowed}
+.um-msg{font-size:.75rem;margin-top:6px;display:none;line-height:1.4}
+.um-msg.success{color:#1b7d3a;display:block}
+.um-msg.error{color:var(--accent);display:block}
+.um-msg.info{color:var(--text-muted);display:block}
+.um-avatar-preview{display:flex;align-items:center;gap:10px;margin-top:6px}
+.um-avatar-preview .um-ap-img{width:48px;height:48px;border-radius:50%;background:var(--accent);color:#fff;font-size:1.2rem;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.um-avatar-preview .um-ap-img img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+.um-avatar-preview .um-ap-actions{display:flex;gap:6px;flex-wrap:wrap}
+.um-section.um-danger{background:#fef7f5}
+.um-section.um-danger label{color:#c53030}
+.um-section.um-danger .um-danger-text{font-size:.74rem;color:#7a2222;line-height:1.4;margin-bottom:6px}
+.um-danger-confirm{display:none;margin-top:8px}
+.um-danger-confirm.open{display:block}
+.comment-avatar{width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:.7rem;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;margin-right:6px;vertical-align:middle}
+.comment-avatar img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+.comment-header .comment-author{display:inline-flex;align-items:center;gap:0}
 .privacy-modal-content{max-width:560px;max-height:75vh;overflow-y:auto;padding:8px 4px 4px}
 .privacy-modal-content h3{font-family:var(--font-heading);font-size:1.3rem;margin-bottom:14px;color:var(--text)}
 .privacy-modal-content p{font-size:.88rem;line-height:1.55;margin-bottom:10px;color:var(--text)}
@@ -571,7 +605,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781880000000 -->
+<!-- cache-bust: 1781890000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -616,7 +650,7 @@ input,textarea,select{font-size:16px !important}
 </head>
 <body>
 <header><div class="header-inner"><a class="logo" onclick="showList()"><!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
-<img src="/logos/Logo_Invertiert.png" alt="AXCOOKING" style="height:28px;width:auto"></a><div class="header-search"><input type="search" id="searchInput" name="recipe-search" placeholder="Suche nach Rezept oder Kategorie" oninput="onSearchInput()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" role="searchbox" data-form-type="other" data-1p-ignore="true" data-lpignore="true" readonly onfocus="this.removeAttribute('readonly')"><button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button></div><div class="header-right"><div class="header-icons"><a href="https://www.youtube.com/@axcooking" target="_blank" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C17 2.6 12 2.6 12 2.6s-5 0-8.3.3c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8.1.2 10v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s5 0 8.3-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.5 15.6V8.1l6.3 3.7-6.3 3.8z"/></svg></a><a href="https://www.tiktok.com/@axcooking" target="_blank" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.8.1v-3.5a6.37 6.37 0 0 0-.8-.05A6.34 6.34 0 0 0 3.15 15.3 6.34 6.34 0 0 0 9.49 21.6a6.34 6.34 0 0 0 6.34-6.34V8.79a8.22 8.22 0 0 0 3.76 1.27V6.69z"/></svg></a></div><div class="lang-picker" id="langPicker"><button type="button" class="lang-picker-trigger" id="langPickerTrigger" onclick="toggleLangPicker(event)" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprache"><span class="flag" id="langPickerFlag"></span><span class="caret"></span></button><div class="lang-picker-menu" id="langPickerMenu" role="listbox"><button type="button" data-lang="de" onclick="selectLang('de')" role="option"><span class="flag flag-de"></span><span class="lang-name" data-de="Deutsch" data-en="German">Deutsch</span></button><button type="button" data-lang="en" onclick="selectLang('en')" role="option"><span class="flag flag-en"></span><span class="lang-name" data-de="Englisch" data-en="English">Englisch</span></button></div></div><div class="user-menu-wrap" id="userMenuWrap"><button class="lock-icon" onclick="handleAuthClick()" id="authBtn" title="Login" aria-label="Login"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button><div class="user-menu" id="userMenu" role="menu"><div class="user-menu-header" id="userMenuHeader"></div><button onclick="closeUserMenu();handleUserLogout()" id="userMenuLogoutBtn">Abmelden</button></div></div></div></div></header>
+<img src="/logos/Logo_Invertiert.png" alt="AXCOOKING" style="height:28px;width:auto"></a><div class="header-search"><input type="search" id="searchInput" name="recipe-search" placeholder="Suche nach Rezept oder Kategorie" oninput="onSearchInput()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" role="searchbox" data-form-type="other" data-1p-ignore="true" data-lpignore="true" readonly onfocus="this.removeAttribute('readonly')"><button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button></div><div class="header-right"><div class="header-icons"><a href="https://www.youtube.com/@axcooking" target="_blank" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C17 2.6 12 2.6 12 2.6s-5 0-8.3.3c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8.1.2 10v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s5 0 8.3-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.5 15.6V8.1l6.3 3.7-6.3 3.8z"/></svg></a><a href="https://www.tiktok.com/@axcooking" target="_blank" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.8.1v-3.5a6.37 6.37 0 0 0-.8-.05A6.34 6.34 0 0 0 3.15 15.3 6.34 6.34 0 0 0 9.49 21.6a6.34 6.34 0 0 0 6.34-6.34V8.79a8.22 8.22 0 0 0 3.76 1.27V6.69z"/></svg></a></div><div class="lang-picker" id="langPicker"><button type="button" class="lang-picker-trigger" id="langPickerTrigger" onclick="toggleLangPicker(event)" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprache"><span class="flag" id="langPickerFlag"></span><span class="caret"></span></button><div class="lang-picker-menu" id="langPickerMenu" role="listbox"><button type="button" data-lang="de" onclick="selectLang('de')" role="option"><span class="flag flag-de"></span><span class="lang-name" data-de="Deutsch" data-en="German">Deutsch</span></button><button type="button" data-lang="en" onclick="selectLang('en')" role="option"><span class="flag flag-en"></span><span class="lang-name" data-de="Englisch" data-en="English">Englisch</span></button></div></div><div class="user-menu-wrap" id="userMenuWrap"><button class="lock-icon" onclick="handleAuthClick()" id="authBtn" title="Login" aria-label="Login"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></button><div class="user-menu" id="userMenu" role="menu"><div class="user-menu-header" id="userMenuHeader"></div><div class="um-section" id="umProfileSection"><label id="umProfileLabel">Profil</label><div class="um-row"><input type="text" id="umNicknameInput" maxlength="40" placeholder="Spitzname" autocomplete="off" data-1p-ignore="true"><button class="um-btn" id="umNicknameSaveBtn" onclick="doUpdateProfile()">Speichern</button></div><div class="um-msg" id="umProfileMsg"></div></div><div class="um-section" id="umAvatarSection"><label id="umAvatarLabel">Profilbild</label><div class="um-avatar-preview"><span class="um-ap-img" id="umAvatarPreview"></span><div class="um-ap-actions"><button class="um-btn um-btn-sec" id="umAvatarUploadBtn" onclick="document.getElementById('umAvatarFile').click()">Hochladen</button><button class="um-btn um-btn-sec" id="umAvatarRemoveBtn" onclick="doDeleteAvatar()" style="display:none">Entfernen</button></div></div><input type="file" id="umAvatarFile" accept="image/jpeg,image/png,image/webp" style="display:none" onchange="doUploadAvatar(this.files[0])"><div class="um-msg" id="umAvatarMsg"></div></div><div class="um-section um-danger" id="umDangerSection"><label id="umDangerLabel">Konto löschen</label><div class="um-danger-text" id="umDangerText">Diese Aktion ist endgültig. Alle deine Daten werden gelöscht.</div><button class="um-btn um-btn-danger" id="umDeleteToggleBtn" onclick="toggleDeleteAccountConfirm()">Konto löschen</button><div class="um-danger-confirm" id="umDeleteConfirm"><div style="margin-top:8px"><label for="umDeletePassword" style="margin-bottom:4px" id="umDeletePasswordLabel">Passwort zur Bestätigung</label><input type="password" id="umDeletePassword" autocomplete="current-password" placeholder=""></div><div class="um-row" style="margin-top:8px"><button class="um-btn um-btn-sec" onclick="toggleDeleteAccountConfirm()" id="umDeleteCancelBtn" style="flex:1">Abbrechen</button><button class="um-btn um-btn-danger" onclick="doDeleteAccount()" id="umDeleteConfirmBtn" style="flex:1">Endgültig löschen</button></div><div class="um-msg" id="umDeleteMsg"></div></div></div><button onclick="closeUserMenu();handleUserLogout()" id="userMenuLogoutBtn">Abmelden</button></div></div></div></div></header>
 <div class="login-overlay" id="loginOverlay" onclick="if(event.target===this)closeAuth()"><div class="login-box auth-box"><div class="auth-tabs"><button class="auth-tab active" id="authTabUserBtn" onclick="setAuthTab('user')">User</button><button class="auth-tab" id="authTabAdminBtn" onclick="setAuthTab('admin')">Admin</button></div>
 
 <!-- User Tab -->
@@ -768,7 +802,7 @@ input,textarea,select{font-size:16px !important}
   <span id="bringFabLabel">Bring! App</span>
 </button>
 </div>
-<script src="/config.js"></script>
+<script src="config.js"></script>
 <script>
 // GH_OWNER, GH_REPO, GH_BRANCH, GH_API, GH_PUBLIC_TOKEN kommen aus config.js
 let lang='de',ghToken=null,loggedIn=false,recipes=[],stats={},currentRecipeId=null,cachedNavList=null,userSession=null;
@@ -835,7 +869,33 @@ Object.assign(L.de, {
   authMyAccount:'Mein Konto',
   authLoggedInAs:'Angemeldet als',
   authPrivacyTitle:'Datenschutzerklärung',
-  authPrivacyText:'<p><strong>Verantwortlich:</strong> AxCooking, Schweiz</p><p><strong>Was wir speichern:</strong> Deine E-Mail-Adresse und ein verschlüsseltes Passwort (PBKDF2-Hash, 100\'000 Iterationen). Wir speichern <em>kein</em> Klartext-Passwort.</p><p><strong>Wo wir speichern:</strong> Auf Cloudflare D1 in der EU-Region (DSGVO-konform).</p><p><strong>Wofür:</strong> Damit du dich anmelden und persönliche Funktionen wie ein eigenes Kochbuch nutzen kannst.</p><p><strong>Wer sieht das:</strong> Nur du und der Betreiber. Wir geben deine Daten nicht an Dritte weiter, ausser an MailerSend (EU) für den Versand der Bestätigungs- und Reset-E-Mails.</p><p><strong>Tracking:</strong> Wir nutzen Google Analytics 4 zur Reichweitenmessung. Es werden keine personenbezogenen Daten an Google übermittelt.</p><p><strong>Deine Rechte:</strong> Du kannst jederzeit per E-Mail an axcooking@gmail.com Auskunft, Berichtigung oder Löschung deiner Daten verlangen.</p><p><strong>Cookies:</strong> Nach der Anmeldung wird ein Session-Cookie gesetzt (HTTP-only, Secure). Dieses ist technisch notwendig und wird nach Abmeldung gelöscht.</p>'
+  authPrivacyText:'<p><strong>Verantwortlich:</strong> AxCooking, Schweiz</p><p><strong>Was wir speichern:</strong> Deine E-Mail-Adresse und ein verschlüsseltes Passwort (PBKDF2-Hash, 100\'000 Iterationen). Wir speichern <em>kein</em> Klartext-Passwort.</p><p><strong>Wo wir speichern:</strong> Auf Cloudflare D1 in der EU-Region (DSGVO-konform).</p><p><strong>Wofür:</strong> Damit du dich anmelden und persönliche Funktionen wie ein eigenes Kochbuch nutzen kannst.</p><p><strong>Wer sieht das:</strong> Nur du und der Betreiber. Wir geben deine Daten nicht an Dritte weiter, ausser an MailerSend (EU) für den Versand der Bestätigungs- und Reset-E-Mails.</p><p><strong>Tracking:</strong> Wir nutzen Google Analytics 4 zur Reichweitenmessung. Es werden keine personenbezogenen Daten an Google übermittelt.</p><p><strong>Deine Rechte:</strong> Du kannst jederzeit per E-Mail an axcooking@gmail.com Auskunft, Berichtigung oder Löschung deiner Daten verlangen.</p><p><strong>Cookies:</strong> Nach der Anmeldung wird ein Session-Cookie gesetzt (HTTP-only, Secure). Dieses ist technisch notwendig und wird nach Abmeldung gelöscht.</p>',
+  umProfileLabel:'Profil',
+  umNicknamePlaceholder:'Spitzname',
+  umNicknameSave:'Speichern',
+  umAvatarLabel:'Profilbild',
+  umAvatarUpload:'Hochladen',
+  umAvatarRemove:'Entfernen',
+  umAvatarUploading:'Wird hochgeladen…',
+  umAvatarUploaded:'Profilbild aktualisiert.',
+  umAvatarRemoved:'Profilbild entfernt.',
+  umAvatarTooLarge:'Datei zu gross (max. 250 KB).',
+  umAvatarBadType:'Nur JPG, PNG oder WebP erlaubt.',
+  umAvatarError:'Profilbild konnte nicht gespeichert werden.',
+  umProfileSaved:'Profil aktualisiert.',
+  umProfileError:'Profil konnte nicht gespeichert werden.',
+  umNicknameTooShort:'Spitzname muss mindestens 2 Zeichen lang sein.',
+  umNicknameTooLong:'Spitzname darf maximal 40 Zeichen lang sein.',
+  umDangerLabel:'Konto löschen',
+  umDangerText:'Diese Aktion ist endgültig. Alle deine Daten – inklusive Kochbuch, Notizen und Bewertungen – werden gelöscht.',
+  umDeleteToggle:'Konto löschen',
+  umDeletePasswordLabel:'Passwort zur Bestätigung',
+  umDeleteCancel:'Abbrechen',
+  umDeleteConfirm:'Endgültig löschen',
+  umDeleteDeleting:'Wird gelöscht…',
+  umDeleteSuccess:'Konto gelöscht. Auf Wiedersehen!',
+  umDeleteWrongPw:'Passwort falsch.',
+  umDeleteError:'Konto konnte nicht gelöscht werden.'
 });
 Object.assign(L.en, {
   authBtnLogin:'Sign in',
@@ -887,7 +947,33 @@ Object.assign(L.en, {
   authMyAccount:'My account',
   authLoggedInAs:'Signed in as',
   authPrivacyTitle:'Privacy policy',
-  authPrivacyText:'<p><strong>Controller:</strong> AxCooking, Switzerland</p><p><strong>What we store:</strong> Your email address and an encrypted password (PBKDF2 hash, 100\'000 iterations). We do <em>not</em> store any plain-text password.</p><p><strong>Where we store:</strong> On Cloudflare D1 in the EU region (GDPR compliant).</p><p><strong>Purpose:</strong> So you can sign in and use personal features like your own recipe book.</p><p><strong>Who sees this:</strong> Only you and the operator. We do not share your data with third parties, except with MailerSend (EU) for sending confirmation and reset emails.</p><p><strong>Tracking:</strong> We use Google Analytics 4 to measure reach. No personal data is transmitted to Google.</p><p><strong>Your rights:</strong> You can request access, correction or deletion of your data at any time by emailing axcooking@gmail.com.</p><p><strong>Cookies:</strong> After signing in, a session cookie is set (HTTP-only, Secure). This is technically necessary and will be deleted upon sign-out.</p>'
+  authPrivacyText:'<p><strong>Controller:</strong> AxCooking, Switzerland</p><p><strong>What we store:</strong> Your email address and an encrypted password (PBKDF2 hash, 100\'000 iterations). We do <em>not</em> store any plain-text password.</p><p><strong>Where we store:</strong> On Cloudflare D1 in the EU region (GDPR compliant).</p><p><strong>Purpose:</strong> So you can sign in and use personal features like your own recipe book.</p><p><strong>Who sees this:</strong> Only you and the operator. We do not share your data with third parties, except with MailerSend (EU) for sending confirmation and reset emails.</p><p><strong>Tracking:</strong> We use Google Analytics 4 to measure reach. No personal data is transmitted to Google.</p><p><strong>Your rights:</strong> You can request access, correction or deletion of your data at any time by emailing axcooking@gmail.com.</p><p><strong>Cookies:</strong> After signing in, a session cookie is set (HTTP-only, Secure). This is technically necessary and will be deleted upon sign-out.</p>',
+  umProfileLabel:'Profile',
+  umNicknamePlaceholder:'Nickname',
+  umNicknameSave:'Save',
+  umAvatarLabel:'Profile picture',
+  umAvatarUpload:'Upload',
+  umAvatarRemove:'Remove',
+  umAvatarUploading:'Uploading…',
+  umAvatarUploaded:'Profile picture updated.',
+  umAvatarRemoved:'Profile picture removed.',
+  umAvatarTooLarge:'File too large (max. 250 KB).',
+  umAvatarBadType:'Only JPG, PNG or WebP allowed.',
+  umAvatarError:'Profile picture could not be saved.',
+  umProfileSaved:'Profile updated.',
+  umProfileError:'Profile could not be saved.',
+  umNicknameTooShort:'Nickname must be at least 2 characters.',
+  umNicknameTooLong:'Nickname can be at most 40 characters.',
+  umDangerLabel:'Delete account',
+  umDangerText:'This action is permanent. All your data — including recipe book, notes and ratings — will be deleted.',
+  umDeleteToggle:'Delete account',
+  umDeletePasswordLabel:'Password to confirm',
+  umDeleteCancel:'Cancel',
+  umDeleteConfirm:'Delete permanently',
+  umDeleteDeleting:'Deleting…',
+  umDeleteSuccess:'Account deleted. Goodbye!',
+  umDeleteWrongPw:'Wrong password.',
+  umDeleteError:'Account could not be deleted.'
 });
 function t(k){return L[lang][k]||k}
 // S3: Favorit/Kochbuch i18n
@@ -1290,6 +1376,160 @@ async function handleUserLogout(){
   updateAuthUI();
   showToast(t('authBtnLogout')+' ✓','success');
 }
+// ── P10: Profile / Avatar / Account-Delete helpers ─────────────────────
+function _userDisplayName(){
+  if(!userSession)return '';
+  const n=(userSession.nickname||'').trim();
+  if(n)return n;
+  const em=userSession.email||'';
+  return em.split('@')[0]||em;
+}
+function _userInitial(){
+  const n=_userDisplayName();
+  return (n||'?').charAt(0).toUpperCase();
+}
+function _userAvatarUrl(){
+  if(!userSession)return null;
+  // Worker v3.7: GET /auth/avatar/:userId (public). Cache-bust an avatar_key.
+  if(!userSession.avatar_key||!userSession.id)return null;
+  // avatar_key enthält die rand-Komponente, eignet sich daher als Cache-Bust
+  return WORKER_URL+'/auth/avatar/'+encodeURIComponent(userSession.id)+'?v='+encodeURIComponent(userSession.avatar_key);
+}
+function _renderAvatarHtml(size,opts){
+  // opts: {url,initial,cls}
+  const u=opts&&opts.url||null;
+  const ini=esc((opts&&opts.initial)||'?');
+  const cls=opts&&opts.cls||'user-avatar';
+  const style='width:'+size+'px;height:'+size+'px';
+  if(u){
+    return '<span class="'+cls+'" style="'+style+'" aria-hidden="true"><img src="'+esc(u)+'" alt="" loading="lazy"></span>';
+  }
+  return '<span class="'+cls+'" style="'+style+';display:inline-flex" aria-hidden="true">'+ini+'</span>';
+}
+function _populateUserMenuFields(){
+  if(!userSession)return;
+  // Profile-Input
+  const ni=$('umNicknameInput');
+  if(ni&&document.activeElement!==ni){ni.value=userSession.nickname||''}
+  // Avatar-Preview
+  const ap=$('umAvatarPreview');
+  if(ap){
+    const url=_userAvatarUrl();
+    if(url){ap.innerHTML='<img src="'+esc(url)+'" alt="">'}
+    else{ap.innerHTML=esc(_userInitial())}
+  }
+  // Remove-Button-Sichtbarkeit
+  const rb=$('umAvatarRemoveBtn');
+  if(rb){rb.style.display=userSession.avatar_key?'inline-flex':'none'}
+  // Header-Avatar+Texte
+  const hdr=$('userMenuHeader');
+  if(hdr){
+    const url=_userAvatarUrl();
+    const ini=esc(_userInitial());
+    const avHtml=url?'<span class="um-h-avatar"><img src="'+esc(url)+'" alt=""></span>':'<span class="um-h-avatar">'+ini+'</span>';
+    hdr.innerHTML=avHtml+'<div class="um-h-text"><strong>'+esc(_userDisplayName())+'</strong><span class="um-h-mail">'+esc(userSession.email||'')+'</span></div>';
+  }
+}
+function _umMsg(id,kind,text){
+  const el=$(id);if(!el)return;
+  el.className='um-msg '+(kind||'');
+  el.textContent=text||'';
+  if(!text)el.style.display='none';
+}
+async function doUpdateProfile(){
+  if(!userSession)return;
+  const ni=$('umNicknameInput');
+  if(!ni)return;
+  const nickname=ni.value.trim();
+  if(nickname.length<2){_umMsg('umProfileMsg','error',t('umNicknameTooShort'));return}
+  if(nickname.length>40){_umMsg('umProfileMsg','error',t('umNicknameTooLong'));return}
+  const btn=$('umNicknameSaveBtn');if(btn)btn.disabled=true;
+  _umMsg('umProfileMsg','info','…');
+  const r=await _authFetch('/auth/update-profile',{nickname,env:_workerEnv()});
+  if(btn)btn.disabled=false;
+  if(r.status===0){_umMsg('umProfileMsg','error',t('authNetworkError'));return}
+  if(r.status===429){_umMsg('umProfileMsg','error',t('authRateLimit'));return}
+  if(!r.ok){_umMsg('umProfileMsg','error',t('umProfileError'));return}
+  // Erfolg: lokalen Cache aktualisieren (Worker liefert nur {ok, email_changed})
+  userSession.nickname=nickname;
+  _umMsg('umProfileMsg','success',t('umProfileSaved'));
+  updateAuthUI();
+  setTimeout(()=>_umMsg('umProfileMsg',''),2200);
+}
+async function doUploadAvatar(file){
+  if(!userSession||!file)return;
+  // Type & Size Validation (Worker erwartet binary + max 250KB)
+  const allowed=['image/jpeg','image/png','image/webp'];
+  if(!allowed.includes(file.type)){_umMsg('umAvatarMsg','error',t('umAvatarBadType'));return}
+  if(file.size>250000){_umMsg('umAvatarMsg','error',t('umAvatarTooLarge'));return}
+  const btn=$('umAvatarUploadBtn');if(btn)btn.disabled=true;
+  _umMsg('umAvatarMsg','info',t('umAvatarUploading'));
+  try{
+    // Worker erwartet Body als rohen Binary-Stream, Content-Type = file.type
+    const r=await fetch(WORKER_URL+'/auth/avatar',{method:'POST',credentials:'include',headers:{'Content-Type':file.type},body:file});
+    if(btn)btn.disabled=false;
+    if(r.status===429){_umMsg('umAvatarMsg','error',t('authRateLimit'));return}
+    if(r.status===413){_umMsg('umAvatarMsg','error',t('umAvatarTooLarge'));return}
+    if(!r.ok){_umMsg('umAvatarMsg','error',t('umAvatarError'));return}
+    const data=await r.json().catch(()=>({}));
+    // Worker liefert {ok:true, avatar_key, user_id} — keine avatar_url
+    if(data.avatar_key)userSession.avatar_key=data.avatar_key;
+    if(data.user_id&&!userSession.id)userSession.id=data.user_id;
+    _umMsg('umAvatarMsg','success',t('umAvatarUploaded'));
+    updateAuthUI();
+    // File-Input resetten damit gleicher File nochmal hochladbar
+    const fi=$('umAvatarFile');if(fi)fi.value='';
+    setTimeout(()=>_umMsg('umAvatarMsg',''),2200);
+  }catch(e){
+    if(btn)btn.disabled=false;
+    _umMsg('umAvatarMsg','error',t('authNetworkError'));
+  }
+}
+async function doDeleteAvatar(){
+  if(!userSession)return;
+  const btn=$('umAvatarRemoveBtn');if(btn)btn.disabled=true;
+  _umMsg('umAvatarMsg','info','…');
+  // Worker v3.8: DELETE /auth/avatar (cookie-auth, kein query-param noetig)
+  const r=await fetch(WORKER_URL+'/auth/avatar',{method:'DELETE',credentials:'include'});
+  if(btn)btn.disabled=false;
+  if(!r.ok){_umMsg('umAvatarMsg','error',t('umAvatarError'));return}
+  userSession.avatar_key=null;
+  _umMsg('umAvatarMsg','success',t('umAvatarRemoved'));
+  updateAuthUI();
+  setTimeout(()=>_umMsg('umAvatarMsg',''),2200);
+}
+function toggleDeleteAccountConfirm(){
+  const c=$('umDeleteConfirm');
+  const tog=$('umDeleteToggleBtn');
+  if(!c||!tog)return;
+  const open=c.classList.toggle('open');
+  tog.style.display=open?'none':'inline-flex';
+  if(open){setTimeout(()=>{const p=$('umDeletePassword');if(p)p.focus()},50)}
+  else{const p=$('umDeletePassword');if(p)p.value='';_umMsg('umDeleteMsg','')}
+}
+async function doDeleteAccount(){
+  if(!userSession)return;
+  const pwEl=$('umDeletePassword');
+  if(!pwEl)return;
+  const password=pwEl.value;
+  if(!password){_umMsg('umDeleteMsg','error',t('authPasswordNeeded'));return}
+  const btn=$('umDeleteConfirmBtn');if(btn)btn.disabled=true;
+  _umMsg('umDeleteMsg','info',t('umDeleteDeleting'));
+  const r=await _authFetch('/auth/delete-account',{password,env:_workerEnv()});
+  if(btn)btn.disabled=false;
+  if(r.status===0){_umMsg('umDeleteMsg','error',t('authNetworkError'));return}
+  if(r.status===429){_umMsg('umDeleteMsg','error',t('authRateLimit'));return}
+  if(r.status===401||r.status===403){_umMsg('umDeleteMsg','error',t('umDeleteWrongPw'));return}
+  if(!r.ok){_umMsg('umDeleteMsg','error',t('umDeleteError'));return}
+  // Erfolg: User-State löschen und Toast
+  userSession=null;
+  userFavorites=[];
+  try{localStorage.removeItem('axc_user_email')}catch(e){}
+  closeUserMenu();
+  if($('tabCookbook')&&$('tabCookbook').classList.contains('active')){showList()}
+  updateAuthUI();
+  showToast(t('umDeleteSuccess'),'success');
+}
 async function _restoreUserSession(){
   // Beim Page-Load: prüfen ob Cookie noch gültig ist
   const r=await _authFetch('/auth/me',null);
@@ -1315,19 +1555,29 @@ function updateAuthUI(){
     }
   }
   if(userSession){
-    // User-Avatar mit Initial
-    const initial=(userSession.email||'?').charAt(0).toUpperCase();
-    btn.innerHTML='<span class="user-avatar" style="display:flex" aria-hidden="true">'+esc(initial)+'</span>';
+    // User-Avatar: R2-URL wenn vorhanden, sonst Initial
+    const avUrl=_userAvatarUrl();
+    const initial=_userInitial();
+    if(avUrl){
+      btn.innerHTML='<span class="user-avatar" style="display:flex" aria-hidden="true"><img src="'+esc(avUrl)+'" alt=""></span>';
+    } else {
+      btn.innerHTML='<span class="user-avatar" style="display:flex" aria-hidden="true">'+esc(initial)+'</span>';
+    }
     btn.title=t('authMyAccount');
     btn.classList.add('user-active');
     btn.classList.remove('lock-icon');
     btn.style.padding='0';
     btn.style.background='none';
     btn.style.border='none';
-    // Header für User-Menu setzen
-    const hdr=$('userMenuHeader');
-    if(hdr){hdr.innerHTML=t('authLoggedInAs')+'<strong>'+esc(userSession.email||'')+'</strong>'}
+    // User-Menu-Felder befüllen (Header, Profile-Input, Avatar-Preview)
+    _populateUserMenuFields();
     const lout=$('userMenuLogoutBtn');if(lout)lout.textContent=t('authBtnLogout');
+    // Sektionen sichtbar
+    const ps=$('umProfileSection');if(ps)ps.style.display='block';
+    const as=$('umAvatarSection');if(as)as.style.display='block';
+    const ds=$('umDangerSection');if(ds)ds.style.display='block';
+    // Statische Labels neu übersetzen
+    applyAuthLabels();
   } else if(loggedIn){
     // Admin-Logged-in: behalten wir den klassischen Look mit "🔓"
     btn.innerHTML='🔓';
@@ -1352,11 +1602,22 @@ function updateAuthUI(){
 }
 function toggleUserMenu(){
   const m=$('userMenu');if(!m)return;
-  if(m.classList.contains('open')){closeUserMenu()}else{m.classList.add('open');setTimeout(()=>document.addEventListener('click',_userMenuOutsideClick),0)}
+  if(m.classList.contains('open')){closeUserMenu()}else{
+    // Frisch öffnen: Felder befüllen + ggf. neueste Session vom Worker
+    _populateUserMenuFields();
+    m.classList.add('open');
+    setTimeout(()=>document.addEventListener('click',_userMenuOutsideClick),0)
+  }
 }
 function closeUserMenu(){
   const m=$('userMenu');if(m)m.classList.remove('open');
   document.removeEventListener('click',_userMenuOutsideClick);
+  // Delete-Confirm-Box zurücksetzen
+  const c=$('umDeleteConfirm');if(c)c.classList.remove('open');
+  const tog=$('umDeleteToggleBtn');if(tog)tog.style.display='inline-flex';
+  const p=$('umDeletePassword');if(p)p.value='';
+  // Alle Messages clearen
+  ['umProfileMsg','umAvatarMsg','umDeleteMsg'].forEach(id=>_umMsg(id,''));
 }
 function _userMenuOutsideClick(e){
   const wrap=$('userMenuWrap');if(!wrap)return;
@@ -1417,7 +1678,18 @@ function applyAuthLabels(){
     authAdminSubmitBtn:'authSubmitLogin',
     authTabUserBtn:'authTabUser',
     authTabAdminBtn:'authTabAdmin',
-    privacyCloseBtn:'authClose'
+    privacyCloseBtn:'authClose',
+    umProfileLabel:'umProfileLabel',
+    umAvatarLabel:'umAvatarLabel',
+    umAvatarUploadBtn:'umAvatarUpload',
+    umAvatarRemoveBtn:'umAvatarRemove',
+    umNicknameSaveBtn:'umNicknameSave',
+    umDangerLabel:'umDangerLabel',
+    umDangerText:'umDangerText',
+    umDeleteToggleBtn:'umDeleteToggle',
+    umDeletePasswordLabel:'umDeletePasswordLabel',
+    umDeleteCancelBtn:'umDeleteCancel',
+    umDeleteConfirmBtn:'umDeleteConfirm'
   };
   for(const id in m){
     const el=$(id);if(!el)continue;
@@ -1425,6 +1697,9 @@ function applyAuthLabels(){
     // Wenn HTML-String (enthält < oder &), als HTML setzen, sonst als Text
     if(/<|&[a-z]+;/i.test(tx))el.innerHTML=tx; else el.textContent=tx;
   }
+  // Placeholders separat setzen
+  const ni=$('umNicknameInput');if(ni)ni.placeholder=t('umNicknamePlaceholder');
+  const um=$('userMenuLogoutBtn');if(um)um.textContent=t('authBtnLogout');
 }
 function handleAuthUrlParams(){
   // Wird beim Page-Load aufgerufen um ?verify=...&reset=... zu verarbeiten
@@ -2542,11 +2817,11 @@ async function deleteAllRecipes(){const count=recipes.length;if(!count)return;if
 async function showRecipeComments(id){await showRecipe(id);setTimeout(()=>{const el=$('commentsSection');if(el)el.scrollIntoView({behavior:'smooth',block:'start'})},100)}
 function scrollToComments(){const el=$('commentsSection');if(!el)return;el.scrollIntoView({behavior:'smooth',block:'start'})}
 let _ratingModalRecipeId=null;
-function openRatingModal(id){const r=recipes.find(x=>x.id===id);if(!r)return;_ratingModalRecipeId=id;const overlay=$('ratingModalOverlay');$('rmTitle').textContent=t('rateModalTitle');$('rmRecipeTitle').textContent=tr(r,'title');const nameInput=$('rmName');nameInput.placeholder=t('rateModalNameLabel');nameInput.value=localStorage.getItem('axc_name')||'';const commentInput=$('rmComment');commentInput.placeholder=t('rateModalCommentOptional');commentInput.value='';$('rmMsg').textContent='';$('rmMsg').style.color='';$('rmCancelBtn').textContent=t('cancel');const submitBtn=$('rmSubmitBtn');submitBtn.textContent=t('submitRating');submitBtn.disabled=false;$('rmStarsWrap').innerHTML=`<div class="rating-picker" data-value="0" role="radiogroup" aria-label="Rating">${[1,2,3,4,5].map(i=>`<button type="button" class="star" data-val="${i}" onclick="setRatingModalValue(${i})" aria-label="${i} Stern${i>1?'e':''}">☆</button>`).join('')}</div><input type="text" name="hp_rating" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">`;overlay.classList.add('open');_resetFormRenderTime();setTimeout(()=>nameInput.focus(),50)}
+function openRatingModal(id){const r=recipes.find(x=>x.id===id);if(!r)return;_ratingModalRecipeId=id;const overlay=$('ratingModalOverlay');$('rmTitle').textContent=t('rateModalTitle');$('rmRecipeTitle').textContent=tr(r,'title');const nameInput=$('rmName');nameInput.placeholder=t('rateModalNameLabel');nameInput.value=userSession?_userDisplayName():(localStorage.getItem('axc_name')||'');const commentInput=$('rmComment');commentInput.placeholder=t('rateModalCommentOptional');commentInput.value='';$('rmMsg').textContent='';$('rmMsg').style.color='';$('rmCancelBtn').textContent=t('cancel');const submitBtn=$('rmSubmitBtn');submitBtn.textContent=t('submitRating');submitBtn.disabled=false;$('rmStarsWrap').innerHTML=`<div class="rating-picker" data-value="0" role="radiogroup" aria-label="Rating">${[1,2,3,4,5].map(i=>`<button type="button" class="star" data-val="${i}" onclick="setRatingModalValue(${i})" aria-label="${i} Stern${i>1?'e':''}">☆</button>`).join('')}</div><input type="text" name="hp_rating" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">`;overlay.classList.add('open');_resetFormRenderTime();setTimeout(()=>nameInput.focus(),50)}
 function closeRatingModal(){_ratingModalRecipeId=null;$('ratingModalOverlay').classList.remove('open')}
 function setRatingModalValue(v){const picker=document.querySelector('#ratingModalOverlay .rating-picker');if(!picker)return;picker.dataset.value=String(v);picker.querySelectorAll('.star').forEach(btn=>{const bv=parseInt(btn.dataset.val,10);const isActive=bv<=v;btn.classList.toggle('active',isActive);btn.textContent=isActive?'★':'☆'})}
 async function submitRatingModal(){const id=_ratingModalRecipeId;if(!id)return;const picker=document.querySelector('#ratingModalOverlay .rating-picker');const ratingVal=picker?parseInt(picker.dataset.value||'0',10):0;const name=$('rmName').value.trim();const text=$('rmComment').value.trim();const msgEl=$('rmMsg');const submitBtn=$('rmSubmitBtn');if(!ratingVal||ratingVal<1||ratingVal>5){msgEl.style.color='var(--accent)';msgEl.textContent=t('ratingNeeded');return}if(!name){msgEl.style.color='var(--accent)';msgEl.textContent=t('nameNeeded');return}localStorage.setItem('axc_name',name);msgEl.style.color='var(--green)';msgEl.textContent=t('commentSending');submitBtn.disabled=true;let ok;if(loggedIn){if(!comments[id])comments[id]=[];const entry={name,text:text,date:new Date().toISOString(),approved:false,rating:ratingVal};comments[id].push(entry);ok=await saveComments()}else{const payload={recipeId:id,name,rating:ratingVal};if(text)payload.text=text;ok=await(text?workerComment(payload):workerRating(payload));if(ok){if(!comments[id])comments[id]=[];comments[id].push({name,text:text||'',date:new Date().toISOString(),approved:false,rating:ratingVal})}}if(ok){_gaEvent('recipe_rating_submit',{recipe_id:id,rating:ratingVal,with_comment:!!text,lang:lang});msgEl.textContent=t('commentSaved');setTimeout(()=>{closeRatingModal();if(currentRecipeId===id){renderDetail(id);renderComments(id)}renderList()},800)}else{msgEl.style.color='var(--accent)';msgEl.textContent=t('commentSaveError');submitBtn.disabled=false}}
-function renderComments(id){const el=$('commentsSection');if(!el)return;const allList=comments[id]||[];const list=loggedIn?allList:allList.filter(c=>c.approved!==false);const myName=(localStorage.getItem('axc_name')||'').trim().toLowerCase();el.innerHTML=`<div class="comments-section"><div style="display:flex;align-items:flex-end;gap:16px;margin-bottom:16px"><h3 class="comments-title" style="margin-bottom:0">${t('comments')} <span class="comment-count">(${list.length})</span></h3><button class="bring-btn" style="margin-left:auto" onclick="sendToBring('${id}')" title="${t('bringTitle')}"><img src="${BRING_IMG}" alt="Bring!"> ${t('shoppingList')}</button></div>${list.length?list.map((c,i)=>({c,i})).sort((a,b)=>new Date(b.c.date)-new Date(a.c.date)).map(({c,i})=>{const canDel=loggedIn||c.name.trim().toLowerCase()===myName;const ratingHtml=(typeof c.rating==='number'&&c.rating>=1&&c.rating<=5)?renderStarsHtml(c.rating,true):'';return`<div class="comment-item"><div class="comment-header"><span class="comment-author">${esc(c.name)}</span>${ratingHtml}<span class="comment-date">${new Date(c.date).toLocaleDateString(t('locale'),{day:'numeric',month:'short',year:'numeric'})}</span>${canDel?`<div class="mi-act del" style="width:32px;height:32px;margin-left:auto;flex-shrink:0" title="${t('deleteComment')}" onclick="deleteComment('${id}',${i})">${trashIcon(14)}</div>`:''}</div>${c.text?`<div class="comment-text">${esc(c.text)}</div>`:''}</div>`}).join(''):`<div class="no-comments">${t('noComments')}</div>`}<div class="comment-form" style="margin-top:20px"><div class="comment-form-rating"><span>${t('rateThis')}:</span>${renderRatingPickerHtml(0)}</div><div class="comment-form-row"><input type="text" id="commentName" placeholder="${t('commentName')}" value="${localStorage.getItem('axc_name')||''}" maxlength="50"><textarea id="commentText" placeholder="${t('commentText')}" maxlength="500"></textarea></div><input type="text" name="hp_comment" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><div id="commentMsg" style="font-size:.82rem;display:none;margin-top:-4px"></div><button onclick="submitComment('${id}')">${t('commentSubmit')}</button></div></div>`;_resetFormRenderTime()}
+function renderComments(id){const el=$('commentsSection');if(!el)return;const allList=comments[id]||[];const list=loggedIn?allList:allList.filter(c=>c.approved!==false);const myName=(localStorage.getItem('axc_name')||'').trim().toLowerCase();const sessNick=userSession?(_userDisplayName()||'').trim().toLowerCase():'';const sessAvUrl=userSession?_userAvatarUrl():null;const sessIni=userSession?_userInitial():'';const defaultName=userSession?_userDisplayName():(localStorage.getItem('axc_name')||'');el.innerHTML=`<div class="comments-section"><div style="display:flex;align-items:flex-end;gap:16px;margin-bottom:16px"><h3 class="comments-title" style="margin-bottom:0">${t('comments')} <span class="comment-count">(${list.length})</span></h3><button class="bring-btn" style="margin-left:auto" onclick="sendToBring('${id}')" title="${t('bringTitle')}"><img src="${BRING_IMG}" alt="Bring!"> ${t('shoppingList')}</button></div>${list.length?list.map((c,i)=>({c,i})).sort((a,b)=>new Date(b.c.date)-new Date(a.c.date)).map(({c,i})=>{const cn=(c.name||'').trim().toLowerCase();const canDel=loggedIn||cn===myName||(sessNick&&cn===sessNick);const ratingHtml=(typeof c.rating==='number'&&c.rating>=1&&c.rating<=5)?renderStarsHtml(c.rating,true):'';const isMine=sessNick&&cn===sessNick;const avHtml=isMine?(sessAvUrl?`<span class="comment-avatar"><img src="${esc(sessAvUrl)}" alt=""></span>`:`<span class="comment-avatar">${esc(sessIni)}</span>`):'';return`<div class="comment-item"><div class="comment-header"><span class="comment-author">${avHtml}${esc(c.name)}</span>${ratingHtml}<span class="comment-date">${new Date(c.date).toLocaleDateString(t('locale'),{day:'numeric',month:'short',year:'numeric'})}</span>${canDel?`<div class="mi-act del" style="width:32px;height:32px;margin-left:auto;flex-shrink:0" title="${t('deleteComment')}" onclick="deleteComment('${id}',${i})">${trashIcon(14)}</div>`:''}</div>${c.text?`<div class="comment-text">${esc(c.text)}</div>`:''}</div>`}).join(''):`<div class="no-comments">${t('noComments')}</div>`}<div class="comment-form" style="margin-top:20px"><div class="comment-form-rating"><span>${t('rateThis')}:</span>${renderRatingPickerHtml(0)}</div><div class="comment-form-row"><input type="text" id="commentName" placeholder="${t('commentName')}" value="${esc(defaultName)}" maxlength="50"><textarea id="commentText" placeholder="${t('commentText')}" maxlength="500"></textarea></div><input type="text" name="hp_comment" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><div id="commentMsg" style="font-size:.82rem;display:none;margin-top:-4px"></div><button onclick="submitComment('${id}')">${t('commentSubmit')}</button></div></div>`;_resetFormRenderTime()}
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
 function getAggregateRating(id){
   const list=(comments[id]||[]).filter(c=>c.approved!==false&&typeof c.rating==='number'&&c.rating>=1&&c.rating<=5);
