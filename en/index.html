@@ -1,4 +1,4 @@
-<!-- v1781960000000 -->
+<!-- v1781970000000 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,8 +81,8 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .lock-icon{color:rgba(255,255,255,.85);font-size:1.05rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:4px;font-family:var(--font-body);transition:color .2s,background .15s,border-color .15s;width:34px;height:34px;box-sizing:border-box;padding:0;line-height:1;flex-shrink:0}
 .lock-icon:hover{color:#fff;background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4)}
 /* Wenn Avatar aktiv: kein Border/BG am Button selbst (Avatar fühlt sich rund) */
-.lock-icon.user-active{background:none;border:none;width:34px;height:34px}
-.lock-icon.user-active .user-avatar{width:34px;height:34px}
+button.user-active{width:34px;height:34px;padding:0;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;background:none;border:none;flex-shrink:0;cursor:pointer}
+button.user-active .user-avatar{width:34px;height:34px}
 .login-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center}
 .login-overlay.open{display:flex}
 .login-box{background:var(--white);border-radius:8px;padding:32px;max-width:380px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.2)}
@@ -128,7 +128,7 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .user-menu-header .um-h-text .um-h-mail{display:block;color:var(--text-muted);font-size:.74rem;margin-top:2px;word-break:break-all}
 .user-menu button{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;font-family:var(--font-body);font-size:.88rem;color:var(--text);cursor:pointer;text-align:left;transition:background .12s;-webkit-tap-highlight-color:transparent}
 .user-menu button:hover{background:var(--bg)}
-.user-menu-wrap{position:relative;display:inline-block}
+.user-menu-wrap{position:relative;display:inline-flex;align-items:center}
 .um-section{padding:10px 14px;border-bottom:1px solid var(--border-light);font-size:.82rem}
 .um-section:last-of-type{border-bottom:none}
 .um-section .um-row{display:flex;gap:8px;align-items:center;margin-top:6px}
@@ -617,7 +617,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781960000000 -->
+<!-- cache-bust: 1781970000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
