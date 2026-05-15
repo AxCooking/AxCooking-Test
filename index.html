@@ -94,7 +94,7 @@ header{background:var(--black);color:var(--white);position:sticky;top:0;z-index:
 .btn-login{background:var(--black);color:var(--white);border:none;padding:9px 20px;border-radius:4px;font-size:.85rem;font-weight:600;cursor:pointer;font-family:var(--font-body)}
 .btn-cancel{background:transparent;border:1px solid var(--border);color:var(--text-light);padding:9px 20px;border-radius:4px;font-size:.85rem;cursor:pointer;font-family:var(--font-body)}
 .login-box.auth-box{max-width:440px}
-#authAdminTitle{color:#999;font-weight:400}
+#authAdminTitle{color:#bbb;font-weight:400}
 .auth-tabs{display:flex;border-bottom:1px solid var(--border);margin:-8px -32px 20px -32px;padding:0 32px}
 .auth-tab{padding:10px 16px;font-size:.85rem;font-weight:500;color:var(--text-light);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;background:none;border-left:none;border-right:none;border-top:none;font-family:var(--font-body);margin-bottom:-1px}
 .auth-tab.active{color:var(--text);border-bottom-color:var(--black)}
@@ -322,16 +322,22 @@ body.lightbox-open .rd-image-col .fav-btn{display:none}
 .add-step-wrap{display:flex;justify-content:flex-end;margin-top:14px}
 .add-step-btn{font-size:.95rem;padding:9px 16px}
 /* S5-Punkt3/4: Cook-Mode im Kochbuch — Distraktoren weg, gestrichene Zutaten weg, Edit-Modus aus */
-.step .remove-orig-step-btn{background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px;margin-left:auto;display:flex;align-items:center;justify-content:center;border-radius:4px;transition:all .15s}
-.step .remove-orig-step-btn:hover{color:var(--accent);background:rgba(0,0,0,.05)}
-.step .remove-orig-step-btn svg{width:18px;height:18px}
-.step .restore-orig-step-btn{background:none;border:none;cursor:pointer;color:var(--accent);padding:4px;margin-left:auto;display:none;align-items:center;gap:4px;font-size:.85rem;border-radius:4px;transition:all .15s}
-.step .restore-orig-step-btn:hover{background:rgba(0,0,0,.05)}
-.step .restore-orig-step-btn svg{width:16px;height:16px}
+/* Step Delete/Restore Style identisch zu Ingredient Delete/Restore (Punkt: gleicher Look) */
+.step .remove-orig-step-btn{background:#fef7f5;border:1px solid #f4d4cf;color:var(--accent);cursor:pointer;padding:4px 8px;margin-left:auto;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;transition:background .12s,border-color .12s,color .12s;-webkit-tap-highlight-color:transparent;line-height:1}
+.step .remove-orig-step-btn:hover{background:#fbeae7;border-color:var(--accent);color:var(--accent)}
+.step .remove-orig-step-btn svg{width:14px;height:14px}
+.step .restore-orig-step-btn{background:#eef8f1;border:1px solid #cdebd8;color:var(--green);cursor:pointer;padding:4px 8px;margin-left:auto;border-radius:8px;display:none;align-items:center;justify-content:center;gap:4px;font-size:.85rem;transition:background .12s,border-color .12s;-webkit-tap-highlight-color:transparent;line-height:1}
+.step .restore-orig-step-btn:hover{background:#dff0e6;border-color:var(--green)}
+.step .restore-orig-step-btn svg{width:14px;height:14px}
 .step.step-deleted .step-header .step-num,
 .step.step-deleted .step-header > .step-title-text,
+.step.step-deleted .step-header > h2,
 .step.step-deleted .step-text,
 .step.step-deleted .step-note .ce-field{text-decoration:line-through;opacity:.55}
+/* Step-Nummerierung: Edit-Mode zeigt step-num-edit (orig fortlaufend inkl. deleted), Cookmode zeigt step-num-cook (umnummeriert) */
+.step .step-num .step-num-cook{display:none}
+body.cook-mode-active .step .step-num .step-num-edit{display:none}
+body.cook-mode-active .step .step-num .step-num-cook{display:inline}
 .step.step-deleted .ingredient-row{display:none}
 .step.step-deleted .add-ing-wrap,
 .step.step-deleted .add-step-wrap{display:none}
@@ -372,6 +378,9 @@ body.cook-mode-active .add-step-btn{display:none !important}
 /* Notizen bleiben sichtbar im Cook-Mode (das ist gewollt) */
 body.cook-mode-active .step-added .step-note,
 body.cook-mode-active .step-added .step-note.has-content{background:none !important;border:none !important;padding:0 !important;color:var(--text-light) !important;font-style:normal !important;font-size:.88rem !important;line-height:1.7 !important;margin-top:14px !important}
+/* Cookmode: leere step-text in added Steps soll kein Margin verursachen — sonst doppelter Abstand zwischen Ingredients und Note */
+body.cook-mode-active .step-added .step-text:empty,
+body.cook-mode-active .step-added .step-text:has(.ce-field:empty){margin-top:0 !important;display:none !important}
 body.cook-mode-active .step-note{display:block}
 .recipe-item{position:relative}
 .cookbook-remove-btn{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.92);border:1px solid var(--border);color:var(--accent);width:30px;height:30px;border-radius:50%;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.12);z-index:2;-webkit-tap-highlight-color:transparent;transition:background .15s,transform .12s}
@@ -605,7 +614,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781900000000 -->
+<!-- cache-bust: 1781910000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -2376,7 +2385,7 @@ function renderSteps(recipe,steps,servings){
   const addStepBtnHtml=(refStr)=>isCookbook?`<div class="add-step-wrap"><button class="add-step-btn" type="button" onclick="addStepAfter('${refStr}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>${esc(t('addStep'))}</button></div>`:'';
 
   // Helper: rendert einen Original-Step
-  function renderOriginalStep(s, i, stepNum){
+  function renderOriginalStep(s, i, stepNum, cookStepNum){
     const ovStep=isCookbook?_getOverlayStep(i):null;
     const origStep=isCookbook?_getOriginalStep(i):null;
     const titleEffective=(ovStep&&ovStep.title!=null)?ovStep.title:s.title||'';
@@ -2394,49 +2403,58 @@ function renderSteps(recipe,steps,servings){
     const noteHtml=isCookbook
       ? `<div class="step-note${noteEff?' has-content':''}"><span class="ce-field ce-empty" contenteditable="true" data-placeholder="${esc(t('editNote'))}" oninput="_onNoteInput(this,${i})">${esc(noteEff)}</span></div>`
       : '';
+    // stepNum-Span: zeigt zwei Zahlen; CSS togglet via body.cook-mode-active
+    const cookNumHtml=(cookStepNum!=null)?`<span class="step-num-cook">${cookStepNum}</span>`:'';
+    const stepNumHtml=`<span class="step-num"><span class="step-num-edit">${stepNum}</span>${cookNumHtml}</span>`;
     // Reihenfolge im Step-Body: orig+added Zutaten, "+ Zutat" rechts, Text, Notiz, "+ Schritt" rechts
-    return `<div class="step${(_currentFav&&_currentFav.overlay&&Array.isArray(_currentFav.overlay.deletedSteps)&&_currentFav.overlay.deletedSteps.indexOf(i+1)>=0)?' step-deleted':''}"><div class="step-header"><span class="step-num">${stepNum}</span>${titleHtml}<button class="remove-orig-step-btn" type="button" onclick="removeOriginalStep(${i+1})" title="${lang==='de'?'Schritt löschen':'Delete step'}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><button class="restore-orig-step-btn" type="button" onclick="restoreOriginalStep(${i+1})" title="${lang==='de'?'Schritt wieder hinzufügen':'Restore step'}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><polyline points="3 3 3 8 8 8"/></svg><span>${lang==='de'?'Wieder hinzufügen':'Restore'}</span></button></div>${origIngsHtml}${addedIngsHtml}${addIngBtnHtml(String(i))}${textHtml}${noteHtml}${addStepBtnHtml('orig:'+i)}</div>`;
+    return `<div class="step${(_currentFav&&_currentFav.overlay&&Array.isArray(_currentFav.overlay.deletedSteps)&&_currentFav.overlay.deletedSteps.indexOf(i+1)>=0)?' step-deleted':''}"><div class="step-header">${stepNumHtml}${titleHtml}<button class="remove-orig-step-btn" type="button" onclick="removeOriginalStep(${i+1})" title="${lang==='de'?'Schritt löschen':'Delete step'}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><button class="restore-orig-step-btn" type="button" onclick="restoreOriginalStep(${i+1})" title="${lang==='de'?'Schritt wieder hinzufügen':'Restore step'}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><polyline points="3 3 3 8 8 8"/></svg></button></div>${origIngsHtml}${addedIngsHtml}${addIngBtnHtml(String(i))}${textHtml}${noteHtml}${addStepBtnHtml('orig:'+i)}</div>`;
   }
 
   // Helper: rendert einen added Step
-  function renderAddedStep(aStep, ai, stepNum){
+  function renderAddedStep(aStep, ai, stepNum, cookStepNum){
     const stepIdxStr='a:'+ai;
     const aTitle=aStep.title||'';
     const aText=aStep.text||'';
     const aNote=aStep.note||'';
     const aIngs=(Array.isArray(aStep.ingredients)?aStep.ingredients:[]);
     const ingsHtml=aIngs.map((ing,ii)=>renderIngRow({mode:'added',stepIdxStr,addedIdx:ii,ing})).join('');
-    const removeStepBtn=`<button class="ing-delete-btn" type="button" onclick="removeAddedStep(${ai})" title="${lang==='de'?'Schritt entfernen':'Remove step'}" style="float:right;margin-top:4px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>`;
+    const removeStepBtn=`<button class="remove-orig-step-btn" type="button" onclick="removeAddedStep(${ai})" title="${lang==='de'?'Schritt entfernen':'Remove step'}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>`;
     const titleHtml=`<h2><span class="ce-field" contenteditable="true" oninput="_onAddedStepFieldInput(this,${ai},'title')">${esc(aTitle)}</span></h2>`;
     const textHtml=`<div class="step-text"><span class="ce-field" contenteditable="true" oninput="_onAddedStepFieldInput(this,${ai},'text')">${esc(aText)}</span></div>`;
     const noteHtml=`<div class="step-note${aNote?' has-content':''}"><span class="ce-field ce-empty" contenteditable="true" data-placeholder="${esc(t('editNote'))}" oninput="_onAddedStepNoteInput(this,${ai})">${esc(aNote)}</span></div>`;
-    return `<div class="step step-added"><div class="step-header"><span class="step-num">${stepNum}</span>${titleHtml}${removeStepBtn}</div>${ingsHtml}${addIngBtnHtml(stepIdxStr)}${textHtml}${noteHtml}${addStepBtnHtml('added:'+ai)}</div>`;
+    const cookNumHtml=(cookStepNum!=null)?`<span class="step-num-cook">${cookStepNum}</span>`:'';
+    const stepNumHtml=`<span class="step-num"><span class="step-num-edit">${stepNum}</span>${cookNumHtml}</span>`;
+    return `<div class="step step-added"><div class="step-header">${stepNumHtml}${titleHtml}${removeStepBtn}</div>${ingsHtml}${addIngBtnHtml(stepIdxStr)}${textHtml}${noteHtml}${addStepBtnHtml('added:'+ai)}</div>`;
   }
 
   // Step-Liste vorab in finale Render-Reihenfolge sortieren
   // Original-Steps in Reihenfolge, added-Steps nach ihrem insertAfter-Ziel; rekursive Verschachtelung möglich.
   const addedStepsArr=(isCookbook&&_currentFav.overlay&&Array.isArray(_currentFav.overlay.addedSteps))?_currentFav.overlay.addedSteps:[];
-  const renderOrder=[]; // {kind:'orig'|'added', sIdx, aIdx, stepNum} — fortlaufende Schritt-Nummerierung
+  const deletedStepsArr=(isCookbook&&_currentFav.overlay&&Array.isArray(_currentFav.overlay.deletedSteps))?_currentFav.overlay.deletedSteps:[];
+  const renderOrder=[]; // {kind:'orig'|'added', sIdx, aIdx, stepNum, cookStepNum, isDeleted}
+  // stepNum = fortlaufend inkl. deleted (Edit-Mode-Anzeige), cookStepNum = nur wenn nicht deleted (Cookmode-Anzeige)
   let curStepNum=1;
+  let curCookStepNum=1;
   function appendAddedAfter(refStr){
     addedStepsArr.forEach((aStep,ai)=>{
       const after=(aStep&&aStep.insertAfter)||'end';
       if(after===refStr){
-        renderOrder.push({kind:'added', aIdx:ai, stepNum:curStepNum++});
+        renderOrder.push({kind:'added', aIdx:ai, stepNum:curStepNum++, cookStepNum:curCookStepNum++, isDeleted:false});
         appendAddedAfter('added:'+ai); // rekursiv: added Steps können auf andere added Steps folgen
       }
     });
   }
   steps.forEach((s,i)=>{
-    renderOrder.push({kind:'orig', sIdx:i, stepNum:curStepNum++});
+    const isDeleted=deletedStepsArr.indexOf(i+1)>=0;
+    renderOrder.push({kind:'orig', sIdx:i, stepNum:curStepNum++, cookStepNum:isDeleted?null:curCookStepNum++, isDeleted});
     if(isCookbook)appendAddedAfter('orig:'+i);
   });
   if(isCookbook)appendAddedAfter('end');
 
   // HTML aus renderOrder zusammenbauen
   const allStepsHtml=renderOrder.map(it=>{
-    if(it.kind==='orig')return renderOriginalStep(steps[it.sIdx], it.sIdx, it.stepNum);
-    return renderAddedStep(addedStepsArr[it.aIdx], it.aIdx, it.stepNum);
+    if(it.kind==='orig')return renderOriginalStep(steps[it.sIdx], it.sIdx, it.stepNum, it.cookStepNum);
+    return renderAddedStep(addedStepsArr[it.aIdx], it.aIdx, it.stepNum, it.cookStepNum);
   }).join('');
 
   // Fallback: globaler "+ Schritt"-Button am Ende, wenn keine Steps existieren — sonst ist der pro Step
