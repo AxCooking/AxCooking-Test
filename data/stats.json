@@ -75,5 +75,8 @@
     "likes": 0,
     "views": 0
   },
-  "szechuan-rind": 0
+  "szechuan-rind": {
+    "likes": 0,
+    "views": 1
+  }
 }
