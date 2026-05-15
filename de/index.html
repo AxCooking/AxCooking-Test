@@ -1,4 +1,4 @@
-<!-- v1781970000000 -->
+<!-- v1781980000000 -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -129,6 +129,7 @@ button.user-active .user-avatar{width:34px;height:34px}
 .user-menu button{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;font-family:var(--font-body);font-size:.88rem;color:var(--text);cursor:pointer;text-align:left;transition:background .12s;-webkit-tap-highlight-color:transparent}
 .user-menu button:hover{background:var(--bg)}
 .user-menu-wrap{position:relative;display:inline-flex;align-items:center}
+body.no-auth .user-menu-wrap{display:none!important}
 .um-section{padding:10px 14px;border-bottom:1px solid var(--border-light);font-size:.82rem}
 .um-section:last-of-type{border-bottom:none}
 .um-section .um-row{display:flex;gap:8px;align-items:center;margin-top:6px}
@@ -617,7 +618,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781970000000 -->
+<!-- cache-bust: 1781980000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -1178,6 +1179,9 @@ const WORKER_URL='https://axcooking-api.axcooking.workers.dev';
 const WORKER_PATHS=['data/comments.json','data/stats.json'];
 let _formRenderTime=Date.now();
 function _resetFormRenderTime(){_formRenderTime=Date.now()}
+// Auth-Feature-Flag: Default auf TEST aktiv, auf PROD aus.
+// Override via PROD-config.js: window.AUTH_ENABLED=true (sobald PROD-DB+Worker-Binding stehen)
+const AUTH_ENABLED=(typeof window!=='undefined'&&typeof window.AUTH_ENABLED!=='undefined')?!!window.AUTH_ENABLED:(GH_REPO==='AxCooking-Test');
 function _workerEnv(){return GH_REPO==='AxCooking-Test'?'test':'prod'}
 async function workerReplace(path,content){try{const r=await fetch(`${WORKER_URL}/replace`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({path,content,env:_workerEnv()})});dbg(`Worker REPLACE ${path}: HTTP ${r.status}`);if(r.ok){dbg(`Worker REPLACE ${path} SUCCESS`);return true}const errBody=await r.json().catch(()=>({}));dbg(`Worker REPLACE ${path} FAILED: ${r.status} ${errBody.error||''}`);return false}catch(e){dbg(`Worker REPLACE ${path} ERROR: ${e.message}`);return false}}
 async function workerComment(payload){try{const hpEl=document.querySelector('input[name="hp_comment"]');const hp=hpEl?hpEl.value:'';const body={...payload,hp,renderTime:_formRenderTime,env:_workerEnv()};const r=await fetch(`${WORKER_URL}/comment`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});dbg(`Worker COMMENT: HTTP ${r.status}`);return r.ok}catch(e){dbg(`Worker COMMENT ERROR: ${e.message}`);return false}}
@@ -3050,7 +3054,7 @@ function jumpToCookStep(){const steps=document.querySelectorAll('#stepsContainer
 // Re-acquire wake lock when tab becomes visible again (iOS/Android release it on background)
 document.addEventListener('visibilitychange',async()=>{if(document.visibilityState==='visible'&&_wakeLock===null){const btn=$('cookModeBtn');if(btn&&btn.classList.contains('active')){try{_wakeLock=await navigator.wakeLock.request('screen');_wakeLock.addEventListener('release',()=>{_wakeLock=null;updateCookModeUi(false)})}catch(e){updateCookModeUi(false)}}}});
 // Legacy hash-URLs (#/de/recipe/...) werden in checkPath() behandelt
-(async function(){if(isMobile)document.body.classList.add('is-mobile');updateLangPickerUi();const savedToken=localStorage.getItem('gh_token')||sessionStorage.getItem('gh_token');if(savedToken){ghToken=savedToken;loggedIn=true;$('tabImport').classList.remove('hidden');if(localStorage.getItem('gh_token'))$('loginRemember').checked=true;loadXlsx().catch(e=>console.warn('XLSX lazy load failed:',e))}applyAuthLabels();updateAuthUI();_restoreUserSession().catch(e=>console.warn('restoreUserSession:',e));await loadRecipes();checkPath();document.documentElement.lang=lang;insertWebSiteJsonLd();handleAuthUrlParams()})();
+(async function(){if(isMobile)document.body.classList.add('is-mobile');if(!AUTH_ENABLED)document.body.classList.add('no-auth');updateLangPickerUi();const savedToken=localStorage.getItem('gh_token')||sessionStorage.getItem('gh_token');if(savedToken){ghToken=savedToken;loggedIn=true;$('tabImport').classList.remove('hidden');if(localStorage.getItem('gh_token'))$('loginRemember').checked=true;loadXlsx().catch(e=>console.warn('XLSX lazy load failed:',e))}applyAuthLabels();updateAuthUI();_restoreUserSession().catch(e=>console.warn('restoreUserSession:',e));await loadRecipes();checkPath();document.documentElement.lang=lang;insertWebSiteJsonLd();handleAuthUrlParams()})();
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=$('ratingModalOverlay');if(o&&o.classList.contains('open'))closeRatingModal();const a=$('loginOverlay');if(a&&a.classList.contains('open'))closeAuth();const p=$('privacyOverlay');if(p&&p.classList.contains('open'))closePrivacyModal()}});
 window.addEventListener('popstate',checkPath);
 window.addEventListener('scroll',()=>{const b=$('bttBtn');if(b)b.classList.toggle('visible',window.scrollY>300)},{passive:true});
