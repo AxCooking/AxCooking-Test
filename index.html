@@ -1,3 +1,4 @@
+<!-- v1781940000000 -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -614,7 +615,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781930000000 -->
+<!-- cache-bust: 1781940000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -1308,6 +1309,8 @@ async function doUserLogin(){
   _gaEvent&&_gaEvent('user_login',{lang:lang});
   // S3: Favoriten laden
   loadUserFavorites().catch(e=>console.warn('loadUserFavorites:',e));
+  // Avatar als data:URL nachladen + UI refresh
+  _loadAndCacheAvatar().catch(e=>console.warn('avatar-cache:',e));
 }
 async function doUserRegister(){
   const email=$('authRegisterEmail').value.trim().toLowerCase();
@@ -1391,12 +1394,41 @@ function _userInitial(){
   const n=_userDisplayName();
   return (n||'?').charAt(0).toUpperCase();
 }
+// v1781940000000: Avatar als data:URL cachen, da Worker-CORP-Header gestrippt werden
+// und <img src=workerUrl> deshalb fehlschlägt. fetch() funktioniert problemlos.
+window._avatarDataCache=window._avatarDataCache||{};
+async function _ensureAvatarDataUrl(){
+  if(!userSession||!userSession.avatar_key||!userSession.id)return null;
+  const key=userSession.id+':'+userSession.avatar_key;
+  if(window._avatarDataCache[key])return window._avatarDataCache[key];
+  // Fetch as blob → data:URL (umgeht CORP-Problem)
+  try{
+    const url=WORKER_URL+'/auth/avatar/'+encodeURIComponent(userSession.id)+'?v='+encodeURIComponent(userSession.avatar_key);
+    const r=await fetch(url,{credentials:'omit',mode:'cors'});
+    if(!r.ok)return null;
+    const blob=await r.blob();
+    const dataUrl=await new Promise((res,rej)=>{const fr=new FileReader();fr.onload=()=>res(fr.result);fr.onerror=()=>rej(new Error('FR fail'));fr.readAsDataURL(blob)});
+    window._avatarDataCache[key]=dataUrl;
+    return dataUrl;
+  }catch(e){console.warn('Avatar-DataUrl-Fetch fehlgeschlagen:',e&&e.message);return null}
+}
 function _userAvatarUrl(){
   if(!userSession)return null;
-  // Worker v3.7: GET /auth/avatar/:userId (public). Cache-bust an avatar_key.
   if(!userSession.avatar_key||!userSession.id)return null;
-  // avatar_key enthält die rand-Komponente, eignet sich daher als Cache-Bust
-  return WORKER_URL+'/auth/avatar/'+encodeURIComponent(userSession.id)+'?v='+encodeURIComponent(userSession.avatar_key);
+  // Nutze gecachte data:URL falls vorhanden, sonst null (Loader läuft asynchron im Hintergrund)
+  const key=userSession.id+':'+userSession.avatar_key;
+  return window._avatarDataCache[key]||null;
+}
+// Beim Login/Init/Avatar-Update: data:URL im Hintergrund laden, dann UI re-rendern
+async function _loadAndCacheAvatar(){
+  if(!userSession||!userSession.avatar_key||!userSession.id)return;
+  const before=_userAvatarUrl();
+  await _ensureAvatarDataUrl();
+  const after=_userAvatarUrl();
+  if(after&&after!==before){
+    // Re-render header + popup
+    try{updateAuthUI()}catch(e){}
+  }
 }
 function _renderAvatarHtml(size,opts){
   // opts: {url,initial,cls}
@@ -1526,6 +1558,9 @@ async function doUploadAvatar(file){
     // Worker liefert {ok:true, avatar_key, user_id} — keine avatar_url
     if(data.avatar_key)userSession.avatar_key=data.avatar_key;
     if(data.user_id&&!userSession.id)userSession.id=data.user_id;
+    // Avatar-Data-URL-Cache leeren + neu laden
+    window._avatarDataCache={};
+    _loadAndCacheAvatar().catch(e=>console.warn('avatar-cache after upload:',e));
     _umMsg('umAvatarMsg','success',t('umAvatarUploaded'));
     updateAuthUI();
     // File-Input resetten damit gleicher File nochmal hochladbar
@@ -1545,6 +1580,7 @@ async function doDeleteAvatar(){
   if(btn)btn.disabled=false;
   if(!r.ok){_umMsg('umAvatarMsg','error',t('umAvatarError'));return}
   userSession.avatar_key=null;
+  window._avatarDataCache={};
   _umMsg('umAvatarMsg','success',t('umAvatarRemoved'));
   updateAuthUI();
   setTimeout(()=>_umMsg('umAvatarMsg',''),2200);
@@ -1589,6 +1625,8 @@ async function _restoreUserSession(){
     updateAuthUI();
     // S3: Favoriten laden
     loadUserFavorites().catch(e=>console.warn('loadUserFavorites:',e));
+    // Avatar als data:URL nachladen + UI refresh
+    _loadAndCacheAvatar().catch(e=>console.warn('avatar-cache:',e));
   }
 }
 function updateAuthUI(){
