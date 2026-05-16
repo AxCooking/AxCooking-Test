@@ -1,4 +1,4 @@
-<!-- v1781980000000 -->
+<!-- v1781990000000 -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -618,7 +618,7 @@ input,textarea,select{font-size:16px !important}
 .recipe-detail.active{animation:fadeIn .3s ease-out}
 .recipe-item{animation:fadeIn .35s ease-out both}
 </style>
-<!-- cache-bust: 1781980000000 -->
+<!-- cache-bust: 1781990000000 -->
   <script>
     // Fix favicon/logo paths on axcooking.github.io (needs /AxCooking-Test prefix)
     if (location.hostname === 'axcooking.github.io') {
@@ -1412,7 +1412,7 @@ async function _ensureAvatarDataUrl(){
   if(window._avatarDataCache[key])return window._avatarDataCache[key];
   // Fetch as blob → data:URL (umgeht CORP-Problem)
   try{
-    const url=WORKER_URL+'/auth/avatar/'+encodeURIComponent(userSession.id)+'?v='+encodeURIComponent(userSession.avatar_key);
+    const url=WORKER_URL+'/auth/avatar/'+encodeURIComponent(userSession.id)+'?v='+encodeURIComponent(userSession.avatar_key)+'&env='+encodeURIComponent(_workerEnv());
     const r=await fetch(url,{credentials:'omit',mode:'cors'});
     if(!r.ok)return null;
     const blob=await r.blob();
