@@ -1,15 +1,15 @@
 {
   "gyros-schweinshalsspiesse": {
     "likes": 0,
-    "views": 3
+    "views": 0
   },
   "buendner-gerstensuppe-der-schweizer-armee": {
     "likes": 0,
-    "views": 1
+    "views": 0
   },
   "zuercher-kalbsgeschnetzeltes-zueri-gschnaetzlets": {
     "likes": 0,
-    "views": 0
+    "views": 4
   },
   "pasta-alfredo": {
     "likes": 0,
@@ -17,19 +17,19 @@
   },
   "buendner-gerstensuppe-der-schweizer-armee-zum-einfrieren": {
     "likes": 0,
-    "views": 1
+    "views": 0
   },
   "caprese-salat-tomaten-mozzarella-mit-crostinis": {
     "likes": 0,
-    "views": 1
+    "views": 0
   },
   "gyros-marinade": {
     "likes": 0,
-    "views": 2
+    "views": 0
   },
   "kalbs-cordon-bleu-nach-wiener-art": {
     "likes": 0,
-    "views": 1
+    "views": 0
   },
   "kalbskopfbacken-geschmort-zum-einkochen": {
     "likes": 0,
@@ -53,11 +53,11 @@
   },
   "butter-chicken-murgh-makhani": {
     "likes": 0,
-    "views": 1
+    "views": 0
   },
   "bruschetta": {
     "likes": 0,
-    "views": 1
+    "views": 0
   },
   "sauce-b-arnaise": {
     "likes": 0,
@@ -87,5 +87,8 @@
     "likes": 0,
     "views": 0
   },
-  "szechuan-rind": 0
+  "szechuan-rind": {
+    "likes": 0,
+    "views": 2
+  }
 }
