@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-05-03T04:50:37.363Z",
+  "generatedAt": "2026-09-12T08:08:42.054Z",
   "images": {
     "bruschetta": {
       "slug": "bruschetta",
@@ -4136,6 +4136,186 @@
         {
           "path": "images/optimized/szechuan-rind.jpg",
           "bytes": 104013,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        }
+      ]
+    },
+    "caf-de-paris-butter": {
+      "slug": "caf-de-paris-butter",
+      "sources": {
+        "16x9": {
+          "filename": "caf-de-paris-butter-16x9.jpg",
+          "hash": "1692f53f79d1296592c411ffbcf2edf7f722bee810e73b9990f1a743a8f63b17"
+        },
+        "4x3": {
+          "filename": "caf-de-paris-butter-4x3.jpg",
+          "hash": "1ae0393be0e07381cb490a3f6b493c5a3fc232e4f5545bc9d3af80a561241d14"
+        }
+      },
+      "compositeKey": "1692f53f79d1296592c411ffbcf2edf7f722bee810e73b9990f1a743a8f63b17|1ae0393be0e07381cb490a3f6b493c5a3fc232e4f5545bc9d3af80a561241d14|-",
+      "sourceWidth": 3439,
+      "sourceHeight": 1935,
+      "encodedAt": "2026-09-12T08:08:42.054Z",
+      "outputs": [
+        {
+          "path": "images/optimized/caf-de-paris-butter-400-16x9.avif",
+          "bytes": 26313,
+          "format": "avif",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-400-16x9.webp",
+          "bytes": 28772,
+          "format": "webp",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-400-16x9.jpg",
+          "bytes": 37397,
+          "format": "jpg",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-800-16x9.avif",
+          "bytes": 85777,
+          "format": "avif",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-800-16x9.webp",
+          "bytes": 95716,
+          "format": "webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-800-16x9.jpg",
+          "bytes": 128375,
+          "format": "jpg",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-1200-16x9.avif",
+          "bytes": 162256,
+          "format": "avif",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-1200-16x9.webp",
+          "bytes": 185492,
+          "format": "webp",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-1200-16x9.jpg",
+          "bytes": 253838,
+          "format": "jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-400-4x3.avif",
+          "bytes": 34070,
+          "format": "avif",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-400-4x3.webp",
+          "bytes": 38118,
+          "format": "webp",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-400-4x3.jpg",
+          "bytes": 49926,
+          "format": "jpg",
+          "width": 400,
+          "height": 300
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-800-4x3.avif",
+          "bytes": 102880,
+          "format": "avif",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-800-4x3.webp",
+          "bytes": 119630,
+          "format": "webp",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-800-4x3.jpg",
+          "bytes": 163907,
+          "format": "jpg",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-1200-4x3.avif",
+          "bytes": 177046,
+          "format": "avif",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-1200-4x3.webp",
+          "bytes": 211614,
+          "format": "webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-1200-4x3.jpg",
+          "bytes": 312117,
+          "format": "jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-pin.jpg",
+          "bytes": 355622,
+          "format": "jpg",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-pin.webp",
+          "bytes": 216726,
+          "format": "webp",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-square.jpg",
+          "bytes": 357229,
+          "format": "jpg",
+          "width": 1200,
+          "height": 1200
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter-og.jpg",
+          "bytes": 246718,
+          "format": "jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "path": "images/optimized/caf-de-paris-butter.jpg",
+          "bytes": 128375,
           "format": "jpg",
           "width": 800,
           "height": 450

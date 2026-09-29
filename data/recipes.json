@@ -7443,5 +7443,413 @@
         "text": "Pour half of the oil into a frying pan and heat it to a high temperature (heat setting 8/9). When the oil reaches its smoke point, add the marinated beef round to the pan and sear for 1 to 2 minutes. Then transfer the beef round to a bowl, cover it, and set it aside.\r\n\r\nAdd the remaining oil to the same frying pan and reduce the heat to level 6/9. Sear the garlic and ginger briefly, then add the carrots. Add water to steam the vegetables. Next, add the bell peppers and, if necessary, add a little more water (not too much).\r\n\r\nWhen the vegetables are half-cooked, add the sauce and the green parts of the scallions and toss everything a few times. Then add the seared beef, heat through briefly, serve, and garnish with thin rings of scallion."
       }
     ]
+  },
+  {
+    "id": "caf-de-paris-butter",
+    "title_de": "Café de Paris Butter",
+    "title_en": "Café de Paris Butter",
+    "desc_de": "Der cremige Klassiker zum Steak. Warum eine Sauce, wenn es auch Butter kann? Café de Paris Butter ist der perfekte Saucenersatz zu einem schönen Stück Fleisch – frisch, würzig und unglaublich geschmacksintensiv. Sanft gedünstete Schalotten und Knoblauch treffen auf frischen Estragon, Petersilie und Rosmarin, dazu eine feine Wärme von Curry und Paprika, ein Hauch Sardelle und Kapern für die Tiefe und ein Spritzer Zitrone, der das Ganze zum Leuchten bringt. Das Beste daran: Sobald der Butter-Taler auf dem heissen Steak langsam zu schmelzen beginnt und sich mit dem Bratensaft zu einer glänzenden, aromatischen Sauce verbindet, braucht es nichts mehr ausser vielleicht ein Stück Brot, um den Teller sauber zu wischen. Auf Vorrat gerollt und im Tiefkühler gelagert, ist sie jederzeit griffbereit – für den spontanen Grillabend genauso wie fürs Sonntagssteak.",
+    "desc_en": "The creamy classic to serve with steak. Why have a sauce when butter will do? Café de Paris butter is the perfect substitute for sauce with a nice cut of meat fresh, aromatic, and incredibly flavorful. Gently sautéed shallots and garlic meet fresh tarragon, parsley, and rosemary, complemented by the subtle warmth of curry and paprika, a hint of anchovy and capers for depth, and a splash of lemon that makes the whole dish shine. The best part: As soon as the pat of butter begins to melt slowly on the hot steak and combines with the pan juices to form a glossy, aromatic sauce, you won’t need anything else except maybe a piece of bread to wipe the plate clean. Rolled up and stored in the freezer, it’s always on hand for a spontaneous barbecue night just as much as for a Sunday steak.",
+    "difficulty_de": "einfach",
+    "difficulty_en": "simple",
+    "workTime": "15m",
+    "cookTime": "0m",
+    "restTime": "0m",
+    "totalTime": "15m",
+    "youtubeId": "",
+    "youtubeUrl": "",
+    "tiktokUrl": "",
+    "tags_de": [
+      "Sauce",
+      "Fisch",
+      "Schweizer Küche",
+      "Französische Küche",
+      "Frische Kräuter",
+      "Einfrieren"
+    ],
+    "tags_en": [
+      "Sauce",
+      "Fish",
+      "Swiss cuisine",
+      "French Cuisine",
+      "Fresh herbs",
+      "Freezing food"
+    ],
+    "baseServings": 450,
+    "servingsUnit_de": "gr",
+    "servingsUnit_en": "gr",
+    "emoji": "🍽",
+    "steps_de": [
+      {
+        "title": "Schalotten-Kräuter Masse zubereiten",
+        "ingredients": [
+          {
+            "amount": 40,
+            "unit": "gr",
+            "name": "Butter (ungesalzen)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 6,
+            "unit": "gr",
+            "name": "Petersilie (frisch)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 6,
+            "unit": "gr",
+            "name": "Estragon (frisch)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 2,
+            "unit": "gr",
+            "name": "Rosmarin (frisch)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 85,
+            "unit": "gr",
+            "name": "Schalotten",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 11,
+            "unit": "gr",
+            "name": "Knoblauch (frisch)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 2.5,
+            "unit": "gr",
+            "name": "Rote Pfefferkörner",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 25,
+            "unit": "gr",
+            "name": "Tomatenmark (Tomatenpurée)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 4,
+            "unit": "gr",
+            "name": "Paprikapulver (edelsüss)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 4,
+            "unit": "gr",
+            "name": "Madras Curry Pulver (mild)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 2,
+            "unit": "Pr",
+            "name": "Zucker",
+            "bring": false,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
+          }
+        ],
+        "text": "Schalotten und Knoblauch schälen, Strunk entfernen, die dicken Stile der Kräuter entfernen, die Pfefferkörner im Murser zerstossen und dann alles in einem Hächsler zerkleinern. Mit der Butter in eine Bratpfanne geben und auf Hitzestufe 4/9 andünsten, sodass keine Farbe angenommen wird.\r\n\r\nAm Schluss das Tomatenmark, die Gewürze und den Zucker hinzugeben, gut vermengen und ebenfalls mitdünsten. Anschliessend vollständig auskühlen lassen."
+      },
+      {
+        "title": "Butter schaumig rühren",
+        "ingredients": [
+          {
+            "amount": 250,
+            "unit": "gr",
+            "name": "Butter (ungesalzen)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          }
+        ],
+        "text": "Die Butter 1 Stunde vor Verarbeitung aus dem Kühlschrank nehmen. Die weiche Butter mit dem Schwingbesen des Mixers während 2 bis 3 Min. schaumig rühren."
+      },
+      {
+        "title": "Café de Paris zubereiten",
+        "ingredients": [
+          {
+            "amount": 2,
+            "unit": "Stk.",
+            "name": "Sardellenfilet (in Öl eingelegt)",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 1,
+            "unit": "TL",
+            "name": "Kapern",
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          },
+          {
+            "amount": 10,
+            "unit": "gr",
+            "name": "Senf",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 1.5,
+            "unit": "TL",
+            "name": "Zitronenschale",
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          },
+          {
+            "amount": 2.5,
+            "unit": "TL",
+            "name": "Zitronensaft",
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          },
+          {
+            "amount": 4.5,
+            "unit": "gr",
+            "name": "Worcestershire Sauce",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 10,
+            "unit": "gr",
+            "name": "Salz",
+            "bring": false,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          }
+        ],
+        "text": "Sardellenfilets und Kapern sehr fein hacken und mit allen übrigen Zutaten mit der abgekühlten Schalotten-Kräuter Masse zur schaumig gerührten Butter geben und nochmals im Mixer gut vermengen."
+      },
+      {
+        "title": "Aufbewahrung und Haltbarkeit",
+        "ingredients": [
+          {
+            "amount": 1,
+            "unit": "Stk.",
+            "name": "Frischhaltefolie",
+            "bring": false,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          }
+        ],
+        "text": "Ein grosszügiges Stück Frischhaltefolie (ca. 40 cm) auf die Arbeitsfläche legen. Die fertige Café de Paris Butter mit einem Löffel oder Teigschaber als länglichen Strang auf das untere Drittel der Folie geben, dabei links und rechts je ca. 5 cm Rand frei lassen. Die Folie über die Butter klappen und die Masse mit den Händen grob zu einer Rolle von ca. 4 cm Durchmesser formen. Nun die Folie satt um die Butter wickeln und die Rolle mit leichtem Druck gleichmässig rund rollen. Damit die Rolle schön kompakt wird: die beiden Folienenden fassen und die Rolle wie ein Bonbon eindrehen, dabei zieht sich die Folie straff um die Butter und allfällige Luftblasen werden herausgedrückt. Die verdrehten Enden unter die Rolle klappen oder verknoten.\r\n\r\nZur Haltbarkeit des Eingefrorenen gibt es unterschiedliche Theorien, ich von meiner Seite habe noch selten Eingefrorenes entsorgt und habe dabei noch nie schlechte Erfahrungen gemacht. Generell gilt, Gefrierbrand ist nicht schädlich und auch nicht giftig, sondern reduziert die Qualität des Eingefrorenen. Allgemein kann gesagt werden, je länger etwas eingefroren ist, um so mehr Nährstoffe und Geschmack geht verloren."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Prepare the shallot and herb mixture",
+        "ingredients": [
+          {
+            "amount": 40,
+            "unit": "g",
+            "name": "Butter (unsalted)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 6,
+            "unit": "g",
+            "name": "Parsley (fresh)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 6,
+            "unit": "g",
+            "name": "Tarragon (fresh)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 2,
+            "unit": "g",
+            "name": "Rosemary (fresh)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 85,
+            "unit": "g",
+            "name": "Shallots",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 11,
+            "unit": "g",
+            "name": "Garlic (fresh)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 2.5,
+            "unit": "g",
+            "name": "Red peppercorns",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 25,
+            "unit": "g",
+            "name": "Tomato paste (Tomato purée)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 4,
+            "unit": "g",
+            "name": "Paprika powder (sweet)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 4,
+            "unit": "g",
+            "name": "Madras curry powder (mild)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 2,
+            "unit": "pn",
+            "name": "Sugar",
+            "bring": true,
+            "unitLong_de": "Prise",
+            "unitLong_en": "pinch"
+          }
+        ],
+        "text": "Peel the shallots and garlic, remove the cores, trim the thick stems from the herbs, crush the peppercorns in a mortar, and then chop everything in a food processor. Add to a skillet with the butter and sauté over heat level 4/9, making sure it doesn’t brown.\r\n\r\nFinally, add the tomato paste, spices, and sugar; mix well and sauté briefly. Then let cool completely."
+      },
+      {
+        "title": "Beat the butter until fluffy",
+        "ingredients": [
+          {
+            "amount": 250,
+            "unit": "g",
+            "name": "Butter (unsalted)",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          }
+        ],
+        "text": "Remove the butter from the refrigerator 1 hour before use. Using the whisk attachment on a mixer, beat the softened butter for 2 to 3 minutes until fluffy."
+      },
+      {
+        "title": "Prepare the Café de Paris",
+        "ingredients": [
+          {
+            "amount": 2,
+            "unit": "pc",
+            "name": "Anchovy fillet (pickled in oil)",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          },
+          {
+            "amount": 1,
+            "unit": "ts",
+            "name": "Capers",
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          },
+          {
+            "amount": 10,
+            "unit": "g",
+            "name": "Mustard",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 1.5,
+            "unit": "ts",
+            "name": "Lemon zest",
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          },
+          {
+            "amount": 2.5,
+            "unit": "ts",
+            "name": "Lemon juice",
+            "bring": true,
+            "unitLong_de": "Teelöffel",
+            "unitLong_en": "teaspoon"
+          },
+          {
+            "amount": 4.5,
+            "unit": "g",
+            "name": "Worcestershire Sauce",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          },
+          {
+            "amount": 10,
+            "unit": "g",
+            "name": "Salt",
+            "bring": true,
+            "unitLong_de": "Gramm",
+            "unitLong_en": "gram"
+          }
+        ],
+        "text": "Finely chop the anchovy fillets and capers, then add them along with all the remaining ingredients and the cooled shallot-herb mixture to the whipped butter, and mix well again in the mixer."
+      },
+      {
+        "title": "Storage and Shelf Life",
+        "ingredients": [
+          {
+            "amount": 1,
+            "unit": "pc",
+            "name": "Plastic wrap",
+            "bring": true,
+            "unitLong_de": "Stück",
+            "unitLong_en": "piece"
+          }
+        ],
+        "text": "Place a generous piece of plastic wrap (about 40 cm) on the work surface. Using a spoon or spatula, place the prepared Café de Paris butter in a long strip on the lower third of the plastic wrap, leaving a margin of about 5 cm on each side. Fold the plastic wrap over the butter and roughly shape the mixture with your hands into a roll about 4 cm in diameter. Now wrap the plastic wrap tightly around the butter and roll it evenly into a round shape, applying light pressure. To make the roll nice and compact: grasp both ends of the plastic wrap and twist the roll like a piece of candy; this pulls the plastic wrap tightly around the butter and squeezes out any air bubbles. Tuck the twisted ends under the roll or tie them in a knot.\r\n\r\nThere are various theories regarding the shelf life of frozen foods; for my part, I’ve rarely had to throw away frozen items and have never had a bad experience doing so. Generally speaking, freezer burn is neither harmful nor toxic, but it does reduce the quality of the frozen food. As a general rule, the longer something is frozen, the more nutrients and flavor are lost."
+      }
+    ]
   }
 ]
